@@ -1,1 +1,2488 @@
-[{"id":"ca2305ba.3a64f8","type":"tab","label":"Main Home Automation","disabled":false,"info":""},{"id":"7f5a232.5f2e2dc","type":"tab","label":"Flow 1","disabled":false,"info":""},{"id":"65b61d5d.d1e1c4","type":"server","z":"","name":"Home Assistant","legacy":false,"hassio":false,"rejectUnauthorizedCerts":true,"ha_boolean":"y|yes|true|on|home|open","connectionDelay":true},{"id":"384480ed.efa9c","type":"comment","z":"ca2305ba.3a64f8","name":"Server Room Door Events","info":"","x":168.99999618530273,"y":1480.0000282526016,"wires":[]},{"id":"a05eb081.368b1","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Server Room Door Contact","server":"65b61d5d.d1e1c4","entityidfilter":"binary_sensor.server_room_door_sensor","entityidfiltertype":"exact","outputinitially":true,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":165.99999618530273,"y":1544.0000282526016,"wires":[["126eb1f0.60baee"]]},{"id":"126eb1f0.60baee","type":"switch","z":"ca2305ba.3a64f8","name":"Open/Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":396.99999618530273,"y":1547.0000282526016,"wires":[["89d07e44.bb7ee"],["213116c7.f0fa2a"]]},{"id":"213116c7.f0fa2a","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Light Off","server":"65b61d5d.d1e1c4","service_domain":"switch","service":"turn_off","data":"{\"entity_id\":\"switch.server_room_switch_switch\"}","mergecontext":"","output_location":"","output_location_type":"none","x":657.9999961853027,"y":1555.0000282526016,"wires":[[]]},{"id":"89d07e44.bb7ee","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Light On","server":"65b61d5d.d1e1c4","service_domain":"switch","service":"turn_on","data":"{\"entity_id\":\"switch.server_room_switch_switch\"}","mergecontext":"","output_location":"","output_location_type":"none","x":662.9999961853027,"y":1469.0000282526016,"wires":[["746d5c74.a077b4"]]},{"id":"42d94216.dcc3ec","type":"bigtimer","z":"ca2305ba.3a64f8","outtopic":"","outpayload1":"on","outpayload2":"off","name":"Dusk/Dawn On/Off","comment":"","lat":"47.758560","lon":"-122.095440","starttime":"5004","endtime":"5003","starttime2":0,"endtime2":0,"startoff":"-60","endoff":"+30","startoff2":0,"endoff2":0,"offs":0,"outtext1":"on","outtext2":"off","timeout":1440,"sun":true,"mon":true,"tue":true,"wed":true,"thu":true,"fri":true,"sat":true,"jan":true,"feb":true,"mar":true,"apr":true,"may":true,"jun":true,"jul":true,"aug":true,"sep":true,"oct":true,"nov":true,"dec":true,"day1":0,"month1":0,"day2":0,"month2":0,"day3":0,"month3":0,"day4":0,"month4":0,"day5":0,"month5":0,"day6":0,"month6":0,"d1":0,"w1":0,"d2":0,"w2":0,"d3":0,"w3":0,"d4":0,"w4":0,"d5":0,"w5":0,"d6":0,"w6":0,"xday1":0,"xmonth1":0,"xday2":0,"xmonth2":0,"xday3":0,"xmonth3":0,"xday4":0,"xmonth4":0,"xday5":0,"xmonth5":0,"xday6":0,"xmonth6":0,"xd1":0,"xw1":0,"xd2":0,"xw2":0,"xd3":0,"xw3":0,"xd4":0,"xw4":0,"xd5":0,"xw5":0,"xd6":0,"xw6":0,"suspend":false,"random":false,"repeat":false,"atstart":true,"odd":false,"even":false,"x":149.99999618530273,"y":1033.5000282526016,"wires":[["82af13cb.2bbca"],[],[]]},{"id":"827abe38.5cf82","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Living Room Scone On","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.living_room_sconce\"}","mergecontext":"","output_location":"","output_location_type":"none","x":656.9999961853027,"y":924.0000282526016,"wires":[[]]},{"id":"82af13cb.2bbca","type":"switch","z":"ca2305ba.3a64f8","name":"on/off","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"on","vt":"str"},{"t":"eq","v":"off","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":368.99999618530273,"y":1035.0000282526016,"wires":[["827abe38.5cf82","79c09d64.93f904","d3fd598e.5fd068","c8afd1ea.be12a"],["59600ad5.5b1d94","c0daa976.6a2b68","703b551.94085ac"]]},{"id":"79c09d64.93f904","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Stairway Lights On","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.stairs_light_switch_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":675.9999961853027,"y":977.0000282526016,"wires":[[]]},{"id":"c0daa976.6a2b68","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Stairway Lights Off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.stairs_light_switch_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":674.9999961853027,"y":1128.0000282526016,"wires":[[]]},{"id":"59600ad5.5b1d94","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Living Room Scone Off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.living_room_sconce\"}","mergecontext":"","output_location":"","output_location_type":"none","x":658.9999961853027,"y":1182.0000282526016,"wires":[[]]},{"id":"7fbbaeb0.385ac","type":"comment","z":"ca2305ba.3a64f8","name":"Dusk Till Dawn Light Controlls","info":"","x":175.99999618530273,"y":963.0000282526016,"wires":[]},{"id":"703b551.94085ac","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Front Lights Off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.front_house_lights_switch_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":685.9999961853027,"y":1075.0000282526016,"wires":[[]]},{"id":"d3fd598e.5fd068","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Front Lights On","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.front_house_lights_switch_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":687.9999961853027,"y":1027.0000282526016,"wires":[[]]},{"id":"c8afd1ea.be12a","type":"debug","z":"ca2305ba.3a64f8","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":475.99999618530273,"y":1303.0000282526016,"wires":[]},{"id":"4fe15b86.63ce84","type":"inject","z":"ca2305ba.3a64f8","name":"","topic":"","payload":"on","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":1476.9999961853027,"y":1145.0000282526016,"wires":[["de39fb0f.8b6488"]]},{"id":"de39fb0f.8b6488","type":"switch","z":"ca2305ba.3a64f8","name":"DoSomething","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"on","vt":"str"},{"t":"eq","v":"off","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":1699.9999961853027,"y":1177.0000282526016,"wires":[[],[]]},{"id":"432fb641.160308","type":"inject","z":"ca2305ba.3a64f8","name":"","topic":"","payload":"off","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":1477.9999961853027,"y":1209.0000282526016,"wires":[["de39fb0f.8b6488"]]},{"id":"9c9d739e.481a3","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Office Google Home","server":"65b61d5d.d1e1c4","service_domain":"tts","service":"google_say","data":"{\"entity_id\":\"media_player.office_speaker\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1405.9999961853027,"y":2243.0000282526016,"wires":[["8771c665.1bc5b8"]]},{"id":"4031f858.1e9748","type":"comment","z":"ca2305ba.3a64f8","name":"******************All Door Events******************","info":"adf","x":235.99999618530273,"y":1435.0000282526016,"wires":[]},{"id":"42550822.4932c8","type":"function","z":"ca2305ba.3a64f8","name":"Announce Door Closed","func":"if(flow.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Closed\"\n                } \n        }\n    }\n}","outputs":1,"noerr":0,"x":992.9999961853027,"y":2147.0000282526016,"wires":[["7e3035e.acfd0cc","702a2083.5b29f","9c9d739e.481a3"]]},{"id":"8c94788.3ba0988","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Office Slider Door Contact","server":"65b61d5d.d1e1c4","entityidfilter":"binary_sensor.office_slider_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":165.99999618530273,"y":1698.0000282526016,"wires":[["a2449016.4a104"]]},{"id":"a2449016.4a104","type":"switch","z":"ca2305ba.3a64f8","name":"Open/Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":385.99999618530273,"y":1699.0000282526016,"wires":[["df229c95.d623e"],["42550822.4932c8"]]},{"id":"92f147c2.c68e38","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Door TTS Status","server":"65b61d5d.d1e1c4","entityidfilter":"input_boolean.door_tts_status","entityidfiltertype":"exact","outputinitially":true,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":138.99999618530273,"y":631.0000282526016,"wires":[["d90bf2cf.5706e"]]},{"id":"8771c665.1bc5b8","type":"debug","z":"ca2305ba.3a64f8","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"true","targetType":"full","x":1712.9999961853027,"y":2280.0000282526016,"wires":[]},{"id":"d90bf2cf.5706e","type":"switch","z":"ca2305ba.3a64f8","name":"on/off","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":562.9999961853027,"y":633.0000282526016,"wires":[["525d514e.12faf"],["4aef307b.03584"]]},{"id":"746d5c74.a077b4","type":"debug","z":"ca2305ba.3a64f8","name":"test","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"true","targetType":"full","x":942.9999961853027,"y":1401.0000282526016,"wires":[]},{"id":"fb609928.fdd758","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Backdoor Contact","server":"65b61d5d.d1e1c4","entityidfilter":"binary_sensor.backdoor_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":145.99999618530273,"y":1780.0000282526016,"wires":[["9a9ab806.8c55a8"]]},{"id":"525d514e.12faf","type":"function","z":"ca2305ba.3a64f8","name":"Set Google TTS On","func":"flow.set(\"GoogleTTSDoorStatus\", 1)\nreturn msg;","outputs":1,"noerr":0,"x":784.9999961853027,"y":587.0000282526016,"wires":[[]]},{"id":"df229c95.d623e","type":"function","z":"ca2305ba.3a64f8","name":"Announce Door Open","func":"if(flow.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Opened\"\n                } \n        }\n    }\n}","outputs":1,"noerr":0,"x":990.9999961853027,"y":2066.0000282526016,"wires":[["eb645a5b.354298","7e3035e.acfd0cc","702a2083.5b29f","9c9d739e.481a3"]]},{"id":"9a9ab806.8c55a8","type":"switch","z":"ca2305ba.3a64f8","name":"Open Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":392.99999618530273,"y":1778.0000282526016,"wires":[["df229c95.d623e"],["42550822.4932c8"]]},{"id":"eb645a5b.354298","type":"debug","z":"ca2305ba.3a64f8","name":"backdoor2","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","x":1403.9999961853027,"y":2049.0000282526016,"wires":[]},{"id":"4aef307b.03584","type":"function","z":"ca2305ba.3a64f8","name":"Set Google TTS Off","func":"flow.set(\"GoogleTTSDoorStatus\", 0)\nreturn msg;","outputs":1,"noerr":0,"x":787.9999961853027,"y":639.0000282526016,"wires":[[]]},{"id":"7e3035e.acfd0cc","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Google Home","server":"65b61d5d.d1e1c4","service_domain":"tts","service":"google_say","data":"{\"entity_id\":\"media_player.kitchen_speaker\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1412.9999961853027,"y":2328.0000282526016,"wires":[["8771c665.1bc5b8"]]},{"id":"54e0a5ce.7bfacc","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Kitchen Door Contact","server":"65b61d5d.d1e1c4","entityidfilter":"binary_sensor.kitchen_door_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":155.99999618530273,"y":1867.0000282526016,"wires":[["facd8e21.69256"]]},{"id":"facd8e21.69256","type":"switch","z":"ca2305ba.3a64f8","name":"Open Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":384.99999618530273,"y":1867.0000282526016,"wires":[["df229c95.d623e"],["42550822.4932c8"]]},{"id":"21ad9323.a28e1c","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Front Door Contact","server":"65b61d5d.d1e1c4","entityidfilter":"binary_sensor.front_door_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":145.99999618530273,"y":1944.0000282526016,"wires":[["a6a18fb5.2d4f6"]]},{"id":"a6a18fb5.2d4f6","type":"switch","z":"ca2305ba.3a64f8","name":"Open Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":384.99999618530273,"y":1944.0000282526016,"wires":[["df229c95.d623e"],["42550822.4932c8"]]},{"id":"86610a3f.0305d8","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Master Bedroom Slider Contact","server":"65b61d5d.d1e1c4","entityidfilter":"binary_sensor.master_bedroom_slider_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":185.99999618530273,"y":2024.0000282526016,"wires":[["9e221147.4e4e2"]]},{"id":"9e221147.4e4e2","type":"switch","z":"ca2305ba.3a64f8","name":"Open Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":426.99999618530273,"y":2024.0000282526016,"wires":[["df229c95.d623e"],["42550822.4932c8"]]},{"id":"49dfbb2b.bf2f24","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Garage Basement Contact","server":"65b61d5d.d1e1c4","entityidfilter":"binary_sensor.garage_basement_door_sensor","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":165.99999618530273,"y":2114.0000282526016,"wires":[["8e70690c.caf858"]]},{"id":"8e70690c.caf858","type":"switch","z":"ca2305ba.3a64f8","name":"Open Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":426.99999618530273,"y":2114.0000282526016,"wires":[["df229c95.d623e"],["42550822.4932c8"]]},{"id":"5fb67583.d9170c","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Tesla Garage Door","server":"65b61d5d.d1e1c4","entityidfilter":"cover.tess","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":145.99999618530273,"y":2243.0000282526016,"wires":[["72c77997.8f9bd8"]]},{"id":"72c77997.8f9bd8","type":"switch","z":"ca2305ba.3a64f8","name":"Open Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":413.99999618530273,"y":2243.0000282526016,"wires":[["df229c95.d623e"],["42550822.4932c8"]]},{"id":"5b7a8eec.bbae2","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"S2k Garage Door","server":"65b61d5d.d1e1c4","entityidfilter":"cover.s2000","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":135.99999618530273,"y":2181.0000282526016,"wires":[["807e7b54.06b348"]]},{"id":"807e7b54.06b348","type":"switch","z":"ca2305ba.3a64f8","name":"Open Close","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":420.99999618530273,"y":2176.0000282526016,"wires":[["df229c95.d623e"],["42550822.4932c8"]]},{"id":"702a2083.5b29f","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Master Bedroom mini","server":"65b61d5d.d1e1c4","service_domain":"tts","service":"google_say","data":"{\"entity_id\":\"media_player.master_bedroom_mini\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1416.9999961853027,"y":2417.0000282526016,"wires":[["8771c665.1bc5b8"]]},{"id":"ad1d275f.028818","type":"comment","z":"ca2305ba.3a64f8","name":"Scenes - Automations","info":"","x":253.0000114440918,"y":3326.000081062317,"wires":[]},{"id":"2355dfcb.49c2c","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Hot Tub","server":"65b61d5d.d1e1c4","entityidfilter":"input_boolean.hot_tub_scene","entityidfiltertype":"exact","outputinitially":false,"state_type":"habool","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":203.0000114440918,"y":3399.000081062317,"wires":[["105fdb56.2ba5f5","86fbe941.829a88"]]},{"id":"105fdb56.2ba5f5","type":"switch","z":"ca2305ba.3a64f8","name":"on/off","property":"payload","propertyType":"msg","rules":[{"t":"true"},{"t":"false"}],"checkall":"true","repair":false,"outputs":2,"x":401.0000114440918,"y":3404.000081062317,"wires":[["d4640ca4.3fe68","8ff35f3a.ef114","20334113.f7378e"],["bd62cdc3.6466f","f21bd1e7.99de2","10d3dd4.82b3323"]]},{"id":"d4640ca4.3fe68","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Patio Soffit Lights - ON","server":"65b61d5d.d1e1c4","service_domain":"homeassistant","service":"turn_on","data":"{\"entity_id\":[\"light.outside_patio_soffit_light_wall_dimmer_level\"]}","mergecontext":"","output_location":"","output_location_type":"none","x":643.0000343322754,"y":3257.999943137169,"wires":[[]]},{"id":"bd62cdc3.6466f","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Patio Soffit Lights - OFF","server":"65b61d5d.d1e1c4","service_domain":"homeassistant","service":"turn_off","data":"{\"entity_id\":[\"light.outside_patio_soffit_light_wall_dimmer_level\"]}","mergecontext":"","output_location":"","output_location_type":"none","x":657.0000228881836,"y":3455.9999383687973,"wires":[[]]},{"id":"86fbe941.829a88","type":"debug","z":"ca2305ba.3a64f8","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":832.0000114440918,"y":3638.000081062317,"wires":[]},{"id":"7b772eac.3fa28","type":"power-monitor","z":"ca2305ba.3a64f8","name":"Washing Machine","threshold":"4","startafter":"3","stopafter":"2","x":477.9999694824219,"y":2389.000249862671,"wires":[[],["1497c62f.daf7ba"]]},{"id":"801d32b8.97a43","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Washing Machine Power","server":"65b61d5d.d1e1c4","entityidfilter":"sensor.s31_washer_energy_power","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":153.99996948242188,"y":2387.000249862671,"wires":[["7b772eac.3fa28"]]},{"id":"db48e66f.ea2418","type":"power-monitor","z":"ca2305ba.3a64f8","name":"Dryer","threshold":"3","startafter":"4","stopafter":"1","x":438.99997329711914,"y":2474.000726699829,"wires":[[],["6243d4b0.8831ec","6d065844.6f8968"]]},{"id":"93f05572.e6f7e8","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Dryer Power","server":"65b61d5d.d1e1c4","entityidfilter":"sensor.s31_dryer_energy_power","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":112.99996948242188,"y":2463.000238418579,"wires":[["db48e66f.ea2418","6243d4b0.8831ec"]]},{"id":"1497c62f.daf7ba","type":"function","z":"ca2305ba.3a64f8","name":"Announce Washer Complete","func":"return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"Washing Machine is complete\"\n            } \n        }\n    }","outputs":1,"noerr":0,"x":991.0000152587891,"y":2280.0004386901855,"wires":[["702a2083.5b29f","9c9d739e.481a3","7e3035e.acfd0cc"]]},{"id":"6d065844.6f8968","type":"function","z":"ca2305ba.3a64f8","name":"Announce Dryer Complete","func":"return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"The Dryer is complete\"\n            } \n        }\n    }","outputs":1,"noerr":0,"x":987.9999694824219,"y":2408.0004444122314,"wires":[["702a2083.5b29f","7e3035e.acfd0cc","9c9d739e.481a3"]]},{"id":"8ff35f3a.ef114","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Outlet Dimmer Lights - ON","server":"65b61d5d.d1e1c4","service_domain":"homeassistant","service":"turn_on","data":"{\"entity_id\":[\"light.outside_outlet_dimmer_level\"]}","mergecontext":"","output_location":"","output_location_type":"none","x":656.0000114440918,"y":3314.999986052513,"wires":[[]]},{"id":"f21bd1e7.99de2","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Outlet Dimmer Lights - OFF","server":"65b61d5d.d1e1c4","service_domain":"homeassistant","service":"turn_off","data":"{\"entity_id\":\"light.outside_outlet_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":664.0000076293945,"y":3516.999980330467,"wires":[[]]},{"id":"6243d4b0.8831ec","type":"debug","z":"ca2305ba.3a64f8","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","x":402.00000762939453,"y":2559.0002403259277,"wires":[]},{"id":"80b6fdfc.f155","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Google TTS Announce Level","server":"65b61d5d.d1e1c4","entityidfilter":"input_number.google_tts_announce_level","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":138.78125,"y":62.91476917266846,"wires":[["fafc0b5b.9e3788"]]},{"id":"fafc0b5b.9e3788","type":"function","z":"ca2305ba.3a64f8","name":"Set Google TTS Announce Level","func":"flow.set(\"GoogleTTSAnnounceLevel\", parseFloat (msg.payload))\nreturn msg;","outputs":1,"noerr":0,"x":479.0142135620117,"y":71.00567054748535,"wires":[["b827a254.b04de","197454e0.9ae08b","607b74a2.1321fc"]]},{"id":"8984a751.488b38","type":"debug","z":"ca2305ba.3a64f8","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"true","targetType":"full","x":1150,"y":100,"wires":[]},{"id":"b827a254.b04de","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Set Master Bedroom mini","server":"65b61d5d.d1e1c4","service_domain":"media_player","service":"volume_set","data":"{\"entity_id\":\"media_player.master_bedroom_mini\",\"volume_level\":\"{{payload}}\"}","mergecontext":"","output_location":"payload","output_location_type":"msg","x":883.0141716003418,"y":131.00562286376953,"wires":[["8984a751.488b38"]]},{"id":"607b74a2.1321fc","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Set Kitchen Mini","server":"65b61d5d.d1e1c4","service_domain":"media_player","service":"volume_set","data":"{\"entity_id\":\"media_player.kitchen_speaker\",\"volume_level\":\"{{payload}}\"}","mergecontext":"","output_location":"payload","output_location_type":"msg","x":850.0142135620117,"y":28.00568199157715,"wires":[[]]},{"id":"197454e0.9ae08b","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Set Office Google Home","server":"65b61d5d.d1e1c4","service_domain":"media_player","service":"volume_set","data":"{\"entity_id\":\"media_player.office_speaker\",\"volume_level\":\"{{payload}}\"}","mergecontext":"","output_location":"payload","output_location_type":"msg","x":883.0142135620117,"y":79.00568199157715,"wires":[[]]},{"id":"20334113.f7378e","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Patio Sconce Light- ON","server":"65b61d5d.d1e1c4","service_domain":"homeassistant","service":"turn_on","data":"{\"entity_id\":[\"light.outside_patio_sconce_light\"]}","mergecontext":"","output_location":"","output_location_type":"none","x":639.0142364501953,"y":3369.0056680440903,"wires":[[]]},{"id":"10d3dd4.82b3323","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Patio Sconce Light- OFF","server":"65b61d5d.d1e1c4","service_domain":"homeassistant","service":"turn_off","data":"{\"entity_id\":\"light.outside_patio_sconce_light\"}","mergecontext":"","output_location":"","output_location_type":"none","x":643.0142364501953,"y":3411.0056680440903,"wires":[[]]},{"id":"be2e0c70.44c65","type":"switch","z":"ca2305ba.3a64f8","name":"Scene?","property":"payload.event.domain","propertyType":"msg","rules":[{"t":"eq","v":"scene","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":367.01737213134766,"y":269.0103998184204,"wires":[["8e9b947e.490178","ad5f072c.3102d8"]]},{"id":"ad5f072c.3102d8","type":"switch","z":"ca2305ba.3a64f8","name":"Which scene?","property":"payload.event.service_data.entity_id","propertyType":"msg","rules":[{"t":"eq","v":"scene.kitchen_lights_on","vt":"str"},{"t":"eq","v":"scene.kitchen_lights_off","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":616.0173263549805,"y":266.01040744781494,"wires":[["a75dd051.3c485"],["aaf2f8.972ecd08"]]},{"id":"8e9b947e.490178","type":"debug","z":"ca2305ba.3a64f8","name":"","active":false,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":639.0764312744141,"y":205.6042127609253,"wires":[]},{"id":"16bb7664.4ffc7a","type":"server-events","z":"ca2305ba.3a64f8","name":"","server":"65b61d5d.d1e1c4","event_type":"call_service","x":160.0798568725586,"y":267.8680658340454,"wires":[["be2e0c70.44c65"]]},{"id":"a75dd051.3c485","type":"link out","z":"ca2305ba.3a64f8","name":"Kitchen Lights On Scene","links":["e8931289.5d916"],"x":838.0798969268799,"y":221.89931869506836,"wires":[]},{"id":"e8931289.5d916","type":"link in","z":"ca2305ba.3a64f8","name":"Kitchen Lights On Scene","links":["a75dd051.3c485"],"x":1514.5208015441895,"y":235.97227668762207,"wires":[["65fd3148.a14fd","7e13de80.da209","f0551aed.587918","66fb51d2.14a9b","aeab114.371b5f"]]},{"id":"65fd3148.a14fd","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Fridge Light - On","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1792.5278549194336,"y":203.72574996948242,"wires":[[]]},{"id":"f0551aed.587918","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Deck Door Light - On","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1798.4619674682617,"y":285.0103883743286,"wires":[[]]},{"id":"7e13de80.da209","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Sink Light - On","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1782.4618606567383,"y":243.010404586792,"wires":[[]]},{"id":"66fb51d2.14a9b","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Table Light - On","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.kitchen_table_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1787.4617538452148,"y":325.0103988647461,"wires":[[]]},{"id":"918392a5.ec51","type":"link in","z":"ca2305ba.3a64f8","name":"Kitchen Lights Off Scene","links":["aaf2f8.972ecd08"],"x":1494.958408355713,"y":477.97222900390625,"wires":[["2a64fcf8.fbd1c4","bcfa12f5.7de3f","ec03e206.7de75","721fa846.5ac218"]]},{"id":"aaf2f8.972ecd08","type":"link out","z":"ca2305ba.3a64f8","name":"Kitchen Lights Off Scene","links":["918392a5.ec51"],"x":836.9722442626953,"y":301.8854446411133,"wires":[]},{"id":"2a64fcf8.fbd1c4","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Fridge Light - Off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1759.4617919921875,"y":445.0104064941406,"wires":[[]]},{"id":"ec03e206.7de75","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Deck Door Light - Off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1765.3959045410156,"y":526.2950448989868,"wires":[[]]},{"id":"bcfa12f5.7de3f","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Sink Light - Off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1749.3957977294922,"y":484.2950611114502,"wires":[[]]},{"id":"721fa846.5ac218","type":"api-call-service","z":"ca2305ba.3a64f8","name":"Kitchen Table Light - Off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.kitchen_table_dimmer_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1754.3956909179688,"y":566.2950553894043,"wires":[[]]},{"id":"aeab114.371b5f","type":"debug","z":"ca2305ba.3a64f8","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":2319.524429321289,"y":198.60416412353516,"wires":[]},{"id":"9e610cbd.5c3b6","type":"server-events","z":"ca2305ba.3a64f8","name":"Input Zwave Scene activated","server":"65b61d5d.d1e1c4","event_type":"zwave.scene_activated","x":160,"y":2840,"wires":[["91268369.61c9a"]]},{"id":"91268369.61c9a","type":"switch","z":"ca2305ba.3a64f8","name":"Identify switch","property":"payload.event.entity_id","propertyType":"msg","rules":[{"t":"eq","v":"zwave.office_front_lights_switch","vt":"str"}],"checkall":"true","repair":false,"outputs":1,"x":420,"y":2840,"wires":[["b777f775.8c5d28"]]},{"id":"b777f775.8c5d28","type":"switch","z":"ca2305ba.3a64f8","name":"Front Office Light Switch","property":"payload.event.scene_data","propertyType":"msg","rules":[{"t":"eq","v":"7680","vt":"str"},{"t":"eq","v":"7860","vt":"str"},{"t":"eq","v":"7920","vt":"str"},{"t":"eq","v":"7980","vt":"str"},{"t":"eq","v":"8040","vt":"str"},{"t":"eq","v":"7740","vt":"str"}],"checkall":"false","repair":false,"outputs":6,"x":670,"y":2760,"wires":[["84124d45.02426"],["6fe1f9a8.c3ddc8"],["d049106e.4be3"],["6bb16bee.d44264"],["8cf61e31.ecc"],["1058c247.6a6afe"]]},{"id":"84124d45.02426","type":"switch","z":"ca2305ba.3a64f8","name":"1x Tap","property":"payload.event.scene_id","propertyType":"msg","rules":[{"t":"eq","v":"1","vt":"str"},{"t":"eq","v":"2","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":930,"y":2660,"wires":[[],[]]},{"id":"1058c247.6a6afe","type":"switch","z":"ca2305ba.3a64f8","name":"Long","property":"payload.event.scene_id","propertyType":"msg","rules":[{"t":"eq","v":"1","vt":"str"},{"t":"eq","v":"2","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":930,"y":2860,"wires":[[],[]]},{"id":"8cf61e31.ecc","type":"switch","z":"ca2305ba.3a64f8","name":"5x Tap","property":"payload.event.scene_id","propertyType":"msg","rules":[{"t":"eq","v":"1","vt":"str"},{"t":"eq","v":"2","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":930,"y":2820,"wires":[[],[]]},{"id":"6bb16bee.d44264","type":"switch","z":"ca2305ba.3a64f8","name":"4x Tap","property":"payload.event.scene_id","propertyType":"msg","rules":[{"t":"eq","v":"1","vt":"str"},{"t":"eq","v":"2","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":930,"y":2780,"wires":[[],[]]},{"id":"d049106e.4be3","type":"switch","z":"ca2305ba.3a64f8","name":"3x Tap","property":"payload.event.scene_id","propertyType":"msg","rules":[{"t":"eq","v":"1","vt":"str"},{"t":"eq","v":"2","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":930,"y":2740,"wires":[[],[]]},{"id":"6fe1f9a8.c3ddc8","type":"switch","z":"ca2305ba.3a64f8","name":"2x Tap","property":"payload.event.scene_id","propertyType":"msg","rules":[{"t":"eq","v":"1","vt":"str"},{"t":"eq","v":"2","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":930,"y":2700,"wires":[["82342c76.08e99","2ee6c55d.d59bda","5f3b5d60.30c184","28d9ad08.ed4b22","d9a5bf42.b0d81","c0dbde48.739","5aab6efe.79b3d"],["829eec45.96de6","129e69d6.ed5236","438d3261.15de4c","f13f520c.fb519","4753dbed.263004","1c0b1abf.3d9c55","8653e3c9.df975"]]},{"id":"83fc36ef.873d38","type":"switch","z":"ca2305ba.3a64f8","name":"","property":"payload","propertyType":"msg","rules":[{"t":"eq","v":"on","vt":"str"},{"t":"eq","v":"off","vt":"str"}],"checkall":"true","repair":false,"outputs":2,"x":310,"y":3120,"wires":[["c0dbde48.739","5aab6efe.79b3d"],["1c0b1abf.3d9c55","8653e3c9.df975"]]},{"id":"c0dbde48.739","type":"api-call-service","z":"ca2305ba.3a64f8","name":"office back light 1 on","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.office_back_1\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1480,"y":2760,"wires":[[]]},{"id":"1c0b1abf.3d9c55","type":"api-call-service","z":"ca2305ba.3a64f8","name":"office back light 1 off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.office_back_1\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1480,"y":3140,"wires":[[]]},{"id":"384a49c9.fd7c56","type":"server-state-changed","z":"ca2305ba.3a64f8","name":"Front Office Light","server":"65b61d5d.d1e1c4","entityidfilter":"light.office_front_lights_switch_level","entityidfiltertype":"exact","outputinitially":false,"state_type":"str","haltifstate":"","halt_if_type":"str","halt_if_compare":"is","outputs":1,"output_only_on_state_change":true,"x":143,"y":3120,"wires":[["83fc36ef.873d38"]]},{"id":"5aab6efe.79b3d","type":"api-call-service","z":"ca2305ba.3a64f8","name":"office back light 2 on","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.office_back_2\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1480,"y":2800,"wires":[[]]},{"id":"8653e3c9.df975","type":"api-call-service","z":"ca2305ba.3a64f8","name":"office back light 2 off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.office_back_2\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1480,"y":3180,"wires":[[]]},{"id":"618c1f7b.886c","type":"comment","z":"ca2305ba.3a64f8","name":"Controll Office Lights","info":"","x":118,"y":3069,"wires":[]},{"id":"d9a5bf42.b0d81","type":"api-call-service","z":"ca2305ba.3a64f8","name":"office front light on","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.office_front_lights_switch_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1470,"y":2720,"wires":[[]]},{"id":"4753dbed.263004","type":"api-call-service","z":"ca2305ba.3a64f8","name":"front office light off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.office_front_lights_switch_level\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1470,"y":3100,"wires":[[]]},{"id":"5f3b5d60.30c184","type":"api-call-service","z":"ca2305ba.3a64f8","name":"home theater BL on","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.home_theater_back_left\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1470,"y":2640,"wires":[[]]},{"id":"2ee6c55d.d59bda","type":"api-call-service","z":"ca2305ba.3a64f8","name":"home theater FL on","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.home_theater_front_left\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1470,"y":2600,"wires":[[]]},{"id":"82342c76.08e99","type":"api-call-service","z":"ca2305ba.3a64f8","name":"home theater FR on","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.home_theater_front_right\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1480,"y":2560,"wires":[[]]},{"id":"28d9ad08.ed4b22","type":"api-call-service","z":"ca2305ba.3a64f8","name":"home theater BR on","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_on","data":"{\"entity_id\":\"light.home_theater_back_right\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1480,"y":2680,"wires":[[]]},{"id":"129e69d6.ed5236","type":"api-call-service","z":"ca2305ba.3a64f8","name":"home theater BR off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.home_theater_back_right\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1480,"y":2980,"wires":[[]]},{"id":"829eec45.96de6","type":"api-call-service","z":"ca2305ba.3a64f8","name":"home theater BL off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.home_theater_back_left\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1470,"y":2940,"wires":[[]]},{"id":"f13f520c.fb519","type":"api-call-service","z":"ca2305ba.3a64f8","name":"home theater FR off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.home_theater_front_right\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1480,"y":3060,"wires":[[]]},{"id":"438d3261.15de4c","type":"api-call-service","z":"ca2305ba.3a64f8","name":"home theater FL off","server":"65b61d5d.d1e1c4","service_domain":"light","service":"turn_off","data":"{\"entity_id\":\"light.home_theater_front_left\"}","mergecontext":"","output_location":"","output_location_type":"none","x":1470,"y":3020,"wires":[[]]},{"id":"34f05386.4447fc","type":"comment","z":"ca2305ba.3a64f8","name":"********* Scene Management ********","info":"","x":180,"y":2660,"wires":[]}]
+[
+    {
+        "id": "ca2305ba.3a64f8",
+        "type": "tab",
+        "label": "Main Home Automation",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7f5a232.5f2e2dc",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "65b61d5d.d1e1c4",
+        "type": "server",
+        "z": "",
+        "name": "Home Assistant",
+        "legacy": false,
+        "hassio": false,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true
+    },
+    {
+        "id": "384480ed.efa9c",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Server Room Door Events",
+        "info": "",
+        "x": 168.99999618530273,
+        "y": 1480.0000282526016,
+        "wires": []
+    },
+    {
+        "id": "a05eb081.368b1",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Server Room Door Contact",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "binary_sensor.server_room_door_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 165.99999618530273,
+        "y": 1544.0000282526016,
+        "wires": [
+            [
+                "126eb1f0.60baee"
+            ]
+        ]
+    },
+    {
+        "id": "126eb1f0.60baee",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open/Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 396.99999618530273,
+        "y": 1547.0000282526016,
+        "wires": [
+            [
+                "89d07e44.bb7ee"
+            ],
+            [
+                "213116c7.f0fa2a"
+            ]
+        ]
+    },
+    {
+        "id": "213116c7.f0fa2a",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Light Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "switch",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"switch.server_room_switch_switch\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 657.9999961853027,
+        "y": 1555.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89d07e44.bb7ee",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Light On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "switch",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"switch.server_room_switch_switch\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 662.9999961853027,
+        "y": 1469.0000282526016,
+        "wires": [
+            [
+                "746d5c74.a077b4"
+            ]
+        ]
+    },
+    {
+        "id": "42d94216.dcc3ec",
+        "type": "bigtimer",
+        "z": "ca2305ba.3a64f8",
+        "outtopic": "",
+        "outpayload1": "on",
+        "outpayload2": "off",
+        "name": "Dusk/Dawn On/Off",
+        "comment": "",
+        "lat": "47.758560",
+        "lon": "-122.095440",
+        "starttime": "5004",
+        "endtime": "5003",
+        "starttime2": 0,
+        "endtime2": 0,
+        "startoff": "-60",
+        "endoff": "+30",
+        "startoff2": 0,
+        "endoff2": 0,
+        "offs": 0,
+        "outtext1": "on",
+        "outtext2": "off",
+        "timeout": 1440,
+        "sun": true,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "jan": true,
+        "feb": true,
+        "mar": true,
+        "apr": true,
+        "may": true,
+        "jun": true,
+        "jul": true,
+        "aug": true,
+        "sep": true,
+        "oct": true,
+        "nov": true,
+        "dec": true,
+        "day1": 0,
+        "month1": 0,
+        "day2": 0,
+        "month2": 0,
+        "day3": 0,
+        "month3": 0,
+        "day4": 0,
+        "month4": 0,
+        "day5": 0,
+        "month5": 0,
+        "day6": 0,
+        "month6": 0,
+        "d1": 0,
+        "w1": 0,
+        "d2": 0,
+        "w2": 0,
+        "d3": 0,
+        "w3": 0,
+        "d4": 0,
+        "w4": 0,
+        "d5": 0,
+        "w5": 0,
+        "d6": 0,
+        "w6": 0,
+        "xday1": 0,
+        "xmonth1": 0,
+        "xday2": 0,
+        "xmonth2": 0,
+        "xday3": 0,
+        "xmonth3": 0,
+        "xday4": 0,
+        "xmonth4": 0,
+        "xday5": 0,
+        "xmonth5": 0,
+        "xday6": 0,
+        "xmonth6": 0,
+        "xd1": 0,
+        "xw1": 0,
+        "xd2": 0,
+        "xw2": 0,
+        "xd3": 0,
+        "xw3": 0,
+        "xd4": 0,
+        "xw4": 0,
+        "xd5": 0,
+        "xw5": 0,
+        "xd6": 0,
+        "xw6": 0,
+        "suspend": false,
+        "random": false,
+        "repeat": false,
+        "atstart": true,
+        "odd": false,
+        "even": false,
+        "x": 149.99999618530273,
+        "y": 1033.5000282526016,
+        "wires": [
+            [
+                "82af13cb.2bbca"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "827abe38.5cf82",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Scone On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.living_room_sconce\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 656.9999961853027,
+        "y": 924.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82af13cb.2bbca",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 368.99999618530273,
+        "y": 1035.0000282526016,
+        "wires": [
+            [
+                "827abe38.5cf82",
+                "79c09d64.93f904",
+                "d3fd598e.5fd068",
+                "c8afd1ea.be12a"
+            ],
+            [
+                "59600ad5.5b1d94",
+                "c0daa976.6a2b68",
+                "703b551.94085ac"
+            ]
+        ]
+    },
+    {
+        "id": "79c09d64.93f904",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Stairway Lights On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.stairs_light_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 675.9999961853027,
+        "y": 977.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0daa976.6a2b68",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Stairway Lights Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.stairs_light_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 674.9999961853027,
+        "y": 1128.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59600ad5.5b1d94",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Scone Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.living_room_sconce\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 658.9999961853027,
+        "y": 1182.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7fbbaeb0.385ac",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Dusk Till Dawn Light Controlls",
+        "info": "",
+        "x": 175.99999618530273,
+        "y": 963.0000282526016,
+        "wires": []
+    },
+    {
+        "id": "703b551.94085ac",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Front Lights Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.front_house_lights_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 685.9999961853027,
+        "y": 1075.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3fd598e.5fd068",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Front Lights On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.front_house_lights_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 687.9999961853027,
+        "y": 1027.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8afd1ea.be12a",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 475.99999618530273,
+        "y": 1303.0000282526016,
+        "wires": []
+    },
+    {
+        "id": "4fe15b86.63ce84",
+        "type": "inject",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1476.9999961853027,
+        "y": 1145.0000282526016,
+        "wires": [
+            [
+                "de39fb0f.8b6488"
+            ]
+        ]
+    },
+    {
+        "id": "de39fb0f.8b6488",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "DoSomething",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1699.9999961853027,
+        "y": 1177.0000282526016,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "432fb641.160308",
+        "type": "inject",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 1477.9999961853027,
+        "y": 1209.0000282526016,
+        "wires": [
+            [
+                "de39fb0f.8b6488"
+            ]
+        ]
+    },
+    {
+        "id": "9c9d739e.481a3",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Office Google Home",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "tts",
+        "service": "google_say",
+        "data": "{\"entity_id\":\"media_player.office_speaker\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1405.9999961853027,
+        "y": 2243.0000282526016,
+        "wires": [
+            [
+                "8771c665.1bc5b8"
+            ]
+        ]
+    },
+    {
+        "id": "4031f858.1e9748",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "******************All Door Events******************",
+        "info": "adf",
+        "x": 235.99999618530273,
+        "y": 1435.0000282526016,
+        "wires": []
+    },
+    {
+        "id": "42550822.4932c8",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Announce Door Closed",
+        "func": "if(flow.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Closed\"\n                } \n        }\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 992.9999961853027,
+        "y": 2147.0000282526016,
+        "wires": [
+            [
+                "7e3035e.acfd0cc",
+                "702a2083.5b29f",
+                "9c9d739e.481a3"
+            ]
+        ]
+    },
+    {
+        "id": "8c94788.3ba0988",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Office Slider Door Contact",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "binary_sensor.office_slider_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 165.99999618530273,
+        "y": 1698.0000282526016,
+        "wires": [
+            [
+                "a2449016.4a104"
+            ]
+        ]
+    },
+    {
+        "id": "a2449016.4a104",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open/Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 385.99999618530273,
+        "y": 1699.0000282526016,
+        "wires": [
+            [
+                "df229c95.d623e"
+            ],
+            [
+                "42550822.4932c8"
+            ]
+        ]
+    },
+    {
+        "id": "92f147c2.c68e38",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Door TTS Status",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "input_boolean.door_tts_status",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 138.99999618530273,
+        "y": 631.0000282526016,
+        "wires": [
+            [
+                "d90bf2cf.5706e"
+            ]
+        ]
+    },
+    {
+        "id": "8771c665.1bc5b8",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1712.9999961853027,
+        "y": 2280.0000282526016,
+        "wires": []
+    },
+    {
+        "id": "d90bf2cf.5706e",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 562.9999961853027,
+        "y": 633.0000282526016,
+        "wires": [
+            [
+                "525d514e.12faf"
+            ],
+            [
+                "4aef307b.03584"
+            ]
+        ]
+    },
+    {
+        "id": "746d5c74.a077b4",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "test",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 942.9999961853027,
+        "y": 1401.0000282526016,
+        "wires": []
+    },
+    {
+        "id": "fb609928.fdd758",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Backdoor Contact",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "binary_sensor.backdoor_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 145.99999618530273,
+        "y": 1780.0000282526016,
+        "wires": [
+            [
+                "9a9ab806.8c55a8"
+            ]
+        ]
+    },
+    {
+        "id": "525d514e.12faf",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set Google TTS On",
+        "func": "flow.set(\"GoogleTTSDoorStatus\", 1)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 784.9999961853027,
+        "y": 587.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df229c95.d623e",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Announce Door Open",
+        "func": "if(flow.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Opened\"\n                } \n        }\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990.9999961853027,
+        "y": 2066.0000282526016,
+        "wires": [
+            [
+                "eb645a5b.354298",
+                "7e3035e.acfd0cc",
+                "702a2083.5b29f",
+                "9c9d739e.481a3"
+            ]
+        ]
+    },
+    {
+        "id": "9a9ab806.8c55a8",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 392.99999618530273,
+        "y": 1778.0000282526016,
+        "wires": [
+            [
+                "df229c95.d623e"
+            ],
+            [
+                "42550822.4932c8"
+            ]
+        ]
+    },
+    {
+        "id": "eb645a5b.354298",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "backdoor2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1403.9999961853027,
+        "y": 2049.0000282526016,
+        "wires": []
+    },
+    {
+        "id": "4aef307b.03584",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set Google TTS Off",
+        "func": "flow.set(\"GoogleTTSDoorStatus\", 0)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 787.9999961853027,
+        "y": 639.0000282526016,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e3035e.acfd0cc",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Google Home",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "tts",
+        "service": "google_say",
+        "data": "{\"entity_id\":\"media_player.kitchen_speaker\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1412.9999961853027,
+        "y": 2328.0000282526016,
+        "wires": [
+            [
+                "8771c665.1bc5b8"
+            ]
+        ]
+    },
+    {
+        "id": "54e0a5ce.7bfacc",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Door Contact",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "binary_sensor.kitchen_door_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 155.99999618530273,
+        "y": 1867.0000282526016,
+        "wires": [
+            [
+                "facd8e21.69256"
+            ]
+        ]
+    },
+    {
+        "id": "facd8e21.69256",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 384.99999618530273,
+        "y": 1867.0000282526016,
+        "wires": [
+            [
+                "df229c95.d623e"
+            ],
+            [
+                "42550822.4932c8"
+            ]
+        ]
+    },
+    {
+        "id": "21ad9323.a28e1c",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Front Door Contact",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "binary_sensor.front_door_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 145.99999618530273,
+        "y": 1944.0000282526016,
+        "wires": [
+            [
+                "a6a18fb5.2d4f6"
+            ]
+        ]
+    },
+    {
+        "id": "a6a18fb5.2d4f6",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 384.99999618530273,
+        "y": 1944.0000282526016,
+        "wires": [
+            [
+                "df229c95.d623e"
+            ],
+            [
+                "42550822.4932c8"
+            ]
+        ]
+    },
+    {
+        "id": "86610a3f.0305d8",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Master Bedroom Slider Contact",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "binary_sensor.master_bedroom_slider_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 185.99999618530273,
+        "y": 2024.0000282526016,
+        "wires": [
+            [
+                "9e221147.4e4e2"
+            ]
+        ]
+    },
+    {
+        "id": "9e221147.4e4e2",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 426.99999618530273,
+        "y": 2024.0000282526016,
+        "wires": [
+            [
+                "df229c95.d623e"
+            ],
+            [
+                "42550822.4932c8"
+            ]
+        ]
+    },
+    {
+        "id": "49dfbb2b.bf2f24",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Garage Basement Contact",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "binary_sensor.garage_basement_door_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 165.99999618530273,
+        "y": 2114.0000282526016,
+        "wires": [
+            [
+                "8e70690c.caf858"
+            ]
+        ]
+    },
+    {
+        "id": "8e70690c.caf858",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 426.99999618530273,
+        "y": 2114.0000282526016,
+        "wires": [
+            [
+                "df229c95.d623e"
+            ],
+            [
+                "42550822.4932c8"
+            ]
+        ]
+    },
+    {
+        "id": "5fb67583.d9170c",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Tesla Garage Door",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "cover.tess",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 145.99999618530273,
+        "y": 2243.0000282526016,
+        "wires": [
+            [
+                "72c77997.8f9bd8"
+            ]
+        ]
+    },
+    {
+        "id": "72c77997.8f9bd8",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 413.99999618530273,
+        "y": 2243.0000282526016,
+        "wires": [
+            [
+                "df229c95.d623e"
+            ],
+            [
+                "42550822.4932c8"
+            ]
+        ]
+    },
+    {
+        "id": "5b7a8eec.bbae2",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "S2k Garage Door",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "cover.s2000",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 135.99999618530273,
+        "y": 2181.0000282526016,
+        "wires": [
+            [
+                "807e7b54.06b348"
+            ]
+        ]
+    },
+    {
+        "id": "807e7b54.06b348",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Open Close",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 420.99999618530273,
+        "y": 2176.0000282526016,
+        "wires": [
+            [
+                "df229c95.d623e"
+            ],
+            [
+                "42550822.4932c8"
+            ]
+        ]
+    },
+    {
+        "id": "702a2083.5b29f",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Master Bedroom mini",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "tts",
+        "service": "google_say",
+        "data": "{\"entity_id\":\"media_player.master_bedroom_mini\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1416.9999961853027,
+        "y": 2417.0000282526016,
+        "wires": [
+            [
+                "8771c665.1bc5b8"
+            ]
+        ]
+    },
+    {
+        "id": "ad1d275f.028818",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Scenes - Automations",
+        "info": "",
+        "x": 253.0000114440918,
+        "y": 3326.000081062317,
+        "wires": []
+    },
+    {
+        "id": "2355dfcb.49c2c",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Hot Tub",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "input_boolean.hot_tub_scene",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 203.0000114440918,
+        "y": 3399.000081062317,
+        "wires": [
+            [
+                "105fdb56.2ba5f5",
+                "86fbe941.829a88"
+            ]
+        ]
+    },
+    {
+        "id": "105fdb56.2ba5f5",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 401.0000114440918,
+        "y": 3404.000081062317,
+        "wires": [
+            [
+                "d4640ca4.3fe68",
+                "8ff35f3a.ef114",
+                "20334113.f7378e"
+            ],
+            [
+                "bd62cdc3.6466f",
+                "f21bd1e7.99de2",
+                "10d3dd4.82b3323"
+            ]
+        ]
+    },
+    {
+        "id": "d4640ca4.3fe68",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Patio Soffit Lights - ON",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_on",
+        "data": "{\"entity_id\":[\"light.outside_patio_soffit_light_wall_dimmer_level\"]}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 643.0000343322754,
+        "y": 3257.999943137169,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd62cdc3.6466f",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Patio Soffit Lights - OFF",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_off",
+        "data": "{\"entity_id\":[\"light.outside_patio_soffit_light_wall_dimmer_level\"]}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 657.0000228881836,
+        "y": 3455.9999383687973,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86fbe941.829a88",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 832.0000114440918,
+        "y": 3638.000081062317,
+        "wires": []
+    },
+    {
+        "id": "7b772eac.3fa28",
+        "type": "power-monitor",
+        "z": "ca2305ba.3a64f8",
+        "name": "Washing Machine",
+        "threshold": "4",
+        "startafter": "3",
+        "stopafter": "2",
+        "x": 477.9999694824219,
+        "y": 2389.000249862671,
+        "wires": [
+            [],
+            [
+                "1497c62f.daf7ba"
+            ]
+        ]
+    },
+    {
+        "id": "801d32b8.97a43",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Washing Machine Power",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "sensor.s31_washer_energy_power",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 153.99996948242188,
+        "y": 2387.000249862671,
+        "wires": [
+            [
+                "7b772eac.3fa28"
+            ]
+        ]
+    },
+    {
+        "id": "db48e66f.ea2418",
+        "type": "power-monitor",
+        "z": "ca2305ba.3a64f8",
+        "name": "Dryer",
+        "threshold": "3",
+        "startafter": "4",
+        "stopafter": "1",
+        "x": 438.99997329711914,
+        "y": 2474.000726699829,
+        "wires": [
+            [],
+            [
+                "6243d4b0.8831ec",
+                "6d065844.6f8968"
+            ]
+        ]
+    },
+    {
+        "id": "93f05572.e6f7e8",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Dryer Power",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "sensor.s31_dryer_energy_power",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 112.99996948242188,
+        "y": 2463.000238418579,
+        "wires": [
+            [
+                "db48e66f.ea2418",
+                "6243d4b0.8831ec"
+            ]
+        ]
+    },
+    {
+        "id": "1497c62f.daf7ba",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Announce Washer Complete",
+        "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"Washing Machine is complete\"\n            } \n        }\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 991.0000152587891,
+        "y": 2280.0004386901855,
+        "wires": [
+            [
+                "702a2083.5b29f",
+                "9c9d739e.481a3",
+                "7e3035e.acfd0cc"
+            ]
+        ]
+    },
+    {
+        "id": "6d065844.6f8968",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Announce Dryer Complete",
+        "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"The Dryer is complete\"\n            } \n        }\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 987.9999694824219,
+        "y": 2408.0004444122314,
+        "wires": [
+            [
+                "702a2083.5b29f",
+                "7e3035e.acfd0cc",
+                "9c9d739e.481a3"
+            ]
+        ]
+    },
+    {
+        "id": "8ff35f3a.ef114",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Outlet Dimmer Lights - ON",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_on",
+        "data": "{\"entity_id\":[\"light.outside_outlet_dimmer_level\"]}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 656.0000114440918,
+        "y": 3314.999986052513,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f21bd1e7.99de2",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Outlet Dimmer Lights - OFF",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.outside_outlet_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 664.0000076293945,
+        "y": 3516.999980330467,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6243d4b0.8831ec",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 402.00000762939453,
+        "y": 2559.0002403259277,
+        "wires": []
+    },
+    {
+        "id": "80b6fdfc.f155",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Google TTS Announce Level",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "input_number.google_tts_announce_level",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 138.78125,
+        "y": 62.91476917266846,
+        "wires": [
+            [
+                "fafc0b5b.9e3788"
+            ]
+        ]
+    },
+    {
+        "id": "fafc0b5b.9e3788",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set Google TTS Announce Level",
+        "func": "flow.set(\"GoogleTTSAnnounceLevel\", parseFloat (msg.payload))\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 479.0142135620117,
+        "y": 71.00567054748535,
+        "wires": [
+            [
+                "b827a254.b04de",
+                "197454e0.9ae08b",
+                "607b74a2.1321fc"
+            ]
+        ]
+    },
+    {
+        "id": "8984a751.488b38",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1150,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b827a254.b04de",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set Master Bedroom mini",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "media_player",
+        "service": "volume_set",
+        "data": "{\"entity_id\":\"media_player.master_bedroom_mini\",\"volume_level\":\"{{payload}}\"}",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 883.0141716003418,
+        "y": 131.00562286376953,
+        "wires": [
+            [
+                "8984a751.488b38"
+            ]
+        ]
+    },
+    {
+        "id": "607b74a2.1321fc",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set Kitchen Mini",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "media_player",
+        "service": "volume_set",
+        "data": "{\"entity_id\":\"media_player.kitchen_speaker\",\"volume_level\":\"{{payload}}\"}",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 850.0142135620117,
+        "y": 28.00568199157715,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "197454e0.9ae08b",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set Office Google Home",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "media_player",
+        "service": "volume_set",
+        "data": "{\"entity_id\":\"media_player.office_speaker\",\"volume_level\":\"{{payload}}\"}",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "x": 883.0142135620117,
+        "y": 79.00568199157715,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20334113.f7378e",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Patio Sconce Light- ON",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_on",
+        "data": "{\"entity_id\":[\"light.outside_patio_sconce_light\"]}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 639.0142364501953,
+        "y": 3369.0056680440903,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10d3dd4.82b3323",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Patio Sconce Light- OFF",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.outside_patio_sconce_light\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 643.0142364501953,
+        "y": 3411.0056680440903,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be2e0c70.44c65",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Scene?",
+        "property": "payload.event.domain",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "scene",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 367.01737213134766,
+        "y": 269.0103998184204,
+        "wires": [
+            [
+                "8e9b947e.490178",
+                "ad5f072c.3102d8"
+            ]
+        ]
+    },
+    {
+        "id": "ad5f072c.3102d8",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Which scene?",
+        "property": "payload.event.service_data.entity_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "scene.kitchen_lights_on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "scene.kitchen_lights_off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 616.0173263549805,
+        "y": 266.01040744781494,
+        "wires": [
+            [
+                "a75dd051.3c485"
+            ],
+            [
+                "aaf2f8.972ecd08"
+            ]
+        ]
+    },
+    {
+        "id": "8e9b947e.490178",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 639.0764312744141,
+        "y": 205.6042127609253,
+        "wires": []
+    },
+    {
+        "id": "16bb7664.4ffc7a",
+        "type": "server-events",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "event_type": "call_service",
+        "x": 160.0798568725586,
+        "y": 267.8680658340454,
+        "wires": [
+            [
+                "be2e0c70.44c65"
+            ]
+        ]
+    },
+    {
+        "id": "a75dd051.3c485",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Lights On Scene",
+        "links": [
+            "e8931289.5d916"
+        ],
+        "x": 838.0798969268799,
+        "y": 221.89931869506836,
+        "wires": []
+    },
+    {
+        "id": "e8931289.5d916",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Lights On Scene",
+        "links": [
+            "a75dd051.3c485"
+        ],
+        "x": 1514.5208015441895,
+        "y": 235.97227668762207,
+        "wires": [
+            [
+                "65fd3148.a14fd",
+                "7e13de80.da209",
+                "f0551aed.587918",
+                "66fb51d2.14a9b",
+                "aeab114.371b5f"
+            ]
+        ]
+    },
+    {
+        "id": "65fd3148.a14fd",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Fridge Light - On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1792.5278549194336,
+        "y": 203.72574996948242,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0551aed.587918",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Deck Door Light - On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1798.4619674682617,
+        "y": 285.0103883743286,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e13de80.da209",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Sink Light - On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1782.4618606567383,
+        "y": 243.010404586792,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "66fb51d2.14a9b",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Table Light - On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_table_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1787.4617538452148,
+        "y": 325.0103988647461,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "918392a5.ec51",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Lights Off Scene",
+        "links": [
+            "aaf2f8.972ecd08"
+        ],
+        "x": 1494.958408355713,
+        "y": 477.97222900390625,
+        "wires": [
+            [
+                "2a64fcf8.fbd1c4",
+                "bcfa12f5.7de3f",
+                "ec03e206.7de75",
+                "721fa846.5ac218"
+            ]
+        ]
+    },
+    {
+        "id": "aaf2f8.972ecd08",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Lights Off Scene",
+        "links": [
+            "918392a5.ec51"
+        ],
+        "x": 836.9722442626953,
+        "y": 301.8854446411133,
+        "wires": []
+    },
+    {
+        "id": "2a64fcf8.fbd1c4",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Fridge Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1759.4617919921875,
+        "y": 445.0104064941406,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec03e206.7de75",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Deck Door Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1765.3959045410156,
+        "y": 526.2950448989868,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bcfa12f5.7de3f",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Sink Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1749.3957977294922,
+        "y": 484.2950611114502,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "721fa846.5ac218",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Table Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_table_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1754.3956909179688,
+        "y": 566.2950553894043,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aeab114.371b5f",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 2319.524429321289,
+        "y": 198.60416412353516,
+        "wires": []
+    },
+    {
+        "id": "9e610cbd.5c3b6",
+        "type": "server-events",
+        "z": "ca2305ba.3a64f8",
+        "name": "Input Zwave Scene activated",
+        "server": "65b61d5d.d1e1c4",
+        "event_type": "zwave.scene_activated",
+        "x": 160,
+        "y": 2840,
+        "wires": [
+            [
+                "91268369.61c9a"
+            ]
+        ]
+    },
+    {
+        "id": "91268369.61c9a",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Identify switch",
+        "property": "payload.event.entity_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "zwave.office_front_lights_switch",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 2840,
+        "wires": [
+            [
+                "b777f775.8c5d28"
+            ]
+        ]
+    },
+    {
+        "id": "b777f775.8c5d28",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Front Office Light Switch",
+        "property": "payload.event.scene_data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "7680",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7860",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7920",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7980",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8040",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7740",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 670,
+        "y": 2760,
+        "wires": [
+            [
+                "84124d45.02426"
+            ],
+            [
+                "6fe1f9a8.c3ddc8"
+            ],
+            [
+                "d049106e.4be3"
+            ],
+            [
+                "6bb16bee.d44264"
+            ],
+            [
+                "8cf61e31.ecc"
+            ],
+            [
+                "1058c247.6a6afe"
+            ]
+        ]
+    },
+    {
+        "id": "84124d45.02426",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "1x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 2660,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1058c247.6a6afe",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Long",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 2860,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8cf61e31.ecc",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "5x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 2820,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6bb16bee.d44264",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "4x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 2780,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d049106e.4be3",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "3x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 2740,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6fe1f9a8.c3ddc8",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "2x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 2700,
+        "wires": [
+            [
+                "82342c76.08e99",
+                "2ee6c55d.d59bda",
+                "5f3b5d60.30c184",
+                "28d9ad08.ed4b22",
+                "d9a5bf42.b0d81",
+                "c0dbde48.739",
+                "5aab6efe.79b3d"
+            ],
+            [
+                "829eec45.96de6",
+                "129e69d6.ed5236",
+                "438d3261.15de4c",
+                "f13f520c.fb519",
+                "4753dbed.263004",
+                "1c0b1abf.3d9c55",
+                "8653e3c9.df975"
+            ]
+        ]
+    },
+    {
+        "id": "83fc36ef.873d38",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 3120,
+        "wires": [
+            [
+                "c0dbde48.739",
+                "5aab6efe.79b3d"
+            ],
+            [
+                "1c0b1abf.3d9c55",
+                "8653e3c9.df975"
+            ]
+        ]
+    },
+    {
+        "id": "c0dbde48.739",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "office back light 1 on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.office_back_1\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1480,
+        "y": 2760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c0b1abf.3d9c55",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "office back light 1 off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.office_back_1\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1480,
+        "y": 3140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "384a49c9.fd7c56",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Front Office Light",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "light.office_front_lights_switch_level",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 143,
+        "y": 3120,
+        "wires": [
+            [
+                "83fc36ef.873d38"
+            ]
+        ]
+    },
+    {
+        "id": "5aab6efe.79b3d",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "office back light 2 on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.office_back_2\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1480,
+        "y": 2800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8653e3c9.df975",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "office back light 2 off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.office_back_2\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1480,
+        "y": 3180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "618c1f7b.886c",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Controll Office Lights",
+        "info": "",
+        "x": 118,
+        "y": 3069,
+        "wires": []
+    },
+    {
+        "id": "d9a5bf42.b0d81",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "office front light on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.office_front_lights_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1470,
+        "y": 2720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4753dbed.263004",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "front office light off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.office_front_lights_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1470,
+        "y": 3100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f3b5d60.30c184",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "home theater BL on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.home_theater_back_left\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1470,
+        "y": 2640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ee6c55d.d59bda",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "home theater FL on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.home_theater_front_left\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1470,
+        "y": 2600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82342c76.08e99",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "home theater FR on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.home_theater_front_right\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1480,
+        "y": 2560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28d9ad08.ed4b22",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "home theater BR on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.home_theater_back_right\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1480,
+        "y": 2680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "129e69d6.ed5236",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "home theater BR off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.home_theater_back_right\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1480,
+        "y": 2980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "829eec45.96de6",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "home theater BL off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.home_theater_back_left\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1470,
+        "y": 2940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f13f520c.fb519",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "home theater FR off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.home_theater_front_right\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1480,
+        "y": 3060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "438d3261.15de4c",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "home theater FL off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.home_theater_front_left\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1470,
+        "y": 3020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34f05386.4447fc",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "********* Scene Management ********",
+        "info": "",
+        "x": 180,
+        "y": 2660,
+        "wires": []
+    }
+]
