@@ -1575,9 +1575,7 @@
         "type": "link out",
         "z": "ca2305ba.3a64f8",
         "name": "Kitchen Lights On Scene",
-        "links": [
-            "e8931289.5d916"
-        ],
+        "links": [],
         "x": 838.0798969268799,
         "y": 221.89931869506836,
         "wires": []
@@ -1586,12 +1584,12 @@
         "id": "e8931289.5d916",
         "type": "link in",
         "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Lights On Scene",
+        "name": "Turn on all Kitchen Lights",
         "links": [
-            "a75dd051.3c485"
+            "bf7b5656.d71878"
         ],
-        "x": 1785,
-        "y": 200,
+        "x": 1600,
+        "y": 190,
         "wires": [
             [
                 "65fd3148.a14fd",
@@ -1599,7 +1597,8 @@
                 "f0551aed.587918",
                 "66fb51d2.14a9b"
             ]
-        ]
+        ],
+        "l": true
     },
     {
         "id": "65fd3148.a14fd",
@@ -1677,12 +1676,12 @@
         "id": "918392a5.ec51",
         "type": "link in",
         "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Lights Off Scene",
+        "name": "Turn off all Kitchen Lights",
         "links": [
-            "aaf2f8.972ecd08"
+            "1dd05952.7a5727"
         ],
-        "x": 1775,
-        "y": 430,
+        "x": 1600,
+        "y": 480,
         "wires": [
             [
                 "2a64fcf8.fbd1c4",
@@ -1690,16 +1689,15 @@
                 "ec03e206.7de75",
                 "721fa846.5ac218"
             ]
-        ]
+        ],
+        "l": true
     },
     {
         "id": "aaf2f8.972ecd08",
         "type": "link out",
         "z": "ca2305ba.3a64f8",
         "name": "Kitchen Lights Off Scene",
-        "links": [
-            "918392a5.ec51"
-        ],
+        "links": [],
         "x": 836.9722442626953,
         "y": 301.8854446411133,
         "wires": []
@@ -1803,16 +1801,24 @@
                 "t": "eq",
                 "v": "zwave.office_front_lights_switch",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "zwave.kitchen_fridge_light_wall_dimmer",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 2,
         "x": 420,
         "y": 2840,
         "wires": [
             [
                 "b777f775.8c5d28"
+            ],
+            [
+                "a9a69829.28b2a8"
             ]
         ]
     },
@@ -1902,7 +1908,7 @@
         "repair": false,
         "outputs": 2,
         "x": 930,
-        "y": 2700,
+        "y": 2720,
         "wires": [
             [
                 "37b5dfa6.90096"
@@ -1958,7 +1964,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2870,
-        "y": 760,
+        "y": 750,
         "wires": [
             []
         ]
@@ -1976,7 +1982,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2870,
-        "y": 950,
+        "y": 940,
         "wires": [
             []
         ]
@@ -2017,7 +2023,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2870,
-        "y": 810,
+        "y": 800,
         "wires": [
             []
         ]
@@ -2035,7 +2041,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2870,
-        "y": 1000,
+        "y": 990,
         "wires": [
             []
         ]
@@ -2063,7 +2069,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2860,
-        "y": 710,
+        "y": 700,
         "wires": [
             []
         ]
@@ -2081,7 +2087,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2860,
-        "y": 900,
+        "y": 890,
         "wires": [
             []
         ]
@@ -2099,7 +2105,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2860,
-        "y": 290,
+        "y": 280,
         "wires": [
             []
         ]
@@ -2117,7 +2123,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2860,
-        "y": 240,
+        "y": 230,
         "wires": [
             []
         ]
@@ -2135,7 +2141,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2870,
-        "y": 190,
+        "y": 180,
         "wires": [
             []
         ]
@@ -2153,7 +2159,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2870,
-        "y": 340,
+        "y": 330,
         "wires": [
             []
         ]
@@ -2171,7 +2177,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2870,
-        "y": 480,
+        "y": 470,
         "wires": [
             []
         ]
@@ -2189,7 +2195,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2860,
-        "y": 430,
+        "y": 420,
         "wires": [
             []
         ]
@@ -2207,7 +2213,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2870,
-        "y": 580,
+        "y": 570,
         "wires": [
             []
         ]
@@ -2225,7 +2231,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 2860,
-        "y": 530,
+        "y": 520,
         "wires": [
             []
         ]
@@ -2287,7 +2293,7 @@
         "name": "Home Theater Lights",
         "info": "",
         "x": 2810,
-        "y": 110,
+        "y": 100,
         "wires": []
     },
     {
@@ -2297,7 +2303,7 @@
         "name": "Trigger On",
         "info": "",
         "x": 2800,
-        "y": 150,
+        "y": 140,
         "wires": []
     },
     {
@@ -2307,7 +2313,7 @@
         "name": "Trigger Off",
         "info": "",
         "x": 2800,
-        "y": 390,
+        "y": 380,
         "wires": []
     },
     {
@@ -2317,7 +2323,7 @@
         "name": "Office Lights",
         "info": "",
         "x": 2780,
-        "y": 630,
+        "y": 620,
         "wires": []
     },
     {
@@ -2327,7 +2333,7 @@
         "name": "Trigger On",
         "info": "",
         "x": 2800,
-        "y": 670,
+        "y": 660,
         "wires": []
     },
     {
@@ -2337,7 +2343,7 @@
         "name": "Trigger Off",
         "info": "",
         "x": 2800,
-        "y": 860,
+        "y": 850,
         "wires": []
     },
     {
@@ -2358,8 +2364,8 @@
         "links": [
             "26849a1f.654876"
         ],
-        "x": 1150,
-        "y": 2720,
+        "x": 1130,
+        "y": 2740,
         "wires": [],
         "l": true
     },
@@ -2371,8 +2377,8 @@
         "links": [
             "2715c85.ae11838"
         ],
-        "x": 1150,
-        "y": 2670,
+        "x": 1130,
+        "y": 2690,
         "wires": [],
         "l": true
     },
@@ -2385,7 +2391,7 @@
             "37b5dfa6.90096"
         ],
         "x": 2430,
-        "y": 250,
+        "y": 240,
         "wires": [
             [
                 "82342c76.08e99",
@@ -2408,7 +2414,7 @@
             "553a45e6.a1485c"
         ],
         "x": 2420,
-        "y": 800,
+        "y": 790,
         "wires": [
             [
                 "829eec45.96de6",
@@ -2444,7 +2450,7 @@
             "1b6aa296.33df2d"
         ],
         "x": 2400,
-        "y": 700,
+        "y": 690,
         "wires": [
             [
                 "d9a5bf42.b0d81",
@@ -2476,7 +2482,7 @@
             "45b5815e.4a6e8"
         ],
         "x": 2400,
-        "y": 910,
+        "y": 900,
         "wires": [
             [
                 "4753dbed.263004",
@@ -2484,6 +2490,128 @@
                 "8653e3c9.df975"
             ]
         ],
+        "l": true
+    },
+    {
+        "id": "a9a69829.28b2a8",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Fridge Light Switch",
+        "property": "payload.event.scene_data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "7680",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7860",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7920",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7980",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8040",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7740",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 680,
+        "y": 2880,
+        "wires": [
+            [],
+            [
+                "21c08113.8eab6e"
+            ],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "1x Tap",
+            "2x Tap",
+            "3x Tap",
+            "4x Tap",
+            "5x Tap",
+            "Long Tap"
+        ]
+    },
+    {
+        "id": "21c08113.8eab6e",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "2x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 2850,
+        "wires": [
+            [
+                "bf7b5656.d71878"
+            ],
+            [
+                "1dd05952.7a5727"
+            ]
+        ]
+    },
+    {
+        "id": "bf7b5656.d71878",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on all Kitchen Lights",
+        "links": [
+            "e8931289.5d916"
+        ],
+        "x": 1130,
+        "y": 2820,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1dd05952.7a5727",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off all Kitchen Lights",
+        "links": [
+            "918392a5.ec51"
+        ],
+        "x": 1130,
+        "y": 2870,
+        "wires": [],
         "l": true
     }
 ]
