@@ -401,75 +401,6 @@
         "wires": []
     },
     {
-        "id": "4fe15b86.63ce84",
-        "type": "inject",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "topic": "",
-        "payload": "on",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 1476.9999961853027,
-        "y": 1145.0000282526016,
-        "wires": [
-            [
-                "de39fb0f.8b6488"
-            ]
-        ]
-    },
-    {
-        "id": "de39fb0f.8b6488",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "DoSomething",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1699.9999961853027,
-        "y": 1177.0000282526016,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "432fb641.160308",
-        "type": "inject",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "topic": "",
-        "payload": "off",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 1477.9999961853027,
-        "y": 1209.0000282526016,
-        "wires": [
-            [
-                "de39fb0f.8b6488"
-            ]
-        ]
-    },
-    {
         "id": "9c9d739e.481a3",
         "type": "api-call-service",
         "z": "ca2305ba.3a64f8",
@@ -1123,8 +1054,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Scenes - Automations",
         "info": "",
-        "x": 253.0000114440918,
-        "y": 3326.000081062317,
+        "x": 290,
+        "y": 3920,
         "wires": []
     },
     {
@@ -1142,8 +1073,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 203.0000114440918,
-        "y": 3399.000081062317,
+        "x": 240,
+        "y": 3993,
         "wires": [
             [
                 "105fdb56.2ba5f5",
@@ -1169,8 +1100,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 401.0000114440918,
-        "y": 3404.000081062317,
+        "x": 438,
+        "y": 3998,
         "wires": [
             [
                 "d4640ca4.3fe68",
@@ -1196,8 +1127,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 643.0000343322754,
-        "y": 3257.999943137169,
+        "x": 680.0000228881836,
+        "y": 3851.999862074852,
         "wires": [
             []
         ]
@@ -1214,8 +1145,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 657.0000228881836,
-        "y": 3455.9999383687973,
+        "x": 694.0000114440918,
+        "y": 4049.9998573064804,
         "wires": [
             []
         ]
@@ -1230,8 +1161,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 832.0000114440918,
-        "y": 3638.000081062317,
+        "x": 869,
+        "y": 4232,
         "wires": []
     },
     {
@@ -1364,8 +1295,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 656.0000114440918,
-        "y": 3314.999986052513,
+        "x": 693,
+        "y": 3908.9999049901962,
         "wires": [
             []
         ]
@@ -1382,8 +1313,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 664.0000076293945,
-        "y": 3516.999980330467,
+        "x": 700.9999961853027,
+        "y": 4110.99989926815,
         "wires": [
             []
         ]
@@ -1527,8 +1458,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 639.0142364501953,
-        "y": 3369.0056680440903,
+        "x": 676.0142250061035,
+        "y": 3963.0055869817734,
         "wires": [
             []
         ]
@@ -1545,8 +1476,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 643.0142364501953,
-        "y": 3411.0056680440903,
+        "x": 680.0142250061035,
+        "y": 4005.0055869817734,
         "wires": [
             []
         ]
@@ -1659,15 +1590,14 @@
         "links": [
             "a75dd051.3c485"
         ],
-        "x": 1514.5208015441895,
-        "y": 235.97227668762207,
+        "x": 1785,
+        "y": 200,
         "wires": [
             [
                 "65fd3148.a14fd",
                 "7e13de80.da209",
                 "f0551aed.587918",
-                "66fb51d2.14a9b",
-                "aeab114.371b5f"
+                "66fb51d2.14a9b"
             ]
         ]
     },
@@ -1683,8 +1613,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1792.5278549194336,
-        "y": 203.72574996948242,
+        "x": 2090,
+        "y": 180,
         "wires": [
             []
         ]
@@ -1701,8 +1631,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1798.4619674682617,
-        "y": 285.0103883743286,
+        "x": 2100,
+        "y": 280,
         "wires": [
             []
         ]
@@ -1719,8 +1649,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1782.4618606567383,
-        "y": 243.010404586792,
+        "x": 2080,
+        "y": 230,
         "wires": [
             []
         ]
@@ -1737,8 +1667,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1787.4617538452148,
-        "y": 325.0103988647461,
+        "x": 2090,
+        "y": 330,
         "wires": [
             []
         ]
@@ -1751,8 +1681,8 @@
         "links": [
             "aaf2f8.972ecd08"
         ],
-        "x": 1494.958408355713,
-        "y": 477.97222900390625,
+        "x": 1775,
+        "y": 430,
         "wires": [
             [
                 "2a64fcf8.fbd1c4",
@@ -1786,8 +1716,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1759.4617919921875,
-        "y": 445.0104064941406,
+        "x": 2090,
+        "y": 420,
         "wires": [
             []
         ]
@@ -1804,8 +1734,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1765.3959045410156,
-        "y": 526.2950448989868,
+        "x": 2100,
+        "y": 520,
         "wires": [
             []
         ]
@@ -1822,8 +1752,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1749.3957977294922,
-        "y": 484.2950611114502,
+        "x": 2080,
+        "y": 470,
         "wires": [
             []
         ]
@@ -1840,25 +1770,11 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1754.3956909179688,
-        "y": 566.2950553894043,
+        "x": 2090,
+        "y": 570,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "aeab114.371b5f",
-        "type": "debug",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 2319.524429321289,
-        "y": 198.60416412353516,
-        "wires": []
     },
     {
         "id": "9e610cbd.5c3b6",
@@ -2136,22 +2052,10 @@
         "y": 2700,
         "wires": [
             [
-                "82342c76.08e99",
-                "2ee6c55d.d59bda",
-                "5f3b5d60.30c184",
-                "28d9ad08.ed4b22",
-                "d9a5bf42.b0d81",
-                "c0dbde48.739",
-                "5aab6efe.79b3d"
+                "37b5dfa6.90096"
             ],
             [
-                "829eec45.96de6",
-                "129e69d6.ed5236",
-                "438d3261.15de4c",
-                "f13f520c.fb519",
-                "4753dbed.263004",
-                "1c0b1abf.3d9c55",
-                "8653e3c9.df975"
+                "553a45e6.a1485c"
             ]
         ]
     },
@@ -2177,16 +2081,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 310,
-        "y": 3120,
+        "x": 346.9999885559082,
+        "y": 3713.999918937683,
         "wires": [
             [
-                "c0dbde48.739",
-                "5aab6efe.79b3d"
+                "1b6aa296.33df2d"
             ],
             [
-                "1c0b1abf.3d9c55",
-                "8653e3c9.df975"
+                "45b5815e.4a6e8"
             ]
         ]
     },
@@ -2202,8 +2104,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1480,
-        "y": 2760,
+        "x": 2870,
+        "y": 760,
         "wires": [
             []
         ]
@@ -2220,8 +2122,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1480,
-        "y": 3140,
+        "x": 2870,
+        "y": 950,
         "wires": [
             []
         ]
@@ -2241,8 +2143,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 143,
-        "y": 3120,
+        "x": 179.9999885559082,
+        "y": 3713.999918937683,
         "wires": [
             [
                 "83fc36ef.873d38"
@@ -2261,8 +2163,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1480,
-        "y": 2800,
+        "x": 2870,
+        "y": 810,
         "wires": [
             []
         ]
@@ -2279,8 +2181,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1480,
-        "y": 3180,
+        "x": 2870,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -2291,8 +2193,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Controll Office Lights",
         "info": "",
-        "x": 118,
-        "y": 3069,
+        "x": 146.9999885559082,
+        "y": 3623.999918937683,
         "wires": []
     },
     {
@@ -2307,10 +2209,12 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1470,
-        "y": 2720,
+        "x": 2860,
+        "y": 710,
         "wires": [
-            []
+            [
+                "44de52a6.4219cc"
+            ]
         ]
     },
     {
@@ -2325,8 +2229,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1470,
-        "y": 3100,
+        "x": 2860,
+        "y": 900,
         "wires": [
             []
         ]
@@ -2343,8 +2247,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1470,
-        "y": 2640,
+        "x": 2860,
+        "y": 290,
         "wires": [
             []
         ]
@@ -2361,8 +2265,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1470,
-        "y": 2600,
+        "x": 2860,
+        "y": 240,
         "wires": [
             []
         ]
@@ -2379,8 +2283,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1480,
-        "y": 2560,
+        "x": 2870,
+        "y": 190,
         "wires": [
             []
         ]
@@ -2397,8 +2301,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1480,
-        "y": 2680,
+        "x": 2870,
+        "y": 340,
         "wires": [
             []
         ]
@@ -2415,8 +2319,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1480,
-        "y": 2980,
+        "x": 2870,
+        "y": 480,
         "wires": [
             []
         ]
@@ -2433,8 +2337,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1470,
-        "y": 2940,
+        "x": 2860,
+        "y": 430,
         "wires": [
             []
         ]
@@ -2451,8 +2355,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1480,
-        "y": 3060,
+        "x": 2870,
+        "y": 580,
         "wires": [
             []
         ]
@@ -2469,8 +2373,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1470,
-        "y": 3020,
+        "x": 2860,
+        "y": 530,
         "wires": [
             []
         ]
@@ -2483,6 +2387,266 @@
         "info": "",
         "x": 180,
         "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "96041091.3119e",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "List out all Upstairs Lights/Switches",
+        "info": "",
+        "x": 2030,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "bda2c466.b5a458",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Lights",
+        "info": "",
+        "x": 1990,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4d53cd09.51a434",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger On",
+        "info": "",
+        "x": 2010,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "22b3ceab.56c0c2",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 2010,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2416ebea.65a524",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Home Theater Lights",
+        "info": "",
+        "x": 2810,
+        "y": 110,
+        "wires": []
+    },
+    {
+        "id": "511fc771.97ee78",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger On",
+        "info": "",
+        "x": 2800,
+        "y": 150,
+        "wires": []
+    },
+    {
+        "id": "a692f5a7.913458",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 2800,
+        "y": 390,
+        "wires": []
+    },
+    {
+        "id": "eab128e.f4876d8",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Office Lights",
+        "info": "",
+        "x": 2780,
+        "y": 630,
+        "wires": []
+    },
+    {
+        "id": "5ea9b65b.7784f8",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger On",
+        "info": "",
+        "x": 2800,
+        "y": 670,
+        "wires": []
+    },
+    {
+        "id": "1d99c49c.18f6eb",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 2800,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "d0794343.2e111",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "List out all Downstairs Lights/Switches",
+        "info": "",
+        "x": 2830,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "553a45e6.a1485c",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Office/HT Lights",
+        "links": [
+            "26849a1f.654876"
+        ],
+        "x": 1150,
+        "y": 2710,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "37b5dfa6.90096",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Office/HT Lights",
+        "links": [
+            "2715c85.ae11838"
+        ],
+        "x": 1150,
+        "y": 2660,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2715c85.ae11838",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Office/HT Lights",
+        "links": [
+            "37b5dfa6.90096"
+        ],
+        "x": 2430,
+        "y": 250,
+        "wires": [
+            [
+                "82342c76.08e99",
+                "2ee6c55d.d59bda",
+                "5f3b5d60.30c184",
+                "28d9ad08.ed4b22",
+                "d9a5bf42.b0d81",
+                "c0dbde48.739",
+                "5aab6efe.79b3d"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "26849a1f.654876",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Office/HT Lights",
+        "links": [
+            "553a45e6.a1485c"
+        ],
+        "x": 2420,
+        "y": 800,
+        "wires": [
+            [
+                "829eec45.96de6",
+                "129e69d6.ed5236",
+                "438d3261.15de4c",
+                "f13f520c.fb519",
+                "4753dbed.263004",
+                "1c0b1abf.3d9c55",
+                "8653e3c9.df975"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "1b6aa296.33df2d",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Office Lights",
+        "links": [
+            "94082817.dc5788"
+        ],
+        "x": 546.9999885559082,
+        "y": 3683.999918937683,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "94082817.dc5788",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Office Lights",
+        "links": [
+            "1b6aa296.33df2d"
+        ],
+        "x": 2400,
+        "y": 700,
+        "wires": [
+            [
+                "d9a5bf42.b0d81",
+                "c0dbde48.739",
+                "5aab6efe.79b3d"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "45b5815e.4a6e8",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Office Lights",
+        "links": [
+            "1ff8965b.dd41ba"
+        ],
+        "x": 546.9999885559082,
+        "y": 3733.999918937683,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1ff8965b.dd41ba",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Office Lights",
+        "links": [
+            "45b5815e.4a6e8"
+        ],
+        "x": 2400,
+        "y": 910,
+        "wires": [
+            [
+                "4753dbed.263004",
+                "1c0b1abf.3d9c55",
+                "8653e3c9.df975"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "44de52a6.4219cc",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 3170,
+        "y": 720,
         "wires": []
     }
 ]
