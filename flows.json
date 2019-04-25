@@ -1861,169 +1861,22 @@
         "x": 670,
         "y": 2760,
         "wires": [
-            [
-                "84124d45.02426"
-            ],
+            [],
             [
                 "6fe1f9a8.c3ddc8"
             ],
-            [
-                "d049106e.4be3"
-            ],
-            [
-                "6bb16bee.d44264"
-            ],
-            [
-                "8cf61e31.ecc"
-            ],
-            [
-                "1058c247.6a6afe"
-            ]
-        ]
-    },
-    {
-        "id": "84124d45.02426",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "1x Tap",
-        "property": "payload.event.scene_id",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 930,
-        "y": 2660,
-        "wires": [
+            [],
+            [],
             [],
             []
-        ]
-    },
-    {
-        "id": "1058c247.6a6afe",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "Long",
-        "property": "payload.event.scene_id",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
         ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 930,
-        "y": 2860,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "8cf61e31.ecc",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "5x Tap",
-        "property": "payload.event.scene_id",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 930,
-        "y": 2820,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "6bb16bee.d44264",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "4x Tap",
-        "property": "payload.event.scene_id",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 930,
-        "y": 2780,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "d049106e.4be3",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "3x Tap",
-        "property": "payload.event.scene_id",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 930,
-        "y": 2740,
-        "wires": [
-            [],
-            []
+        "outputLabels": [
+            "1x Tap",
+            "2x Tap",
+            "3x Tap",
+            "4x Tap",
+            "5x Tap",
+            "Long Tap"
         ]
     },
     {
