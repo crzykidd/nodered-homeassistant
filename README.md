@@ -5,5 +5,4 @@ Flows for my home assistant environment
 
 ### About
 
-This is your project's README.md file. It helps users understand what your
-project does, how to use it and anything else they may need to know.
+I am in the process of moving from Smarthings over to Home Assistant, during the process I have decided to jump into Node-Red head first.   My intent to share my project with you is to maybe give someone starting out some insight and ideas.   
