@@ -1752,7 +1752,9 @@
         "x": 660,
         "y": 770,
         "wires": [
-            [],
+            [
+                "9cd67542.246698"
+            ],
             [
                 "6fe1f9a8.c3ddc8"
             ],
@@ -1828,12 +1830,8 @@
         "x": 306.9999885559082,
         "y": 1193.999918937683,
         "wires": [
-            [
-                "1b6aa296.33df2d"
-            ],
-            [
-                "45b5815e.4a6e8"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -2317,12 +2315,12 @@
         "id": "1b6aa296.33df2d",
         "type": "link out",
         "z": "ca2305ba.3a64f8",
-        "name": "Turn on Office Lights",
+        "name": "Turn on Back Office Lights",
         "links": [
             "94082817.dc5788"
         ],
-        "x": 506.9999885559082,
-        "y": 1163.999918937683,
+        "x": 1130,
+        "y": 600,
         "wires": [],
         "l": true
     },
@@ -2330,15 +2328,14 @@
         "id": "94082817.dc5788",
         "type": "link in",
         "z": "ca2305ba.3a64f8",
-        "name": "Turn on Office Lights",
+        "name": "Turn on Back Office Lights",
         "links": [
             "1b6aa296.33df2d"
         ],
-        "x": 2400,
+        "x": 2420,
         "y": 690,
         "wires": [
             [
-                "d9a5bf42.b0d81",
                 "c0dbde48.739",
                 "5aab6efe.79b3d"
             ]
@@ -2349,12 +2346,12 @@
         "id": "45b5815e.4a6e8",
         "type": "link out",
         "z": "ca2305ba.3a64f8",
-        "name": "Turn off Office Lights",
+        "name": "Turn off Back Office Lights",
         "links": [
             "1ff8965b.dd41ba"
         ],
-        "x": 506.9999885559082,
-        "y": 1213.999918937683,
+        "x": 1130,
+        "y": 650,
         "wires": [],
         "l": true
     },
@@ -2362,15 +2359,14 @@
         "id": "1ff8965b.dd41ba",
         "type": "link in",
         "z": "ca2305ba.3a64f8",
-        "name": "Turn off Office Lights",
+        "name": "Turn off Back Office Lights",
         "links": [
             "45b5815e.4a6e8"
         ],
-        "x": 2400,
+        "x": 2420,
         "y": 900,
         "wires": [
             [
-                "4753dbed.263004",
                 "1c0b1abf.3d9c55",
                 "8653e3c9.df975"
             ]
@@ -2803,5 +2799,38 @@
             ]
         ],
         "l": true
+    },
+    {
+        "id": "9cd67542.246698",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "1x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 910,
+        "y": 640,
+        "wires": [
+            [
+                "1b6aa296.33df2d"
+            ],
+            [
+                "45b5815e.4a6e8"
+            ]
+        ]
     }
 ]
