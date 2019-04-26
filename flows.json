@@ -242,8 +242,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 656.9999961853027,
-        "y": 924.0000282526016,
+        "x": 2090,
+        "y": 710,
         "wires": [
             []
         ]
@@ -298,8 +298,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 675.9999961853027,
-        "y": 977.0000282526016,
+        "x": 2070,
+        "y": 910,
         "wires": [
             []
         ]
@@ -316,8 +316,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 674.9999961853027,
-        "y": 1128.0000282526016,
+        "x": 2070,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -334,8 +334,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 658.9999961853027,
-        "y": 1182.0000282526016,
+        "x": 2090,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -362,8 +362,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 685.9999961853027,
-        "y": 1075.0000282526016,
+        "x": 730,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -380,8 +380,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 687.9999961853027,
-        "y": 1027.0000282526016,
+        "x": 730,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -2613,5 +2613,143 @@
         "y": 2870,
         "wires": [],
         "l": true
+    },
+    {
+        "id": "f2034d1f.52406",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Lights",
+        "info": "",
+        "x": 2010,
+        "y": 630,
+        "wires": []
+    },
+    {
+        "id": "7b79b510.d7e13c",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger On",
+        "info": "",
+        "x": 2010,
+        "y": 670,
+        "wires": []
+    },
+    {
+        "id": "2038c552.53b21a",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Tall Lamp On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.living_room_tall_lamp\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 2100,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "194db129.eee25f",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Short Lamp On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.living_room_short_lamp\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 2100,
+        "y": 810,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "49eb6641.ef9f58",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Fan Light On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.living_room_fan_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 2090,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89f64d88.4038f",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 2010,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "a9b79174.e93c1",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Tall Lamp Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.living_room_tall_lamp\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 2100,
+        "y": 1050,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27b3f586.f54f6a",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Short Lamp Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.living_room_short_lamp\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 2100,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36791b71.c3f7f4",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Living Room Fan Light Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.living_room_fan_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 2090,
+        "y": 1150,
+        "wires": [
+            []
+        ]
     }
 ]
