@@ -15,3 +15,9 @@ The first flow is designed around using the zwave scene from HA and exeucting a 
 
 SceneManagement01.PNG is the main flow for this and it has links to the different lights involved in the scene:
 ![Image description](https://github.com/crzykidd/nodered-homeassistant/raw/nodered-homeassistant/SceneManagement01.PNG)
+
+SceneManagement02.PNG is where the links land to turn on or off different lights
+![Image description](https://github.com/crzykidd/nodered-homeassistant/raw/nodered-homeassistant/SceneManagement02.PNG)
+
+
+Hope you find this usefull.
