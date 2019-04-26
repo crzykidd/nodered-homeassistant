@@ -30,8 +30,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Server Room Door Events",
         "info": "",
-        "x": 168.99999618530273,
-        "y": 1480.0000282526016,
+        "x": 170,
+        "y": 1960,
         "wires": []
     },
     {
@@ -49,8 +49,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 165.99999618530273,
-        "y": 1544.0000282526016,
+        "x": 167,
+        "y": 2024,
         "wires": [
             [
                 "126eb1f0.60baee"
@@ -75,8 +75,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 396.99999618530273,
-        "y": 1547.0000282526016,
+        "x": 398,
+        "y": 2027,
         "wires": [
             [
                 "89d07e44.bb7ee"
@@ -98,8 +98,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 657.9999961853027,
-        "y": 1555.0000282526016,
+        "x": 659,
+        "y": 2035,
         "wires": [
             []
         ]
@@ -116,8 +116,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 662.9999961853027,
-        "y": 1469.0000282526016,
+        "x": 664,
+        "y": 1949,
         "wires": [
             [
                 "746d5c74.a077b4"
@@ -220,8 +220,8 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 149.99999618530273,
-        "y": 1033.5000282526016,
+        "x": 110,
+        "y": 410,
         "wires": [
             [
                 "82af13cb.2bbca"
@@ -270,19 +270,15 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 368.99999618530273,
-        "y": 1035.0000282526016,
+        "x": 329,
+        "y": 411.5,
         "wires": [
             [
-                "827abe38.5cf82",
-                "79c09d64.93f904",
-                "d3fd598e.5fd068",
-                "c8afd1ea.be12a"
+                "c8afd1ea.be12a",
+                "20afa414.35affc"
             ],
             [
-                "59600ad5.5b1d94",
-                "c0daa976.6a2b68",
-                "703b551.94085ac"
+                "8d856041.3aff5"
             ]
         ]
     },
@@ -346,8 +342,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Dusk Till Dawn Light Controlls",
         "info": "",
-        "x": 175.99999618530273,
-        "y": 963.0000282526016,
+        "x": 136,
+        "y": 339.5,
         "wires": []
     },
     {
@@ -362,8 +358,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 730,
-        "y": 1220,
+        "x": 2860,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -372,7 +368,7 @@
         "id": "d3fd598e.5fd068",
         "type": "api-call-service",
         "z": "ca2305ba.3a64f8",
-        "name": "Front Lights On",
+        "name": "Front House Lights On",
         "server": "65b61d5d.d1e1c4",
         "service_domain": "light",
         "service": "turn_on",
@@ -380,8 +376,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 730,
-        "y": 1120,
+        "x": 2870,
+        "y": 1170,
         "wires": [
             []
         ]
@@ -396,8 +392,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 475.99999618530273,
-        "y": 1303.0000282526016,
+        "x": 320.00000381469727,
+        "y": 486.4999717473984,
         "wires": []
     },
     {
@@ -412,8 +408,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1405.9999961853027,
-        "y": 2243.0000282526016,
+        "x": 1407,
+        "y": 2723,
         "wires": [
             [
                 "8771c665.1bc5b8"
@@ -426,8 +422,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "******************All Door Events******************",
         "info": "adf",
-        "x": 235.99999618530273,
-        "y": 1435.0000282526016,
+        "x": 237,
+        "y": 1915,
         "wires": []
     },
     {
@@ -438,8 +434,8 @@
         "func": "if(flow.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Closed\"\n                } \n        }\n    }\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 992.9999961853027,
-        "y": 2147.0000282526016,
+        "x": 994,
+        "y": 2627,
         "wires": [
             [
                 "7e3035e.acfd0cc",
@@ -463,8 +459,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 165.99999618530273,
-        "y": 1698.0000282526016,
+        "x": 167,
+        "y": 2178,
         "wires": [
             [
                 "a2449016.4a104"
@@ -489,8 +485,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 385.99999618530273,
-        "y": 1699.0000282526016,
+        "x": 387,
+        "y": 2179,
         "wires": [
             [
                 "df229c95.d623e"
@@ -515,8 +511,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 138.99999618530273,
-        "y": 631.0000282526016,
+        "x": 110,
+        "y": 230,
         "wires": [
             [
                 "d90bf2cf.5706e"
@@ -534,8 +530,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1712.9999961853027,
-        "y": 2280.0000282526016,
+        "x": 1710,
+        "y": 2850,
         "wires": []
     },
     {
@@ -556,8 +552,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 562.9999961853027,
-        "y": 633.0000282526016,
+        "x": 534,
+        "y": 232,
         "wires": [
             [
                 "525d514e.12faf"
@@ -578,8 +574,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 942.9999961853027,
-        "y": 1401.0000282526016,
+        "x": 944,
+        "y": 1881,
         "wires": []
     },
     {
@@ -597,8 +593,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 145.99999618530273,
-        "y": 1780.0000282526016,
+        "x": 147,
+        "y": 2260,
         "wires": [
             [
                 "9a9ab806.8c55a8"
@@ -613,8 +609,8 @@
         "func": "flow.set(\"GoogleTTSDoorStatus\", 1)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 784.9999961853027,
-        "y": 587.0000282526016,
+        "x": 756,
+        "y": 186,
         "wires": [
             []
         ]
@@ -627,8 +623,8 @@
         "func": "if(flow.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Opened\"\n                } \n        }\n    }\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 990.9999961853027,
-        "y": 2066.0000282526016,
+        "x": 992,
+        "y": 2546,
         "wires": [
             [
                 "eb645a5b.354298",
@@ -656,8 +652,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 392.99999618530273,
-        "y": 1778.0000282526016,
+        "x": 394,
+        "y": 2258,
         "wires": [
             [
                 "df229c95.d623e"
@@ -678,8 +674,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1403.9999961853027,
-        "y": 2049.0000282526016,
+        "x": 1405,
+        "y": 2529,
         "wires": []
     },
     {
@@ -690,8 +686,8 @@
         "func": "flow.set(\"GoogleTTSDoorStatus\", 0)\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 787.9999961853027,
-        "y": 639.0000282526016,
+        "x": 759,
+        "y": 238,
         "wires": [
             []
         ]
@@ -708,8 +704,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1412.9999961853027,
-        "y": 2328.0000282526016,
+        "x": 1414,
+        "y": 2808,
         "wires": [
             [
                 "8771c665.1bc5b8"
@@ -731,8 +727,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 155.99999618530273,
-        "y": 1867.0000282526016,
+        "x": 157,
+        "y": 2347,
         "wires": [
             [
                 "facd8e21.69256"
@@ -757,8 +753,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 384.99999618530273,
-        "y": 1867.0000282526016,
+        "x": 386,
+        "y": 2347,
         "wires": [
             [
                 "df229c95.d623e"
@@ -783,8 +779,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 145.99999618530273,
-        "y": 1944.0000282526016,
+        "x": 147,
+        "y": 2424,
         "wires": [
             [
                 "a6a18fb5.2d4f6"
@@ -809,8 +805,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 384.99999618530273,
-        "y": 1944.0000282526016,
+        "x": 386,
+        "y": 2424,
         "wires": [
             [
                 "df229c95.d623e"
@@ -835,8 +831,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 185.99999618530273,
-        "y": 2024.0000282526016,
+        "x": 187,
+        "y": 2504,
         "wires": [
             [
                 "9e221147.4e4e2"
@@ -861,8 +857,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 426.99999618530273,
-        "y": 2024.0000282526016,
+        "x": 428,
+        "y": 2504,
         "wires": [
             [
                 "df229c95.d623e"
@@ -887,8 +883,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 165.99999618530273,
-        "y": 2114.0000282526016,
+        "x": 167,
+        "y": 2594,
         "wires": [
             [
                 "8e70690c.caf858"
@@ -913,8 +909,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 426.99999618530273,
-        "y": 2114.0000282526016,
+        "x": 428,
+        "y": 2594,
         "wires": [
             [
                 "df229c95.d623e"
@@ -939,8 +935,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 145.99999618530273,
-        "y": 2243.0000282526016,
+        "x": 147,
+        "y": 2723,
         "wires": [
             [
                 "72c77997.8f9bd8"
@@ -965,8 +961,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 413.99999618530273,
-        "y": 2243.0000282526016,
+        "x": 415,
+        "y": 2723,
         "wires": [
             [
                 "df229c95.d623e"
@@ -991,8 +987,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 135.99999618530273,
-        "y": 2181.0000282526016,
+        "x": 137,
+        "y": 2661,
         "wires": [
             [
                 "807e7b54.06b348"
@@ -1017,8 +1013,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 420.99999618530273,
-        "y": 2176.0000282526016,
+        "x": 422,
+        "y": 2656,
         "wires": [
             [
                 "df229c95.d623e"
@@ -1040,8 +1036,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1416.9999961853027,
-        "y": 2417.0000282526016,
+        "x": 1418,
+        "y": 2897,
         "wires": [
             [
                 "8771c665.1bc5b8"
@@ -1054,8 +1050,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Scenes - Automations",
         "info": "",
-        "x": 290,
-        "y": 3920,
+        "x": 250,
+        "y": 1400,
         "wires": []
     },
     {
@@ -1073,8 +1069,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 240,
-        "y": 3993,
+        "x": 200,
+        "y": 1473,
         "wires": [
             [
                 "105fdb56.2ba5f5",
@@ -1100,18 +1096,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 438,
-        "y": 3998,
+        "x": 398,
+        "y": 1478,
         "wires": [
             [
-                "d4640ca4.3fe68",
-                "8ff35f3a.ef114",
-                "20334113.f7378e"
+                "8f36a295.1e12d"
             ],
             [
-                "bd62cdc3.6466f",
-                "f21bd1e7.99de2",
-                "10d3dd4.82b3323"
+                "2ef53439.3cb13c"
             ]
         ]
     },
@@ -1127,8 +1119,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 680.0000228881836,
-        "y": 3851.999862074852,
+        "x": 2870,
+        "y": 1220,
         "wires": [
             []
         ]
@@ -1145,8 +1137,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 694.0000114440918,
-        "y": 4049.9998573064804,
+        "x": 2890,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -1156,13 +1148,14 @@
         "type": "debug",
         "z": "ca2305ba.3a64f8",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
-        "x": 869,
-        "y": 4232,
+        "complete": "true",
+        "targetType": "full",
+        "x": 810,
+        "y": 1700,
         "wires": []
     },
     {
@@ -1173,8 +1166,8 @@
         "threshold": "4",
         "startafter": "3",
         "stopafter": "2",
-        "x": 477.9999694824219,
-        "y": 2389.000249862671,
+        "x": 478.99997329711914,
+        "y": 2869.0002216100693,
         "wires": [
             [],
             [
@@ -1197,8 +1190,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 153.99996948242188,
-        "y": 2387.000249862671,
+        "x": 154.99997329711914,
+        "y": 2867.0002216100693,
         "wires": [
             [
                 "7b772eac.3fa28"
@@ -1213,8 +1206,8 @@
         "threshold": "3",
         "startafter": "4",
         "stopafter": "1",
-        "x": 438.99997329711914,
-        "y": 2474.000726699829,
+        "x": 439.9999771118164,
+        "y": 2954.0006984472275,
         "wires": [
             [],
             [
@@ -1238,8 +1231,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 112.99996948242188,
-        "y": 2463.000238418579,
+        "x": 113.99997329711914,
+        "y": 2943.0002101659775,
         "wires": [
             [
                 "db48e66f.ea2418",
@@ -1255,8 +1248,8 @@
         "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"Washing Machine is complete\"\n            } \n        }\n    }",
         "outputs": 1,
         "noerr": 0,
-        "x": 991.0000152587891,
-        "y": 2280.0004386901855,
+        "x": 992.0000190734863,
+        "y": 2760.000410437584,
         "wires": [
             [
                 "702a2083.5b29f",
@@ -1273,8 +1266,8 @@
         "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"The Dryer is complete\"\n            } \n        }\n    }",
         "outputs": 1,
         "noerr": 0,
-        "x": 987.9999694824219,
-        "y": 2408.0004444122314,
+        "x": 988.9999732971191,
+        "y": 2888.00041615963,
         "wires": [
             [
                 "702a2083.5b29f",
@@ -1295,8 +1288,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 693,
-        "y": 3908.9999049901962,
+        "x": 2890,
+        "y": 1270,
         "wires": [
             []
         ]
@@ -1313,8 +1306,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 700.9999961853027,
-        "y": 4110.99989926815,
+        "x": 2900,
+        "y": 1670,
         "wires": [
             []
         ]
@@ -1330,8 +1323,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 402.00000762939453,
-        "y": 2559.0002403259277,
+        "x": 403.0000114440918,
+        "y": 3039.000212073326,
         "wires": []
     },
     {
@@ -1349,8 +1342,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 138.78125,
-        "y": 62.91476917266846,
+        "x": 150,
+        "y": 70,
         "wires": [
             [
                 "fafc0b5b.9e3788"
@@ -1458,8 +1451,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 676.0142250061035,
-        "y": 3963.0055869817734,
+        "x": 2880,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -1476,109 +1469,11 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 680.0142250061035,
-        "y": 4005.0055869817734,
+        "x": 2890,
+        "y": 1570,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "be2e0c70.44c65",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "Scene?",
-        "property": "payload.event.domain",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "scene",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 380,
-        "y": 410,
-        "wires": [
-            [
-                "8e9b947e.490178",
-                "ad5f072c.3102d8"
-            ]
-        ]
-    },
-    {
-        "id": "ad5f072c.3102d8",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "Which scene?",
-        "property": "payload.event.service_data.entity_id",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "scene.kitchen_lights_on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "scene.kitchen_lights_off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 628.9999542236328,
-        "y": 407.00000762939453,
-        "wires": [
-            [
-                "a75dd051.3c485"
-            ],
-            [
-                "aaf2f8.972ecd08"
-            ]
-        ]
-    },
-    {
-        "id": "8e9b947e.490178",
-        "type": "debug",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 652.0590591430664,
-        "y": 346.5938129425049,
-        "wires": []
-    },
-    {
-        "id": "16bb7664.4ffc7a",
-        "type": "server-events",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "server": "65b61d5d.d1e1c4",
-        "event_type": "call_service",
-        "x": 173.06248474121094,
-        "y": 408.857666015625,
-        "wires": [
-            [
-                "be2e0c70.44c65"
-            ]
-        ]
-    },
-    {
-        "id": "a75dd051.3c485",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Lights On Scene",
-        "links": [],
-        "x": 851.0625247955322,
-        "y": 362.88891887664795,
-        "wires": []
     },
     {
         "id": "e8931289.5d916",
@@ -1693,16 +1588,6 @@
         "l": true
     },
     {
-        "id": "aaf2f8.972ecd08",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Lights Off Scene",
-        "links": [],
-        "x": 849.9548721313477,
-        "y": 442.87504482269287,
-        "wires": []
-    },
-    {
         "id": "2a64fcf8.fbd1c4",
         "type": "api-call-service",
         "z": "ca2305ba.3a64f8",
@@ -1781,8 +1666,8 @@
         "name": "Input Zwave Scene activated",
         "server": "65b61d5d.d1e1c4",
         "event_type": "zwave.scene_activated",
-        "x": 160,
-        "y": 2840,
+        "x": 150,
+        "y": 850,
         "wires": [
             [
                 "91268369.61c9a"
@@ -1811,8 +1696,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 420,
-        "y": 2840,
+        "x": 410,
+        "y": 850,
         "wires": [
             [
                 "b777f775.8c5d28"
@@ -1864,8 +1749,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 6,
-        "x": 670,
-        "y": 2760,
+        "x": 660,
+        "y": 770,
         "wires": [
             [],
             [
@@ -1907,8 +1792,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 930,
-        "y": 2720,
+        "x": 920,
+        "y": 730,
         "wires": [
             [
                 "37b5dfa6.90096"
@@ -1940,8 +1825,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 346.9999885559082,
-        "y": 3713.999918937683,
+        "x": 306.9999885559082,
+        "y": 1193.999918937683,
         "wires": [
             [
                 "1b6aa296.33df2d"
@@ -2002,8 +1887,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 179.9999885559082,
-        "y": 3713.999918937683,
+        "x": 139.9999885559082,
+        "y": 1193.999918937683,
         "wires": [
             [
                 "83fc36ef.873d38"
@@ -2052,8 +1937,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Controll Office Lights",
         "info": "",
-        "x": 146.9999885559082,
-        "y": 3623.999918937683,
+        "x": 106.9999885559082,
+        "y": 1103.999918937683,
         "wires": []
     },
     {
@@ -2242,8 +2127,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "********* Scene Management ********",
         "info": "",
-        "x": 180,
-        "y": 2660,
+        "x": 170,
+        "y": 670,
         "wires": []
     },
     {
@@ -2364,8 +2249,8 @@
         "links": [
             "26849a1f.654876"
         ],
-        "x": 1130,
-        "y": 2740,
+        "x": 1120,
+        "y": 750,
         "wires": [],
         "l": true
     },
@@ -2377,8 +2262,8 @@
         "links": [
             "2715c85.ae11838"
         ],
-        "x": 1130,
-        "y": 2690,
+        "x": 1120,
+        "y": 700,
         "wires": [],
         "l": true
     },
@@ -2436,8 +2321,8 @@
         "links": [
             "94082817.dc5788"
         ],
-        "x": 546.9999885559082,
-        "y": 3683.999918937683,
+        "x": 506.9999885559082,
+        "y": 1163.999918937683,
         "wires": [],
         "l": true
     },
@@ -2468,8 +2353,8 @@
         "links": [
             "1ff8965b.dd41ba"
         ],
-        "x": 546.9999885559082,
-        "y": 3733.999918937683,
+        "x": 506.9999885559082,
+        "y": 1213.999918937683,
         "wires": [],
         "l": true
     },
@@ -2534,8 +2419,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 6,
-        "x": 680,
-        "y": 2880,
+        "x": 670,
+        "y": 890,
         "wires": [
             [],
             [
@@ -2577,8 +2462,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 930,
-        "y": 2850,
+        "x": 920,
+        "y": 860,
         "wires": [
             [
                 "bf7b5656.d71878"
@@ -2596,8 +2481,8 @@
         "links": [
             "e8931289.5d916"
         ],
-        "x": 1130,
-        "y": 2820,
+        "x": 1120,
+        "y": 830,
         "wires": [],
         "l": true
     },
@@ -2609,8 +2494,8 @@
         "links": [
             "918392a5.ec51"
         ],
-        "x": 1130,
-        "y": 2870,
+        "x": 1120,
+        "y": 880,
         "wires": [],
         "l": true
     },
@@ -2751,5 +2636,172 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6bc682be.28bbec",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "All Lights",
+        "info": "",
+        "x": 2770,
+        "y": 1090,
+        "wires": []
+    },
+    {
+        "id": "b90b7514.7f4e88",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger On",
+        "info": "",
+        "x": 2800,
+        "y": 1130,
+        "wires": []
+    },
+    {
+        "id": "ca43e431.52b1b8",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "List out all Outside Lights",
+        "info": "",
+        "x": 2790,
+        "y": 1050,
+        "wires": []
+    },
+    {
+        "id": "5e5bb3d5.d6366c",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 2810,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "8f36a295.1e12d",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Hut Tub Scene",
+        "links": [
+            "562ff468.8e249c"
+        ],
+        "x": 660,
+        "y": 1450,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2ef53439.3cb13c",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Hot Tub Scene",
+        "links": [
+            "ab97c066.6aef4"
+        ],
+        "x": 670,
+        "y": 1520,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ab97c066.6aef4",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Hut Tub Scene",
+        "links": [
+            "2ef53439.3cb13c"
+        ],
+        "x": 2430,
+        "y": 1430,
+        "wires": [
+            [
+                "10d3dd4.82b3323",
+                "bd62cdc3.6466f",
+                "f21bd1e7.99de2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "562ff468.8e249c",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Hut Tub Scene",
+        "links": [
+            "8f36a295.1e12d"
+        ],
+        "x": 2430,
+        "y": 1370,
+        "wires": [
+            [
+                "d4640ca4.3fe68",
+                "8ff35f3a.ef114",
+                "20334113.f7378e"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "8d856041.3aff5",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off at Dawn",
+        "links": [
+            "ed671d86.3c607"
+        ],
+        "x": 580.0000038146973,
+        "y": 416.4999717473984,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "20afa414.35affc",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on at Dusk",
+        "links": [
+            "cb3afe4b.d2e76"
+        ],
+        "x": 580.0000038146973,
+        "y": 366.4999717473984,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ed671d86.3c607",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off at Dawn",
+        "links": [
+            "8d856041.3aff5"
+        ],
+        "x": 1570,
+        "y": 1030,
+        "wires": [
+            [
+                "59600ad5.5b1d94",
+                "c0daa976.6a2b68"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "cb3afe4b.d2e76",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on at Dusk",
+        "links": [
+            "20afa414.35affc"
+        ],
+        "x": 1570,
+        "y": 870,
+        "wires": [
+            [
+                "827abe38.5cf82",
+                "79c09d64.93f904",
+                "d3fd598e.5fd068"
+            ]
+        ],
+        "l": true
     }
 ]
