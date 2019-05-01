@@ -5585,5 +5585,15 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "8be09372.970dd",
+        "type": "comment",
+        "z": "7f5a232.5f2e2dc",
+        "name": "These nodes are borrowed from other people and not in use.",
+        "info": "",
+        "x": 320,
+        "y": 70,
+        "wires": []
     }
 ]
