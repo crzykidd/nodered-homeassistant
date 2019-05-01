@@ -14,6 +14,13 @@
         "info": ""
     },
     {
+        "id": "b4bd0bcf.c07d88",
+        "type": "tab",
+        "label": "HA Actions",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "65b61d5d.d1e1c4",
         "type": "server",
         "z": "",
@@ -280,24 +287,6 @@
         ]
     },
     {
-        "id": "827abe38.5cf82",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Scone On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.living_room_sconce\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3280,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "82af13cb.2bbca",
         "type": "switch",
         "z": "ca2305ba.3a64f8",
@@ -332,60 +321,6 @@
         ]
     },
     {
-        "id": "79c09d64.93f904",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Stairway Lights On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.stairs_light_switch_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3260,
-        "y": 1200,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c0daa976.6a2b68",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Stairway Lights Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.stairs_light_switch_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3260,
-        "y": 1490,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "59600ad5.5b1d94",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Scone Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.living_room_sconce\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3280,
-        "y": 1290,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "7fbbaeb0.385ac",
         "type": "comment",
         "z": "ca2305ba.3a64f8",
@@ -394,42 +329,6 @@
         "x": 136,
         "y": 339.5,
         "wires": []
-    },
-    {
-        "id": "703b551.94085ac",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Front Lights Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.front_house_lights_switch_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4030,
-        "y": 1530,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d3fd598e.5fd068",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Front House Lights On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.front_house_lights_switch_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 1180,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "c8afd1ea.be12a",
@@ -1157,42 +1056,6 @@
         ]
     },
     {
-        "id": "d4640ca4.3fe68",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Patio Soffit Lights - ON",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "homeassistant",
-        "service": "turn_on",
-        "data": "{\"entity_id\":[\"light.outside_patio_soffit_light_wall_dimmer_level\"]}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 1230,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bd62cdc3.6466f",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Patio Soffit Lights - OFF",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "homeassistant",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.outside_patio_soffit_light_wall_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4060,
-        "y": 1630,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "86fbe941.829a88",
         "type": "debug",
         "z": "ca2305ba.3a64f8",
@@ -1326,42 +1189,6 @@
         ]
     },
     {
-        "id": "8ff35f3a.ef114",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Outlet Dimmer Lights - ON",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "homeassistant",
-        "service": "turn_on",
-        "data": "{\"entity_id\":[\"light.outside_outlet_dimmer_level\"]}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4060,
-        "y": 1280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f21bd1e7.99de2",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Outlet Dimmer Lights - OFF",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "homeassistant",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.outside_outlet_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4070,
-        "y": 1680,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6243d4b0.8831ec",
         "type": "debug",
         "z": "ca2305ba.3a64f8",
@@ -1484,226 +1311,6 @@
         "output_location_type": "msg",
         "x": 883.0142135620117,
         "y": 79.00568199157715,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "20334113.f7378e",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Patio Sconce Light- ON",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "homeassistant",
-        "service": "turn_on",
-        "data": "{\"entity_id\":[\"light.outside_patio_sconce_light\"]}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4050,
-        "y": 1330,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "10d3dd4.82b3323",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Patio Sconce Light- OFF",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "homeassistant",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.outside_patio_sconce_light\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4060,
-        "y": 1580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e8931289.5d916",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on all Kitchen Lights",
-        "links": [
-            "bf7b5656.d71878"
-        ],
-        "x": 2770,
-        "y": 200,
-        "wires": [
-            [
-                "65fd3148.a14fd",
-                "7e13de80.da209",
-                "f0551aed.587918",
-                "66fb51d2.14a9b"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "65fd3148.a14fd",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Fridge Light - On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3260,
-        "y": 190,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f0551aed.587918",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Deck Door Light - On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3270,
-        "y": 290,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7e13de80.da209",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Sink Light - On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3250,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "66fb51d2.14a9b",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Table Light - On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.kitchen_table_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3260,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "918392a5.ec51",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off all Kitchen Lights",
-        "links": [
-            "1dd05952.7a5727"
-        ],
-        "x": 2770,
-        "y": 540,
-        "wires": [
-            [
-                "2a64fcf8.fbd1c4",
-                "bcfa12f5.7de3f",
-                "ec03e206.7de75",
-                "721fa846.5ac218"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "2a64fcf8.fbd1c4",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Fridge Light - Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3260,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ec03e206.7de75",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Deck Door Light - Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3270,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bcfa12f5.7de3f",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Sink Light - Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3250,
-        "y": 530,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "721fa846.5ac218",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Table Light - Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.kitchen_table_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3260,
-        "y": 630,
         "wires": [
             []
         ]
@@ -1879,258 +1486,6 @@
         ]
     },
     {
-        "id": "c0dbde48.739",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "office back light 1 on",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.office_back_1\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1c0b1abf.3d9c55",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "office back light 1 off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.office_back_1\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 950,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5aab6efe.79b3d",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "office back light 2 on",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.office_back_2\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 810,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8653e3c9.df975",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "office back light 2 off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.office_back_2\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 1000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d9a5bf42.b0d81",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "office front light on",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.office_front_lights_switch_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4030,
-        "y": 710,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4753dbed.263004",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "front office light off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.office_front_lights_switch_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4030,
-        "y": 900,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5f3b5d60.30c184",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "home theater BL on",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.home_theater_back_left\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4030,
-        "y": 290,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2ee6c55d.d59bda",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "home theater FL on",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.home_theater_front_left\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4030,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "82342c76.08e99",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "home theater FR on",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.home_theater_front_right\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 190,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "28d9ad08.ed4b22",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "home theater BR on",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.home_theater_back_right\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "129e69d6.ed5236",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "home theater BR off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.home_theater_back_right\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "829eec45.96de6",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "home theater BL off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.home_theater_back_left\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4030,
-        "y": 430,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f13f520c.fb519",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "home theater FR off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.home_theater_front_right\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4040,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "438d3261.15de4c",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "home theater FL off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.home_theater_front_left\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4030,
-        "y": 530,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "34f05386.4447fc",
         "type": "comment",
         "z": "ca2305ba.3a64f8",
@@ -2141,122 +1496,13 @@
         "wires": []
     },
     {
-        "id": "96041091.3119e",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "List out all Upstairs Lights/Switches",
-        "info": "",
-        "x": 3200,
-        "y": 70,
-        "wires": []
-    },
-    {
-        "id": "bda2c466.b5a458",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Kitchen Lights",
-        "info": "",
-        "x": 3160,
-        "y": 110,
-        "wires": []
-    },
-    {
-        "id": "4d53cd09.51a434",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger On",
-        "info": "",
-        "x": 3180,
-        "y": 150,
-        "wires": []
-    },
-    {
-        "id": "22b3ceab.56c0c2",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 3180,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "2416ebea.65a524",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Home Theater Lights",
-        "info": "",
-        "x": 3980,
-        "y": 110,
-        "wires": []
-    },
-    {
-        "id": "511fc771.97ee78",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger On",
-        "info": "",
-        "x": 3970,
-        "y": 150,
-        "wires": []
-    },
-    {
-        "id": "a692f5a7.913458",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 3970,
-        "y": 390,
-        "wires": []
-    },
-    {
-        "id": "eab128e.f4876d8",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Office Lights",
-        "info": "",
-        "x": 3950,
-        "y": 630,
-        "wires": []
-    },
-    {
-        "id": "5ea9b65b.7784f8",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger On",
-        "info": "",
-        "x": 3970,
-        "y": 670,
-        "wires": []
-    },
-    {
-        "id": "1d99c49c.18f6eb",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 3970,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "d0794343.2e111",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "List out all Downstairs Lights/Switches",
-        "info": "",
-        "x": 4000,
-        "y": 70,
-        "wires": []
-    },
-    {
         "id": "553a45e6.a1485c",
         "type": "link out",
         "z": "ca2305ba.3a64f8",
         "name": "Turn off Office/HT Lights",
         "links": [
-            "26849a1f.654876"
+            "26849a1f.654876",
+            "7ee27850.15b358"
         ],
         "x": 1280,
         "y": 680,
@@ -2269,57 +1515,12 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn on Office/HT Lights",
         "links": [
-            "2715c85.ae11838"
+            "2715c85.ae11838",
+            "6ebd6391.4bbb3c"
         ],
         "x": 1260,
         "y": 640,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "2715c85.ae11838",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on Office/HT Lights",
-        "links": [
-            "37b5dfa6.90096"
-        ],
-        "x": 3600,
-        "y": 250,
-        "wires": [
-            [
-                "82342c76.08e99",
-                "2ee6c55d.d59bda",
-                "5f3b5d60.30c184",
-                "28d9ad08.ed4b22",
-                "d9a5bf42.b0d81",
-                "c0dbde48.739",
-                "5aab6efe.79b3d"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "26849a1f.654876",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off Office/HT Lights",
-        "links": [
-            "553a45e6.a1485c"
-        ],
-        "x": 3590,
-        "y": 800,
-        "wires": [
-            [
-                "829eec45.96de6",
-                "129e69d6.ed5236",
-                "438d3261.15de4c",
-                "f13f520c.fb519",
-                "4753dbed.263004",
-                "1c0b1abf.3d9c55",
-                "8653e3c9.df975"
-            ]
-        ],
         "l": true
     },
     {
@@ -2328,29 +1529,12 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn on Back Office Lights",
         "links": [
-            "94082817.dc5788"
+            "94082817.dc5788",
+            "df74d19e.78101"
         ],
         "x": 1120,
         "y": 560,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "94082817.dc5788",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on Back Office Lights",
-        "links": [
-            "1b6aa296.33df2d"
-        ],
-        "x": 3590,
-        "y": 700,
-        "wires": [
-            [
-                "c0dbde48.739",
-                "5aab6efe.79b3d"
-            ]
-        ],
         "l": true
     },
     {
@@ -2359,29 +1543,12 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn off Back Office Lights",
         "links": [
-            "1ff8965b.dd41ba"
+            "1ff8965b.dd41ba",
+            "ccd8a0da.cfdb4"
         ],
         "x": 1160,
         "y": 600,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "1ff8965b.dd41ba",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off Back Office Lights",
-        "links": [
-            "45b5815e.4a6e8"
-        ],
-        "x": 3590,
-        "y": 910,
-        "wires": [
-            [
-                "1c0b1abf.3d9c55",
-                "8653e3c9.df975"
-            ]
-        ],
         "l": true
     },
     {
@@ -2486,7 +1653,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn on all Kitchen Lights",
         "links": [
-            "e8931289.5d916"
+            "e8931289.5d916",
+            "77bd43a7.33d76c"
         ],
         "x": 1120,
         "y": 830,
@@ -2499,7 +1667,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn off all Kitchen Lights",
         "links": [
-            "918392a5.ec51"
+            "918392a5.ec51",
+            "7d845e34.f1356"
         ],
         "x": 1140,
         "y": 870,
@@ -2507,190 +1676,13 @@
         "l": true
     },
     {
-        "id": "f2034d1f.52406",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Lights",
-        "info": "",
-        "x": 3200,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "7b79b510.d7e13c",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger On",
-        "info": "",
-        "x": 3200,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "2038c552.53b21a",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Tall Lamp On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.living_room_tall_lamp\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3290,
-        "y": 1050,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "194db129.eee25f",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Short Lamp On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.living_room_short_lamp\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3290,
-        "y": 1100,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "49eb6641.ef9f58",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Fan Light On",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.living_room_fan_light_wall_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3280,
-        "y": 1150,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "89f64d88.4038f",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 3200,
-        "y": 1250,
-        "wires": []
-    },
-    {
-        "id": "a9b79174.e93c1",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Tall Lamp Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.living_room_tall_lamp\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3290,
-        "y": 1340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "27b3f586.f54f6a",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Short Lamp Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.living_room_short_lamp\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3290,
-        "y": 1390,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "36791b71.c3f7f4",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "Living Room Fan Light Off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.living_room_fan_light_wall_dimmer_level\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 3280,
-        "y": 1440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6bc682be.28bbec",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "All Lights",
-        "info": "",
-        "x": 3940,
-        "y": 1100,
-        "wires": []
-    },
-    {
-        "id": "b90b7514.7f4e88",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger On",
-        "info": "",
-        "x": 3970,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "ca43e431.52b1b8",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "List out all Outside Lights",
-        "info": "",
-        "x": 3960,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "5e5bb3d5.d6366c",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 3980,
-        "y": 1490,
-        "wires": []
-    },
-    {
         "id": "8f36a295.1e12d",
         "type": "link out",
         "z": "ca2305ba.3a64f8",
         "name": "Turn on Hot Tub Scene",
         "links": [
-            "562ff468.8e249c"
+            "562ff468.8e249c",
+            "233ebac9.692876"
         ],
         "x": 560,
         "y": 1450,
@@ -2703,53 +1695,12 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn off Hot Tub Scene",
         "links": [
-            "ab97c066.6aef4"
+            "ab97c066.6aef4",
+            "637a1c24.bfa924"
         ],
         "x": 560,
         "y": 1520,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "ab97c066.6aef4",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off Hot Tub Scene",
-        "links": [
-            "2ef53439.3cb13c",
-            "c6717f5b.cea47"
-        ],
-        "x": 3600,
-        "y": 1440,
-        "wires": [
-            [
-                "10d3dd4.82b3323",
-                "bd62cdc3.6466f",
-                "f21bd1e7.99de2",
-                "88362fb8.d9c3f"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "562ff468.8e249c",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on Hot Tub Scene",
-        "links": [
-            "5c3df371.f41b5c",
-            "8f36a295.1e12d"
-        ],
-        "x": 3600,
-        "y": 1380,
-        "wires": [
-            [
-                "d4640ca4.3fe68",
-                "8ff35f3a.ef114",
-                "20334113.f7378e",
-                "9e23ec2c.0f63f"
-            ]
-        ],
         "l": true
     },
     {
@@ -2758,7 +1709,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn off at Dawn",
         "links": [
-            "ed671d86.3c607"
+            "ed671d86.3c607",
+            "5577022b.1192cc"
         ],
         "x": 580.0000038146973,
         "y": 416.4999717473984,
@@ -2771,49 +1723,12 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn on at Dusk",
         "links": [
-            "cb3afe4b.d2e76"
+            "cb3afe4b.d2e76",
+            "6933e03f.8b93f"
         ],
         "x": 580.0000038146973,
         "y": 366.4999717473984,
         "wires": [],
-        "l": true
-    },
-    {
-        "id": "ed671d86.3c607",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off at Dawn",
-        "links": [
-            "8d856041.3aff5"
-        ],
-        "x": 2870,
-        "y": 1310,
-        "wires": [
-            [
-                "59600ad5.5b1d94",
-                "c0daa976.6a2b68",
-                "703b551.94085ac"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "cb3afe4b.d2e76",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on at Dusk",
-        "links": [
-            "20afa414.35affc"
-        ],
-        "x": 2870,
-        "y": 1180,
-        "wires": [
-            [
-                "827abe38.5cf82",
-                "79c09d64.93f904",
-                "d3fd598e.5fd068"
-            ]
-        ],
         "l": true
     },
     {
@@ -2951,7 +1866,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn on Hot Tub Scene",
         "links": [
-            "562ff468.8e249c"
+            "562ff468.8e249c",
+            "233ebac9.692876"
         ],
         "x": 1120,
         "y": 940,
@@ -2964,48 +1880,13 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn Off Hot Tub Scene",
         "links": [
-            "ab97c066.6aef4"
+            "ab97c066.6aef4",
+            "637a1c24.bfa924"
         ],
         "x": 1120,
         "y": 990,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "9e23ec2c.0f63f",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "input_boolean.hot_tub_scene on",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "homeassistant",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"input_boolean.hot_tub_scene\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4430,
-        "y": 1380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "88362fb8.d9c3f",
-        "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
-        "name": "input_boolean.hot_tub_scene off",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "homeassistant",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"input_boolean.hot_tub_scene\"}",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "x": 4430,
-        "y": 1440,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "514da86.251a658",
@@ -5216,7 +4097,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn on Living Room Lamps",
         "links": [
-            "17c43b2b.de5695"
+            "17c43b2b.de5695",
+            "a85620cc.0278d"
         ],
         "x": 1130,
         "y": 1040,
@@ -5229,7 +4111,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn Off Living Room Lamps",
         "links": [
-            "31c719e3.ca4a96"
+            "31c719e3.ca4a96",
+            "f024aac3.fc53a8"
         ],
         "x": 1180,
         "y": 1090,
@@ -5242,7 +4125,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn on Living Room Fan/lamps",
         "links": [
-            "bdfd8902.a6d6c8"
+            "bdfd8902.a6d6c8",
+            "3984fec3.a17932"
         ],
         "x": 1470,
         "y": 1140,
@@ -5255,7 +4139,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn Off Living Room Fan/lamps",
         "links": [
-            "90ee6e74.0fe52"
+            "90ee6e74.0fe52",
+            "2e4f1dd0.b00b22"
         ],
         "x": 1470,
         "y": 1190,
@@ -5294,80 +4179,6 @@
                 "55df3ac6.a5e864"
             ]
         ]
-    },
-    {
-        "id": "17c43b2b.de5695",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on Living Room Lamps",
-        "links": [
-            "88bdb145.6b871"
-        ],
-        "x": 2900,
-        "y": 1040,
-        "wires": [
-            [
-                "2038c552.53b21a",
-                "194db129.eee25f"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "bdfd8902.a6d6c8",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on Living Room Fan/lamps",
-        "links": [
-            "497b2d71.46a164"
-        ],
-        "x": 2910,
-        "y": 1090,
-        "wires": [
-            [
-                "2038c552.53b21a",
-                "194db129.eee25f",
-                "49eb6641.ef9f58"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "31c719e3.ca4a96",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off Living Room Lamps",
-        "links": [
-            "a0906a0f.64a0d8"
-        ],
-        "x": 2900,
-        "y": 1420,
-        "wires": [
-            [
-                "a9b79174.e93c1",
-                "27b3f586.f54f6a"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "90ee6e74.0fe52",
-        "type": "link in",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off Living Room Fan/lamps",
-        "links": [
-            "55df3ac6.a5e864"
-        ],
-        "x": 2910,
-        "y": 1470,
-        "wires": [
-            [
-                "36791b71.c3f7f4",
-                "27b3f586.f54f6a",
-                "a9b79174.e93c1"
-            ]
-        ],
-        "l": true
     },
     {
         "id": "d9b883a1.05716",
@@ -5471,7 +4282,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn on Kitchen Cabinet Lights",
         "links": [
-            "5c408a79.5a6514"
+            "5c408a79.5a6514",
+            "cc5e066f.a722d8"
         ],
         "x": 1260,
         "y": 1260,
@@ -5484,7 +4296,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn off Kitchen Cabinet Lights",
         "links": [
-            "8df752a9.449c2"
+            "8df752a9.449c2",
+            "1bfbfe04.fea962"
         ],
         "x": 1260,
         "y": 1310,
@@ -5492,9 +4305,1221 @@
         "l": true
     },
     {
-        "id": "cd612114.07ce4",
+        "id": "4d5c5ff3.28b9a",
         "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Scone On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.living_room_sconce\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 970,
+        "y": 1050,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19646d21.5acfc3",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Stairway Lights On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.stairs_light_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 950,
+        "y": 1250,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "654b3663.811218",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Stairway Lights Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.stairs_light_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 950,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b76242f.470c9c",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Scone Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.living_room_sconce\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 970,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c916c06.4c6124",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Front Lights Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.front_house_lights_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1720,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33be18a9.7f08c8",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Front House Lights On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.front_house_lights_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 1230,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7b47fb1.4e748",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Patio Soffit Lights - ON",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_on",
+        "data": "{\"entity_id\":[\"light.outside_patio_soffit_light_wall_dimmer_level\"]}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea613c7c.ec017",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Patio Soffit Lights - OFF",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.outside_patio_soffit_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1750,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10bb803b.cccec",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Outlet Dimmer Lights - ON",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_on",
+        "data": "{\"entity_id\":[\"light.outside_outlet_dimmer_level\"]}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1750,
+        "y": 1330,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9390e88.0e664",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Outlet Dimmer Lights - OFF",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.outside_outlet_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1760,
+        "y": 1730,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "680f6583.b3703c",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Patio Sconce Light- ON",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_on",
+        "data": "{\"entity_id\":[\"light.outside_patio_sconce_light\"]}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1740,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cce7be3b.d693b",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Patio Sconce Light- OFF",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.outside_patio_sconce_light\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1750,
+        "y": 1630,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77bd43a7.33d76c",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on all Kitchen Lights",
+        "links": [
+            "bf7b5656.d71878"
+        ],
+        "x": 460,
+        "y": 250,
+        "wires": [
+            [
+                "d29774d3.c91278",
+                "3a74385c.8bdb28",
+                "c50060c0.8f09c",
+                "5dc70946.0895c8"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d29774d3.c91278",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Fridge Light - On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 950,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c50060c0.8f09c",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Deck Door Light - On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 960,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a74385c.8bdb28",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Sink Light - On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 940,
+        "y": 290,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5dc70946.0895c8",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Table Light - On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_table_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 950,
+        "y": 390,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d845e34.f1356",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off all Kitchen Lights",
+        "links": [
+            "1dd05952.7a5727"
+        ],
+        "x": 460,
+        "y": 590,
+        "wires": [
+            [
+                "da886df5.bbcd",
+                "be4d704c.dd5f5",
+                "428887cb.c746e8",
+                "a99ea4ab.0cbc18"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "da886df5.bbcd",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Fridge Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 950,
+        "y": 530,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "428887cb.c746e8",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Deck Door Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 960,
+        "y": 630,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be4d704c.dd5f5",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Sink Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 940,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a99ea4ab.0cbc18",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Table Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_table_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 950,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa50b9db.0c7d38",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "office back light 1 on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.office_back_1\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 810,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52d4c202.e3188c",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "office back light 1 off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.office_back_1\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9701447f.73d698",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "office back light 2 on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.office_back_2\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37cdbde4.f8e4e2",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "office back light 2 off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.office_back_2\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 1050,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c62c50cd.fbc62",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "office front light on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.office_front_lights_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1720,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ac105b7.165faa",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "front office light off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.office_front_lights_switch_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1720,
+        "y": 950,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71ad6b3b.0ee304",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "home theater BL on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.home_theater_back_left\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1720,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b06ff81.3a724",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "home theater FL on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.home_theater_front_left\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1720,
+        "y": 290,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "973d78fb.95f4e8",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "home theater FR on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.home_theater_front_right\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "968fdb35.d22508",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "home theater BR on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.home_theater_back_right\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 390,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df2997bd.573f78",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "home theater BR off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.home_theater_back_right\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 530,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ecbbef4a.4e525",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "home theater BL off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.home_theater_back_left\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1720,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3356ae02.564752",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "home theater FR off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.home_theater_front_right\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1730,
+        "y": 630,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48015f30.90e1d",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "home theater FL off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.home_theater_front_left\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1720,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "79c4fc05.ac9c24",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "List out all Upstairs Lights/Switches",
+        "info": "",
+        "x": 890,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "56a8d0cf.842d6",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Kitchen Lights",
+        "info": "",
+        "x": 850,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5bce20e9.e868e",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger On",
+        "info": "",
+        "x": 870,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4cff6283.e6289c",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 870,
+        "y": 490,
+        "wires": []
+    },
+    {
+        "id": "3267924b.7b4fbe",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Home Theater Lights",
+        "info": "",
+        "x": 1670,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "67a7d033.1697a",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger On",
+        "info": "",
+        "x": 1660,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "3f88b6d5.5233ea",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 1660,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6868a261.27688c",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Office Lights",
+        "info": "",
+        "x": 1640,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "78440a5f.d025f4",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger On",
+        "info": "",
+        "x": 1660,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "91757103.222cf",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 1660,
+        "y": 910,
+        "wires": []
+    },
+    {
+        "id": "37957dbe.114f32",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "List out all Downstairs Lights/Switches",
+        "info": "",
+        "x": 1690,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6ebd6391.4bbb3c",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on Office/HT Lights",
+        "links": [
+            "37b5dfa6.90096"
+        ],
+        "x": 1290,
+        "y": 300,
+        "wires": [
+            [
+                "973d78fb.95f4e8",
+                "9b06ff81.3a724",
+                "71ad6b3b.0ee304",
+                "968fdb35.d22508",
+                "c62c50cd.fbc62",
+                "fa50b9db.0c7d38",
+                "9701447f.73d698"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "7ee27850.15b358",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off Office/HT Lights",
+        "links": [
+            "553a45e6.a1485c"
+        ],
+        "x": 1280,
+        "y": 850,
+        "wires": [
+            [
+                "ecbbef4a.4e525",
+                "df2997bd.573f78",
+                "48015f30.90e1d",
+                "3356ae02.564752",
+                "2ac105b7.165faa",
+                "52d4c202.e3188c",
+                "37cdbde4.f8e4e2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "df74d19e.78101",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on Back Office Lights",
+        "links": [
+            "1b6aa296.33df2d"
+        ],
+        "x": 1280,
+        "y": 750,
+        "wires": [
+            [
+                "fa50b9db.0c7d38",
+                "9701447f.73d698"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "ccd8a0da.cfdb4",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off Back Office Lights",
+        "links": [
+            "45b5815e.4a6e8"
+        ],
+        "x": 1280,
+        "y": 960,
+        "wires": [
+            [
+                "52d4c202.e3188c",
+                "37cdbde4.f8e4e2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "b597df4c.c1b7f",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Lights",
+        "info": "",
+        "x": 890,
+        "y": 970,
+        "wires": []
+    },
+    {
+        "id": "8b4b41e4.7cbab",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger On",
+        "info": "",
+        "x": 890,
+        "y": 1010,
+        "wires": []
+    },
+    {
+        "id": "c58f75f6.e258a8",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Tall Lamp On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.living_room_tall_lamp\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 980,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fcc81b64.1b4828",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Short Lamp On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.living_room_short_lamp\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 980,
+        "y": 1150,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55480ed8.c9b19",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Fan Light On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.living_room_fan_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 970,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7cbae1c.f0133",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 890,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "860694e9.8493e8",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Tall Lamp Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.living_room_tall_lamp\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 980,
+        "y": 1390,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f19563e.69deba",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Short Lamp Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.living_room_short_lamp\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 980,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0ad50f3.a4eff",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Living Room Fan Light Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.living_room_fan_light_wall_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 970,
+        "y": 1490,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "adcce8a5.435618",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "All Lights",
+        "info": "",
+        "x": 1630,
+        "y": 1150,
+        "wires": []
+    },
+    {
+        "id": "96d03ff7.cc923",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger On",
+        "info": "",
+        "x": 1660,
+        "y": 1190,
+        "wires": []
+    },
+    {
+        "id": "ed9913ad.1e199",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "List out all Outside Lights",
+        "info": "",
+        "x": 1650,
+        "y": 1110,
+        "wires": []
+    },
+    {
+        "id": "2402b6d2.4b68da",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Trigger Off",
+        "info": "",
+        "x": 1670,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "637a1c24.bfa924",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off Hot Tub Scene",
+        "links": [
+            "2ef53439.3cb13c",
+            "c6717f5b.cea47"
+        ],
+        "x": 1290,
+        "y": 1490,
+        "wires": [
+            [
+                "cce7be3b.d693b",
+                "ea613c7c.ec017",
+                "b9390e88.0e664",
+                "f0bf8d49.71176"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "233ebac9.692876",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on Hot Tub Scene",
+        "links": [
+            "5c3df371.f41b5c",
+            "8f36a295.1e12d"
+        ],
+        "x": 1290,
+        "y": 1430,
+        "wires": [
+            [
+                "e7b47fb1.4e748",
+                "10bb803b.cccec",
+                "680f6583.b3703c",
+                "3d3cac03.b363a4"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "5577022b.1192cc",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off at Dawn",
+        "links": [
+            "8d856041.3aff5"
+        ],
+        "x": 560,
+        "y": 1360,
+        "wires": [
+            [
+                "6b76242f.470c9c",
+                "654b3663.811218",
+                "c916c06.4c6124"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "6933e03f.8b93f",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on at Dusk",
+        "links": [
+            "20afa414.35affc"
+        ],
+        "x": 560,
+        "y": 1230,
+        "wires": [
+            [
+                "4d5c5ff3.28b9a",
+                "19646d21.5acfc3",
+                "33be18a9.7f08c8"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "3d3cac03.b363a4",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "input_boolean.hot_tub_scene on",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"input_boolean.hot_tub_scene\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 2120,
+        "y": 1430,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0bf8d49.71176",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "input_boolean.hot_tub_scene off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "homeassistant",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"input_boolean.hot_tub_scene\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 2120,
+        "y": 1490,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a85620cc.0278d",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on Living Room Lamps",
+        "links": [
+            "88bdb145.6b871"
+        ],
+        "x": 590,
+        "y": 1090,
+        "wires": [
+            [
+                "c58f75f6.e258a8",
+                "fcc81b64.1b4828"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "3984fec3.a17932",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on Living Room Fan/lamps",
+        "links": [
+            "497b2d71.46a164"
+        ],
+        "x": 600,
+        "y": 1140,
+        "wires": [
+            [
+                "c58f75f6.e258a8",
+                "fcc81b64.1b4828",
+                "55480ed8.c9b19"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "f024aac3.fc53a8",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off Living Room Lamps",
+        "links": [
+            "a0906a0f.64a0d8"
+        ],
+        "x": 590,
+        "y": 1470,
+        "wires": [
+            [
+                "860694e9.8493e8",
+                "3f19563e.69deba"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "2e4f1dd0.b00b22",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off Living Room Fan/lamps",
+        "links": [
+            "55df3ac6.a5e864"
+        ],
+        "x": 600,
+        "y": 1520,
+        "wires": [
+            [
+                "c0ad50f3.a4eff",
+                "3f19563e.69deba",
+                "860694e9.8493e8"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d5a8a617.b15398",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Cabinet Lights On",
         "server": "65b61d5d.d1e1c4",
         "service_domain": "light",
@@ -5503,50 +5528,50 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 3260,
-        "y": 390,
+        "x": 950,
+        "y": 440,
         "wires": [
             []
         ]
     },
     {
-        "id": "5c408a79.5a6514",
+        "id": "cc5e066f.a722d8",
         "type": "link in",
-        "z": "ca2305ba.3a64f8",
+        "z": "b4bd0bcf.c07d88",
         "name": "Turn on Kitchen Cabinet Lights",
         "links": [
             "46515be6.b9d8e4"
         ],
-        "x": 2790,
-        "y": 380,
+        "x": 480,
+        "y": 430,
         "wires": [
             [
-                "cd612114.07ce4"
+                "d5a8a617.b15398"
             ]
         ],
         "l": true
     },
     {
-        "id": "8df752a9.449c2",
+        "id": "1bfbfe04.fea962",
         "type": "link in",
-        "z": "ca2305ba.3a64f8",
+        "z": "b4bd0bcf.c07d88",
         "name": "Turn off Kitchen Cabinet Lights",
         "links": [
             "3a76ed96.349f62"
         ],
-        "x": 2790,
-        "y": 640,
+        "x": 480,
+        "y": 690,
         "wires": [
             [
-                "233039c6.323466"
+                "610d916d.eef81"
             ]
         ],
         "l": true
     },
     {
-        "id": "233039c6.323466",
+        "id": "610d916d.eef81",
         "type": "api-call-service",
-        "z": "ca2305ba.3a64f8",
+        "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Cabinet Lights Off",
         "server": "65b61d5d.d1e1c4",
         "service_domain": "light",
@@ -5555,8 +5580,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 3260,
-        "y": 680,
+        "x": 950,
+        "y": 730,
         "wires": [
             []
         ]
