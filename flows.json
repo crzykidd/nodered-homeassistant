@@ -9,7 +9,7 @@
     {
         "id": "7f5a232.5f2e2dc",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Test Nodes ",
         "disabled": false,
         "info": ""
     },
@@ -291,8 +291,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2090,
-        "y": 710,
+        "x": 3280,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -343,8 +343,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2070,
-        "y": 910,
+        "x": 3260,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -361,8 +361,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2070,
-        "y": 1200,
+        "x": 3260,
+        "y": 1490,
         "wires": [
             []
         ]
@@ -379,8 +379,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2090,
-        "y": 1000,
+        "x": 3280,
+        "y": 1290,
         "wires": [
             []
         ]
@@ -407,8 +407,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2860,
-        "y": 1520,
+        "x": 4030,
+        "y": 1530,
         "wires": [
             []
         ]
@@ -425,8 +425,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 1170,
+        "x": 4040,
+        "y": 1180,
         "wires": [
             []
         ]
@@ -1168,8 +1168,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 1220,
+        "x": 4040,
+        "y": 1230,
         "wires": [
             []
         ]
@@ -1182,12 +1182,12 @@
         "server": "65b61d5d.d1e1c4",
         "service_domain": "homeassistant",
         "service": "turn_off",
-        "data": "{\"entity_id\":[\"light.outside_patio_soffit_light_wall_dimmer_level\"]}",
+        "data": "{\"entity_id\":\"light.outside_patio_soffit_light_wall_dimmer_level\"}",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2890,
-        "y": 1620,
+        "x": 4060,
+        "y": 1630,
         "wires": [
             []
         ]
@@ -1214,7 +1214,7 @@
         "name": "Washing Machine",
         "threshold": "4",
         "startafter": "3",
-        "stopafter": "3",
+        "stopafter": "4",
         "x": 478.99997329711914,
         "y": 2869.0002216100693,
         "wires": [
@@ -1337,8 +1337,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2890,
-        "y": 1270,
+        "x": 4060,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -1355,8 +1355,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2900,
-        "y": 1670,
+        "x": 4070,
+        "y": 1680,
         "wires": [
             []
         ]
@@ -1500,8 +1500,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2880,
-        "y": 1320,
+        "x": 4050,
+        "y": 1330,
         "wires": [
             []
         ]
@@ -1518,8 +1518,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2890,
-        "y": 1570,
+        "x": 4060,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -1532,8 +1532,8 @@
         "links": [
             "bf7b5656.d71878"
         ],
-        "x": 1600,
-        "y": 190,
+        "x": 2770,
+        "y": 200,
         "wires": [
             [
                 "65fd3148.a14fd",
@@ -1556,8 +1556,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2090,
-        "y": 180,
+        "x": 3260,
+        "y": 190,
         "wires": [
             []
         ]
@@ -1574,8 +1574,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2100,
-        "y": 280,
+        "x": 3270,
+        "y": 290,
         "wires": [
             []
         ]
@@ -1592,8 +1592,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2080,
-        "y": 230,
+        "x": 3250,
+        "y": 240,
         "wires": [
             []
         ]
@@ -1610,8 +1610,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2090,
-        "y": 330,
+        "x": 3260,
+        "y": 340,
         "wires": [
             []
         ]
@@ -1624,8 +1624,8 @@
         "links": [
             "1dd05952.7a5727"
         ],
-        "x": 1600,
-        "y": 480,
+        "x": 2770,
+        "y": 540,
         "wires": [
             [
                 "2a64fcf8.fbd1c4",
@@ -1648,8 +1648,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2090,
-        "y": 420,
+        "x": 3260,
+        "y": 480,
         "wires": [
             []
         ]
@@ -1666,8 +1666,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2100,
-        "y": 520,
+        "x": 3270,
+        "y": 580,
         "wires": [
             []
         ]
@@ -1684,8 +1684,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2080,
-        "y": 470,
+        "x": 3250,
+        "y": 530,
         "wires": [
             []
         ]
@@ -1702,8 +1702,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2090,
-        "y": 570,
+        "x": 3260,
+        "y": 630,
         "wires": [
             []
         ]
@@ -1750,11 +1750,16 @@
                 "t": "eq",
                 "v": "zwave.living_room_fan_light_wall_dimmer",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "zwave.kitchen_sink_light_dimmer",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 4,
+        "outputs": 5,
         "x": 410,
         "y": 850,
         "wires": [
@@ -1769,6 +1774,9 @@
             ],
             [
                 "568960f.c0f50a"
+            ],
+            [
+                "d9b883a1.05716"
             ]
         ]
     },
@@ -1859,8 +1867,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
-        "y": 730,
+        "x": 970,
+        "y": 680,
         "wires": [
             [
                 "37b5dfa6.90096"
@@ -1882,8 +1890,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 750,
+        "x": 4040,
+        "y": 760,
         "wires": [
             []
         ]
@@ -1900,8 +1908,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 940,
+        "x": 4040,
+        "y": 950,
         "wires": [
             []
         ]
@@ -1918,8 +1926,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 800,
+        "x": 4040,
+        "y": 810,
         "wires": [
             []
         ]
@@ -1936,8 +1944,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 990,
+        "x": 4040,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -1954,8 +1962,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2860,
-        "y": 700,
+        "x": 4030,
+        "y": 710,
         "wires": [
             []
         ]
@@ -1972,8 +1980,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2860,
-        "y": 890,
+        "x": 4030,
+        "y": 900,
         "wires": [
             []
         ]
@@ -1990,8 +1998,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2860,
-        "y": 280,
+        "x": 4030,
+        "y": 290,
         "wires": [
             []
         ]
@@ -2008,8 +2016,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2860,
-        "y": 230,
+        "x": 4030,
+        "y": 240,
         "wires": [
             []
         ]
@@ -2026,8 +2034,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 180,
+        "x": 4040,
+        "y": 190,
         "wires": [
             []
         ]
@@ -2044,8 +2052,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 330,
+        "x": 4040,
+        "y": 340,
         "wires": [
             []
         ]
@@ -2062,8 +2070,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 470,
+        "x": 4040,
+        "y": 480,
         "wires": [
             []
         ]
@@ -2080,8 +2088,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2860,
-        "y": 420,
+        "x": 4030,
+        "y": 430,
         "wires": [
             []
         ]
@@ -2098,8 +2106,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2870,
-        "y": 570,
+        "x": 4040,
+        "y": 580,
         "wires": [
             []
         ]
@@ -2116,8 +2124,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2860,
-        "y": 520,
+        "x": 4030,
+        "y": 530,
         "wires": [
             []
         ]
@@ -2138,8 +2146,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "List out all Upstairs Lights/Switches",
         "info": "",
-        "x": 2030,
-        "y": 60,
+        "x": 3200,
+        "y": 70,
         "wires": []
     },
     {
@@ -2148,8 +2156,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Kitchen Lights",
         "info": "",
-        "x": 1990,
-        "y": 100,
+        "x": 3160,
+        "y": 110,
         "wires": []
     },
     {
@@ -2158,8 +2166,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger On",
         "info": "",
-        "x": 2010,
-        "y": 140,
+        "x": 3180,
+        "y": 150,
         "wires": []
     },
     {
@@ -2168,8 +2176,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger Off",
         "info": "",
-        "x": 2010,
-        "y": 380,
+        "x": 3180,
+        "y": 440,
         "wires": []
     },
     {
@@ -2178,8 +2186,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Home Theater Lights",
         "info": "",
-        "x": 2810,
-        "y": 100,
+        "x": 3980,
+        "y": 110,
         "wires": []
     },
     {
@@ -2188,8 +2196,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger On",
         "info": "",
-        "x": 2800,
-        "y": 140,
+        "x": 3970,
+        "y": 150,
         "wires": []
     },
     {
@@ -2198,8 +2206,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger Off",
         "info": "",
-        "x": 2800,
-        "y": 380,
+        "x": 3970,
+        "y": 390,
         "wires": []
     },
     {
@@ -2208,8 +2216,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Office Lights",
         "info": "",
-        "x": 2780,
-        "y": 620,
+        "x": 3950,
+        "y": 630,
         "wires": []
     },
     {
@@ -2218,8 +2226,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger On",
         "info": "",
-        "x": 2800,
-        "y": 660,
+        "x": 3970,
+        "y": 670,
         "wires": []
     },
     {
@@ -2228,8 +2236,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger Off",
         "info": "",
-        "x": 2800,
-        "y": 850,
+        "x": 3970,
+        "y": 860,
         "wires": []
     },
     {
@@ -2238,8 +2246,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "List out all Downstairs Lights/Switches",
         "info": "",
-        "x": 2830,
-        "y": 60,
+        "x": 4000,
+        "y": 70,
         "wires": []
     },
     {
@@ -2250,8 +2258,8 @@
         "links": [
             "26849a1f.654876"
         ],
-        "x": 1120,
-        "y": 750,
+        "x": 1280,
+        "y": 680,
         "wires": [],
         "l": true
     },
@@ -2263,8 +2271,8 @@
         "links": [
             "2715c85.ae11838"
         ],
-        "x": 1120,
-        "y": 700,
+        "x": 1260,
+        "y": 640,
         "wires": [],
         "l": true
     },
@@ -2276,8 +2284,8 @@
         "links": [
             "37b5dfa6.90096"
         ],
-        "x": 2430,
-        "y": 240,
+        "x": 3600,
+        "y": 250,
         "wires": [
             [
                 "82342c76.08e99",
@@ -2299,8 +2307,8 @@
         "links": [
             "553a45e6.a1485c"
         ],
-        "x": 2420,
-        "y": 790,
+        "x": 3590,
+        "y": 800,
         "wires": [
             [
                 "829eec45.96de6",
@@ -2322,8 +2330,8 @@
         "links": [
             "94082817.dc5788"
         ],
-        "x": 1130,
-        "y": 600,
+        "x": 1120,
+        "y": 560,
         "wires": [],
         "l": true
     },
@@ -2335,8 +2343,8 @@
         "links": [
             "1b6aa296.33df2d"
         ],
-        "x": 2420,
-        "y": 690,
+        "x": 3590,
+        "y": 700,
         "wires": [
             [
                 "c0dbde48.739",
@@ -2353,8 +2361,8 @@
         "links": [
             "1ff8965b.dd41ba"
         ],
-        "x": 1130,
-        "y": 650,
+        "x": 1160,
+        "y": 600,
         "wires": [],
         "l": true
     },
@@ -2366,8 +2374,8 @@
         "links": [
             "45b5815e.4a6e8"
         ],
-        "x": 2420,
-        "y": 900,
+        "x": 3590,
+        "y": 910,
         "wires": [
             [
                 "1c0b1abf.3d9c55",
@@ -2419,7 +2427,7 @@
         "repair": false,
         "outputs": 6,
         "x": 670,
-        "y": 890,
+        "y": 880,
         "wires": [
             [],
             [
@@ -2493,8 +2501,8 @@
         "links": [
             "918392a5.ec51"
         ],
-        "x": 1120,
-        "y": 880,
+        "x": 1140,
+        "y": 870,
         "wires": [],
         "l": true
     },
@@ -2504,8 +2512,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Living Room Lights",
         "info": "",
-        "x": 2010,
-        "y": 630,
+        "x": 3200,
+        "y": 920,
         "wires": []
     },
     {
@@ -2514,8 +2522,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger On",
         "info": "",
-        "x": 2010,
-        "y": 670,
+        "x": 3200,
+        "y": 960,
         "wires": []
     },
     {
@@ -2530,8 +2538,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2100,
-        "y": 760,
+        "x": 3290,
+        "y": 1050,
         "wires": [
             []
         ]
@@ -2548,8 +2556,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2100,
-        "y": 810,
+        "x": 3290,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -2566,8 +2574,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2090,
-        "y": 860,
+        "x": 3280,
+        "y": 1150,
         "wires": [
             []
         ]
@@ -2578,8 +2586,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger Off",
         "info": "",
-        "x": 2010,
-        "y": 960,
+        "x": 3200,
+        "y": 1250,
         "wires": []
     },
     {
@@ -2594,8 +2602,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2100,
-        "y": 1050,
+        "x": 3290,
+        "y": 1340,
         "wires": [
             []
         ]
@@ -2612,8 +2620,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2100,
-        "y": 1100,
+        "x": 3290,
+        "y": 1390,
         "wires": [
             []
         ]
@@ -2630,8 +2638,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 2090,
-        "y": 1150,
+        "x": 3280,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -2642,8 +2650,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "All Lights",
         "info": "",
-        "x": 2770,
-        "y": 1090,
+        "x": 3940,
+        "y": 1100,
         "wires": []
     },
     {
@@ -2652,8 +2660,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger On",
         "info": "",
-        "x": 2800,
-        "y": 1130,
+        "x": 3970,
+        "y": 1140,
         "wires": []
     },
     {
@@ -2662,8 +2670,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "List out all Outside Lights",
         "info": "",
-        "x": 2790,
-        "y": 1050,
+        "x": 3960,
+        "y": 1060,
         "wires": []
     },
     {
@@ -2672,8 +2680,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Trigger Off",
         "info": "",
-        "x": 2810,
-        "y": 1480,
+        "x": 3980,
+        "y": 1490,
         "wires": []
     },
     {
@@ -2711,8 +2719,8 @@
             "2ef53439.3cb13c",
             "c6717f5b.cea47"
         ],
-        "x": 2430,
-        "y": 1430,
+        "x": 3600,
+        "y": 1440,
         "wires": [
             [
                 "10d3dd4.82b3323",
@@ -2732,8 +2740,8 @@
             "5c3df371.f41b5c",
             "8f36a295.1e12d"
         ],
-        "x": 2430,
-        "y": 1370,
+        "x": 3600,
+        "y": 1380,
         "wires": [
             [
                 "d4640ca4.3fe68",
@@ -2778,8 +2786,8 @@
         "links": [
             "8d856041.3aff5"
         ],
-        "x": 1680,
-        "y": 1020,
+        "x": 2870,
+        "y": 1310,
         "wires": [
             [
                 "59600ad5.5b1d94",
@@ -2797,8 +2805,8 @@
         "links": [
             "20afa414.35affc"
         ],
-        "x": 1680,
-        "y": 890,
+        "x": 2870,
+        "y": 1180,
         "wires": [
             [
                 "827abe38.5cf82",
@@ -2884,7 +2892,7 @@
         "repair": false,
         "outputs": 6,
         "x": 680,
-        "y": 1010,
+        "y": 990,
         "wires": [
             [],
             [
@@ -2926,7 +2934,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
+        "x": 900,
         "y": 970,
         "wires": [
             [
@@ -2975,8 +2983,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 3260,
-        "y": 1370,
+        "x": 4430,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -2993,8 +3001,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 3260,
-        "y": 1430,
+        "x": 4430,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -5147,7 +5155,7 @@
         "repair": false,
         "outputs": 6,
         "x": 650,
-        "y": 1130,
+        "y": 1100,
         "wires": [
             [],
             [
@@ -5211,7 +5219,7 @@
             "17c43b2b.de5695"
         ],
         "x": 1130,
-        "y": 1060,
+        "y": 1040,
         "wires": [],
         "l": true
     },
@@ -5223,8 +5231,8 @@
         "links": [
             "31c719e3.ca4a96"
         ],
-        "x": 1130,
-        "y": 1110,
+        "x": 1180,
+        "y": 1090,
         "wires": [],
         "l": true
     },
@@ -5236,8 +5244,8 @@
         "links": [
             "bdfd8902.a6d6c8"
         ],
-        "x": 1140,
-        "y": 1160,
+        "x": 1470,
+        "y": 1140,
         "wires": [],
         "l": true
     },
@@ -5249,8 +5257,8 @@
         "links": [
             "90ee6e74.0fe52"
         ],
-        "x": 1140,
-        "y": 1210,
+        "x": 1470,
+        "y": 1190,
         "wires": [],
         "l": true
     },
@@ -5276,7 +5284,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
+        "x": 1110,
         "y": 1150,
         "wires": [
             [
@@ -5295,8 +5303,8 @@
         "links": [
             "88bdb145.6b871"
         ],
-        "x": 1710,
-        "y": 750,
+        "x": 2900,
+        "y": 1040,
         "wires": [
             [
                 "2038c552.53b21a",
@@ -5313,8 +5321,8 @@
         "links": [
             "497b2d71.46a164"
         ],
-        "x": 1720,
-        "y": 800,
+        "x": 2910,
+        "y": 1090,
         "wires": [
             [
                 "2038c552.53b21a",
@@ -5332,8 +5340,8 @@
         "links": [
             "a0906a0f.64a0d8"
         ],
-        "x": 1710,
-        "y": 1130,
+        "x": 2900,
+        "y": 1420,
         "wires": [
             [
                 "a9b79174.e93c1",
@@ -5350,8 +5358,8 @@
         "links": [
             "55df3ac6.a5e864"
         ],
-        "x": 1720,
-        "y": 1180,
+        "x": 2910,
+        "y": 1470,
         "wires": [
             [
                 "36791b71.c3f7f4",
@@ -5360,5 +5368,197 @@
             ]
         ],
         "l": true
+    },
+    {
+        "id": "d9b883a1.05716",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Sink Light Switch",
+        "property": "payload.event.scene_data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "7680",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7860",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7920",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7980",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8040",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7740",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 660,
+        "y": 1210,
+        "wires": [
+            [],
+            [
+                "9f59e383.813a2"
+            ],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "1x Tap",
+            "2x Tap",
+            "3x Tap",
+            "4x Tap",
+            "5x Tap",
+            "Long Tap"
+        ]
+    },
+    {
+        "id": "9f59e383.813a2",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "2x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 920,
+        "y": 1260,
+        "wires": [
+            [
+                "46515be6.b9d8e4"
+            ],
+            [
+                "3a76ed96.349f62"
+            ]
+        ]
+    },
+    {
+        "id": "46515be6.b9d8e4",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Kitchen Cabinet Lights",
+        "links": [
+            "5c408a79.5a6514"
+        ],
+        "x": 1260,
+        "y": 1260,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "3a76ed96.349f62",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Kitchen Cabinet Lights",
+        "links": [
+            "8df752a9.449c2"
+        ],
+        "x": 1260,
+        "y": 1310,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "cd612114.07ce4",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Cabinet Lights On",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.kitchen_cabinet_lights\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 3260,
+        "y": 390,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c408a79.5a6514",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Kitchen Cabinet Lights",
+        "links": [
+            "46515be6.b9d8e4"
+        ],
+        "x": 2790,
+        "y": 380,
+        "wires": [
+            [
+                "cd612114.07ce4"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "8df752a9.449c2",
+        "type": "link in",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Kitchen Cabinet Lights",
+        "links": [
+            "3a76ed96.349f62"
+        ],
+        "x": 2790,
+        "y": 640,
+        "wires": [
+            [
+                "233039c6.323466"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "233039c6.323466",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "Kitchen Cabinet Lights Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.kitchen_cabinet_lights\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 3260,
+        "y": 680,
+        "wires": [
+            []
+        ]
     }
 ]
