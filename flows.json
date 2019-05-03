@@ -42,15 +42,6 @@
         "ha_boolean": "y|yes|true|on|home|open"
     },
     {
-        "id": "adc3c50.07e7f38",
-        "type": "server",
-        "z": "",
-        "name": "Home Assistant",
-        "legacy": false,
-        "hassio": false,
-        "rejectUnauthorizedCerts": true
-    },
-    {
         "id": "a0008d66.3b39",
         "type": "server",
         "z": "",
@@ -86,8 +77,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Server Room Door Events",
         "info": "",
-        "x": 170,
-        "y": 1960,
+        "x": 200,
+        "y": 3170,
         "wires": []
     },
     {
@@ -105,8 +96,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 167,
-        "y": 2024,
+        "x": 197,
+        "y": 3234,
         "wires": [
             [
                 "126eb1f0.60baee"
@@ -131,8 +122,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 398,
-        "y": 2027,
+        "x": 428,
+        "y": 3237,
         "wires": [
             [
                 "89d07e44.bb7ee"
@@ -154,8 +145,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 659,
-        "y": 2035,
+        "x": 689,
+        "y": 3245,
         "wires": [
             []
         ]
@@ -172,8 +163,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 664,
-        "y": 1949,
+        "x": 694,
+        "y": 3159,
         "wires": [
             [
                 "746d5c74.a077b4"
@@ -276,8 +267,8 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 110,
-        "y": 410,
+        "x": 170,
+        "y": 1130,
         "wires": [
             [
                 "82af13cb.2bbca"
@@ -308,8 +299,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 329,
-        "y": 411.5,
+        "x": 389,
+        "y": 1131.5,
         "wires": [
             [
                 "c8afd1ea.be12a",
@@ -326,8 +317,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Dusk Till Dawn Light Controlls",
         "info": "",
-        "x": 136,
-        "y": 339.5,
+        "x": 196,
+        "y": 1059.5,
         "wires": []
     },
     {
@@ -340,8 +331,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 320.00000381469727,
-        "y": 486.4999717473984,
+        "x": 380.00000381469727,
+        "y": 1206.4999717473984,
         "wires": []
     },
     {
@@ -356,8 +347,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1407,
-        "y": 2723,
+        "x": 1437,
+        "y": 3933,
         "wires": [
             [
                 "8771c665.1bc5b8"
@@ -370,8 +361,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "******************All Door Events******************",
         "info": "adf",
-        "x": 237,
-        "y": 1915,
+        "x": 267,
+        "y": 3125,
         "wires": []
     },
     {
@@ -382,8 +373,8 @@
         "func": "if(flow.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Closed\"\n                } \n        }\n    }\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 994,
-        "y": 2627,
+        "x": 1024,
+        "y": 3837,
         "wires": [
             [
                 "7e3035e.acfd0cc",
@@ -407,8 +398,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 167,
-        "y": 2178,
+        "x": 197,
+        "y": 3388,
         "wires": [
             [
                 "a2449016.4a104"
@@ -433,8 +424,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 387,
-        "y": 2179,
+        "x": 417,
+        "y": 3389,
         "wires": [
             [
                 "df229c95.d623e"
@@ -478,8 +469,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1710,
-        "y": 2850,
+        "x": 1740,
+        "y": 4060,
         "wires": []
     },
     {
@@ -522,8 +513,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 944,
-        "y": 1881,
+        "x": 974,
+        "y": 3091,
         "wires": []
     },
     {
@@ -541,8 +532,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 147,
-        "y": 2260,
+        "x": 177,
+        "y": 3470,
         "wires": [
             [
                 "9a9ab806.8c55a8"
@@ -571,8 +562,8 @@
         "func": "if(flow.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Opened\"\n                } \n        }\n    }\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 992,
-        "y": 2546,
+        "x": 1022,
+        "y": 3756,
         "wires": [
             [
                 "eb645a5b.354298",
@@ -600,8 +591,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 394,
-        "y": 2258,
+        "x": 424,
+        "y": 3468,
         "wires": [
             [
                 "df229c95.d623e"
@@ -622,8 +613,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1405,
-        "y": 2529,
+        "x": 1435,
+        "y": 3739,
         "wires": []
     },
     {
@@ -652,8 +643,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1414,
-        "y": 2808,
+        "x": 1444,
+        "y": 4018,
         "wires": [
             [
                 "8771c665.1bc5b8"
@@ -675,8 +666,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 157,
-        "y": 2347,
+        "x": 187,
+        "y": 3557,
         "wires": [
             [
                 "facd8e21.69256"
@@ -701,8 +692,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 386,
-        "y": 2347,
+        "x": 416,
+        "y": 3557,
         "wires": [
             [
                 "df229c95.d623e"
@@ -727,8 +718,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 147,
-        "y": 2424,
+        "x": 177,
+        "y": 3634,
         "wires": [
             [
                 "a6a18fb5.2d4f6"
@@ -753,8 +744,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 386,
-        "y": 2424,
+        "x": 416,
+        "y": 3634,
         "wires": [
             [
                 "df229c95.d623e"
@@ -779,8 +770,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 187,
-        "y": 2504,
+        "x": 217,
+        "y": 3714,
         "wires": [
             [
                 "9e221147.4e4e2"
@@ -805,8 +796,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 428,
-        "y": 2504,
+        "x": 458,
+        "y": 3714,
         "wires": [
             [
                 "df229c95.d623e"
@@ -831,8 +822,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 167,
-        "y": 2594,
+        "x": 197,
+        "y": 3804,
         "wires": [
             [
                 "8e70690c.caf858"
@@ -857,8 +848,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 428,
-        "y": 2594,
+        "x": 458,
+        "y": 3804,
         "wires": [
             [
                 "df229c95.d623e"
@@ -883,8 +874,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 147,
-        "y": 2723,
+        "x": 177,
+        "y": 3933,
         "wires": [
             [
                 "72c77997.8f9bd8"
@@ -909,8 +900,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 415,
-        "y": 2723,
+        "x": 445,
+        "y": 3933,
         "wires": [
             [
                 "df229c95.d623e"
@@ -935,8 +926,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 137,
-        "y": 2661,
+        "x": 167,
+        "y": 3871,
         "wires": [
             [
                 "807e7b54.06b348"
@@ -961,8 +952,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 422,
-        "y": 2656,
+        "x": 452,
+        "y": 3866,
         "wires": [
             [
                 "df229c95.d623e"
@@ -984,8 +975,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1418,
-        "y": 2897,
+        "x": 1448,
+        "y": 4107,
         "wires": [
             [
                 "8771c665.1bc5b8"
@@ -998,8 +989,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Scenes - Automations",
         "info": "",
-        "x": 160,
-        "y": 1400,
+        "x": 190,
+        "y": 2760,
         "wires": []
     },
     {
@@ -1017,8 +1008,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 110,
-        "y": 1473,
+        "x": 140,
+        "y": 2833,
         "wires": [
             [
                 "105fdb56.2ba5f5",
@@ -1044,8 +1035,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 308,
-        "y": 1478,
+        "x": 338,
+        "y": 2838,
         "wires": [
             [
                 "8f36a295.1e12d"
@@ -1066,8 +1057,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 270,
-        "y": 1570,
+        "x": 300,
+        "y": 2930,
         "wires": []
     },
     {
@@ -1078,8 +1069,8 @@
         "threshold": "4",
         "startafter": "3",
         "stopafter": "4",
-        "x": 478.99997329711914,
-        "y": 2869.0002216100693,
+        "x": 508.99997329711914,
+        "y": 4079.0002216100693,
         "wires": [
             [],
             [
@@ -1093,7 +1084,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Washing Machine Power",
         "server": "65b61d5d.d1e1c4",
-        "entityidfilter": "sensor.s31_washer_energy_power",
+        "entityidfilter": "sensor.s31_washer_power",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -1102,8 +1093,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 154.99997329711914,
-        "y": 2867.0002216100693,
+        "x": 184.99997329711914,
+        "y": 4077.0002216100693,
         "wires": [
             [
                 "7b772eac.3fa28"
@@ -1117,9 +1108,9 @@
         "name": "Dryer",
         "threshold": "3",
         "startafter": "4",
-        "stopafter": "2",
-        "x": 439.9999771118164,
-        "y": 2954.0006984472275,
+        "stopafter": "3",
+        "x": 469.9999771118164,
+        "y": 4164.0006984472275,
         "wires": [
             [],
             [
@@ -1134,7 +1125,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Dryer Power",
         "server": "65b61d5d.d1e1c4",
-        "entityidfilter": "sensor.s31_dryer_energy_power",
+        "entityidfilter": "sensor.s31_dryer_power",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -1143,8 +1134,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 113.99997329711914,
-        "y": 2943.0002101659775,
+        "x": 143.99997329711914,
+        "y": 4153.0002101659775,
         "wires": [
             [
                 "db48e66f.ea2418",
@@ -1160,8 +1151,8 @@
         "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"Washing Machine is complete\"\n            } \n        }\n    }",
         "outputs": 1,
         "noerr": 0,
-        "x": 992.0000190734863,
-        "y": 2760.000410437584,
+        "x": 1022.0000190734863,
+        "y": 3970.000410437584,
         "wires": [
             [
                 "702a2083.5b29f",
@@ -1178,8 +1169,8 @@
         "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"The Dryer is complete\"\n            } \n        }\n    }",
         "outputs": 1,
         "noerr": 0,
-        "x": 988.9999732971191,
-        "y": 2888.00041615963,
+        "x": 1018.9999732971191,
+        "y": 4098.00041615963,
         "wires": [
             [
                 "702a2083.5b29f",
@@ -1199,8 +1190,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 403.0000114440918,
-        "y": 3039.000212073326,
+        "x": 433.0000114440918,
+        "y": 4249.000212073326,
         "wires": []
     },
     {
@@ -1211,7 +1202,7 @@
         "server": "65b61d5d.d1e1c4",
         "entityidfilter": "input_number.google_tts_announce_level",
         "entityidfiltertype": "exact",
-        "outputinitially": false,
+        "outputinitially": true,
         "state_type": "str",
         "haltifstate": "",
         "halt_if_type": "str",
@@ -1322,8 +1313,8 @@
         "name": "Input Zwave Scene activated",
         "server": "65b61d5d.d1e1c4",
         "event_type": "zwave.scene_activated",
-        "x": 150,
-        "y": 850,
+        "x": 210,
+        "y": 1570,
         "wires": [
             [
                 "91268369.61c9a"
@@ -1362,13 +1353,18 @@
                 "t": "eq",
                 "v": "zwave.kitchen_sink_light_dimmer",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "zwave.master_bathroom_light_dimmer",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 5,
-        "x": 410,
-        "y": 850,
+        "outputs": 6,
+        "x": 470,
+        "y": 1570,
         "wires": [
             [
                 "b777f775.8c5d28"
@@ -1384,6 +1380,9 @@
             ],
             [
                 "d9b883a1.05716"
+            ],
+            [
+                "d9fa21f8.1f474"
             ]
         ]
     },
@@ -1429,8 +1428,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 6,
-        "x": 660,
-        "y": 770,
+        "x": 720,
+        "y": 1490,
         "wires": [
             [
                 "9cd67542.246698"
@@ -1474,8 +1473,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 970,
-        "y": 680,
+        "x": 1030,
+        "y": 1400,
         "wires": [
             [
                 "37b5dfa6.90096"
@@ -1491,8 +1490,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "********* Scene Management ********",
         "info": "",
-        "x": 170,
-        "y": 670,
+        "x": 230,
+        "y": 1390,
         "wires": []
     },
     {
@@ -1504,8 +1503,8 @@
             "26849a1f.654876",
             "7ee27850.15b358"
         ],
-        "x": 1280,
-        "y": 680,
+        "x": 1340,
+        "y": 1400,
         "wires": [],
         "l": true
     },
@@ -1518,8 +1517,8 @@
             "2715c85.ae11838",
             "6ebd6391.4bbb3c"
         ],
-        "x": 1260,
-        "y": 640,
+        "x": 1320,
+        "y": 1360,
         "wires": [],
         "l": true
     },
@@ -1532,8 +1531,8 @@
             "94082817.dc5788",
             "df74d19e.78101"
         ],
-        "x": 1120,
-        "y": 560,
+        "x": 1180,
+        "y": 1280,
         "wires": [],
         "l": true
     },
@@ -1546,8 +1545,8 @@
             "1ff8965b.dd41ba",
             "ccd8a0da.cfdb4"
         ],
-        "x": 1160,
-        "y": 600,
+        "x": 1220,
+        "y": 1320,
         "wires": [],
         "l": true
     },
@@ -1593,8 +1592,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 6,
-        "x": 670,
-        "y": 880,
+        "x": 730,
+        "y": 1600,
         "wires": [
             [],
             [
@@ -1636,8 +1635,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
-        "y": 860,
+        "x": 980,
+        "y": 1580,
         "wires": [
             [
                 "bf7b5656.d71878"
@@ -1656,8 +1655,8 @@
             "e8931289.5d916",
             "77bd43a7.33d76c"
         ],
-        "x": 1120,
-        "y": 830,
+        "x": 1200,
+        "y": 1540,
         "wires": [],
         "l": true
     },
@@ -1670,8 +1669,8 @@
             "918392a5.ec51",
             "7d845e34.f1356"
         ],
-        "x": 1140,
-        "y": 870,
+        "x": 1200,
+        "y": 1590,
         "wires": [],
         "l": true
     },
@@ -1684,8 +1683,8 @@
             "562ff468.8e249c",
             "233ebac9.692876"
         ],
-        "x": 560,
-        "y": 1450,
+        "x": 590,
+        "y": 2810,
         "wires": [],
         "l": true
     },
@@ -1698,8 +1697,8 @@
             "ab97c066.6aef4",
             "637a1c24.bfa924"
         ],
-        "x": 560,
-        "y": 1520,
+        "x": 590,
+        "y": 2880,
         "wires": [],
         "l": true
     },
@@ -1712,8 +1711,8 @@
             "ed671d86.3c607",
             "5577022b.1192cc"
         ],
-        "x": 580.0000038146973,
-        "y": 416.4999717473984,
+        "x": 640.0000038146973,
+        "y": 1136.4999717473984,
         "wires": [],
         "l": true
     },
@@ -1726,8 +1725,8 @@
             "cb3afe4b.d2e76",
             "6933e03f.8b93f"
         ],
-        "x": 580.0000038146973,
-        "y": 366.4999717473984,
+        "x": 640.0000038146973,
+        "y": 1086.4999717473984,
         "wires": [],
         "l": true
     },
@@ -1753,8 +1752,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 910,
-        "y": 640,
+        "x": 970,
+        "y": 1360,
         "wires": [
             [
                 "1b6aa296.33df2d"
@@ -1806,8 +1805,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 6,
-        "x": 680,
-        "y": 990,
+        "x": 740,
+        "y": 1710,
         "wires": [
             [],
             [
@@ -1849,8 +1848,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 900,
-        "y": 970,
+        "x": 960,
+        "y": 1690,
         "wires": [
             [
                 "5c3df371.f41b5c"
@@ -1869,8 +1868,8 @@
             "562ff468.8e249c",
             "233ebac9.692876"
         ],
-        "x": 1120,
-        "y": 940,
+        "x": 1180,
+        "y": 1660,
         "wires": [],
         "l": true
     },
@@ -1883,8 +1882,8 @@
             "ab97c066.6aef4",
             "637a1c24.bfa924"
         ],
-        "x": 1120,
-        "y": 990,
+        "x": 1180,
+        "y": 1710,
         "wires": [],
         "l": true
     },
@@ -1900,8 +1899,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 770,
-        "y": 1660,
+        "x": 840,
+        "y": 3030,
         "wires": [
             []
         ]
@@ -1925,8 +1924,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
-        "y": 1670,
+        "x": 1050,
+        "y": 3040,
         "wires": [
             []
         ]
@@ -1984,8 +1983,8 @@
         "func": "msg.brightness = msg.brightness + 5\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 722.9999923706055,
-        "y": 380.88888931274414,
+        "x": 720,
+        "y": 370,
         "wires": [
             [
                 "9bbd5de7.7c46e"
@@ -2105,41 +2104,6 @@
         ]
     },
     {
-        "id": "f936afb.2be625",
-        "type": "trigger-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Alarm Clock",
-        "server": "e99fbe3c.cbbf8",
-        "entityid": "input_boolean.alarm_clock",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
-        "constraints": [
-            {
-                "id": "a5l00itz2m",
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "on"
-            }
-        ],
-        "constraintsmustmatch": "all",
-        "outputs": 2,
-        "customoutputs": [],
-        "outputinitially": false,
-        "state_type": "str",
-        "x": 242.9999771118164,
-        "y": 224.11110591888428,
-        "wires": [
-            [
-                "c3f6f2b4.5b72d"
-            ],
-            []
-        ]
-    },
-    {
         "id": "f5466cc2.dadd2",
         "type": "change",
         "z": "7f5a232.5f2e2dc",
@@ -2161,9 +2125,7 @@
         "x": 433.8333206176758,
         "y": 371.1111125946045,
         "wires": [
-            [
-                "f936afb.2be625"
-            ]
+            []
         ]
     },
     {
@@ -2188,9 +2150,7 @@
         "x": 503.83332443237305,
         "y": 144.11111068725586,
         "wires": [
-            [
-                "f936afb.2be625"
-            ]
+            []
         ]
     },
     {
@@ -2340,7 +2300,7 @@
                 "t": "set",
                 "p": "brightness",
                 "pt": "msg",
-                "to": "56",
+                "to": "100",
                 "tot": "str"
             }
         ],
@@ -2349,7 +2309,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 530,
+        "x": 570,
         "y": 870,
         "wires": [
             [
@@ -3559,9 +3519,7 @@
         "x": 770,
         "y": 1250,
         "wires": [
-            [
-                "3512758c.dfd3ba"
-            ],
+            [],
             [
                 "82ea8082.14d77"
             ],
@@ -3588,9 +3546,7 @@
         "x": 298,
         "y": 1250,
         "wires": [
-            [
-                "76e9a4bc.0c26ac"
-            ]
+            []
         ]
     },
     {
@@ -3608,9 +3564,7 @@
         "x": 298,
         "y": 1282,
         "wires": [
-            [
-                "76e9a4bc.0c26ac"
-            ]
+            []
         ]
     },
     {
@@ -3628,9 +3582,7 @@
         "x": 278,
         "y": 1218,
         "wires": [
-            [
-                "76e9a4bc.0c26ac"
-            ]
+            []
         ]
     },
     {
@@ -3648,144 +3600,7 @@
         "x": 278,
         "y": 1314,
         "wires": [
-            [
-                "76e9a4bc.0c26ac"
-            ]
-        ]
-    },
-    {
-        "id": "76e9a4bc.0c26ac",
-        "type": "trigger-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "server": "ef067c6f.620e6",
-        "entityid": "media_player.kodi",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
-        "constraints": [
-            {
-                "id": "9j39dq9ztx8",
-                "targetType": "entity_id",
-                "targetValue": "sun.sun",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "below_horizon"
-            },
-            {
-                "id": "tdsi2wxqhzl",
-                "targetType": "entity_id",
-                "targetValue": "input_boolean.lounge_media_dim_enable",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "on"
-            },
-            {
-                "id": "5gunooldeqa",
-                "targetType": "entity_id",
-                "targetValue": "group.lounge_hues",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "on"
-            }
-        ],
-        "constraintsmustmatch": "all",
-        "outputs": 2,
-        "customoutputs": [],
-        "outputinitially": false,
-        "state_type": "str",
-        "x": 562,
-        "y": 1250,
-        "wires": [
-            [
-                "dcbd2c20.d0f33"
-            ],
             []
-        ]
-    },
-    {
-        "id": "85f1db87.4756b8",
-        "type": "trigger-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "server": "ef067c6f.620e6",
-        "entityid": "group.lounge_hues",
-        "entityidfiltertype": "exact",
-        "debugenabled": false,
-        "constraints": [
-            {
-                "id": "9che1gtjte8",
-                "targetType": "entity_id",
-                "targetValue": "media_player.kodi",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "playing"
-            },
-            {
-                "id": "wr0a0qz3ho",
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "current_state",
-                "propertyValue": "new_state.state",
-                "comparatorType": "is",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "on"
-            },
-            {
-                "id": "g7hcv1xrnz5",
-                "targetType": "this_entity",
-                "targetValue": "",
-                "propertyType": "previous_state",
-                "propertyValue": "old_state.state",
-                "comparatorType": "is_not",
-                "comparatorValueDatatype": "str",
-                "comparatorValue": "on"
-            }
-        ],
-        "constraintsmustmatch": "all",
-        "outputs": 2,
-        "customoutputs": [],
-        "outputinitially": false,
-        "state_type": "str",
-        "x": 322,
-        "y": 1138,
-        "wires": [
-            [
-                "3512758c.dfd3ba"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "3512758c.dfd3ba",
-        "type": "api-current-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "server": "ef067c6f.620e6",
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": false,
-        "entity_id": "light.standard_lamp_right",
-        "state_type": "str",
-        "state_location": "",
-        "override_payload": "none",
-        "entity_location": "data",
-        "override_data": "msg",
-        "x": 672,
-        "y": 1138,
-        "wires": [
-            [
-                "f69e1f3a.133b5"
-            ]
         ]
     },
     {
@@ -3831,29 +3646,6 @@
         "x": 268,
         "y": 1186,
         "wires": []
-    },
-    {
-        "id": "2fee847d.83fb0c",
-        "type": "server-state-changed",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "server": "ef067c6f.620e6",
-        "entityidfilter": "input_number.kodi_dimmer_slider",
-        "entityidfiltertype": "exact",
-        "outputinitially": true,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": false,
-        "x": 372,
-        "y": 1362,
-        "wires": [
-            [
-                "d3402ab3.1d82f8"
-            ]
-        ]
     },
     {
         "id": "d3402ab3.1d82f8",
@@ -4035,8 +3827,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 6,
-        "x": 650,
-        "y": 1100,
+        "x": 710,
+        "y": 1820,
         "wires": [
             [],
             [
@@ -4080,8 +3872,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
-        "y": 1090,
+        "x": 980,
+        "y": 1810,
         "wires": [
             [
                 "88bdb145.6b871"
@@ -4100,8 +3892,8 @@
             "17c43b2b.de5695",
             "a85620cc.0278d"
         ],
-        "x": 1130,
-        "y": 1040,
+        "x": 1190,
+        "y": 1760,
         "wires": [],
         "l": true
     },
@@ -4114,8 +3906,8 @@
             "31c719e3.ca4a96",
             "f024aac3.fc53a8"
         ],
-        "x": 1180,
-        "y": 1090,
+        "x": 1240,
+        "y": 1810,
         "wires": [],
         "l": true
     },
@@ -4128,8 +3920,8 @@
             "bdfd8902.a6d6c8",
             "3984fec3.a17932"
         ],
-        "x": 1470,
-        "y": 1140,
+        "x": 1530,
+        "y": 1860,
         "wires": [],
         "l": true
     },
@@ -4142,8 +3934,8 @@
             "90ee6e74.0fe52",
             "2e4f1dd0.b00b22"
         ],
-        "x": 1470,
-        "y": 1190,
+        "x": 1530,
+        "y": 1910,
         "wires": [],
         "l": true
     },
@@ -4169,8 +3961,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1110,
-        "y": 1150,
+        "x": 1170,
+        "y": 1870,
         "wires": [
             [
                 "497b2d71.46a164"
@@ -4222,8 +4014,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 6,
-        "x": 660,
-        "y": 1210,
+        "x": 720,
+        "y": 1930,
         "wires": [
             [],
             [
@@ -4265,8 +4057,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 920,
-        "y": 1260,
+        "x": 990,
+        "y": 1930,
         "wires": [
             [
                 "46515be6.b9d8e4"
@@ -4285,8 +4077,8 @@
             "5c408a79.5a6514",
             "cc5e066f.a722d8"
         ],
-        "x": 1260,
-        "y": 1260,
+        "x": 1530,
+        "y": 1960,
         "wires": [],
         "l": true
     },
@@ -4299,8 +4091,8 @@
             "8df752a9.449c2",
             "1bfbfe04.fea962"
         ],
-        "x": 1260,
-        "y": 1310,
+        "x": 1530,
+        "y": 2010,
         "wires": [],
         "l": true
     },
@@ -5594,6 +5386,400 @@
         "info": "",
         "x": 320,
         "y": 70,
+        "wires": []
+    },
+    {
+        "id": "450a6015.288b2",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Master Bath Light - On Dim",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_on",
+        "data": "{\"entity_id\":\"light.master_bathroom_light_dimmer_level\",\"brightness_pct\":\"{{brightness}}\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 980,
+        "y": 1680,
+        "wires": [
+            [
+                "694c9457.adfe4c"
+            ]
+        ]
+    },
+    {
+        "id": "b74dc7b.e56b238",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Master Bath Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "service_domain": "light",
+        "service": "turn_off",
+        "data": "{\"entity_id\":\"light.master_bathroom_light_dimmer_level\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 960,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "694c9457.adfe4c",
+        "type": "debug",
+        "z": "b4bd0bcf.c07d88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1320,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "e49aa9ff.ff7118",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "MBath Night Dim Level",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "input_number.master_bathroom_night_dim_level",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "39282e0.11a32d2"
+            ]
+        ]
+    },
+    {
+        "id": "39282e0.11a32d2",
+        "type": "change",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set MBathNightDimLevel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MBathNightDimLevel",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 360,
+        "wires": [
+            [
+                "a4890716.c8a918"
+            ]
+        ]
+    },
+    {
+        "id": "d9fa21f8.1f474",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "Master Bathroom Light Switch",
+        "property": "payload.event.scene_data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "7680",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7860",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7920",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7980",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8040",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7740",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 730,
+        "y": 2110,
+        "wires": [
+            [
+                "527ad2c4.57efdc"
+            ],
+            [
+                "1e3190d0.abe58f"
+            ],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "1x Tap",
+            "2x Tap",
+            "3x Tap",
+            "4x Tap",
+            "5x Tap",
+            "Long Tap"
+        ]
+    },
+    {
+        "id": "8b3e6e8.087359",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on MBath Dim",
+        "links": [
+            "13369b9a.ec1d34"
+        ],
+        "x": 1540,
+        "y": 2110,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1e3190d0.abe58f",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "2x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 990,
+        "y": 2140,
+        "wires": [
+            [
+                "fab0b203.6b657"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "60f8e0ea.4423d",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1870,
+        "y": 2110,
+        "wires": []
+    },
+    {
+        "id": "13369b9a.ec1d34",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn On MBath Dim",
+        "links": [
+            "8b3e6e8.087359"
+        ],
+        "x": 570,
+        "y": 1680,
+        "wires": [
+            [
+                "450a6015.288b2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "fab0b203.6b657",
+        "type": "change",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set Brightness MBath Night",
+        "rules": [
+            {
+                "t": "set",
+                "p": "brightness",
+                "pt": "msg",
+                "to": "MBathNightDimLevel",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 2140,
+        "wires": [
+            [
+                "8b3e6e8.087359",
+                "60f8e0ea.4423d"
+            ]
+        ]
+    },
+    {
+        "id": "527ad2c4.57efdc",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "1x Tap",
+        "property": "payload.event.scene_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 990,
+        "y": 2080,
+        "wires": [
+            [
+                "bfdfa327.ef70f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bfdfa327.ef70f",
+        "type": "change",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set Brightness MBath normal",
+        "rules": [
+            {
+                "t": "set",
+                "p": "brightness",
+                "pt": "msg",
+                "to": "MBathNormalDimLevel",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 2080,
+        "wires": [
+            [
+                "8b3e6e8.087359",
+                "60f8e0ea.4423d"
+            ]
+        ]
+    },
+    {
+        "id": "f33334a4.1e4178",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "MBath Normal Dim Level",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "input_number.master_bathroom_normal_dim_level",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 140,
+        "y": 430,
+        "wires": [
+            [
+                "1d034de2.8be252"
+            ]
+        ]
+    },
+    {
+        "id": "1d034de2.8be252",
+        "type": "change",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set MBathNightDimLevel",
+        "rules": [
+            {
+                "t": "set",
+                "p": "MBathNormalDimLevel",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 430,
+        "wires": [
+            [
+                "a4890716.c8a918"
+            ]
+        ]
+    },
+    {
+        "id": "a4890716.c8a918",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 850,
+        "y": 370,
         "wires": []
     }
 ]
