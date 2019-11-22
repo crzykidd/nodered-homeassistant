@@ -7,16 +7,16 @@
         "info": ""
     },
     {
-        "id": "7f5a232.5f2e2dc",
+        "id": "b4bd0bcf.c07d88",
         "type": "tab",
-        "label": "Test Nodes ",
+        "label": "HA Actions",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "b4bd0bcf.c07d88",
+        "id": "7f5a232.5f2e2dc",
         "type": "tab",
-        "label": "HA Actions",
+        "label": "Test Nodes ",
         "disabled": false,
         "info": ""
     },
@@ -307,7 +307,8 @@
                 "20afa414.35affc"
             ],
             [
-                "8d856041.3aff5"
+                "8d856041.3aff5",
+                "c8afd1ea.be12a"
             ]
         ]
     },
@@ -331,8 +332,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 380.00000381469727,
-        "y": 1206.4999717473984,
+        "x": 810,
+        "y": 1230,
         "wires": []
     },
     {
@@ -1057,8 +1058,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 300,
-        "y": 2930,
+        "x": 680,
+        "y": 2990,
         "wires": []
     },
     {
@@ -1066,7 +1067,7 @@
         "type": "power-monitor",
         "z": "ca2305ba.3a64f8",
         "name": "Washing Machine",
-        "threshold": "4",
+        "threshold": "5",
         "startafter": "3",
         "stopafter": "4",
         "x": 508.99997329711914,
@@ -5166,7 +5167,8 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Turn off at Dawn",
         "links": [
-            "8d856041.3aff5"
+            "8d856041.3aff5",
+            "3a8ed91b.6aa796"
         ],
         "x": 560,
         "y": 1360,
@@ -5185,7 +5187,8 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Turn on at Dusk",
         "links": [
-            "20afa414.35affc"
+            "20afa414.35affc",
+            "ad5ba3dc.6f9e3"
         ],
         "x": 560,
         "y": 1230,
@@ -5384,8 +5387,8 @@
         "z": "7f5a232.5f2e2dc",
         "name": "These nodes are borrowed from other people and not in use.",
         "info": "",
-        "x": 320,
-        "y": 70,
+        "x": 260,
+        "y": 50,
         "wires": []
     },
     {
@@ -5394,18 +5397,21 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Master Bath Light - On Dim",
         "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
-        "data": "{\"entity_id\":\"light.master_bathroom_light_dimmer_level\",\"brightness_pct\":\"{{brightness}}\"}",
+        "entityId": "light.master_bathroom_light_dimmer_level",
+        "data": "{\"brightness_pct\":\"{{brightness}}\"}",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
+        "mustacheAltTags": false,
         "x": 980,
         "y": 1680,
         "wires": [
-            [
-                "694c9457.adfe4c"
-            ]
+            []
         ]
     },
     {
@@ -5430,15 +5436,15 @@
         "id": "694c9457.adfe4c",
         "type": "debug",
         "z": "b4bd0bcf.c07d88",
-        "name": "",
-        "active": true,
+        "name": "HotwaterPump test 2",
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1320,
-        "y": 1780,
+        "x": 1370,
+        "y": 1910,
         "wires": []
     },
     {
@@ -5773,13 +5779,252 @@
         "type": "debug",
         "z": "ca2305ba.3a64f8",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "x": 850,
         "y": 370,
+        "wires": []
+    },
+    {
+        "id": "730d7647.326768",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 380,
+        "y": 820,
+        "wires": [
+            [
+                "79db278a.288718",
+                "f1c284a4.eaa008"
+            ],
+            [
+                "36c9acdc.6a1aa4",
+                "958f7916.7b09d8"
+            ]
+        ]
+    },
+    {
+        "id": "ce073e5a.3604e",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "House Routines",
+        "info": "",
+        "x": 126,
+        "y": 749.5,
+        "wires": []
+    },
+    {
+        "id": "79db278a.288718",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "HotWaterTest",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 920,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "f1c284a4.eaa008",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn On Hot Water Circ Pump",
+        "links": [
+            "22267358.f21cec"
+        ],
+        "x": 680,
+        "y": 760,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "c259e593.dabd28",
+        "type": "comment",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Non Light devices",
+        "info": "",
+        "x": 880,
+        "y": 1870,
+        "wires": []
+    },
+    {
+        "id": "22267358.f21cec",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on HotWaterCirc Pump",
+        "links": [
+            "f1c284a4.eaa008"
+        ],
+        "x": 635,
+        "y": 1950,
+        "wires": [
+            [
+                "a674b642.29ff88"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a674b642.29ff88",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "HotWaterCirc Pump On",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.s31_hotwatercirc",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 960,
+        "y": 1950,
+        "wires": [
+            [
+                "694c9457.adfe4c"
+            ]
+        ]
+    },
+    {
+        "id": "36c9acdc.6a1aa4",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn Off Hot Water Circ Pump",
+        "links": [
+            "1dda1467.0b882c"
+        ],
+        "x": 680,
+        "y": 810,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1dda1467.0b882c",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off HotWaterCirc Pump",
+        "links": [
+            "36c9acdc.6a1aa4"
+        ],
+        "x": 640,
+        "y": 2000,
+        "wires": [
+            [
+                "873fb8b8.e4fc28"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "873fb8b8.e4fc28",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "HotWaterCirc Pump Off",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.s31_hotwatercirc",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 960,
+        "y": 2000,
+        "wires": [
+            [
+                "f3fe1bbd.9d2d18"
+            ]
+        ]
+    },
+    {
+        "id": "7995afc9.38043",
+        "type": "timerswitch",
+        "z": "ca2305ba.3a64f8",
+        "name": "HotWaterCirc Pump Schedule",
+        "ontopic": "",
+        "offtopic": "",
+        "onpayload": "on",
+        "offpayload": "off",
+        "disabled": false,
+        "schedules": [
+            {
+                "on_h": "05",
+                "on_m": "00",
+                "on_s": "00",
+                "off_h": "22",
+                "off_m": "08",
+                "off_s": "00",
+                "valid": true
+            }
+        ],
+        "x": 160,
+        "y": 820,
+        "wires": [
+            [
+                "730d7647.326768"
+            ]
+        ]
+    },
+    {
+        "id": "f3fe1bbd.9d2d18",
+        "type": "debug",
+        "z": "b4bd0bcf.c07d88",
+        "name": "HotwaterPump off",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1370,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "958f7916.7b09d8",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "HotWater Off",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 920,
+        "y": 810,
         "wires": []
     }
 ]
