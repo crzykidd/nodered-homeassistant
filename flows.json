@@ -267,8 +267,8 @@
         "atstart": true,
         "odd": false,
         "even": false,
-        "x": 170,
-        "y": 1130,
+        "x": 200,
+        "y": 800,
         "wires": [
             [
                 "82af13cb.2bbca"
@@ -299,8 +299,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 389,
-        "y": 1131.5,
+        "x": 379,
+        "y": 801.5,
         "wires": [
             [
                 "c8afd1ea.be12a",
@@ -318,8 +318,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "Dusk Till Dawn Light Controlls",
         "info": "",
-        "x": 196,
-        "y": 1059.5,
+        "x": 190,
+        "y": 740,
         "wires": []
     },
     {
@@ -332,8 +332,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 810,
-        "y": 1230,
+        "x": 820,
+        "y": 850,
         "wires": []
     },
     {
@@ -1712,8 +1712,8 @@
             "ed671d86.3c607",
             "5577022b.1192cc"
         ],
-        "x": 640.0000038146973,
-        "y": 1136.4999717473984,
+        "x": 630.0000038146973,
+        "y": 806.4999717473984,
         "wires": [],
         "l": true
     },
@@ -1726,8 +1726,8 @@
             "cb3afe4b.d2e76",
             "6933e03f.8b93f"
         ],
-        "x": 640.0000038146973,
-        "y": 1086.4999717473984,
+        "x": 630.0000038146973,
+        "y": 756.4999717473984,
         "wires": [],
         "l": true
     },
@@ -5427,7 +5427,7 @@
         "output_location": "",
         "output_location_type": "none",
         "x": 960,
-        "y": 1780,
+        "y": 1730,
         "wires": [
             []
         ]
@@ -5444,7 +5444,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1370,
-        "y": 1910,
+        "y": 2190,
         "wires": []
     },
     {
@@ -5810,8 +5810,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 380,
-        "y": 820,
+        "x": 420,
+        "y": 670,
         "wires": [
             [
                 "79db278a.288718",
@@ -5829,8 +5829,8 @@
         "z": "ca2305ba.3a64f8",
         "name": "House Routines",
         "info": "",
-        "x": 126,
-        "y": 749.5,
+        "x": 110,
+        "y": 620,
         "wires": []
     },
     {
@@ -5844,8 +5844,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 920,
-        "y": 760,
+        "x": 960,
+        "y": 610,
         "wires": []
     },
     {
@@ -5856,8 +5856,8 @@
         "links": [
             "22267358.f21cec"
         ],
-        "x": 680,
-        "y": 760,
+        "x": 720,
+        "y": 610,
         "wires": [],
         "l": true
     },
@@ -5868,7 +5868,7 @@
         "name": "Non Light devices",
         "info": "",
         "x": 880,
-        "y": 1870,
+        "y": 2150,
         "wires": []
     },
     {
@@ -5880,7 +5880,7 @@
             "f1c284a4.eaa008"
         ],
         "x": 635,
-        "y": 1950,
+        "y": 2230,
         "wires": [
             [
                 "a674b642.29ff88"
@@ -5906,7 +5906,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 960,
-        "y": 1950,
+        "y": 2230,
         "wires": [
             [
                 "694c9457.adfe4c"
@@ -5921,8 +5921,8 @@
         "links": [
             "1dda1467.0b882c"
         ],
-        "x": 680,
-        "y": 810,
+        "x": 720,
+        "y": 660,
         "wires": [],
         "l": true
     },
@@ -5935,7 +5935,7 @@
             "36c9acdc.6a1aa4"
         ],
         "x": 640,
-        "y": 2000,
+        "y": 2280,
         "wires": [
             [
                 "873fb8b8.e4fc28"
@@ -5961,7 +5961,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 960,
-        "y": 2000,
+        "y": 2280,
         "wires": [
             [
                 "f3fe1bbd.9d2d18"
@@ -5989,8 +5989,8 @@
                 "valid": true
             }
         ],
-        "x": 160,
-        "y": 820,
+        "x": 200,
+        "y": 670,
         "wires": [
             [
                 "730d7647.326768"
@@ -6009,7 +6009,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1370,
-        "y": 1980,
+        "y": 2260,
         "wires": []
     },
     {
@@ -6023,8 +6023,151 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 920,
-        "y": 810,
+        "x": 960,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "ffb86d67.64cef",
+        "type": "comment",
+        "z": "ca2305ba.3a64f8",
+        "name": "Bathroom Fan Timers",
+        "info": "",
+        "x": 170,
+        "y": 890,
+        "wires": []
+    },
+    {
+        "id": "bb920da4.a5572",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Upstairs Bathroom Fan turns on",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "entityidfilter": "switch.upstairs_bathroom_fan_switch",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "x": 240,
+        "y": 950,
+        "wires": [
+            [
+                "6cd7f2ed.73bcec"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f997a1c8.e01a5",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1080,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "6cd7f2ed.73bcec",
+        "type": "delay",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 520,
+        "y": 950,
+        "wires": [
+            [
+                "f997a1c8.e01a5",
+                "c4f2ee9e.16c26"
+            ]
+        ]
+    },
+    {
+        "id": "c4f2ee9e.16c26",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Upstairs Bathroom Fan",
+        "links": [
+            "3576f310.2b67dc"
+        ],
+        "x": 780,
+        "y": 950,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "3576f310.2b67dc",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off upstairs bathroom fan",
+        "links": [
+            "c4f2ee9e.16c26"
+        ],
+        "x": 600,
+        "y": 1830,
+        "wires": [
+            [
+                "d1c7e2d.6c08c2"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d1c7e2d.6c08c2",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Upstairs Bath Fan - Off",
+        "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.upstairs_bathroom_fan_switch",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 960,
+        "y": 1830,
+        "wires": [
+            [
+                "43ea8672.210e78"
+            ]
+        ]
+    },
+    {
+        "id": "43ea8672.210e78",
+        "type": "debug",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Upstairs Bath Fan Off",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 1250,
+        "y": 1830,
         "wires": []
     }
 ]
