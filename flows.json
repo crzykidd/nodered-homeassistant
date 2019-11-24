@@ -21,6 +21,20 @@
         "info": ""
     },
     {
+        "id": "2aba4bad.aeba64",
+        "type": "tab",
+        "label": "HVAC Flows",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a0818eac.0a1ff",
+        "type": "tab",
+        "label": "Notifications",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "65b61d5d.d1e1c4",
         "type": "server",
         "z": "",
@@ -70,6 +84,29 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "d1254dc8.4173e",
+        "type": "telegram bot",
+        "z": "",
+        "botname": "crzykidd_nodered_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "verboselogging": true
     },
     {
         "id": "384480ed.efa9c",
@@ -429,10 +466,12 @@
         "y": 3389,
         "wires": [
             [
-                "df229c95.d623e"
+                "df229c95.d623e",
+                "b5a1a023.6d787"
             ],
             [
-                "42550822.4932c8"
+                "42550822.4932c8",
+                "259af1e2.f0a20e"
             ]
         ]
     },
@@ -596,10 +635,12 @@
         "y": 3468,
         "wires": [
             [
-                "df229c95.d623e"
+                "df229c95.d623e",
+                "b5a1a023.6d787"
             ],
             [
-                "42550822.4932c8"
+                "42550822.4932c8",
+                "259af1e2.f0a20e"
             ]
         ]
     },
@@ -612,10 +653,10 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 1435,
-        "y": 3739,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1340,
+        "y": 3730,
         "wires": []
     },
     {
@@ -697,10 +738,12 @@
         "y": 3557,
         "wires": [
             [
-                "df229c95.d623e"
+                "df229c95.d623e",
+                "b5a1a023.6d787"
             ],
             [
-                "42550822.4932c8"
+                "42550822.4932c8",
+                "259af1e2.f0a20e"
             ]
         ]
     },
@@ -749,10 +792,12 @@
         "y": 3634,
         "wires": [
             [
-                "df229c95.d623e"
+                "df229c95.d623e",
+                "b5a1a023.6d787"
             ],
             [
-                "42550822.4932c8"
+                "42550822.4932c8",
+                "259af1e2.f0a20e"
             ]
         ]
     },
@@ -801,10 +846,12 @@
         "y": 3714,
         "wires": [
             [
-                "df229c95.d623e"
+                "df229c95.d623e",
+                "b5a1a023.6d787"
             ],
             [
-                "42550822.4932c8"
+                "42550822.4932c8",
+                "259af1e2.f0a20e"
             ]
         ]
     },
@@ -853,10 +900,12 @@
         "y": 3804,
         "wires": [
             [
-                "df229c95.d623e"
+                "df229c95.d623e",
+                "b5a1a023.6d787"
             ],
             [
-                "42550822.4932c8"
+                "42550822.4932c8",
+                "259af1e2.f0a20e"
             ]
         ]
     },
@@ -905,10 +954,12 @@
         "y": 3933,
         "wires": [
             [
-                "df229c95.d623e"
+                "df229c95.d623e",
+                "b5a1a023.6d787"
             ],
             [
-                "42550822.4932c8"
+                "42550822.4932c8",
+                "259af1e2.f0a20e"
             ]
         ]
     },
@@ -957,10 +1008,12 @@
         "y": 3866,
         "wires": [
             [
-                "df229c95.d623e"
+                "df229c95.d623e",
+                "b5a1a023.6d787"
             ],
             [
-                "42550822.4932c8"
+                "42550822.4932c8",
+                "259af1e2.f0a20e"
             ]
         ]
     },
@@ -1152,8 +1205,8 @@
         "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"Washing Machine is complete\"\n            } \n        }\n    }",
         "outputs": 1,
         "noerr": 0,
-        "x": 1022.0000190734863,
-        "y": 3970.000410437584,
+        "x": 950,
+        "y": 4070,
         "wires": [
             [
                 "702a2083.5b29f",
@@ -1170,8 +1223,8 @@
         "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"The Dryer is complete\"\n            } \n        }\n    }",
         "outputs": 1,
         "noerr": 0,
-        "x": 1018.9999732971191,
-        "y": 4098.00041615963,
+        "x": 950,
+        "y": 4160,
         "wires": [
             [
                 "702a2083.5b29f",
@@ -5983,8 +6036,8 @@
                 "on_h": "05",
                 "on_m": "00",
                 "on_s": "00",
-                "off_h": "22",
-                "off_m": "08",
+                "off_h": "23",
+                "off_m": "00",
                 "off_s": "00",
                 "valid": true
             }
@@ -6169,5 +6222,316 @@
         "x": 1250,
         "y": 1830,
         "wires": []
+    },
+    {
+        "id": "c022b90f.491408",
+        "type": "comment",
+        "z": "2aba4bad.aeba64",
+        "name": "Turn off fireplaces at bedtime",
+        "info": "",
+        "x": 160,
+        "y": 110,
+        "wires": []
+    },
+    {
+        "id": "7c0fb223.513b5c",
+        "type": "inject",
+        "z": "2aba4bad.aeba64",
+        "name": "Fireplace night ttime",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "30 22 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "bb92b119.0f3de",
+                "167851aa.8018fe",
+                "3cce1f37.698b7",
+                "56133ca5.481fd4"
+            ]
+        ]
+    },
+    {
+        "id": "bb92b119.0f3de",
+        "type": "api-call-service",
+        "z": "2aba4bad.aeba64",
+        "name": "Turn off livingroom fireplace",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_hvac_mode",
+        "entityId": "climate.living_room_fireplace_thermostat_heating_1",
+        "data": "{\"hvac_mode\":\"off\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 510,
+        "y": 230,
+        "wires": [
+            [
+                "dc6c1483.d71d28"
+            ]
+        ]
+    },
+    {
+        "id": "167851aa.8018fe",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "Inject",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 450,
+        "y": 390,
+        "wires": []
+    },
+    {
+        "id": "dc6c1483.d71d28",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "HVAC off",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 800,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3cce1f37.698b7",
+        "type": "api-call-service",
+        "z": "2aba4bad.aeba64",
+        "name": "Turn off office fireplace",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_hvac_mode",
+        "entityId": "climate.office_fireplace_thermostat_heating1",
+        "data": "{\"hvac_mode\":\"off\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 490,
+        "y": 300,
+        "wires": [
+            [
+                "dc6c1483.d71d28"
+            ]
+        ]
+    },
+    {
+        "id": "826bbe8c.30a3f",
+        "type": "inject",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 220,
+        "y": 690,
+        "wires": [
+            [
+                "56133ca5.481fd4"
+            ]
+        ]
+    },
+    {
+        "id": "322b717d.de88ce",
+        "type": "function",
+        "z": "a0818eac.0a1ff",
+        "name": "Telegram Message Builder",
+        "func": "var content = msg.notification_txt;\nmsg.payload = {\n    chatId:'-333215697',\n    type: \"message\",\n    content:content\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 620,
+        "y": 170,
+        "wires": [
+            [
+                "b3063d42.2c2f1",
+                "b78c1440.e5a508"
+            ]
+        ]
+    },
+    {
+        "id": "b3063d42.2c2f1",
+        "type": "telegram sender",
+        "z": "a0818eac.0a1ff",
+        "name": "",
+        "bot": "d1254dc8.4173e",
+        "x": 980,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b78c1440.e5a508",
+        "type": "debug",
+        "z": "a0818eac.0a1ff",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 960,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "378eb08b.3082d",
+        "type": "function",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 620,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56133ca5.481fd4",
+        "type": "change",
+        "z": "2aba4bad.aeba64",
+        "name": "Fireplaces Turned Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "notification_txt",
+                "pt": "msg",
+                "to": "Fireplaces turned Off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 170,
+        "wires": [
+            [
+                "25b5d13c.596b7e"
+            ]
+        ]
+    },
+    {
+        "id": "25b5d13c.596b7e",
+        "type": "link out",
+        "z": "2aba4bad.aeba64",
+        "name": "Send Notification",
+        "links": [
+            "a69a61fd.e1ff7"
+        ],
+        "x": 790,
+        "y": 170,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "a69a61fd.e1ff7",
+        "type": "link in",
+        "z": "a0818eac.0a1ff",
+        "name": "Recieve Notifications",
+        "links": [
+            "25b5d13c.596b7e",
+            "e0c6d6b.da71b28"
+        ],
+        "x": 340,
+        "y": 170,
+        "wires": [
+            [
+                "322b717d.de88ce"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "b5a1a023.6d787",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Message Door Open",
+        "func": "    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n    msg.notification_txt=friendlyName + \" has been Opened\"\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1050,
+        "y": 3410,
+        "wires": [
+            [
+                "1fbb17d9.a174f8",
+                "e0c6d6b.da71b28"
+            ]
+        ]
+    },
+    {
+        "id": "e0c6d6b.da71b28",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Telegraph Door Action",
+        "links": [
+            "a69a61fd.e1ff7"
+        ],
+        "x": 1390,
+        "y": 3430,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1fbb17d9.a174f8",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "Backdoor3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1370,
+        "y": 3470,
+        "wires": []
+    },
+    {
+        "id": "259af1e2.f0a20e",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Message Door Open",
+        "func": "    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n    msg.notification_txt=friendlyName + \" has been Closed\"\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1050,
+        "y": 3480,
+        "wires": [
+            [
+                "1fbb17d9.a174f8",
+                "e0c6d6b.da71b28"
+            ]
+        ]
     }
 ]
