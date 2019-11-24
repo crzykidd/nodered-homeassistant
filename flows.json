@@ -6521,7 +6521,7 @@
         "id": "259af1e2.f0a20e",
         "type": "function",
         "z": "ca2305ba.3a64f8",
-        "name": "Message Door Open",
+        "name": "Message Door Closed",
         "func": "    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n    msg.notification_txt=friendlyName + \" has been Closed\"\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
