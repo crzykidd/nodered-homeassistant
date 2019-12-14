@@ -14,13 +14,6 @@
         "info": ""
     },
     {
-        "id": "7f5a232.5f2e2dc",
-        "type": "tab",
-        "label": "Test Nodes ",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "2aba4bad.aeba64",
         "type": "tab",
         "label": "HVAC Flows",
@@ -42,6 +35,13 @@
         "info": ""
     },
     {
+        "id": "d2879bb8.476c48",
+        "type": "tab",
+        "label": "Scenes",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "65b61d5d.d1e1c4",
         "type": "server",
         "z": "",
@@ -51,25 +51,6 @@
         "rejectUnauthorizedCerts": true,
         "ha_boolean": "y|yes|true|on|home|open",
         "connectionDelay": true
-    },
-    {
-        "id": "e99fbe3c.cbbf8",
-        "type": "server",
-        "z": "",
-        "name": "Home Assistant",
-        "legacy": false,
-        "hassio": false,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open"
-    },
-    {
-        "id": "a0008d66.3b39",
-        "type": "server",
-        "z": "",
-        "name": "Home Assistant",
-        "legacy": false,
-        "hassio": true,
-        "rejectUnauthorizedCerts": true
     },
     {
         "id": "d1254dc8.4173e",
@@ -258,12 +239,17 @@
         "z": "ca2305ba.3a64f8",
         "name": "Light Off",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
-        "data": "{\"entity_id\":\"switch.server_room_switch_switch\"}",
+        "entityId": "switch.server_room_switch_switch",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
+        "mustacheAltTags": false,
         "x": 729,
         "y": 3615,
         "wires": [
@@ -276,12 +262,17 @@
         "z": "ca2305ba.3a64f8",
         "name": "Light On",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
-        "data": "{\"entity_id\":\"switch.server_room_switch_switch\"}",
+        "entityId": "switch.server_room_switch_switch",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
+        "mustacheAltTags": false,
         "x": 730,
         "y": 3570,
         "wires": [
@@ -289,169 +280,6 @@
                 "746d5c74.a077b4"
             ]
         ]
-    },
-    {
-        "id": "42d94216.dcc3ec",
-        "type": "bigtimer",
-        "z": "ca2305ba.3a64f8",
-        "outtopic": "",
-        "outpayload1": "on",
-        "outpayload2": "off",
-        "name": "Dusk/Dawn On/Off",
-        "comment": "",
-        "lat": "47.758560",
-        "lon": "-122.095440",
-        "starttime": "5004",
-        "endtime": "5003",
-        "starttime2": 0,
-        "endtime2": 0,
-        "startoff": "-60",
-        "endoff": "+30",
-        "startoff2": 0,
-        "endoff2": 0,
-        "offs": 0,
-        "outtext1": "on",
-        "outtext2": "off",
-        "timeout": 1440,
-        "sun": true,
-        "mon": true,
-        "tue": true,
-        "wed": true,
-        "thu": true,
-        "fri": true,
-        "sat": true,
-        "jan": true,
-        "feb": true,
-        "mar": true,
-        "apr": true,
-        "may": true,
-        "jun": true,
-        "jul": true,
-        "aug": true,
-        "sep": true,
-        "oct": true,
-        "nov": true,
-        "dec": true,
-        "day1": 0,
-        "month1": 0,
-        "day2": 0,
-        "month2": 0,
-        "day3": 0,
-        "month3": 0,
-        "day4": 0,
-        "month4": 0,
-        "day5": 0,
-        "month5": 0,
-        "day6": 0,
-        "month6": 0,
-        "d1": 0,
-        "w1": 0,
-        "d2": 0,
-        "w2": 0,
-        "d3": 0,
-        "w3": 0,
-        "d4": 0,
-        "w4": 0,
-        "d5": 0,
-        "w5": 0,
-        "d6": 0,
-        "w6": 0,
-        "xday1": 0,
-        "xmonth1": 0,
-        "xday2": 0,
-        "xmonth2": 0,
-        "xday3": 0,
-        "xmonth3": 0,
-        "xday4": 0,
-        "xmonth4": 0,
-        "xday5": 0,
-        "xmonth5": 0,
-        "xday6": 0,
-        "xmonth6": 0,
-        "xd1": 0,
-        "xw1": 0,
-        "xd2": 0,
-        "xw2": 0,
-        "xd3": 0,
-        "xw3": 0,
-        "xd4": 0,
-        "xw4": 0,
-        "xd5": 0,
-        "xw5": 0,
-        "xd6": 0,
-        "xw6": 0,
-        "suspend": false,
-        "random": false,
-        "repeat": false,
-        "atstart": true,
-        "odd": false,
-        "even": false,
-        "x": 160,
-        "y": 1020,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "82af13cb.2bbca",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "on/off",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 389,
-        "y": 1031.5,
-        "wires": [
-            [
-                "c8afd1ea.be12a",
-                "20afa414.35affc"
-            ],
-            [
-                "8d856041.3aff5",
-                "c8afd1ea.be12a"
-            ]
-        ]
-    },
-    {
-        "id": "7fbbaeb0.385ac",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Dusk Till Dawn Light Controlls",
-        "info": "",
-        "x": 200,
-        "y": 970,
-        "wires": []
-    },
-    {
-        "id": "c8afd1ea.be12a",
-        "type": "debug",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 470,
-        "y": 1180,
-        "wires": []
     },
     {
         "id": "9c9d739e.481a3",
@@ -1137,84 +965,6 @@
         ]
     },
     {
-        "id": "ad1d275f.028818",
-        "type": "comment",
-        "z": "ca2305ba.3a64f8",
-        "name": "Scenes - Automations",
-        "info": "",
-        "x": 230,
-        "y": 3130,
-        "wires": []
-    },
-    {
-        "id": "2355dfcb.49c2c",
-        "type": "server-state-changed",
-        "z": "ca2305ba.3a64f8",
-        "name": "Hot Tub",
-        "server": "65b61d5d.d1e1c4",
-        "entityidfilter": "input_boolean.hot_tub_scene",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "habool",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "x": 180,
-        "y": 3203,
-        "wires": [
-            [
-                "105fdb56.2ba5f5",
-                "86fbe941.829a88"
-            ]
-        ]
-    },
-    {
-        "id": "105fdb56.2ba5f5",
-        "type": "switch",
-        "z": "ca2305ba.3a64f8",
-        "name": "on/off",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 378,
-        "y": 3208,
-        "wires": [
-            [
-                "8f36a295.1e12d"
-            ],
-            [
-                "2ef53439.3cb13c"
-            ]
-        ]
-    },
-    {
-        "id": "86fbe941.829a88",
-        "type": "debug",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 720,
-        "y": 3360,
-        "wires": []
-    },
-    {
         "id": "7b772eac.3fa28",
         "type": "power-monitor",
         "z": "ca2305ba.3a64f8",
@@ -1410,12 +1160,17 @@
         "z": "ca2305ba.3a64f8",
         "name": "Set Master Bedroom mini",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "media_player",
         "service": "volume_set",
-        "data": "{\"entity_id\":\"media_player.master_bedroom_mini\",\"volume_level\":\"{{payload}}\"}",
+        "entityId": "media_player.master_bedroom_mini",
+        "data": "{\"volume_level\":\"{{payload}}\"}",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
+        "mustacheAltTags": false,
         "x": 893.0141716003418,
         "y": 481.00562286376953,
         "wires": [
@@ -1430,12 +1185,17 @@
         "z": "ca2305ba.3a64f8",
         "name": "Set Kitchen Mini",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "media_player",
         "service": "volume_set",
-        "data": "{\"entity_id\":\"media_player.kitchen_speaker\",\"volume_level\":\"{{payload}}\"}",
+        "entityId": "media_player.kitchen_speaker",
+        "data": "{\"volume_level\":\"{{payload}}\"}",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
+        "mustacheAltTags": false,
         "x": 870,
         "y": 370,
         "wires": [
@@ -1448,12 +1208,17 @@
         "z": "ca2305ba.3a64f8",
         "name": "Set Office Google Home",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "media_player",
         "service": "volume_set",
-        "data": "{\"entity_id\":\"media_player.office_speaker\",\"volume_level\":\"{{payload}}\"}",
+        "entityId": "media_player.office_speaker",
+        "data": "{\"volume_level\":\"{{payload}}\"}",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "payload",
         "output_location_type": "msg",
+        "mustacheAltTags": false,
         "x": 893.0142135620117,
         "y": 429.00568199157715,
         "wires": [
@@ -1829,62 +1594,6 @@
         "l": true
     },
     {
-        "id": "8f36a295.1e12d",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on Hot Tub Scene",
-        "links": [
-            "562ff468.8e249c",
-            "233ebac9.692876"
-        ],
-        "x": 630,
-        "y": 3180,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "2ef53439.3cb13c",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off Hot Tub Scene",
-        "links": [
-            "ab97c066.6aef4",
-            "637a1c24.bfa924"
-        ],
-        "x": 630,
-        "y": 3250,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "8d856041.3aff5",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn off at Dawn",
-        "links": [
-            "ed671d86.3c607",
-            "5577022b.1192cc"
-        ],
-        "x": 610,
-        "y": 1020,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "20afa414.35affc",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Turn on at Dusk",
-        "links": [
-            "cb3afe4b.d2e76",
-            "6933e03f.8b93f"
-        ],
-        "x": 610,
-        "y": 980,
-        "wires": [],
-        "l": true
-    },
-    {
         "id": "9cd67542.246698",
         "type": "switch",
         "z": "ca2305ba.3a64f8",
@@ -2040,1888 +1749,6 @@
         "y": 2590,
         "wires": [],
         "l": true
-    },
-    {
-        "id": "514da86.251a658",
-        "type": "inject",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 880,
-        "y": 3400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bc692643.f44fd8",
-        "type": "change",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1090,
-        "y": 3410,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7066b48d.0cccdc",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "server": "e99fbe3c.cbbf8",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.bedside_lights\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 1270,
-        "y": 230,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c3f6f2b4.5b72d",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Start Loop",
-        "rules": [
-            {
-                "t": "set",
-                "p": "brightness",
-                "pt": "msg",
-                "to": "1",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 425.99999237060547,
-        "y": 218.88888883590698,
-        "wires": [
-            [
-                "9bbd5de7.7c46e"
-            ]
-        ]
-    },
-    {
-        "id": "fca29c9e.68641",
-        "type": "function",
-        "z": "7f5a232.5f2e2dc",
-        "name": "increase brightness",
-        "func": "msg.brightness = msg.brightness + 5\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 720,
-        "y": 370,
-        "wires": [
-            [
-                "9bbd5de7.7c46e"
-            ]
-        ]
-    },
-    {
-        "id": "1909ba4d.a28e26",
-        "type": "switch",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "property": "brightness",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "96",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 813.9999923706055,
-        "y": 216.88888883590698,
-        "wires": [
-            [
-                "e3d50032.1d21b",
-                "e933b2b3.24fcb"
-            ],
-            [
-                "fca29c9e.68641",
-                "f5466cc2.dadd2",
-                "31b62ba9.094924"
-            ]
-        ]
-    },
-    {
-        "id": "31b62ba9.094924",
-        "type": "template",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "{\n  \"brightness_pct\": \"{{brightness\"}}\"\n  }",
-        "output": "str",
-        "x": 1030,
-        "y": 220,
-        "wires": [
-            [
-                "7066b48d.0cccdc"
-            ]
-        ]
-    },
-    {
-        "id": "8102d953.f9b6e8",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Turn Off Alarm clock",
-        "server": "e99fbe3c.cbbf8",
-        "service_domain": "input_boolean",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"input_boolean.alarm_clock\"}",
-        "mergecontext": "",
-        "x": 1596,
-        "y": 173,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e933b2b3.24fcb",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "server": "e99fbe3c.cbbf8",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.bedside_lights\",\"brightness_pct\":\"100\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 1058.8333282470703,
-        "y": 172.11111164093018,
-        "wires": [
-            [
-                "aca58d74.c1305"
-            ]
-        ]
-    },
-    {
-        "id": "9bbd5de7.7c46e",
-        "type": "delay",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "6",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 622.9999923706055,
-        "y": 219.43055486679077,
-        "wires": [
-            [
-                "1909ba4d.a28e26"
-            ]
-        ]
-    },
-    {
-        "id": "f5466cc2.dadd2",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "disable",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "disable",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 433.8333206176758,
-        "y": 371.1111125946045,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e3d50032.1d21b",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "enable",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "enable",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 503.83332443237305,
-        "y": 144.11111068725586,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "aca58d74.c1305",
-        "type": "delay",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 1251.8333320617676,
-        "y": 172.11111068725586,
-        "wires": [
-            [
-                "84e5bf97.a544c"
-            ]
-        ]
-    },
-    {
-        "id": "84e5bf97.a544c",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "turn_off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "turn_off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1405.8333320617676,
-        "y": 172.11111068725586,
-        "wires": [
-            [
-                "8102d953.f9b6e8"
-            ]
-        ]
-    },
-    {
-        "id": "6363ac3.8b2cb54",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Disable to prevent any snooze issues",
-        "info": "",
-        "x": 431.0000228881836,
-        "y": 418.3333349227905,
-        "wires": []
-    },
-    {
-        "id": "3da28f44.3673",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "by 5 each loop",
-        "info": "",
-        "x": 932.4999465942383,
-        "y": 299.9999589920044,
-        "wires": []
-    },
-    {
-        "id": "ad7cd32e.237a",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "until 96",
-        "info": "",
-        "x": 918.0555419921875,
-        "y": 137.77778911590576,
-        "wires": []
-    },
-    {
-        "id": "3a1df556.4da4fa",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "enact light adjustment",
-        "info": "",
-        "x": 1326.9443283081055,
-        "y": 281.11108684539795,
-        "wires": []
-    },
-    {
-        "id": "e6e0b8e3.1cc988",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "set light to max and turn off input_boolean.alarm_clock",
-        "info": "",
-        "x": 1388.0555038452148,
-        "y": 119.99998664855957,
-        "wires": []
-    },
-    {
-        "id": "ec7d7908.03e458",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "topic": "",
-        "payload": "Dim Lights",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 340,
-        "y": 870,
-        "wires": [
-            [
-                "e80c00bf.1211e"
-            ]
-        ]
-    },
-    {
-        "id": "225f2dbb.7893d2",
-        "type": "template",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "newmsg = {}\n\nnewmsg.payload = { data: { \"brightness_pct\":brightness} }\n\nreturn newmsg;",
-        "output": "str",
-        "x": 690,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e80c00bf.1211e",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "brightness",
-                "pt": "msg",
-                "to": "100",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 570,
-        "y": 870,
-        "wires": [
-            [
-                "1f08b00a.7a3f1"
-            ]
-        ]
-    },
-    {
-        "id": "fc4a36c2.e65cf8",
-        "type": "debug",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1090,
-        "y": 850,
-        "wires": []
-    },
-    {
-        "id": "1f08b00a.7a3f1",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.home_theater_front_left\",\"brightness_pct\":\"{{brightness}}\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 830,
-        "y": 870,
-        "wires": [
-            [
-                "fc4a36c2.e65cf8"
-            ]
-        ]
-    },
-    {
-        "id": "a195e0c3.45adf",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "TRIGGER ALARM CLOCK",
-        "info": "",
-        "x": 180,
-        "y": 2690,
-        "wires": []
-    },
-    {
-        "id": "e89c4e53.f627f",
-        "type": "join",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "mode": "custom",
-        "build": "array",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "2",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 880,
-        "y": 2710,
-        "wires": [
-            [
-                "a6de0be0.0825d8"
-            ]
-        ]
-    },
-    {
-        "id": "a6de0be0.0825d8",
-        "type": "function",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Compare Times",
-        "func": "newmsg = {};\nif (msg.payload[0] == msg.payload[1]) {\n    newmsg.payload = \"True\";\n} else {\n    newmsg.payload = \"False\";\n}\n\nreturn newmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 890,
-        "y": 2770,
-        "wires": [
-            [
-                "c7f22113.9895"
-            ]
-        ]
-    },
-    {
-        "id": "c7f22113.9895",
-        "type": "switch",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Is it Time?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "True",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 900,
-        "y": 2830,
-        "wires": [
-            [
-                "e6e87455.6d6e88"
-            ]
-        ]
-    },
-    {
-        "id": "11b386e2.2d8589",
-        "type": "api-current-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Alarm Clock ON?",
-        "server": "a0008d66.3b39",
-        "outputs": 1,
-        "halt_if": "off",
-        "override_topic": false,
-        "entity_id": "input_boolean.house_option_alarmclock",
-        "override_payload": false,
-        "override_data": false,
-        "x": 340,
-        "y": 2750,
-        "wires": [
-            [
-                "875556a2.a1df88"
-            ]
-        ]
-    },
-    {
-        "id": "875556a2.a1df88",
-        "type": "api-current-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Get Alarm Time",
-        "server": "a0008d66.3b39",
-        "outputs": 1,
-        "halt_if": "",
-        "override_topic": true,
-        "entity_id": "input_datetime.alarm_time",
-        "override_payload": true,
-        "override_data": true,
-        "x": 630,
-        "y": 2830,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bfcef404.b84f18",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 140,
-        "y": 2750,
-        "wires": [
-            [
-                "11b386e2.2d8589"
-            ]
-        ]
-    },
-    {
-        "id": "e6e87455.6d6e88",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "House State - Waking Up",
-        "server": "a0008d66.3b39",
-        "service_domain": "variable",
-        "service": "set_variable",
-        "data": "{\"variable\":\"house_state\",\"value\":\"Waking Up\"}",
-        "mergecontext": "",
-        "x": 1180,
-        "y": 2770,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f7a212c5.9621d",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "START ALARM CLOCK SEQUENCE",
-        "info": "",
-        "x": 220,
-        "y": 2930,
-        "wires": []
-    },
-    {
-        "id": "22e6427.c5e5ebe",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Make Coffee",
-        "info": "",
-        "x": 560,
-        "y": 3110,
-        "wires": []
-    },
-    {
-        "id": "f000a20b.295bb",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Set Initial Flow Variables",
-        "info": "",
-        "x": 600,
-        "y": 2990,
-        "wires": []
-    },
-    {
-        "id": "800b8ee4.ca583",
-        "type": "api-current-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Radio?",
-        "server": "a0008d66.3b39",
-        "outputs": 1,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": true,
-        "entity_id": "input_boolean.house_alarmclock_radio",
-        "state_type": "str",
-        "override_payload": true,
-        "override_data": true,
-        "x": 550,
-        "y": 3250,
-        "wires": [
-            [
-                "8d9871ff.adca"
-            ]
-        ]
-    },
-    {
-        "id": "465f886d.62d9b8",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "LOOP LOGIC ",
-        "info": "",
-        "x": 140,
-        "y": 3410,
-        "wires": []
-    },
-    {
-        "id": "53aad52c.a9b65c",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Snooze Button Actions",
-        "info": "",
-        "x": 870,
-        "y": 3830,
-        "wires": []
-    },
-    {
-        "id": "ae03cb78.3f35e8",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Finish Alarm Sequence",
-        "info": "",
-        "x": 1590,
-        "y": 3590,
-        "wires": []
-    },
-    {
-        "id": "5c791d44.4482a4",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Snooze Timer",
-        "info": "",
-        "x": 560,
-        "y": 3910,
-        "wires": []
-    },
-    {
-        "id": "f6ffea09.138a38",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Stop",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "snooze",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 540,
-        "y": 3570,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e3612a93.ebb018",
-        "type": "server-state-changed",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Snooze On",
-        "server": "a0008d66.3b39",
-        "entityidfilter": "input_boolean.house_alarmclock_snooze",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "haltifstate": "off",
-        "outputs": 1,
-        "x": 350,
-        "y": 3870,
-        "wires": [
-            [
-                "f6ffea09.138a38",
-                "71ff8e03.6969a",
-                "956862d2.f5eb9"
-            ]
-        ]
-    },
-    {
-        "id": "8dd23b28.587c58",
-        "type": "link in",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "links": [
-            "eb50076e.508948"
-        ],
-        "x": 685,
-        "y": 3570,
-        "wires": [
-            [
-                "f6ffea09.138a38"
-            ]
-        ]
-    },
-    {
-        "id": "71ff8e03.6969a",
-        "type": "function",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Reset to Brightness / Volume",
-        "func": "flow.set(\"brightness\", 30);\nflow.set(\"volume\",0.3);\nnewmsg = {\"payload\":\"true\"}\nreturn newmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 890,
-        "y": 3870,
-        "wires": [
-            [
-                "eb002e38.6c4d2",
-                "2bc8b7a9.92c828",
-                "d63cf49c.e1b738"
-            ]
-        ]
-    },
-    {
-        "id": "956862d2.f5eb9",
-        "type": "delay",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "3",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 550,
-        "y": 3950,
-        "wires": [
-            [
-                "e465be49.7629a"
-            ]
-        ]
-    },
-    {
-        "id": "ff90a036.0eec7",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Brightness ---->",
-        "topic": "",
-        "payload": "brightness",
-        "payloadType": "flow",
-        "repeat": "6",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 320,
-        "y": 3510,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e3bc5d12.a599",
-        "type": "function",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Set Brightness",
-        "func": "newmsg = {}\nvar brightness = flow.get(\"brightness\");\n\nnewmsg.payload = { data: { \"brightness_pct\":brightness} }\n\nreturn newmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 930,
-        "y": 3510,
-        "wires": [
-            [
-                "69d9593.5b599a8",
-                "2b243d94.8daa22"
-            ]
-        ]
-    },
-    {
-        "id": "1497ae12.622282",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Start",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "start",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 540,
-        "y": 3450,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "eb002e38.6c4d2",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Turn Off Entry Light",
-        "server": "a0008d66.3b39",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.entry\"}",
-        "mergecontext": "",
-        "x": 1180,
-        "y": 3810,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2bc8b7a9.92c828",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Turn Off Bedroom Light",
-        "server": "a0008d66.3b39",
-        "service_domain": "light",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"light.bedroom\"}",
-        "mergecontext": "",
-        "x": 1200,
-        "y": 3870,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e465be49.7629a",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Snooze Off (Restart Loop)",
-        "server": "a0008d66.3b39",
-        "service_domain": "homeassistant",
-        "service": "turn_off",
-        "data": "{\"entity_id\":\"input_boolean.house_alarmclock_snooze\"}",
-        "mergecontext": "",
-        "x": 880,
-        "y": 3950,
-        "wires": [
-            [
-                "5ab02f64.7a606"
-            ]
-        ]
-    },
-    {
-        "id": "69d9593.5b599a8",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Turn On Entry Light",
-        "server": "a0008d66.3b39",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.entry\",\"rgb_color\":[255,255,255]}",
-        "mergecontext": "",
-        "x": 1180,
-        "y": 3470,
-        "wires": [
-            [
-                "155957e4.b386f8"
-            ]
-        ]
-    },
-    {
-        "id": "2b243d94.8daa22",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Turn On Bedroom Light",
-        "server": "a0008d66.3b39",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"light.bedroom\",\"rgb_color\":[255,255,255]}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 1200,
-        "y": 3550,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "321f1040.1b3ec",
-        "type": "switch",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Is it Time?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Waking Up",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 280,
-        "y": 3130,
-        "wires": [
-            [
-                "1497ae12.622282",
-                "9f263064.b8958",
-                "468188c4.a00e08",
-                "800b8ee4.ca583"
-            ]
-        ]
-    },
-    {
-        "id": "d6a2459f.5c26f8",
-        "type": "server-state-changed",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Snooze Off",
-        "server": "a0008d66.3b39",
-        "entityidfilter": "input_boolean.house_alarmclock_snooze",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "on",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "x": 350,
-        "y": 3450,
-        "wires": [
-            [
-                "1497ae12.622282"
-            ]
-        ]
-    },
-    {
-        "id": "155957e4.b386f8",
-        "type": "function",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Increment Brightness",
-        "func": "var brightness = flow.get('brightness')||0;\n\nif (brightness < 100) {\n    brightness = brightness + 1;\n    flow.set(\"brightness\", brightness);\n    \n    newmsg = {\"payload\":\"looping\"}\n    return newmsg;\n}\nelse {\n    newmsg = {\"payload\":\"done\"};\n    return newmsg;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1450,
-        "y": 3470,
-        "wires": [
-            [
-                "d3396615.6a2b78"
-            ]
-        ]
-    },
-    {
-        "id": "b854ecf7.a6e9f",
-        "type": "server-state-changed",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Wake Up House",
-        "server": "a0008d66.3b39",
-        "entityidfilter": "variable.house_state",
-        "entityidfiltertype": "substring",
-        "outputinitially": false,
-        "haltifstate": "",
-        "outputs": 1,
-        "x": 150,
-        "y": 2990,
-        "wires": [
-            [
-                "321f1040.1b3ec"
-            ]
-        ]
-    },
-    {
-        "id": "9f263064.b8958",
-        "type": "api-current-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Coffee?",
-        "server": "a0008d66.3b39",
-        "outputs": 1,
-        "halt_if": "",
-        "override_topic": true,
-        "entity_id": "sensor.coffeemaker",
-        "override_payload": true,
-        "override_data": true,
-        "x": 550,
-        "y": 3150,
-        "wires": [
-            [
-                "fc7e32d3.90afa"
-            ]
-        ]
-    },
-    {
-        "id": "468188c4.a00e08",
-        "type": "function",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Initialize Brightness / Volume to 0",
-        "func": "flow.set(\"brightness\", 1);\nflow.set(\"volume\", 0.0);\n\nnewmsg = {\"payload\":\"true\"}\nreturn newmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 630,
-        "y": 3030,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d3396615.6a2b78",
-        "type": "switch",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Is Loop Done?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "done",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1570,
-        "y": 3530,
-        "wires": [
-            [
-                "eb50076e.508948"
-            ]
-        ]
-    },
-    {
-        "id": "fc7e32d3.90afa",
-        "type": "switch",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Ready",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Ready",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 680,
-        "y": 3150,
-        "wires": [
-            [
-                "fcd023f9.548a"
-            ]
-        ]
-    },
-    {
-        "id": "a033f71f.493488",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "x": 880,
-        "y": 3030,
-        "wires": [
-            [
-                "468188c4.a00e08"
-            ]
-        ]
-    },
-    {
-        "id": "eb50076e.508948",
-        "type": "link out",
-        "z": "7f5a232.5f2e2dc",
-        "name": "FINISH ALARM SEQUENCE!",
-        "links": [
-            "8dd23b28.587c58",
-            "45deb28f.3cb32c"
-        ],
-        "x": 1465,
-        "y": 3590,
-        "wires": []
-    },
-    {
-        "id": "fcd023f9.548a",
-        "type": "delay",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "3",
-        "timeoutUnits": "minutes",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 830,
-        "y": 3150,
-        "wires": [
-            [
-                "48a7f970.687638"
-            ]
-        ]
-    },
-    {
-        "id": "48a7f970.687638",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Make Coffee",
-        "server": "a0008d66.3b39",
-        "service_domain": "switch",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"switch.coffeemaker\"}",
-        "mergecontext": "",
-        "x": 1000,
-        "y": 3150,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "99e6725b.89ff5",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "LIGHTING",
-        "info": "",
-        "x": 930,
-        "y": 3470,
-        "wires": []
-    },
-    {
-        "id": "a7d3815a.9bc23",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Volume ---->",
-        "topic": "",
-        "payload": "volume",
-        "payloadType": "flow",
-        "repeat": "30",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 330,
-        "y": 3650,
-        "wires": [
-            [
-                "60581bfb.4195b4"
-            ]
-        ]
-    },
-    {
-        "id": "85a92763.5758b8",
-        "type": "function",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Set Volume",
-        "func": "newmsg = {};\nvar volume = flow.get(\"volume\");\n\nnewmsg.payload = { data: { \"volume_level\":volume} }\n\nreturn newmsg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 920,
-        "y": 3650,
-        "wires": [
-            [
-                "44f590cd.d95a4"
-            ]
-        ]
-    },
-    {
-        "id": "44f590cd.d95a4",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Kitchen Alexa",
-        "server": "a0008d66.3b39",
-        "service_domain": "media_player",
-        "service": "volume_set",
-        "data": "{\"entity_id\":\"media_player.kitchen\"}",
-        "mergecontext": "",
-        "x": 1170,
-        "y": 3650,
-        "wires": [
-            [
-                "d8a20634.250038"
-            ]
-        ]
-    },
-    {
-        "id": "d8a20634.250038",
-        "type": "function",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Increment Volume",
-        "func": "var volume = flow.get('volume')||0.0;\n\nif (volume < 0.75) {\n    volume = volume + 0.05;\n    flow.set(\"volume\", volume);\n    \n    newmsg = {\"payload\":\"looping\"}\n    return newmsg;\n}\nelse {\n    newmsg = {\"payload\":\"done\"};\n    return newmsg;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1440,
-        "y": 3650,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8f749626.b728e8",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "SNOOZE!",
-        "info": "",
-        "x": 130,
-        "y": 3730,
-        "wires": []
-    },
-    {
-        "id": "8f5541b1.789f9",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "VOLUME",
-        "info": "",
-        "x": 930,
-        "y": 3590,
-        "wires": []
-    },
-    {
-        "id": "125de225.e60d1e",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Turn on Radio",
-        "info": "",
-        "x": 560,
-        "y": 3210,
-        "wires": []
-    },
-    {
-        "id": "60581bfb.4195b4",
-        "type": "api-current-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Radio?",
-        "server": "a0008d66.3b39",
-        "outputs": 1,
-        "halt_if": "off",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "override_topic": true,
-        "entity_id": "input_boolean.house_alarmclock_radio",
-        "state_type": "str",
-        "override_payload": true,
-        "override_data": true,
-        "x": 530,
-        "y": 3650,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8d9871ff.adca",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Volume",
-        "server": "a0008d66.3b39",
-        "service_domain": "media_player",
-        "service": "volume_set",
-        "data": "{\"entity_id\":\"media_player.kitchen\",\"volume_level\":0}",
-        "mergecontext": "",
-        "x": 710,
-        "y": 3250,
-        "wires": [
-            [
-                "3d66262c.c0e81a"
-            ]
-        ]
-    },
-    {
-        "id": "a5016491.ddef38",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Play NPR",
-        "server": "a0008d66.3b39",
-        "service_domain": "media_player",
-        "service": "play_media",
-        "data": "{\"entity_id\":\"media_player.kitchen\",\"media_content_id\":\"K Q E D\",\"media_content_type\":\"TUNEIN\"}",
-        "mergecontext": "",
-        "x": 1010,
-        "y": 3250,
-        "wires": [
-            [
-                "b030aeef.58c25"
-            ]
-        ]
-    },
-    {
-        "id": "3d66262c.c0e81a",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Delete",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 860,
-        "y": 3250,
-        "wires": [
-            [
-                "a5016491.ddef38"
-            ]
-        ]
-    },
-    {
-        "id": "d63cf49c.e1b738",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Pause Radio",
-        "server": "a0008d66.3b39",
-        "service_domain": "media_player",
-        "service": "media_pause",
-        "data": "{\"entity_id\":\"media_player.kitchen\"}",
-        "mergecontext": "",
-        "x": 1160,
-        "y": 3930,
-        "wires": [
-            [
-                "f993d3ab.0642d"
-            ]
-        ]
-    },
-    {
-        "id": "5ab02f64.7a606",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Delete",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 880,
-        "y": 4010,
-        "wires": [
-            [
-                "765c01f6.2adcb"
-            ]
-        ]
-    },
-    {
-        "id": "765c01f6.2adcb",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Play",
-        "server": "a0008d66.3b39",
-        "service_domain": "media_player",
-        "service": "media_play",
-        "data": "{\"entity_id\":\"media_player.kitchen\"}",
-        "mergecontext": "",
-        "x": 1140,
-        "y": 4010,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f993d3ab.0642d",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Delete",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1320,
-        "y": 3930,
-        "wires": [
-            [
-                "2e93f943.8a4586"
-            ]
-        ]
-    },
-    {
-        "id": "2e93f943.8a4586",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Volume",
-        "server": "a0008d66.3b39",
-        "service_domain": "media_player",
-        "service": "volume_set",
-        "data": "{\"entity_id\":\"media_player.kitchen\",\"volume_level\":0.3}",
-        "mergecontext": "",
-        "x": 1470,
-        "y": 3930,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "70ce8a3b.45fa84",
-        "type": "api-current-state",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Waking Up?",
-        "server": "a0008d66.3b39",
-        "outputs": 1,
-        "halt_if": "Waking Up",
-        "halt_if_type": "str",
-        "halt_if_compare": "is_not",
-        "override_topic": true,
-        "entity_id": "variable.house_state",
-        "state_type": "str",
-        "override_payload": true,
-        "override_data": true,
-        "x": 780,
-        "y": 4090,
-        "wires": [
-            [
-                "dfed9dd8.6a70c"
-            ]
-        ]
-    },
-    {
-        "id": "dfed9dd8.6a70c",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Snooze On",
-        "server": "a0008d66.3b39",
-        "service_domain": "homeassistant",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"input_boolean.house_alarmclock_snooze\"}",
-        "mergecontext": "",
-        "x": 960,
-        "y": 4090,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1859296f.dc7927",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Snooze Button",
-        "info": "",
-        "x": 570,
-        "y": 4050,
-        "wires": []
-    },
-    {
-        "id": "b030aeef.58c25",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Delete",
-        "rules": [
-            {
-                "t": "delete",
-                "p": "payload",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1140,
-        "y": 3250,
-        "wires": [
-            [
-                "fee130ad.12e53"
-            ]
-        ]
-    },
-    {
-        "id": "fee130ad.12e53",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "Volume",
-        "server": "a0008d66.3b39",
-        "service_domain": "media_player",
-        "service": "volume_set",
-        "data": "{\"entity_id\":\"media_player.kitchen\",\"volume_level\":0}",
-        "mergecontext": "",
-        "x": 1270,
-        "y": 3250,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "dcbd2c20.d0f33",
-        "type": "switch",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "jsonata_exp",
-                "v": "data.event.old_state.state = \"idle\" and data.event.new_state.state = \"playing\"",
-                "vt": "jsonata"
-            },
-            {
-                "t": "jsonata_exp",
-                "v": "data.event.old_state.state = \"playing\" and data.event.new_state.state = \"paused\"",
-                "vt": "jsonata"
-            },
-            {
-                "t": "jsonata_exp",
-                "v": "data.event.old_state.state = \"paused\" and data.event.new_state.state = \"playing\"",
-                "vt": "jsonata"
-            },
-            {
-                "t": "eq",
-                "v": "idle",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 4,
-        "x": 770,
-        "y": 1250,
-        "wires": [
-            [],
-            [
-                "82ea8082.14d77"
-            ],
-            [
-                "b461f209.4fa7"
-            ],
-            [
-                "e97046f6.0dd848"
-            ]
-        ]
-    },
-    {
-        "id": "b44a9c91.dc9d9",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "playing -> paused",
-        "topic": "",
-        "payload": "{\"entity_id\":\"media_player.kodi\",\"old_state\":{\"state\":\"playing\"},\"new_state\":{\"state\":\"paused\"}}",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 298,
-        "y": 1250,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3b2e42a8.785e3e",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "paused -> playing",
-        "topic": "",
-        "payload": "{\"entity_id\":\"media_player.kodi\",\"old_state\":{\"state\":\"paused\"},\"new_state\":{\"state\":\"playing\"}}",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 298,
-        "y": 1282,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1b56c129.495a7f",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "idle -> playing",
-        "topic": "",
-        "payload": "{\"entity_id\":\"media_player.kodi\",\"old_state\":{\"state\":\"idle\"},\"new_state\":{\"state\":\"playing\"}}",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 278,
-        "y": 1218,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "307ef820.dc5828",
-        "type": "inject",
-        "z": "7f5a232.5f2e2dc",
-        "name": "random -> idle",
-        "topic": "",
-        "payload": "{\"entity_id\":\"media_player.kodi\",\"old_state\":{\"state\":\"random\"},\"new_state\":{\"state\":\"idle\"}}",
-        "payloadType": "json",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 278,
-        "y": 1314,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b461f209.4fa7",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "brightness: slider trans: 2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "brightness",
-                "pt": "msg",
-                "to": "kodi_dimmer_slider",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "transition",
-                "pt": "msg",
-                "to": "2",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1022,
-        "y": 1186,
-        "wires": [
-            [
-                "11612bdc.8e95b4"
-            ]
-        ]
-    },
-    {
-        "id": "a5d68a49.a4c428",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "For Testing",
-        "info": "",
-        "x": 268,
-        "y": 1186,
-        "wires": []
-    },
-    {
-        "id": "d3402ab3.1d82f8",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "kodi_dimmer_slider",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 712,
-        "y": 1362,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "11612bdc.8e95b4",
-        "type": "api-call-service",
-        "z": "7f5a232.5f2e2dc",
-        "name": "",
-        "server": "65b61d5d.d1e1c4",
-        "service_domain": "light",
-        "service": "turn_on",
-        "data": "{\"entity_id\":\"group.lounge_hues\",\"brightness_pct\":\"{{brightness}}\",\"transition\":\"{{transition}}\"}",
-        "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
-        "x": 1274,
-        "y": 1234,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "82ea8082.14d77",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "brightness: 50 trans: 3",
-        "rules": [
-            {
-                "t": "set",
-                "p": "brightness",
-                "pt": "msg",
-                "to": "50",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "transition",
-                "pt": "msg",
-                "to": "3",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1012,
-        "y": 1234,
-        "wires": [
-            [
-                "11612bdc.8e95b4"
-            ]
-        ]
-    },
-    {
-        "id": "e97046f6.0dd848",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "brightness: saved trans: 3",
-        "rules": [
-            {
-                "t": "set",
-                "p": "brightness",
-                "pt": "msg",
-                "to": "saved_lounge_brightness",
-                "tot": "flow"
-            },
-            {
-                "t": "set",
-                "p": "transition",
-                "pt": "msg",
-                "to": "3",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1022,
-        "y": 1282,
-        "wires": [
-            [
-                "11612bdc.8e95b4"
-            ]
-        ]
-    },
-    {
-        "id": "f69e1f3a.133b5",
-        "type": "change",
-        "z": "7f5a232.5f2e2dc",
-        "name": "save brightness",
-        "rules": [
-            {
-                "t": "set",
-                "p": "saved_lounge_brightness",
-                "pt": "flow",
-                "to": "data.attributes.brightness",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 992,
-        "y": 1138,
-        "wires": [
-            [
-                "b461f209.4fa7"
-            ]
-        ]
     },
     {
         "id": "568960f.c0f50a",
@@ -4282,8 +2109,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 950,
-        "y": 1540,
+        "x": 2760,
+        "y": 1470,
         "wires": [
             []
         ]
@@ -4294,14 +2121,19 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Scone Off",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
-        "data": "{\"entity_id\":\"light.living_room_sconce\"}",
+        "entityId": "light.living_room_sconce",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 970,
-        "y": 1340,
+        "mustacheAltTags": false,
+        "x": 2780,
+        "y": 1270,
         "wires": [
             []
         ]
@@ -4318,8 +2150,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1720,
-        "y": 1580,
+        "x": 2790,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -4336,8 +2168,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 1230,
+        "x": 970,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -4354,8 +2186,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 1280,
+        "x": 970,
+        "y": 1430,
         "wires": [
             []
         ]
@@ -4372,8 +2204,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1750,
-        "y": 1680,
+        "x": 2820,
+        "y": 1700,
         "wires": [
             []
         ]
@@ -4390,8 +2222,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1750,
-        "y": 1330,
+        "x": 990,
+        "y": 1480,
         "wires": [
             []
         ]
@@ -4408,8 +2240,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1760,
-        "y": 1730,
+        "x": 2830,
+        "y": 1750,
         "wires": [
             []
         ]
@@ -4420,14 +2252,19 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Patio Sconce Light- ON",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_on",
-        "data": "{\"entity_id\":[\"light.outside_patio_sconce_light\"]}",
+        "entityId": "light.outside_patio_sconce_light",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1740,
-        "y": 1380,
+        "mustacheAltTags": false,
+        "x": 980,
+        "y": 1530,
         "wires": [
             []
         ]
@@ -4444,8 +2281,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1750,
-        "y": 1630,
+        "x": 2820,
+        "y": 1650,
         "wires": [
             []
         ]
@@ -4476,12 +2313,17 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Fridge Light - On",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
-        "data": "{\"entity_id\":\"light.kitchen_fridge_light_wall_dimmer_level\"}",
+        "entityId": "light.kitchen_fridge_light_wall_dimmer_level",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
+        "mustacheAltTags": false,
         "x": 950,
         "y": 240,
         "wires": [
@@ -4494,12 +2336,17 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Deck Door Light - On",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
-        "data": "{\"entity_id\":\"light.kitchen_deck_door_dimmer_level\"}",
+        "entityId": "light.kitchen_deck_door_dimmer_level",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
+        "mustacheAltTags": false,
         "x": 960,
         "y": 340,
         "wires": [
@@ -4512,12 +2359,17 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Sink Light - On",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
-        "data": "{\"entity_id\":\"light.kitchen_sink_light_dimmer_level\"}",
+        "entityId": "light.kitchen_sink_light_dimmer_level",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
+        "mustacheAltTags": false,
         "x": 940,
         "y": 290,
         "wires": [
@@ -4530,12 +2382,17 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Table Light - On",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
-        "data": "{\"entity_id\":\"light.kitchen_table_dimmer_level\"}",
+        "entityId": "light.kitchen_table_dimmer_level",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
+        "mustacheAltTags": false,
         "x": 950,
         "y": 390,
         "wires": [
@@ -4550,8 +2407,8 @@
         "links": [
             "1dd05952.7a5727"
         ],
-        "x": 460,
-        "y": 590,
+        "x": 1880,
+        "y": 250,
         "wires": [
             [
                 "da886df5.bbcd",
@@ -4574,8 +2431,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 950,
-        "y": 530,
+        "x": 2630,
+        "y": 270,
         "wires": [
             []
         ]
@@ -4592,8 +2449,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 960,
-        "y": 630,
+        "x": 2640,
+        "y": 370,
         "wires": [
             []
         ]
@@ -4610,8 +2467,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 940,
-        "y": 580,
+        "x": 2620,
+        "y": 320,
         "wires": [
             []
         ]
@@ -4628,8 +2485,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 950,
-        "y": 680,
+        "x": 2630,
+        "y": 420,
         "wires": [
             []
         ]
@@ -4646,8 +2503,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 810,
+        "x": 970,
+        "y": 860,
         "wires": [
             []
         ]
@@ -4664,8 +2521,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 1000,
+        "x": 2650,
+        "y": 900,
         "wires": [
             []
         ]
@@ -4682,8 +2539,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 860,
+        "x": 970,
+        "y": 910,
         "wires": [
             []
         ]
@@ -4700,8 +2557,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 1050,
+        "x": 2650,
+        "y": 950,
         "wires": [
             []
         ]
@@ -4718,8 +2575,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1720,
-        "y": 760,
+        "x": 960,
+        "y": 810,
         "wires": [
             []
         ]
@@ -4736,8 +2593,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1720,
-        "y": 950,
+        "x": 2640,
+        "y": 850,
         "wires": [
             []
         ]
@@ -4754,8 +2611,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1720,
-        "y": 340,
+        "x": 960,
+        "y": 700,
         "wires": [
             []
         ]
@@ -4772,8 +2629,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1720,
-        "y": 290,
+        "x": 960,
+        "y": 650,
         "wires": [
             []
         ]
@@ -4790,8 +2647,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 240,
+        "x": 970,
+        "y": 600,
         "wires": [
             []
         ]
@@ -4808,8 +2665,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 390,
+        "x": 970,
+        "y": 750,
         "wires": [
             []
         ]
@@ -4826,8 +2683,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 530,
+        "x": 2630,
+        "y": 640,
         "wires": [
             []
         ]
@@ -4844,8 +2701,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1720,
-        "y": 480,
+        "x": 2620,
+        "y": 590,
         "wires": [
             []
         ]
@@ -4862,8 +2719,8 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1730,
-        "y": 630,
+        "x": 2630,
+        "y": 740,
         "wires": [
             []
         ]
@@ -4880,121 +2737,11 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 1720,
-        "y": 580,
+        "x": 2620,
+        "y": 690,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "79c4fc05.ac9c24",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "List out all Upstairs Lights/Switches",
-        "info": "",
-        "x": 890,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "56a8d0cf.842d6",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Kitchen Lights",
-        "info": "",
-        "x": 850,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "5bce20e9.e868e",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger On",
-        "info": "",
-        "x": 870,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "4cff6283.e6289c",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 870,
-        "y": 490,
-        "wires": []
-    },
-    {
-        "id": "3267924b.7b4fbe",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Home Theater Lights",
-        "info": "",
-        "x": 1670,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "67a7d033.1697a",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger On",
-        "info": "",
-        "x": 1660,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "3f88b6d5.5233ea",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 1660,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "6868a261.27688c",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Office Lights",
-        "info": "",
-        "x": 1640,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "78440a5f.d025f4",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger On",
-        "info": "",
-        "x": 1660,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "91757103.222cf",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 1660,
-        "y": 910,
-        "wires": []
-    },
-    {
-        "id": "37957dbe.114f32",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "List out all Downstairs Lights/Switches",
-        "info": "",
-        "x": 1690,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "6ebd6391.4bbb3c",
@@ -5004,8 +2751,8 @@
         "links": [
             "37b5dfa6.90096"
         ],
-        "x": 1290,
-        "y": 300,
+        "x": 500,
+        "y": 630,
         "wires": [
             [
                 "973d78fb.95f4e8",
@@ -5027,8 +2774,8 @@
         "links": [
             "553a45e6.a1485c"
         ],
-        "x": 1280,
-        "y": 850,
+        "x": 1920,
+        "y": 580,
         "wires": [
             [
                 "ecbbef4a.4e525",
@@ -5050,7 +2797,7 @@
         "links": [
             "1b6aa296.33df2d"
         ],
-        "x": 1280,
+        "x": 500,
         "y": 750,
         "wires": [
             [
@@ -5068,8 +2815,8 @@
         "links": [
             "45b5815e.4a6e8"
         ],
-        "x": 1280,
-        "y": 960,
+        "x": 1920,
+        "y": 910,
         "wires": [
             [
                 "52d4c202.e3188c",
@@ -5077,26 +2824,6 @@
             ]
         ],
         "l": true
-    },
-    {
-        "id": "b597df4c.c1b7f",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Living Room Lights",
-        "info": "",
-        "x": 890,
-        "y": 970,
-        "wires": []
-    },
-    {
-        "id": "8b4b41e4.7cbab",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger On",
-        "info": "",
-        "x": 890,
-        "y": 1010,
-        "wires": []
     },
     {
         "id": "c58f75f6.e258a8",
@@ -5153,29 +2880,24 @@
         ]
     },
     {
-        "id": "a7cbae1c.f0133",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 890,
-        "y": 1300,
-        "wires": []
-    },
-    {
         "id": "860694e9.8493e8",
         "type": "api-call-service",
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Tall Lamp Off",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
-        "data": "{\"entity_id\":\"light.living_room_tall_lamp\"}",
+        "entityId": "light.living_room_tall_lamp",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 980,
-        "y": 1390,
+        "mustacheAltTags": false,
+        "x": 2790,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -5197,8 +2919,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 980,
-        "y": 1440,
+        "x": 2790,
+        "y": 1370,
         "wires": [
             []
         ]
@@ -5215,51 +2937,11 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 970,
-        "y": 1490,
+        "x": 2780,
+        "y": 1420,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "adcce8a5.435618",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "All Lights",
-        "info": "",
-        "x": 1630,
-        "y": 1150,
-        "wires": []
-    },
-    {
-        "id": "96d03ff7.cc923",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger On",
-        "info": "",
-        "x": 1660,
-        "y": 1190,
-        "wires": []
-    },
-    {
-        "id": "ed9913ad.1e199",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "List out all Outside Lights",
-        "info": "",
-        "x": 1650,
-        "y": 1110,
-        "wires": []
-    },
-    {
-        "id": "2402b6d2.4b68da",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Trigger Off",
-        "info": "",
-        "x": 1670,
-        "y": 1540,
-        "wires": []
     },
     {
         "id": "637a1c24.bfa924",
@@ -5268,10 +2950,11 @@
         "name": "Turn off Hot Tub Scene",
         "links": [
             "2ef53439.3cb13c",
-            "c6717f5b.cea47"
+            "c6717f5b.cea47",
+            "84b65cca.e2d3e"
         ],
-        "x": 1290,
-        "y": 1490,
+        "x": 1790,
+        "y": 1720,
         "wires": [
             [
                 "cce7be3b.d693b",
@@ -5289,10 +2972,11 @@
         "name": "Turn on Hot Tub Scene",
         "links": [
             "5c3df371.f41b5c",
-            "8f36a295.1e12d"
+            "8f36a295.1e12d",
+            "950af4ad.897aa8"
         ],
-        "x": 1290,
-        "y": 1430,
+        "x": 580,
+        "y": 1650,
         "wires": [
             [
                 "e7b47fb1.4e748",
@@ -5307,14 +2991,12 @@
         "id": "5577022b.1192cc",
         "type": "link in",
         "z": "b4bd0bcf.c07d88",
-        "name": "Turn off at Dawn",
+        "name": "Run at day scene enabled",
         "links": [
-            "8d856041.3aff5",
-            "3a8ed91b.6aa796",
-            "5dc98591.2428dc"
+            "9b631a53.06af28"
         ],
-        "x": 560,
-        "y": 1360,
+        "x": 1860,
+        "y": 1180,
         "wires": [
             [
                 "6b76242f.470c9c",
@@ -5328,19 +3010,20 @@
         "id": "6933e03f.8b93f",
         "type": "link in",
         "z": "b4bd0bcf.c07d88",
-        "name": "Turn on at Dusk",
+        "name": "Turn on evening scene",
         "links": [
+            "160fc393.ba2a8c",
             "20afa414.35affc",
-            "ad5ba3dc.6f9e3",
-            "160fc393.ba2a8c"
+            "f8a6b334.ae589"
         ],
-        "x": 560,
+        "x": 580,
         "y": 1230,
         "wires": [
             [
                 "4d5c5ff3.28b9a",
                 "19646d21.5acfc3",
-                "33be18a9.7f08c8"
+                "33be18a9.7f08c8",
+                "83f59f68.5262f"
             ]
         ],
         "l": true
@@ -5362,8 +3045,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 2130,
-        "y": 1470,
+        "x": 990,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -5385,8 +3068,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 2130,
-        "y": 1510,
+        "x": 2840,
+        "y": 2040,
         "wires": [
             []
         ]
@@ -5436,8 +3119,8 @@
         "links": [
             "a0906a0f.64a0d8"
         ],
-        "x": 590,
-        "y": 1470,
+        "x": 2330,
+        "y": 1280,
         "wires": [
             [
                 "860694e9.8493e8",
@@ -5454,8 +3137,8 @@
         "links": [
             "55df3ac6.a5e864"
         ],
-        "x": 600,
-        "y": 1520,
+        "x": 2330,
+        "y": 1330,
         "wires": [
             [
                 "c0ad50f3.a4eff",
@@ -5508,8 +3191,8 @@
         "links": [
             "3a76ed96.349f62"
         ],
-        "x": 480,
-        "y": 690,
+        "x": 1900,
+        "y": 380,
         "wires": [
             [
                 "610d916d.eef81"
@@ -5529,21 +3212,11 @@
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 950,
-        "y": 730,
+        "x": 2630,
+        "y": 470,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "8be09372.970dd",
-        "type": "comment",
-        "z": "7f5a232.5f2e2dc",
-        "name": "These nodes are borrowed from other people and not in use.",
-        "info": "",
-        "x": 260,
-        "y": 50,
-        "wires": []
     },
     {
         "id": "450a6015.288b2",
@@ -5562,8 +3235,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 980,
-        "y": 1680,
+        "x": 970,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -5574,32 +3247,22 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Master Bath Light - Off",
         "server": "65b61d5d.d1e1c4",
+        "version": "1",
+        "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
-        "data": "{\"entity_id\":\"light.master_bathroom_light_dimmer_level\"}",
+        "entityId": "light.master_bathroom_light_dimmer_level",
+        "data": "",
+        "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
-        "x": 960,
-        "y": 1730,
+        "mustacheAltTags": false,
+        "x": 2820,
+        "y": 1860,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "694c9457.adfe4c",
-        "type": "debug",
-        "z": "b4bd0bcf.c07d88",
-        "name": "HotwaterPump test 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1370,
-        "y": 2190,
-        "wires": []
     },
     {
         "id": "e49aa9ff.ff7118",
@@ -5770,8 +3433,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 1840,
-        "y": 2990,
+        "x": 1510,
+        "y": 3030,
         "wires": []
     },
     {
@@ -5783,7 +3446,7 @@
             "8b3e6e8.087359"
         ],
         "x": 570,
-        "y": 1680,
+        "y": 1750,
         "wires": [
             [
                 "450a6015.288b2"
@@ -5953,88 +3616,13 @@
         "wires": []
     },
     {
-        "id": "c259e593.dabd28",
-        "type": "comment",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Non Light devices",
-        "info": "",
-        "x": 880,
-        "y": 2150,
-        "wires": []
-    },
-    {
-        "id": "a674b642.29ff88",
-        "type": "api-call-service",
-        "z": "b4bd0bcf.c07d88",
-        "name": "HotWaterCirc Pump On",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "switch",
-        "service": "turn_on",
-        "entityId": "switch.s31_hotwatercirc",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 960,
-        "y": 2230,
-        "wires": [
-            [
-                "694c9457.adfe4c"
-            ]
-        ]
-    },
-    {
-        "id": "873fb8b8.e4fc28",
-        "type": "api-call-service",
-        "z": "b4bd0bcf.c07d88",
-        "name": "HotWaterCirc Pump Off",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "switch",
-        "service": "turn_off",
-        "entityId": "switch.s31_hotwatercirc",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 960,
-        "y": 2280,
-        "wires": [
-            [
-                "f3fe1bbd.9d2d18"
-            ]
-        ]
-    },
-    {
-        "id": "f3fe1bbd.9d2d18",
-        "type": "debug",
-        "z": "b4bd0bcf.c07d88",
-        "name": "HotwaterPump off",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1370,
-        "y": 2260,
-        "wires": []
-    },
-    {
         "id": "ffb86d67.64cef",
         "type": "comment",
         "z": "ca2305ba.3a64f8",
         "name": "Bathroom Fan Timers",
         "info": "",
-        "x": 2030,
-        "y": 690,
+        "x": 1650,
+        "y": 150,
         "wires": []
     },
     {
@@ -6053,8 +3641,8 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
-        "x": 2080,
-        "y": 750,
+        "x": 1700,
+        "y": 210,
         "wires": [
             [
                 "44dd9f3.282d56"
@@ -6072,8 +3660,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 2650,
-        "y": 790,
+        "x": 2270,
+        "y": 250,
         "wires": []
     },
     {
@@ -6084,8 +3672,8 @@
         "links": [
             "3576f310.2b67dc"
         ],
-        "x": 2710,
-        "y": 840,
+        "x": 2330,
+        "y": 300,
         "wires": [],
         "l": true
     },
@@ -6097,8 +3685,8 @@
         "links": [
             "c4f2ee9e.16c26"
         ],
-        "x": 600,
-        "y": 1830,
+        "x": 2340,
+        "y": 1900,
         "wires": [
             [
                 "d1c7e2d.6c08c2"
@@ -6123,8 +3711,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 960,
-        "y": 1830,
+        "x": 2830,
+        "y": 1910,
         "wires": [
             [
                 "43ea8672.210e78"
@@ -6142,142 +3730,9 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1250,
-        "y": 1830,
+        "x": 3120,
+        "y": 1910,
         "wires": []
-    },
-    {
-        "id": "c022b90f.491408",
-        "type": "comment",
-        "z": "2aba4bad.aeba64",
-        "name": "Turn off fireplaces at bedtime",
-        "info": "",
-        "x": 160,
-        "y": 110,
-        "wires": []
-    },
-    {
-        "id": "7c0fb223.513b5c",
-        "type": "inject",
-        "z": "2aba4bad.aeba64",
-        "name": "Fireplace night ttime",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "30 22 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 210,
-        "y": 240,
-        "wires": [
-            [
-                "bb92b119.0f3de",
-                "167851aa.8018fe",
-                "3cce1f37.698b7",
-                "56133ca5.481fd4"
-            ]
-        ]
-    },
-    {
-        "id": "bb92b119.0f3de",
-        "type": "api-call-service",
-        "z": "2aba4bad.aeba64",
-        "name": "Turn off livingroom fireplace",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "climate",
-        "service": "set_hvac_mode",
-        "entityId": "climate.living_room_fireplace_thermostat_heating_1",
-        "data": "{\"hvac_mode\":\"off\"}",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 510,
-        "y": 230,
-        "wires": [
-            [
-                "dc6c1483.d71d28"
-            ]
-        ]
-    },
-    {
-        "id": "167851aa.8018fe",
-        "type": "debug",
-        "z": "2aba4bad.aeba64",
-        "name": "Inject",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "x": 450,
-        "y": 390,
-        "wires": []
-    },
-    {
-        "id": "dc6c1483.d71d28",
-        "type": "debug",
-        "z": "2aba4bad.aeba64",
-        "name": "HVAC off",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 800,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "3cce1f37.698b7",
-        "type": "api-call-service",
-        "z": "2aba4bad.aeba64",
-        "name": "Turn off office fireplace",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "climate",
-        "service": "set_hvac_mode",
-        "entityId": "climate.office_fireplace_thermostat_heating1",
-        "data": "{\"hvac_mode\":\"off\"}",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 490,
-        "y": 300,
-        "wires": [
-            [
-                "dc6c1483.d71d28"
-            ]
-        ]
-    },
-    {
-        "id": "826bbe8c.30a3f",
-        "type": "inject",
-        "z": "2aba4bad.aeba64",
-        "name": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 220,
-        "y": 690,
-        "wires": [
-            [
-                "56133ca5.481fd4"
-            ]
-        ]
     },
     {
         "id": "322b717d.de88ce",
@@ -6324,60 +3779,6 @@
         "wires": []
     },
     {
-        "id": "378eb08b.3082d",
-        "type": "function",
-        "z": "2aba4bad.aeba64",
-        "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 620,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "56133ca5.481fd4",
-        "type": "change",
-        "z": "2aba4bad.aeba64",
-        "name": "Fireplaces Turned Off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "notification_txt",
-                "pt": "msg",
-                "to": "Fireplaces turned Off",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 490,
-        "y": 170,
-        "wires": [
-            [
-                "25b5d13c.596b7e"
-            ]
-        ]
-    },
-    {
-        "id": "25b5d13c.596b7e",
-        "type": "link out",
-        "z": "2aba4bad.aeba64",
-        "name": "Send Notification",
-        "links": [
-            "a69a61fd.e1ff7"
-        ],
-        "x": 790,
-        "y": 170,
-        "wires": [],
-        "l": true
-    },
-    {
         "id": "a69a61fd.e1ff7",
         "type": "link in",
         "z": "a0818eac.0a1ff",
@@ -6391,7 +3792,12 @@
             "6e011ed6.fcc35",
             "6e4c68eb.edd718",
             "f7f81bc3.122b68",
-            "9087af8.712a35"
+            "9087af8.712a35",
+            "b77fca4e.664d68",
+            "72ef96b6.44b8b8",
+            "78da8bbb.d73064",
+            "3552e7a6.548188",
+            "cbebf2ec.fe3a1"
         ],
         "x": 330,
         "y": 180,
@@ -6959,48 +4365,6 @@
         "wires": []
     },
     {
-        "id": "952c1fd.884a5e",
-        "type": "inject",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "topic": "",
-        "payload": "on",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 110,
-        "y": 1120,
-        "wires": [
-            [
-                "82af13cb.2bbca",
-                "c8afd1ea.be12a"
-            ]
-        ]
-    },
-    {
-        "id": "2d186251.dc705e",
-        "type": "inject",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "topic": "",
-        "payload": "off",
-        "payloadType": "str",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 110,
-        "y": 1160,
-        "wires": [
-            [
-                "c8afd1ea.be12a",
-                "82af13cb.2bbca"
-            ]
-        ]
-    },
-    {
         "id": "83f59f68.5262f",
         "type": "api-call-service",
         "z": "b4bd0bcf.c07d88",
@@ -7017,8 +4381,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1730,
-        "y": 1420,
+        "x": 970,
+        "y": 1570,
         "wires": [
             []
         ]
@@ -7040,8 +4404,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1750,
-        "y": 1780,
+        "x": 2820,
+        "y": 1800,
         "wires": [
             []
         ]
@@ -7050,34 +4414,21 @@
         "id": "39b25a59.f7c0f6",
         "type": "link in",
         "z": "b4bd0bcf.c07d88",
-        "name": "Turn off Christmas Lights",
+        "name": "Run at night scene enabled",
         "links": [
-            "10933e8.8a4fac2",
-            "6def5848.773ed8"
+            "eefa5d5c.57057"
         ],
-        "x": 1330,
-        "y": 1770,
+        "x": 1890,
+        "y": 1450,
         "wires": [
             [
-                "1cf064b5.bd4edb"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "7df3de9e.de5ae",
-        "type": "link in",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Turn on Christmas Lights",
-        "links": [
-            "d63d78b5.8b4778",
-            "160fc393.ba2a8c"
-        ],
-        "x": 1330,
-        "y": 1310,
-        "wires": [
-            [
-                "83f59f68.5262f"
+                "1cf064b5.bd4edb",
+                "b74dc7b.e56b238",
+                "654b3663.811218",
+                "c0ad50f3.a4eff",
+                "3f19563e.69deba",
+                "860694e9.8493e8",
+                "37cdbde4.f8e4e2"
             ]
         ],
         "l": true
@@ -8211,243 +5562,6 @@
         "wires": []
     },
     {
-        "id": "5c0e7afd.869824",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Morning Scene On",
-        "links": [
-            "661905c8.d3592c"
-        ],
-        "x": 2260,
-        "y": 170,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "661905c8.d3592c",
-        "type": "link in",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Morning Scene On",
-        "links": [
-            "5c0e7afd.869824"
-        ],
-        "x": 390,
-        "y": 2170,
-        "wires": [
-            [
-                "a674b642.29ff88"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "ab3bf5fe.f909c8",
-        "type": "link in",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Night Scene On",
-        "links": [
-            "6def5848.773ed8"
-        ],
-        "x": 380,
-        "y": 2460,
-        "wires": [
-            [
-                "873fb8b8.e4fc28",
-                "ab18845f.3179c8",
-                "953272d3.7042d",
-                "e3f69a8a.4b66a8"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "6def5848.773ed8",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Night Scene On",
-        "links": [
-            "39b25a59.f7c0f6",
-            "ab3bf5fe.f909c8"
-        ],
-        "x": 2240,
-        "y": 510,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "8469ffd9.d5ce8",
-        "type": "server-state-changed",
-        "z": "ca2305ba.3a64f8",
-        "name": "Morning Routine",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "entityidfilter": "input_select.house_mode",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "Morning",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "x": 2000,
-        "y": 180,
-        "wires": [
-            [
-                "5c0e7afd.869824"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "524e0bde.5d8314",
-        "type": "debug",
-        "z": "ca2305ba.3a64f8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 2400,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "9ea918db.bd3e78",
-        "type": "server-state-changed",
-        "z": "ca2305ba.3a64f8",
-        "name": "Night Routine",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "entityidfilter": "input_select.house_mode",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "Night",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "x": 1990,
-        "y": 510,
-        "wires": [
-            [
-                "6def5848.773ed8"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "16faeb7f.8e5e25",
-        "type": "server-state-changed",
-        "z": "ca2305ba.3a64f8",
-        "name": "Day Routine",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "entityidfilter": "input_select.house_mode",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "Day",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "x": 1990,
-        "y": 290,
-        "wires": [
-            [
-                "5dc98591.2428dc"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "551b66d2.23ba98",
-        "type": "server-state-changed",
-        "z": "ca2305ba.3a64f8",
-        "name": "Evening Routine",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "entityidfilter": "input_select.house_mode",
-        "entityidfiltertype": "exact",
-        "outputinitially": false,
-        "state_type": "str",
-        "haltifstate": "Evening",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "x": 2000,
-        "y": 400,
-        "wires": [
-            [
-                "160fc393.ba2a8c"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "5dc98591.2428dc",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Day Scene On",
-        "links": [
-            "5577022b.1192cc",
-            "ebf918e8.6f8818"
-        ],
-        "x": 2240,
-        "y": 290,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "160fc393.ba2a8c",
-        "type": "link out",
-        "z": "ca2305ba.3a64f8",
-        "name": "Evening Scene On",
-        "links": [
-            "6933e03f.8b93f",
-            "75382953.700d78",
-            "7df3de9e.de5ae"
-        ],
-        "x": 2250,
-        "y": 400,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "75382953.700d78",
-        "type": "link in",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Evening Scene On",
-        "links": [
-            "160fc393.ba2a8c"
-        ],
-        "x": 390,
-        "y": 2310,
-        "wires": [
-            []
-        ],
-        "l": true
-    },
-    {
-        "id": "ebf918e8.6f8818",
-        "type": "link in",
-        "z": "b4bd0bcf.c07d88",
-        "name": "Day Scene On",
-        "links": [
-            "5dc98591.2428dc"
-        ],
-        "x": 380,
-        "y": 2250,
-        "wires": [
-            []
-        ],
-        "l": true
-    },
-    {
         "id": "814db14.f8b0f5",
         "type": "server-state-changed",
         "z": "770eefce.2dc6a",
@@ -8616,8 +5730,8 @@
         "payloadtype": "num",
         "payloadval": "0",
         "name": "",
-        "x": 2440,
-        "y": 750,
+        "x": 2060,
+        "y": 210,
         "wires": [
             [
                 "7312410d.83062"
@@ -8644,8 +5758,8 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 2370,
-        "y": 820,
+        "x": 1990,
+        "y": 280,
         "wires": [
             [
                 "44dd9f3.282d56",
@@ -8683,8 +5797,8 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
-        "x": 2060,
-        "y": 900,
+        "x": 1680,
+        "y": 360,
         "wires": [
             [
                 "53dc52.0a65d3b"
@@ -8702,8 +5816,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 2650,
-        "y": 940,
+        "x": 2270,
+        "y": 400,
         "wires": []
     },
     {
@@ -8714,8 +5828,8 @@
         "links": [
             "b7a71695.ba8ab8"
         ],
-        "x": 2690,
-        "y": 990,
+        "x": 2310,
+        "y": 450,
         "wires": [],
         "l": true
     },
@@ -8728,8 +5842,8 @@
         "payloadtype": "num",
         "payloadval": "0",
         "name": "",
-        "x": 2440,
-        "y": 900,
+        "x": 2060,
+        "y": 360,
         "wires": [
             [
                 "3fe5dbc.1708e24"
@@ -8756,8 +5870,8 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 2370,
-        "y": 970,
+        "x": 1990,
+        "y": 430,
         "wires": [
             [
                 "53dc52.0a65d3b",
@@ -8776,8 +5890,8 @@
         "links": [
             "de206d71.8524b"
         ],
-        "x": 580,
-        "y": 1910,
+        "x": 2350,
+        "y": 1980,
         "wires": [
             [
                 "e0f8e26b.d7001"
@@ -8802,8 +5916,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 960,
-        "y": 1910,
+        "x": 2830,
+        "y": 1990,
         "wires": [
             [
                 "afe3fdf1.c8613"
@@ -8821,14 +5935,94 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 1250,
-        "y": 1910,
+        "x": 3120,
+        "y": 1990,
         "wires": []
     },
     {
-        "id": "ab18845f.3179c8",
+        "id": "eb52751a.6e7f98",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "HotwaterPump test 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 920,
+        "y": 50,
+        "wires": []
+    },
+    {
+        "id": "96f1a21a.7173d",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "HotWaterCirc Pump On",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.s31_hotwatercirc",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "eb52751a.6e7f98"
+            ]
+        ]
+    },
+    {
+        "id": "653eab07.6c65e4",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "HotWaterCirc Pump Off",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.s31_hotwatercirc",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 580,
+        "y": 620,
+        "wires": [
+            [
+                "d02bdfe.8e9772"
+            ]
+        ]
+    },
+    {
+        "id": "d02bdfe.8e9772",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "HotwaterPump off",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1030,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "508583a.69a437c",
         "type": "api-current-state",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Is Front Door Locked",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
@@ -8844,35 +6038,35 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 790,
-        "y": 2470,
+        "x": 570,
+        "y": 680,
         "wires": [
             [],
             [
-                "35da3209.acc4fe",
-                "3c517c64.c66514",
-                "f84ccc4c.d805c"
+                "2e4e7199.d8d47e",
+                "276739f4.7fb986",
+                "acdd801e.f99ff"
             ]
         ]
     },
     {
-        "id": "35da3209.acc4fe",
+        "id": "2e4e7199.d8d47e",
         "type": "debug",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 1180,
-        "y": 2410,
+        "x": 1020,
+        "y": 560,
         "wires": []
     },
     {
-        "id": "3c517c64.c66514",
+        "id": "276739f4.7fb986",
         "type": "api-call-service",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Lock Front Door",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
@@ -8886,35 +6080,35 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1030,
-        "y": 2510,
+        "x": 860,
+        "y": 670,
         "wires": [
             [
-                "f84ccc4c.d805c",
-                "e05996ec.3bd738"
+                "acdd801e.f99ff",
+                "84e9d6b5.430eb8"
             ]
         ]
     },
     {
-        "id": "e05996ec.3bd738",
+        "id": "84e9d6b5.430eb8",
         "type": "function",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Message Door Locked",
         "func": "    msg.notification_txt=\"Front Door Has Been Locked\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1300,
-        "y": 2510,
+        "x": 1120,
+        "y": 670,
         "wires": [
             [
-                "6e4c68eb.edd718"
+                "72ef96b6.44b8b8"
             ]
         ]
     },
     {
-        "id": "f84ccc4c.d805c",
+        "id": "acdd801e.f99ff",
         "type": "debug",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Lock Door",
         "active": false,
         "tosidebar": true,
@@ -8922,27 +6116,27 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1260,
-        "y": 2450,
+        "x": 1020,
+        "y": 600,
         "wires": []
     },
     {
-        "id": "6e4c68eb.edd718",
+        "id": "72ef96b6.44b8b8",
         "type": "link out",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Sent Telegram",
         "links": [
             "a69a61fd.e1ff7"
         ],
-        "x": 1540,
-        "y": 2510,
+        "x": 1370,
+        "y": 670,
         "wires": [],
         "l": true
     },
     {
-        "id": "953272d3.7042d",
+        "id": "f84f4a4d.021878",
         "type": "api-current-state",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Is Tesla Garage door open",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
@@ -8958,20 +6152,20 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 810,
-        "y": 2570,
+        "x": 590,
+        "y": 740,
         "wires": [
             [
-                "35da3209.acc4fe",
-                "1bf1f157.76493f"
+                "2e4e7199.d8d47e",
+                "e1eaf2d6.b2eb9"
             ],
             []
         ]
     },
     {
-        "id": "1bf1f157.76493f",
+        "id": "e1eaf2d6.b2eb9",
         "type": "api-call-service",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Close Tesla Door",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
@@ -8985,48 +6179,48 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 1100,
-        "y": 2590,
+        "x": 860,
+        "y": 740,
         "wires": [
             [
-                "f84ccc4c.d805c",
-                "ed70e8e0.601d68"
+                "acdd801e.f99ff",
+                "44982ebb.369d6"
             ]
         ]
     },
     {
-        "id": "ed70e8e0.601d68",
+        "id": "44982ebb.369d6",
         "type": "function",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Message Tesla Garge Closed",
         "func": "    msg.notification_txt=\"Tess Garage door has been closed\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1410,
-        "y": 2580,
+        "x": 1140,
+        "y": 730,
         "wires": [
             [
-                "f7f81bc3.122b68"
+                "78da8bbb.d73064"
             ]
         ]
     },
     {
-        "id": "f7f81bc3.122b68",
+        "id": "78da8bbb.d73064",
         "type": "link out",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Sent Telegram",
         "links": [
             "a69a61fd.e1ff7"
         ],
-        "x": 1590,
-        "y": 2620,
+        "x": 1380,
+        "y": 730,
         "wires": [],
         "l": true
     },
     {
-        "id": "e3f69a8a.4b66a8",
+        "id": "a623a6d.36a0658",
         "type": "api-current-state",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Is S2kGarage door open",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
@@ -9042,20 +6236,20 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 820,
-        "y": 2630,
+        "x": 580,
+        "y": 800,
         "wires": [
             [
-                "5ecebdde.7ad334",
-                "35da3209.acc4fe"
+                "2e4e7199.d8d47e",
+                "bfcde99b.2af438"
             ],
             []
         ]
     },
     {
-        "id": "5ecebdde.7ad334",
+        "id": "bfcde99b.2af438",
         "type": "api-call-service",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Close Tesla Door",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
@@ -9069,42 +6263,524 @@
         "output_location": "payload",
         "output_location_type": "msg",
         "mustacheAltTags": false,
-        "x": 1100,
-        "y": 2660,
+        "x": 850,
+        "y": 800,
         "wires": [
             [
-                "2c7be723.5ac208",
-                "f84ccc4c.d805c"
+                "acdd801e.f99ff",
+                "585b97dc.8fe208"
             ]
         ]
     },
     {
-        "id": "2c7be723.5ac208",
+        "id": "585b97dc.8fe208",
         "type": "function",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Message S2k Garge Closed",
         "func": "    msg.notification_txt=\"S2k Garage door has been closed\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1400,
-        "y": 2660,
+        "x": 1160,
+        "y": 800,
         "wires": [
             [
-                "9087af8.712a35"
+                "3552e7a6.548188"
             ]
         ]
     },
     {
-        "id": "9087af8.712a35",
+        "id": "3552e7a6.548188",
         "type": "link out",
-        "z": "b4bd0bcf.c07d88",
+        "z": "d2879bb8.476c48",
         "name": "Sent Telegram",
         "links": [
             "a69a61fd.e1ff7"
         ],
-        "x": 1590,
-        "y": 2700,
+        "x": 1380,
+        "y": 810,
         "wires": [],
         "l": true
+    },
+    {
+        "id": "e828130a.5a83e",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "Turn off livingroom fireplace",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_hvac_mode",
+        "entityId": "climate.living_room_thermostat_mode",
+        "data": "{\"hvac_mode\":\"off\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 590,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a32adaf.863c528",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "Turn off office fireplace",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_hvac_mode",
+        "entityId": "climate.office_fireplace_thermostat_mode",
+        "data": "{\"hvac_mode\":\"off\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 570,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7bc12ab.95fdf",
+        "type": "change",
+        "z": "d2879bb8.476c48",
+        "name": "Fireplaces Turned Off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "notification_txt",
+                "pt": "msg",
+                "to": "Fireplaces turned Off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 860,
+        "wires": [
+            [
+                "cbebf2ec.fe3a1"
+            ]
+        ]
+    },
+    {
+        "id": "cbebf2ec.fe3a1",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Send Notification",
+        "links": [
+            "a69a61fd.e1ff7"
+        ],
+        "x": 820,
+        "y": 870,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "eaef6ec8.d1026",
+        "type": "server-state-changed",
+        "z": "d2879bb8.476c48",
+        "name": "Morning Routine",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "entityidfilter": "input_select.house_mode",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Morning",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "x": 190,
+        "y": 150,
+        "wires": [
+            [
+                "96f1a21a.7173d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "8a4d2577.cd6848",
+        "type": "server-state-changed",
+        "z": "d2879bb8.476c48",
+        "name": "Night Routine",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "entityidfilter": "input_select.house_mode",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Night",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "x": 190,
+        "y": 590,
+        "wires": [
+            [
+                "653eab07.6c65e4",
+                "508583a.69a437c",
+                "f84f4a4d.021878",
+                "a623a6d.36a0658",
+                "b7bc12ab.95fdf",
+                "e828130a.5a83e",
+                "a32adaf.863c528",
+                "eefa5d5c.57057"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "71014e23.d56a8",
+        "type": "server-state-changed",
+        "z": "d2879bb8.476c48",
+        "name": "Day Routine",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "entityidfilter": "input_select.house_mode",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Day",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "x": 190,
+        "y": 270,
+        "wires": [
+            [
+                "9b631a53.06af28"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d112bed.ad68d4",
+        "type": "server-state-changed",
+        "z": "d2879bb8.476c48",
+        "name": "Evening Routine",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "entityidfilter": "input_select.house_mode",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "Evening",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "x": 190,
+        "y": 420,
+        "wires": [
+            [
+                "f8a6b334.ae589"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f8a6b334.ae589",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Turn on evening Scene",
+        "links": [
+            "6933e03f.8b93f"
+        ],
+        "x": 530,
+        "y": 370,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "9b631a53.06af28",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Turn off at day scene",
+        "links": [
+            "5577022b.1192cc"
+        ],
+        "x": 520,
+        "y": 240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "eefa5d5c.57057",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Turn on night scene",
+        "links": [
+            "39b25a59.f7c0f6"
+        ],
+        "x": 560,
+        "y": 1000,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "a7186ad1.e8bf48",
+        "type": "comment",
+        "z": "d2879bb8.476c48",
+        "name": "Scenes - Automations",
+        "info": "",
+        "x": 220,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "115d660d.6b6ada",
+        "type": "server-state-changed",
+        "z": "d2879bb8.476c48",
+        "name": "Hot Tub",
+        "server": "65b61d5d.d1e1c4",
+        "entityidfilter": "input_boolean.hot_tub_scene",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 170,
+        "y": 1213,
+        "wires": [
+            [
+                "b70aca02.e83128"
+            ]
+        ]
+    },
+    {
+        "id": "b70aca02.e83128",
+        "type": "switch",
+        "z": "d2879bb8.476c48",
+        "name": "on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 368,
+        "y": 1218,
+        "wires": [
+            [
+                "950af4ad.897aa8"
+            ],
+            [
+                "84b65cca.e2d3e"
+            ]
+        ]
+    },
+    {
+        "id": "950af4ad.897aa8",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Turn on Hot Tub Scene",
+        "links": [
+            "562ff468.8e249c",
+            "233ebac9.692876"
+        ],
+        "x": 620,
+        "y": 1190,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "84b65cca.e2d3e",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Turn off Hot Tub Scene",
+        "links": [
+            "ab97c066.6aef4",
+            "637a1c24.bfa924"
+        ],
+        "x": 620,
+        "y": 1260,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "428bddf9.7a3a94",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "entityidfilter": "binary_sensor.garage_multisensor_sensor",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 1780,
+        "y": 740,
+        "wires": [
+            [
+                "6ac813c9.0cd38c",
+                "15bb347c.dc21ac"
+            ]
+        ]
+    },
+    {
+        "id": "6ac813c9.0cd38c",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 2260,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "15bb347c.dc21ac",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 2110,
+        "y": 760,
+        "wires": [
+            [
+                "e2bb6e0e.23f39",
+                "4dccf0b6.66568",
+                "6ac813c9.0cd38c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2addefc.bae001",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "OFF",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.garage_light_switch",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 2590,
+        "y": 850,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4dccf0b6.66568",
+        "type": "api-call-service",
+        "z": "ca2305ba.3a64f8",
+        "name": "ON",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.garage_light_switch",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "payload",
+        "output_location_type": "msg",
+        "mustacheAltTags": false,
+        "x": 2430,
+        "y": 770,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a874bbce.82ef88",
+        "type": "api-current-state",
+        "z": "ca2305ba.3a64f8",
+        "name": "Still Motion?",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": true,
+        "entity_id": "binary_sensor.garage_multisensor_sensor",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 2430,
+        "y": 830,
+        "wires": [
+            [],
+            [
+                "2addefc.bae001"
+            ]
+        ]
+    },
+    {
+        "id": "e2bb6e0e.23f39",
+        "type": "stoptimer",
+        "z": "ca2305ba.3a64f8",
+        "duration": "5",
+        "units": "Minute",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "5 Min wait",
+        "x": 2260,
+        "y": 790,
+        "wires": [
+            [
+                "a874bbce.82ef88"
+            ],
+            []
+        ]
     }
 ]
