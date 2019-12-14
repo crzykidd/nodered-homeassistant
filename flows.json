@@ -3797,7 +3797,8 @@
             "72ef96b6.44b8b8",
             "78da8bbb.d73064",
             "3552e7a6.548188",
-            "cbebf2ec.fe3a1"
+            "cbebf2ec.fe3a1",
+            "c117e365.8a2e8"
         ],
         "x": 330,
         "y": 180,
@@ -4122,165 +4123,6 @@
                 "c867f7f6.11f908"
             ]
         ]
-    },
-    {
-        "id": "8c4b6d65.23817",
-        "type": "server-state-changed",
-        "z": "a0818eac.0a1ff",
-        "name": "Is house occupied",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "entityidfilter": "binary_sensor.occupancy",
-        "entityidfiltertype": "exact",
-        "outputinitially": true,
-        "state_type": "str",
-        "haltifstate": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 1,
-        "output_only_on_state_change": true,
-        "x": 200,
-        "y": 790,
-        "wires": [
-            [
-                "c22f7e61.1ed03",
-                "26afcfe7.de9d9"
-            ]
-        ]
-    },
-    {
-        "id": "c22f7e61.1ed03",
-        "type": "debug",
-        "z": "a0818eac.0a1ff",
-        "name": "Occupancy",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 510,
-        "y": 770,
-        "wires": []
-    },
-    {
-        "id": "26afcfe7.de9d9",
-        "type": "switch",
-        "z": "a0818eac.0a1ff",
-        "name": "Occupied Switch",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "on",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "off",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 510,
-        "y": 860,
-        "wires": [
-            [
-                "ac4d8285.c2035",
-                "b288a1dc.b8167"
-            ],
-            [
-                "ac4d8285.c2035",
-                "43fdf667.3600e8"
-            ]
-        ]
-    },
-    {
-        "id": "ac4d8285.c2035",
-        "type": "debug",
-        "z": "a0818eac.0a1ff",
-        "name": "Occupancy on/off",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 790,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "43fdf667.3600e8",
-        "type": "change",
-        "z": "a0818eac.0a1ff",
-        "name": "Set HomeOccupancy false",
-        "rules": [
-            {
-                "t": "set",
-                "p": "HomeOccupancy",
-                "pt": "global",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 810,
-        "y": 870,
-        "wires": [
-            [
-                "5d60c4c3.730f1c"
-            ]
-        ]
-    },
-    {
-        "id": "b288a1dc.b8167",
-        "type": "change",
-        "z": "a0818eac.0a1ff",
-        "name": "Set HomeOccupancy true",
-        "rules": [
-            {
-                "t": "set",
-                "p": "HomeOccupancy",
-                "pt": "global",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 800,
-        "y": 810,
-        "wires": [
-            [
-                "5d60c4c3.730f1c"
-            ]
-        ]
-    },
-    {
-        "id": "5d60c4c3.730f1c",
-        "type": "debug",
-        "z": "a0818eac.0a1ff",
-        "name": "Occupancy true/false",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1170,
-        "y": 840,
-        "wires": []
     },
     {
         "id": "81f39c19.81b2a",
@@ -6009,7 +5851,7 @@
         "type": "debug",
         "z": "d2879bb8.476c48",
         "name": "HotwaterPump off",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6502,8 +6344,8 @@
         "links": [
             "6933e03f.8b93f"
         ],
-        "x": 530,
-        "y": 370,
+        "x": 480,
+        "y": 400,
         "wires": [],
         "l": true
     },
@@ -6515,8 +6357,8 @@
         "links": [
             "5577022b.1192cc"
         ],
-        "x": 520,
-        "y": 240,
+        "x": 470,
+        "y": 250,
         "wires": [],
         "l": true
     },
@@ -6781,6 +6623,270 @@
                 "a874bbce.82ef88"
             ],
             []
+        ]
+    },
+    {
+        "id": "a3c34bff.7ac4a8",
+        "type": "server-state-changed",
+        "z": "d2879bb8.476c48",
+        "name": "Is house occupied",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "entityidfilter": "binary_sensor.occupancy",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 190,
+        "y": 1530,
+        "wires": [
+            [
+                "4475834e.47cbcc",
+                "dd2a3675.5befd8"
+            ]
+        ]
+    },
+    {
+        "id": "4475834e.47cbcc",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "Occupancy",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 500,
+        "y": 1490,
+        "wires": []
+    },
+    {
+        "id": "dd2a3675.5befd8",
+        "type": "switch",
+        "z": "d2879bb8.476c48",
+        "name": "Occupied Switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 460,
+        "y": 1560,
+        "wires": [
+            [
+                "fd74fac8.5891d8",
+                "db83368.c3a86c8",
+                "8517e6a1.ed1108",
+                "b1634a0d.ff7a28"
+            ],
+            [
+                "fd74fac8.5891d8",
+                "432426c7.b2d0a8",
+                "84dc5c22.6ce55",
+                "78c22859.1b7748"
+            ]
+        ]
+    },
+    {
+        "id": "fd74fac8.5891d8",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "Occupancy on/off",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 780,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "432426c7.b2d0a8",
+        "type": "change",
+        "z": "d2879bb8.476c48",
+        "name": "Set HomeOccupancy false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "HomeOccupancy",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 1560,
+        "wires": [
+            [
+                "999cc5ae.6851b8"
+            ]
+        ]
+    },
+    {
+        "id": "db83368.c3a86c8",
+        "type": "change",
+        "z": "d2879bb8.476c48",
+        "name": "Set HomeOccupancy true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "HomeOccupancy",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 1410,
+        "wires": [
+            [
+                "999cc5ae.6851b8"
+            ]
+        ]
+    },
+    {
+        "id": "999cc5ae.6851b8",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "Occupancy true/false",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1120,
+        "y": 1410,
+        "wires": []
+    },
+    {
+        "id": "84dc5c22.6ce55",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Set message Unoccupied",
+        "func": "    msg.notification_txt=\"House is Unoccupied\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 800,
+        "y": 1600,
+        "wires": [
+            [
+                "c117e365.8a2e8"
+            ]
+        ]
+    },
+    {
+        "id": "46ab08b8.909468",
+        "type": "comment",
+        "z": "d2879bb8.476c48",
+        "name": "Scenes - Away mode",
+        "info": "",
+        "x": 190,
+        "y": 1410,
+        "wires": []
+    },
+    {
+        "id": "c117e365.8a2e8",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Sent Telegram",
+        "links": [
+            "a69a61fd.e1ff7"
+        ],
+        "x": 1120,
+        "y": 1520,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "8517e6a1.ed1108",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "HotWaterCirc Pump On",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.s31_hotwatercirc",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 790,
+        "y": 1490,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78c22859.1b7748",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "HotWaterCirc Pump On",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.s31_hotwatercirc",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 800,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1634a0d.ff7a28",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Set message Occupied",
+        "func": "    msg.notification_txt=\"House is Occupied\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 800,
+        "y": 1450,
+        "wires": [
+            [
+                "c117e365.8a2e8"
+            ]
         ]
     }
 ]
