@@ -27,5 +27,7 @@ https://flows.nodered.org/node/node-red-contrib-power-monitor
 Here is a picture of the flow. The flow itself can be found in the main flows.json.
 ![Image description](https://github.com/crzykidd/nodered-homeassistant/raw/nodered-homeassistant/WasherDryerAnnounce.PNG)
 
+## Added a schedule builder for house modes
+
 Hope you find this usefull.
  
