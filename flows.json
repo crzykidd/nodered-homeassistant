@@ -4155,7 +4155,9 @@
             "3552e7a6.548188",
             "cbebf2ec.fe3a1",
             "c117e365.8a2e8",
-            "4a6c82ff.04211c"
+            "4a6c82ff.04211c",
+            "928388fb.4c9a38",
+            "b6e85b3.69618a8"
         ],
         "x": 330,
         "y": 180,
@@ -6484,7 +6486,9 @@
                 "a32adaf.863c528",
                 "eefa5d5c.57057",
                 "eb8366d7.d6ff78",
-                "f6c41f1c.4a0ec"
+                "f6c41f1c.4a0ec",
+                "7dc27c02.a35ed4",
+                "1829495e.56d047"
             ],
             []
         ]
@@ -6510,8 +6514,9 @@
         "wires": [
             [
                 "9b631a53.06af28",
-                "6378ac4.2819854",
-                "a3483efd.8db8f"
+                "a3483efd.8db8f",
+                "320fe74f.9c49b8",
+                "6378ac4.2819854"
             ],
             []
         ]
@@ -6538,7 +6543,8 @@
             [
                 "f8a6b334.ae589",
                 "8c23f76a.e2e558",
-                "b19d5087.e8f8d"
+                "b19d5087.e8f8d",
+                "c499e2a6.f333f"
             ],
             []
         ]
@@ -6564,8 +6570,8 @@
         "links": [
             "5577022b.1192cc"
         ],
-        "x": 570,
-        "y": 260,
+        "x": 580,
+        "y": 200,
         "wires": [],
         "l": true
     },
@@ -6588,8 +6594,8 @@
         "z": "d2879bb8.476c48",
         "name": "Scenes - Automations",
         "info": "",
-        "x": 230,
-        "y": 1370,
+        "x": 240,
+        "y": 1650,
         "wires": []
     },
     {
@@ -6619,8 +6625,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 180,
-        "y": 1443,
+        "x": 190,
+        "y": 1723,
         "wires": [
             [
                 "b70aca02.e83128"
@@ -6645,8 +6651,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 378,
-        "y": 1448,
+        "x": 388,
+        "y": 1728,
         "wires": [
             [
                 "950af4ad.897aa8"
@@ -6665,8 +6671,8 @@
             "562ff468.8e249c",
             "233ebac9.692876"
         ],
-        "x": 630,
-        "y": 1420,
+        "x": 640,
+        "y": 1700,
         "wires": [],
         "l": true
     },
@@ -6679,8 +6685,8 @@
             "ab97c066.6aef4",
             "637a1c24.bfa924"
         ],
-        "x": 630,
-        "y": 1490,
+        "x": 640,
+        "y": 1770,
         "wires": [],
         "l": true
     },
@@ -6860,8 +6866,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 200,
-        "y": 1760,
+        "x": 210,
+        "y": 2040,
         "wires": [
             [
                 "dd2a3675.5befd8"
@@ -6890,8 +6896,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 1790,
+        "x": 480,
+        "y": 2070,
         "wires": [
             [
                 "fd74fac8.5891d8",
@@ -6919,8 +6925,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 790,
-        "y": 2070,
+        "x": 800,
+        "y": 2350,
         "wires": []
     },
     {
@@ -6942,8 +6948,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
-        "y": 1790,
+        "x": 830,
+        "y": 2070,
         "wires": [
             [
                 "999cc5ae.6851b8"
@@ -6969,8 +6975,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
-        "y": 1640,
+        "x": 820,
+        "y": 1920,
         "wires": [
             [
                 "999cc5ae.6851b8"
@@ -6988,8 +6994,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1130,
-        "y": 1640,
+        "x": 1140,
+        "y": 1920,
         "wires": []
     },
     {
@@ -7000,8 +7006,8 @@
         "func": "    msg.notification_txt=\"House is Unoccupied\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 810,
-        "y": 1830,
+        "x": 820,
+        "y": 2110,
         "wires": [
             [
                 "c117e365.8a2e8"
@@ -7014,8 +7020,8 @@
         "z": "d2879bb8.476c48",
         "name": "Scenes - Away mode",
         "info": "",
-        "x": 200,
-        "y": 1640,
+        "x": 210,
+        "y": 1920,
         "wires": []
     },
     {
@@ -7026,8 +7032,8 @@
         "links": [
             "a69a61fd.e1ff7"
         ],
-        "x": 1130,
-        "y": 1750,
+        "x": 1140,
+        "y": 2030,
         "wires": [],
         "l": true
     },
@@ -7048,8 +7054,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 800,
-        "y": 1720,
+        "x": 810,
+        "y": 2000,
         "wires": [
             []
         ]
@@ -7071,8 +7077,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 810,
-        "y": 1870,
+        "x": 820,
+        "y": 2150,
         "wires": [
             []
         ]
@@ -7085,8 +7091,8 @@
         "func": "    msg.notification_txt=\"House is Occupied\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 810,
-        "y": 1680,
+        "x": 820,
+        "y": 1960,
         "wires": [
             [
                 "c117e365.8a2e8"
@@ -7502,8 +7508,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 640,
-        "y": 1280,
+        "x": 650,
+        "y": 1560,
         "wires": [
             [
                 "559963da.b6907c"
@@ -7530,8 +7536,8 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 420,
-        "y": 1280,
+        "x": 430,
+        "y": 1560,
         "wires": [
             [
                 "4a4ac510.765cec"
@@ -7557,8 +7563,8 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 1110,
-        "y": 1290,
+        "x": 1120,
+        "y": 1570,
         "wires": [
             [
                 "fbe880aa.e3538"
@@ -7575,8 +7581,8 @@
         "payloadtype": "num",
         "payloadval": "0",
         "name": "",
-        "x": 880,
-        "y": 1290,
+        "x": 890,
+        "y": 1570,
         "wires": [
             [
                 "9519b790.64b338"
@@ -7601,8 +7607,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1340,
-        "y": 1290,
+        "x": 1350,
+        "y": 1570,
         "wires": [
             [
                 "cea35e16.6e501"
@@ -7617,8 +7623,8 @@
         "func": "    msg.notification_txt=\"Front Door was found unlocked and Has Been Locked\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1560,
-        "y": 1290,
+        "x": 1570,
+        "y": 1570,
         "wires": [
             [
                 "4a6c82ff.04211c"
@@ -7633,8 +7639,8 @@
         "links": [
             "a69a61fd.e1ff7"
         ],
-        "x": 1790,
-        "y": 1310,
+        "x": 1800,
+        "y": 1590,
         "wires": [],
         "l": true
     },
@@ -7665,8 +7671,8 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
-        "x": 130,
-        "y": 1290,
+        "x": 140,
+        "y": 1570,
         "wires": [
             [
                 "b49e8334.c6d5"
@@ -8169,8 +8175,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 790,
-        "y": 1570,
+        "x": 800,
+        "y": 1850,
         "wires": [
             [
                 "394d408d.f83b9"
@@ -8189,8 +8195,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 180,
-        "y": 1880,
+        "x": 190,
+        "y": 2160,
         "wires": [
             [
                 "dd2a3675.5befd8"
@@ -8209,8 +8215,8 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "x": 170,
-        "y": 1940,
+        "x": 180,
+        "y": 2220,
         "wires": [
             [
                 "dd2a3675.5befd8"
@@ -8234,8 +8240,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1480,
-        "y": 1470,
+        "x": 1490,
+        "y": 1750,
         "wires": [
             [
                 "5c5819e6.b2ec98"
@@ -8253,8 +8259,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1480,
-        "y": 1590,
+        "x": 1490,
+        "y": 1870,
         "wires": []
     },
     {
@@ -8274,8 +8280,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1120,
-        "y": 1460,
+        "x": 1130,
+        "y": 1740,
         "wires": [
             [
                 "5c5819e6.b2ec98",
@@ -8361,8 +8367,8 @@
         "func": "global.set(\"HouseMode\", \"Day\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 800,
-        "y": 290,
+        "x": 900,
+        "y": 220,
         "wires": [
             []
         ]
@@ -8386,8 +8392,8 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 570,
-        "y": 500,
+        "x": 580,
+        "y": 530,
         "wires": [
             [
                 "8107d89e.4cded8",
@@ -8518,6 +8524,216 @@
                 "d5665e6f.f26f",
                 "8107d89e.4cded8"
             ]
+        ]
+    },
+    {
+        "id": "7dc27c02.a35ed4",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Is Back Door Locked",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "locked",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "lock.schlage_be469zp_backdoor_locked_backdoor",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 570,
+        "y": 1240,
+        "wires": [
+            [],
+            [
+                "4e96ece1.a18814"
+            ]
+        ]
+    },
+    {
+        "id": "4e96ece1.a18814",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "Lock Back Door",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "lock",
+        "service": "lock",
+        "entityId": "lock.schlage_be469zp_backdoor_locked_backdoor",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 840,
+        "y": 1220,
+        "wires": [
+            [
+                "a17a9d24.baae5"
+            ]
+        ]
+    },
+    {
+        "id": "a17a9d24.baae5",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Message Door Locked",
+        "func": "    msg.notification_txt=\"Back Door Has Been Locked\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1080,
+        "y": 1220,
+        "wires": [
+            [
+                "928388fb.4c9a38"
+            ]
+        ]
+    },
+    {
+        "id": "928388fb.4c9a38",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Sent Telegram",
+        "links": [
+            "a69a61fd.e1ff7"
+        ],
+        "x": 1310,
+        "y": 1240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1829495e.56d047",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Is Garage Door Locked",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "outputs": 2,
+        "halt_if": "locked",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked_garage",
+        "state_type": "str",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 580,
+        "y": 1300,
+        "wires": [
+            [],
+            [
+                "b3a5551f.702388"
+            ]
+        ]
+    },
+    {
+        "id": "b3a5551f.702388",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "Lock Garage Door",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "lock",
+        "service": "lock",
+        "entityId": "lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked_garage",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 850,
+        "y": 1280,
+        "wires": [
+            [
+                "61f1d195.993ea"
+            ]
+        ]
+    },
+    {
+        "id": "61f1d195.993ea",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Message Door Locked",
+        "func": "    msg.notification_txt=\"Garage Door Has Been Locked\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1080,
+        "y": 1280,
+        "wires": [
+            [
+                "b6e85b3.69618a8"
+            ]
+        ]
+    },
+    {
+        "id": "b6e85b3.69618a8",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Sent Telegram",
+        "links": [
+            "a69a61fd.e1ff7"
+        ],
+        "x": 1310,
+        "y": 1300,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "320fe74f.9c49b8",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "HotWaterCirc Pump On",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.s31_hotwatercirc",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 580,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c499e2a6.f333f",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "HotWaterCirc Pump On",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.s31_hotwatercirc",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 580,
+        "y": 470,
+        "wires": [
+            []
         ]
     }
 ]
