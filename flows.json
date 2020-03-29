@@ -47,7 +47,6 @@
         "z": "",
         "name": "Home Assistant",
         "legacy": false,
-        "hassio": false,
         "rejectUnauthorizedCerts": true,
         "ha_boolean": "y|yes|true|on|home|open",
         "connectionDelay": true
@@ -178,13 +177,35 @@
         "name": "Home Assistant"
     },
     {
+        "id": "32473d23.e05bc2",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "docker01 mosquitto",
+        "broker": "docker01.crzynet.local",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
         "id": "384480ed.efa9c",
         "type": "comment",
         "z": "ca2305ba.3a64f8",
         "name": "Server Room Door Events",
         "info": "",
         "x": 240,
-        "y": 3540,
+        "y": 3750,
         "wires": []
     },
     {
@@ -215,7 +236,7 @@
         "outputs": 1,
         "output_only_on_state_change": true,
         "x": 237,
-        "y": 3604,
+        "y": 3814,
         "wires": [
             [
                 "126eb1f0.60baee"
@@ -241,7 +262,7 @@
         "repair": false,
         "outputs": 2,
         "x": 468,
-        "y": 3607,
+        "y": 3817,
         "wires": [
             [
                 "89d07e44.bb7ee"
@@ -269,7 +290,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 729,
-        "y": 3615,
+        "y": 3825,
         "wires": [
             []
         ]
@@ -292,7 +313,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 730,
-        "y": 3570,
+        "y": 3780,
         "wires": [
             [
                 "746d5c74.a077b4"
@@ -331,7 +352,7 @@
         "name": "******************All Door Events******************",
         "info": "adf",
         "x": 307,
-        "y": 3495,
+        "y": 3705,
         "wires": []
     },
     {
@@ -498,7 +519,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 950,
-        "y": 3600,
+        "y": 3810,
         "wires": []
     },
     {
@@ -507,7 +528,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Backdoor Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -519,7 +540,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.backdoor_sensor",
+        "entityidfilter": "binary_sensor.backdoor_sensor_backdoor",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "habool",
@@ -726,8 +747,19 @@
         "z": "ca2305ba.3a64f8",
         "name": "Front Door Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
-        "entityidfilter": "binary_sensor.front_door_sensor",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "binary_sensor.front_door_sensor_frontdoor",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "habool",
@@ -1241,7 +1273,8 @@
         "y": 420,
         "wires": [
             [
-                "fafc0b5b.9e3788"
+                "fafc0b5b.9e3788",
+                "8984a751.488b38"
             ]
         ]
     },
@@ -1420,13 +1453,18 @@
             },
             {
                 "t": "eq",
+                "v": "zwave.masterbedroom_tosha_nightstand_wallmote",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "zwave.nanomote_masterbedroom",
                 "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 8,
+        "outputs": 9,
         "x": 400,
         "y": 2650,
         "wires": [
@@ -1447,6 +1485,9 @@
             ],
             [
                 "d9fa21f8.1f474"
+            ],
+            [
+                "f65c789d.081f88"
             ],
             [
                 "f65c789d.081f88"
@@ -1723,7 +1764,8 @@
         "name": "Turn on all Kitchen Lights",
         "links": [
             "e8931289.5d916",
-            "77bd43a7.33d76c"
+            "77bd43a7.33d76c",
+            "a5a486d6.9ffe28"
         ],
         "x": 1170,
         "y": 2420,
@@ -2494,7 +2536,8 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Turn on all Kitchen Lights",
         "links": [
-            "bf7b5656.d71878"
+            "bf7b5656.d71878",
+            "c39514fe.a43e38"
         ],
         "x": 460,
         "y": 250,
@@ -2606,7 +2649,8 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Turn off all Kitchen Lights",
         "links": [
-            "1dd05952.7a5727"
+            "1dd05952.7a5727",
+            "3d88c035.57073"
         ],
         "x": 1880,
         "y": 250,
@@ -3534,8 +3578,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 2820,
-        "y": 1860,
+        "x": 2830,
+        "y": 2140,
         "wires": [
             []
         ]
@@ -3716,7 +3760,7 @@
         "type": "debug",
         "z": "ca2305ba.3a64f8",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4189,7 +4233,18 @@
         "name": "Front Door Lock Status",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
-        "entityidfilter": "lock.lock_front_door_lock",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked_frontdoor",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -4571,7 +4626,8 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Run at night scene enabled",
         "links": [
-            "eefa5d5c.57057"
+            "eefa5d5c.57057",
+            "3d88c035.57073"
         ],
         "x": 1890,
         "y": 1450,
@@ -4744,6 +4800,7 @@
         "wires": [
             [
                 "a4032f27.6330a",
+                "6c5f3376.8ea51c",
                 "10cd39d2.d7f2f6"
             ],
             []
@@ -4781,8 +4838,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1350,
-        "y": 1270,
+        "x": 1590,
+        "y": 1290,
         "wires": [
             [
                 "4ff9154b.9d96cc"
@@ -5189,7 +5246,8 @@
         "wires": [
             [
                 "1f60fd14.eb4143",
-                "f59fb257.a8329"
+                "f59fb257.a8329",
+                "e70314ea.3842b8"
             ],
             []
         ]
@@ -5432,7 +5490,8 @@
         "wires": [
             [
                 "c695abf9.f7f688",
-                "a6a5d497.ada638"
+                "a6a5d497.ada638",
+                "a66a0f31.35212"
             ],
             []
         ]
@@ -5578,8 +5637,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1630,
-        "y": 1260,
+        "x": 1890,
+        "y": 1300,
         "wires": [
             [
                 "d9b8c67c.f38f68"
@@ -5594,8 +5653,8 @@
         "links": [
             "a69a61fd.e1ff7"
         ],
-        "x": 1795,
-        "y": 1260,
+        "x": 2075,
+        "y": 1300,
         "wires": []
     },
     {
@@ -5954,7 +6013,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 610,
-        "y": 80,
+        "y": 70,
         "wires": [
             [
                 "eb52751a.6e7f98"
@@ -5979,7 +6038,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 580,
-        "y": 620,
+        "y": 750,
         "wires": [
             [
                 "d02bdfe.8e9772"
@@ -5997,8 +6056,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1030,
-        "y": 520,
+        "x": 1320,
+        "y": 670,
         "wires": []
     },
     {
@@ -6013,7 +6072,7 @@
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "override_topic": false,
-        "entity_id": "lock.lock_front_door_lock",
+        "entity_id": "lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked_frontdoor",
         "state_type": "str",
         "state_location": "payload",
         "override_payload": "msg",
@@ -6021,7 +6080,7 @@
         "override_data": "msg",
         "blockInputOverrides": false,
         "x": 570,
-        "y": 1050,
+        "y": 1180,
         "wires": [
             [],
             [
@@ -6041,8 +6100,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 1020,
-        "y": 560,
+        "x": 1270,
+        "y": 730,
         "wires": []
     },
     {
@@ -6055,7 +6114,7 @@
         "debugenabled": false,
         "service_domain": "lock",
         "service": "lock",
-        "entityId": "lock.lock_front_door_lock",
+        "entityId": "lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked_frontdoor",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -6063,7 +6122,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 840,
-        "y": 1030,
+        "y": 1160,
         "wires": [
             [
                 "acdd801e.f99ff",
@@ -6080,7 +6139,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1080,
-        "y": 1030,
+        "y": 1160,
         "wires": [
             [
                 "72ef96b6.44b8b8"
@@ -6098,8 +6157,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1020,
-        "y": 600,
+        "x": 1270,
+        "y": 770,
         "wires": []
     },
     {
@@ -6111,7 +6170,7 @@
             "a69a61fd.e1ff7"
         ],
         "x": 1310,
-        "y": 1050,
+        "y": 1180,
         "wires": [],
         "l": true
     },
@@ -6135,7 +6194,7 @@
         "override_data": "msg",
         "blockInputOverrides": false,
         "x": 590,
-        "y": 740,
+        "y": 870,
         "wires": [
             [
                 "2e4e7199.d8d47e",
@@ -6162,7 +6221,7 @@
         "output_location_type": "msg",
         "mustacheAltTags": false,
         "x": 860,
-        "y": 740,
+        "y": 870,
         "wires": [
             [
                 "acdd801e.f99ff",
@@ -6179,7 +6238,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1140,
-        "y": 730,
+        "y": 860,
         "wires": [
             [
                 "78da8bbb.d73064"
@@ -6195,7 +6254,7 @@
             "a69a61fd.e1ff7"
         ],
         "x": 1380,
-        "y": 730,
+        "y": 860,
         "wires": [],
         "l": true
     },
@@ -6219,7 +6278,7 @@
         "override_data": "msg",
         "blockInputOverrides": false,
         "x": 580,
-        "y": 800,
+        "y": 930,
         "wires": [
             [
                 "2e4e7199.d8d47e",
@@ -6246,7 +6305,7 @@
         "output_location_type": "msg",
         "mustacheAltTags": false,
         "x": 850,
-        "y": 800,
+        "y": 930,
         "wires": [
             [
                 "acdd801e.f99ff",
@@ -6263,7 +6322,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1160,
-        "y": 800,
+        "y": 930,
         "wires": [
             [
                 "3552e7a6.548188"
@@ -6279,7 +6338,7 @@
             "a69a61fd.e1ff7"
         ],
         "x": 1380,
-        "y": 810,
+        "y": 940,
         "wires": [],
         "l": true
     },
@@ -6301,7 +6360,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 590,
-        "y": 900,
+        "y": 1030,
         "wires": [
             []
         ]
@@ -6324,7 +6383,7 @@
         "output_location_type": "none",
         "mustacheAltTags": false,
         "x": 570,
-        "y": 940,
+        "y": 1070,
         "wires": [
             []
         ]
@@ -6349,7 +6408,7 @@
         "to": "",
         "reg": false,
         "x": 570,
-        "y": 860,
+        "y": 990,
         "wires": [
             [
                 "cbebf2ec.fe3a1"
@@ -6365,7 +6424,7 @@
             "a69a61fd.e1ff7"
         ],
         "x": 820,
-        "y": 870,
+        "y": 1000,
         "wires": [],
         "l": true
     },
@@ -6385,13 +6444,13 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
-        "x": 190,
-        "y": 150,
+        "x": 180,
+        "y": 90,
         "wires": [
             [
                 "96f1a21a.7173d",
-                "25ddf32a.39fb4c",
-                "850e84bb.d224a8"
+                "e79396f5.e3ee88",
+                "30d71841.7ce038"
             ],
             []
         ]
@@ -6412,8 +6471,8 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
-        "x": 170,
-        "y": 570,
+        "x": 160,
+        "y": 710,
         "wires": [
             [
                 "653eab07.6c65e4",
@@ -6424,7 +6483,8 @@
                 "e828130a.5a83e",
                 "a32adaf.863c528",
                 "eefa5d5c.57057",
-                "6657b063.1ed17"
+                "eb8366d7.d6ff78",
+                "f6c41f1c.4a0ec"
             ],
             []
         ]
@@ -6450,8 +6510,8 @@
         "wires": [
             [
                 "9b631a53.06af28",
-                "a0afeea7.d4b63",
-                "e4d674e7.a11ad8"
+                "6378ac4.2819854",
+                "a3483efd.8db8f"
             ],
             []
         ]
@@ -6477,7 +6537,8 @@
         "wires": [
             [
                 "f8a6b334.ae589",
-                "90475ad7.157498"
+                "8c23f76a.e2e558",
+                "b19d5087.e8f8d"
             ],
             []
         ]
@@ -6491,7 +6552,7 @@
             "6933e03f.8b93f"
         ],
         "x": 580,
-        "y": 400,
+        "y": 430,
         "wires": [],
         "l": true
     },
@@ -6503,8 +6564,8 @@
         "links": [
             "5577022b.1192cc"
         ],
-        "x": 470,
-        "y": 250,
+        "x": 570,
+        "y": 260,
         "wires": [],
         "l": true
     },
@@ -6517,7 +6578,7 @@
             "39b25a59.f7c0f6"
         ],
         "x": 560,
-        "y": 1000,
+        "y": 1130,
         "wires": [],
         "l": true
     },
@@ -6769,7 +6830,7 @@
         "id": "e2bb6e0e.23f39",
         "type": "stoptimer",
         "z": "ca2305ba.3a64f8",
-        "duration": "5",
+        "duration": "8",
         "units": "Minute",
         "payloadtype": "num",
         "payloadval": "0",
@@ -6803,25 +6864,9 @@
         "y": 1760,
         "wires": [
             [
-                "4475834e.47cbcc",
                 "dd2a3675.5befd8"
             ]
         ]
-    },
-    {
-        "id": "4475834e.47cbcc",
-        "type": "debug",
-        "z": "d2879bb8.476c48",
-        "name": "Occupancy",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 510,
-        "y": 1720,
-        "wires": []
     },
     {
         "id": "dd2a3675.5befd8",
@@ -6852,7 +6897,8 @@
                 "fd74fac8.5891d8",
                 "db83368.c3a86c8",
                 "8517e6a1.ed1108",
-                "b1634a0d.ff7a28"
+                "b1634a0d.ff7a28",
+                "660b01ca.aa29d"
             ],
             [
                 "fd74fac8.5891d8",
@@ -6867,7 +6913,7 @@
         "type": "debug",
         "z": "d2879bb8.476c48",
         "name": "Occupancy on/off",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -6936,7 +6982,7 @@
         "type": "debug",
         "z": "d2879bb8.476c48",
         "name": "Occupancy true/false",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -7012,7 +7058,7 @@
         "id": "78c22859.1b7748",
         "type": "api-call-service",
         "z": "d2879bb8.476c48",
-        "name": "HotWaterCirc Pump On",
+        "name": "HotWaterCirc Pump Off",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
         "debugenabled": false,
@@ -7240,93 +7286,24 @@
         "wires": []
     },
     {
-        "id": "25ddf32a.39fb4c",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Set MBathFloor to 88",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "climate",
-        "service": "set_temperature",
-        "entityId": "climate.masterbath",
-        "data": "{\"temperature\":88}",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 600,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a0afeea7.d4b63",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Set MBathFloor to 68",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "climate",
-        "service": "set_temperature",
-        "entityId": "climate.masterbath",
-        "data": "{\"temperature\":68}",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 610,
-        "y": 290,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "90475ad7.157498",
         "type": "api-call-service",
         "z": "d2879bb8.476c48",
-        "name": "Set MBathFloor to 70",
+        "name": "Set MBathFloor temp",
         "server": "65b61d5d.d1e1c4",
         "version": 1,
         "debugenabled": false,
         "service_domain": "climate",
         "service": "set_temperature",
         "entityId": "climate.masterbath",
-        "data": "{\"temperature\":70}",
+        "data": "{\"temperature\":\"{{payload}}\"}",
         "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 570,
-        "y": 450,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6657b063.1ed17",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Set MBathFloor to 66",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "climate",
-        "service": "set_temperature",
-        "entityId": "climate.masterbath",
-        "data": "{\"temperature\":66}",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 570,
-        "y": 530,
+        "x": 1390,
+        "y": 410,
         "wires": [
             []
         ]
@@ -7525,8 +7502,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 680,
-        "y": 1130,
+        "x": 640,
+        "y": 1280,
         "wires": [
             [
                 "559963da.b6907c"
@@ -7553,8 +7530,8 @@
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 460,
-        "y": 1130,
+        "x": 420,
+        "y": 1280,
         "wires": [
             [
                 "4a4ac510.765cec"
@@ -7573,15 +7550,15 @@
         "halt_if_type": "str",
         "halt_if_compare": "is",
         "override_topic": false,
-        "entity_id": "lock.lock_front_door_lock",
+        "entity_id": "lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked_frontdoor",
         "state_type": "str",
         "state_location": "payload",
         "override_payload": "msg",
         "entity_location": "data",
         "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 1150,
-        "y": 1140,
+        "x": 1110,
+        "y": 1290,
         "wires": [
             [
                 "fbe880aa.e3538"
@@ -7593,13 +7570,13 @@
         "id": "559963da.b6907c",
         "type": "stoptimer",
         "z": "d2879bb8.476c48",
-        "duration": "1",
+        "duration": "2",
         "units": "Minute",
         "payloadtype": "num",
         "payloadval": "0",
         "name": "",
-        "x": 920,
-        "y": 1140,
+        "x": 880,
+        "y": 1290,
         "wires": [
             [
                 "9519b790.64b338"
@@ -7617,15 +7594,15 @@
         "debugenabled": false,
         "service_domain": "lock",
         "service": "lock",
-        "entityId": "lock.lock_front_door_lock",
+        "entityId": "lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked_frontdoor",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1380,
-        "y": 1140,
+        "x": 1340,
+        "y": 1290,
         "wires": [
             [
                 "cea35e16.6e501"
@@ -7640,8 +7617,8 @@
         "func": "    msg.notification_txt=\"Front Door was found unlocked and Has Been Locked\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1600,
-        "y": 1140,
+        "x": 1560,
+        "y": 1290,
         "wires": [
             [
                 "4a6c82ff.04211c"
@@ -7656,8 +7633,8 @@
         "links": [
             "a69a61fd.e1ff7"
         ],
-        "x": 1830,
-        "y": 1160,
+        "x": 1790,
+        "y": 1310,
         "wires": [],
         "l": true
     },
@@ -7679,7 +7656,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "lock.lock_front_door_lock",
+        "entityidfilter": "lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked_frontdoor",
         "entityidfiltertype": "exact",
         "outputinitially": true,
         "state_type": "str",
@@ -7688,58 +7665,12 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
-        "x": 170,
-        "y": 1140,
+        "x": 130,
+        "y": 1290,
         "wires": [
             [
                 "b49e8334.c6d5"
             ],
-            []
-        ]
-    },
-    {
-        "id": "850e84bb.d224a8",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Set Upstairs Bath to 88",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "climate",
-        "service": "set_temperature",
-        "entityId": "climate.upstairs_bath",
-        "data": "{\"temperature\":88}",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 610,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e4d674e7.a11ad8",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Set Upstairs Bath to 66",
-        "server": "65b61d5d.d1e1c4",
-        "version": 1,
-        "debugenabled": false,
-        "service_domain": "climate",
-        "service": "set_temperature",
-        "entityId": "climate.upstairs_bath",
-        "data": "{\"temperature\":66}",
-        "dataType": "json",
-        "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
-        "mustacheAltTags": false,
-        "x": 620,
-        "y": 340,
-        "wires": [
             []
         ]
     },
@@ -7764,7 +7695,8 @@
         "y": 3070,
         "wires": [
             [
-                "31ab2457.a1525c"
+                "145027f6.68c698",
+                "60f8e0ea.4423d"
             ]
         ]
     },
@@ -7790,12 +7722,10 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 3230,
+        "x": 1040,
+        "y": 3580,
         "wires": [
-            [
-                "145027f6.68c698"
-            ],
+            [],
             []
         ]
     },
@@ -7816,8 +7746,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1500,
-        "y": 3070,
+        "x": 1490,
+        "y": 3140,
         "wires": [
             []
         ]
@@ -7855,7 +7785,7 @@
         "repair": false,
         "outputs": 4,
         "x": 700,
-        "y": 3020,
+        "y": 3250,
         "wires": [
             [
                 "d4587bbf.dbf698"
@@ -7863,8 +7793,12 @@
             [
                 "b7461345.1fe64"
             ],
-            [],
-            []
+            [
+                "410cf1ae.e62ef"
+            ],
+            [
+                "8882754c.e9af58"
+            ]
         ]
     },
     {
@@ -7899,8 +7833,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 690,
-        "y": 3250,
+        "x": 700,
+        "y": 3600,
         "wires": [
             [
                 "a104da1c.e3e788"
@@ -7933,7 +7867,7 @@
         "y": 3110,
         "wires": [
             [
-                "145027f6.68c698"
+                "31ab2457.a1525c"
             ]
         ]
     },
@@ -7954,8 +7888,8 @@
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 1510,
-        "y": 3160,
+        "x": 1500,
+        "y": 3080,
         "wires": [
             []
         ]
@@ -7982,13 +7916,608 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 3270,
+        "x": 1040,
+        "y": 3620,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "8882754c.e9af58",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "MBRoom Button4 sceens",
+        "property": "payload.event.scene_data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1040,
+        "y": 3340,
         "wires": [
             [
-                "31ab2457.a1525c"
-            ],
+                "2d7104ff.f73a6c"
+            ]
+        ]
+    },
+    {
+        "id": "2d7104ff.f73a6c",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn off Master Bedroom/Bathroom",
+        "links": [
+            "857ae990.5fdd58"
+        ],
+        "x": 1440,
+        "y": 3300,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "857ae990.5fdd58",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn off Master Bedroom/Bathroom",
+        "links": [
+            "2d7104ff.f73a6c"
+        ],
+        "x": 2370,
+        "y": 2150,
+        "wires": [
+            [
+                "b74dc7b.e56b238",
+                "c6aadd9e.9c25d"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "c6aadd9e.9c25d",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Masterbedroom Light - Off",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_off",
+        "entityId": "light.master_bedroom_wall_dimmer_level",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 2840,
+        "y": 2190,
+        "wires": [
             []
+        ]
+    },
+    {
+        "id": "8ee27104.c4b9b",
+        "type": "link in",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Turn on Living Room Light",
+        "links": [
+            "c39514fe.a43e38"
+        ],
+        "x": 580,
+        "y": 1190,
+        "wires": [
+            [
+                "55480ed8.c9b19"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "410cf1ae.e62ef",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "MBRoom Button3 sceens",
+        "property": "payload.event.scene_data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 3200,
+        "wires": [
+            [
+                "c39514fe.a43e38"
+            ],
+            [
+                "3d88c035.57073"
+            ]
+        ]
+    },
+    {
+        "id": "c39514fe.a43e38",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "Turn on Kitchen/Living Lights",
+        "links": [
+            "77bd43a7.33d76c",
+            "8ee27104.c4b9b"
+        ],
+        "x": 1450,
+        "y": 3200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "3d88c035.57073",
+        "type": "link out",
+        "z": "ca2305ba.3a64f8",
+        "name": "turn off kitchen/living and set night",
+        "links": [
+            "39b25a59.f7c0f6",
+            "7d845e34.f1356"
+        ],
+        "x": 1460,
+        "y": 3240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "b1fb1852.70f3d8",
+        "type": "mqtt in",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "topic": "z2m/nodeID_3",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "32473d23.e05bc2",
+        "x": 140,
+        "y": 970,
+        "wires": [
+            [
+                "71d4f9ba.ef99d8"
+            ]
+        ]
+    },
+    {
+        "id": "2c55eefd.b5dbc2",
+        "type": "mqtt out",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "topic": "sonoff/kitchen-uc-led01",
+        "qos": "",
+        "retain": "",
+        "broker": "32473d23.e05bc2",
+        "x": 880,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "71d4f9ba.ef99d8",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 530,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "6c5f3376.8ea51c",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set HouseMode = Morning",
+        "func": "global.set(\"HouseMode\", \"Morning\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1320,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e79396f5.e3ee88",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Set HouseMode = Morning",
+        "func": "global.set(\"HouseMode\", \"Morning\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "660b01ca.aa29d",
+        "type": "switch",
+        "z": "d2879bb8.476c48",
+        "name": "GetHouseMode",
+        "property": "HouseMode",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "morning",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 790,
+        "y": 1570,
+        "wires": [
+            [
+                "394d408d.f83b9"
+            ]
+        ]
+    },
+    {
+        "id": "e73c6467.83bbe8",
+        "type": "inject",
+        "z": "d2879bb8.476c48",
+        "name": "Occupiedoff",
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 180,
+        "y": 1880,
+        "wires": [
+            [
+                "dd2a3675.5befd8"
+            ]
+        ]
+    },
+    {
+        "id": "b4ea5b8c.dfe668",
+        "type": "inject",
+        "z": "d2879bb8.476c48",
+        "name": "Occupied on",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 170,
+        "y": 1940,
+        "wires": [
+            [
+                "dd2a3675.5befd8"
+            ]
+        ]
+    },
+    {
+        "id": "97c56758.6e22b8",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "input_select",
+        "service": "select_option",
+        "entityId": "input_select.house_mode",
+        "data": "{\"option\":\"Morning\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 1480,
+        "y": 1470,
+        "wires": [
+            [
+                "5c5819e6.b2ec98"
+            ]
+        ]
+    },
+    {
+        "id": "5c5819e6.b2ec98",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "sethousemode",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1480,
+        "y": 1590,
+        "wires": []
+    },
+    {
+        "id": "394d408d.f83b9",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "input_select",
+        "service": "select_option",
+        "entityId": "input_select.house_mode",
+        "data": "{\"option\":\"None\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 1120,
+        "y": 1460,
+        "wires": [
+            [
+                "5c5819e6.b2ec98",
+                "97c56758.6e22b8"
+            ]
+        ]
+    },
+    {
+        "id": "d904c17b.39598",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set HouseMode = Day",
+        "func": "global.set(\"HouseMode\", \"Day\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1290,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e70314ea.3842b8",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set HouseMode = Evening",
+        "func": "global.set(\"HouseMode\", \"Evening\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1310,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a66a0f31.35212",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Set HouseMode = Night",
+        "func": "global.set(\"HouseMode\", \"Night\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1310,
+        "y": 1780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb8366d7.d6ff78",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Set HouseMode = Night",
+        "func": "global.set(\"HouseMode\", \"Night\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c23f76a.e2e558",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Set HouseMode = Evening",
+        "func": "global.set(\"HouseMode\", \"Evening\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 430,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6378ac4.2819854",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Set HouseMode = Day",
+        "func": "global.set(\"HouseMode\", \"Day\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 800,
+        "y": 290,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b19d5087.e8f8d",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Get Floor Temp Setting",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_number.bath_floor_temp_evening",
+        "state_type": "num",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 570,
+        "y": 500,
+        "wires": [
+            [
+                "8107d89e.4cded8",
+                "90475ad7.157498",
+                "d5665e6f.f26f"
+            ]
+        ]
+    },
+    {
+        "id": "8107d89e.4cded8",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "Bath Temp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1360,
+        "y": 530,
+        "wires": []
+    },
+    {
+        "id": "d5665e6f.f26f",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "Set SetUpstairsBathFloor temp",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_temperature",
+        "entityId": "climate.upstairs_bath",
+        "data": "{\"temperature\":\"{{payload}}\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "mustacheAltTags": false,
+        "x": 1420,
+        "y": 470,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6c41f1c.4a0ec",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Get Floor Temp Setting",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_number.bath_floor_temp_night",
+        "state_type": "num",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 580,
+        "y": 690,
+        "wires": [
+            [
+                "90475ad7.157498",
+                "d5665e6f.f26f",
+                "8107d89e.4cded8"
+            ]
+        ]
+    },
+    {
+        "id": "a3483efd.8db8f",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Get Floor Temp Setting",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_number.bath_floor_temp_day",
+        "state_type": "num",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 590,
+        "y": 340,
+        "wires": [
+            [
+                "90475ad7.157498",
+                "d5665e6f.f26f"
+            ]
+        ]
+    },
+    {
+        "id": "30d71841.7ce038",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Get Floor Temp Setting",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "override_topic": false,
+        "entity_id": "input_number.bath_floor_temp_morning",
+        "state_type": "num",
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "blockInputOverrides": false,
+        "x": 600,
+        "y": 130,
+        "wires": [
+            [
+                "90475ad7.157498",
+                "d5665e6f.f26f",
+                "8107d89e.4cded8"
+            ]
         ]
     }
 ]
