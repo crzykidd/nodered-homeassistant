@@ -42,6 +42,13 @@
         "info": ""
     },
     {
+        "id": "768db333.b948cc",
+        "type": "tab",
+        "label": "MQTT Flows",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "65b61d5d.d1e1c4",
         "type": "server",
         "z": "",
@@ -183,7 +190,7 @@
         "name": "docker01 mosquitto",
         "broker": "docker01.crzynet.local",
         "port": "1883",
-        "clientid": "",
+        "clientid": "nodered_01",
         "usetls": false,
         "compatmode": false,
         "keepalive": "60",
@@ -435,7 +442,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Door TTS Status",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 1,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -2416,20 +2423,20 @@
         "id": "e7b47fb1.4e748",
         "type": "api-call-service",
         "z": "b4bd0bcf.c07d88",
-        "name": "Patio Soffit Lights - ON",
+        "name": "Outside Soffit Lights - ON",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 1,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_on",
-        "entityId": "light.outside_patio_soffit_light_wall_dimmer_level",
+        "entityId": "light.outside_soffit_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 970,
+        "x": 980,
         "y": 1430,
         "wires": [
             []
@@ -2439,20 +2446,20 @@
         "id": "ea613c7c.ec017",
         "type": "api-call-service",
         "z": "b4bd0bcf.c07d88",
-        "name": "Patio Soffit Lights - OFF",
+        "name": "Outside Soffit Lights - OFF",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 1,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_off",
-        "entityId": "light.outside_patio_soffit_light_wall_dimmer_level",
+        "entityId": "light.outside_soffit_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
         "output_location": "",
         "output_location_type": "none",
         "mustacheAltTags": false,
-        "x": 2820,
+        "x": 2830,
         "y": 1700,
         "wires": [
             []
@@ -9278,6 +9285,158 @@
         "y": 1548.232666015625,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "5e3ffbfb.915a94",
+        "type": "server-state-changed",
+        "z": "768db333.b948cc",
+        "name": "Attic Node 2 OTA Mode",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_boolean.attic_node_2_ota_mode",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "habool",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 130,
+        "y": 130,
+        "wires": [
+            [
+                "6bcb6351.c6ab8c"
+            ]
+        ]
+    },
+    {
+        "id": "ba411088.d00aa",
+        "type": "mqtt out",
+        "z": "768db333.b948cc",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "32473d23.e05bc2",
+        "x": 940,
+        "y": 90,
+        "wires": []
+    },
+    {
+        "id": "1da10afc.7b8535",
+        "type": "change",
+        "z": "768db333.b948cc",
+        "name": "Enable OTA Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "ON",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ESPHome/ota_mode_on/attic_node_2",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "retain",
+                "pt": "msg",
+                "to": "true",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 90,
+        "wires": [
+            [
+                "ba411088.d00aa"
+            ]
+        ]
+    },
+    {
+        "id": "6bcb6351.c6ab8c",
+        "type": "switch",
+        "z": "768db333.b948cc",
+        "name": "OTA Mode On/Off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 400,
+        "y": 130,
+        "wires": [
+            [
+                "1da10afc.7b8535"
+            ],
+            [
+                "52e91d6.c2861e4"
+            ]
+        ]
+    },
+    {
+        "id": "52e91d6.c2861e4",
+        "type": "change",
+        "z": "768db333.b948cc",
+        "name": "Disable OTA Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OFF",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ESPHome/ota_mode_on/attic_node_2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 150,
+        "wires": [
+            [
+                "ba411088.d00aa"
+            ]
         ]
     }
 ]
