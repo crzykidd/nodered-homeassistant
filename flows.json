@@ -409,8 +409,8 @@
         "func": "if(global.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Closed\"\n                } \n        }\n    }\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 1007,
-        "y": 4574,
+        "x": 1000,
+        "y": 4450,
         "wires": [
             [
                 "7e3035e.acfd0cc",
@@ -455,8 +455,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 180,
-        "y": 4125,
+        "x": 173,
+        "y": 4001,
         "wires": [
             [
                 "a2449016.4a104"
@@ -481,8 +481,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 400,
-        "y": 4126,
+        "x": 393,
+        "y": 4002,
         "wires": [
             [
                 "df229c95.d623e",
@@ -623,8 +623,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 160,
-        "y": 4207,
+        "x": 153,
+        "y": 4083,
         "wires": [
             [
                 "9a9ab806.8c55a8"
@@ -653,8 +653,8 @@
         "func": "if(global.get(\"GoogleTTSDoorStatus\") == 1) {\n    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n        return {\n            \"payload\": {\n               \"data\": {\n                   \"message\": friendlyName + \" has been Opened\"\n                } \n        }\n    }\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 1005,
-        "y": 4493,
+        "x": 998,
+        "y": 4369,
         "wires": [
             [
                 "eb645a5b.354298",
@@ -683,8 +683,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 407,
-        "y": 4205,
+        "x": 400,
+        "y": 4081,
         "wires": [
             [
                 "df229c95.d623e",
@@ -785,8 +785,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 170,
-        "y": 4294,
+        "x": 163,
+        "y": 4170,
         "wires": [
             [
                 "facd8e21.69256"
@@ -811,8 +811,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 399,
-        "y": 4294,
+        "x": 392,
+        "y": 4170,
         "wires": [
             [
                 "df229c95.d623e",
@@ -859,8 +859,8 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
-        "x": 160,
-        "y": 4371,
+        "x": 153,
+        "y": 4247,
         "wires": [
             [
                 "a6a18fb5.2d4f6"
@@ -885,8 +885,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 399,
-        "y": 4371,
+        "x": 392,
+        "y": 4247,
         "wires": [
             [
                 "df229c95.d623e",
@@ -914,8 +914,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 200,
-        "y": 4451,
+        "x": 193,
+        "y": 4327,
         "wires": [
             [
                 "9e221147.4e4e2"
@@ -940,8 +940,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 441,
-        "y": 4451,
+        "x": 434,
+        "y": 4327,
         "wires": [
             [
                 "df229c95.d623e",
@@ -980,8 +980,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 180,
-        "y": 4541,
+        "x": 173,
+        "y": 4417,
         "wires": [
             [
                 "8e70690c.caf858"
@@ -1006,8 +1006,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 441,
-        "y": 4541,
+        "x": 434,
+        "y": 4417,
         "wires": [
             [
                 "df229c95.d623e",
@@ -1046,8 +1046,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 160,
-        "y": 4670,
+        "x": 153,
+        "y": 4546,
         "wires": [
             [
                 "72c77997.8f9bd8"
@@ -1072,8 +1072,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 428,
-        "y": 4670,
+        "x": 421,
+        "y": 4546,
         "wires": [
             [
                 "df229c95.d623e",
@@ -1112,8 +1112,8 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
-        "x": 150,
-        "y": 4608,
+        "x": 143,
+        "y": 4484,
         "wires": [
             [
                 "807e7b54.06b348"
@@ -1138,8 +1138,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 435,
-        "y": 4603,
+        "x": 428,
+        "y": 4479,
         "wires": [
             [
                 "df229c95.d623e",
@@ -1287,9 +1287,11 @@
         "type": "function",
         "z": "ca2305ba.3a64f8",
         "name": "Announce Washer Complete",
-        "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"Washing Machine is complete\"\n            } \n        }\n    }",
+        "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"Your clothes are now clean and wet\"\n            } \n        }\n    }",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 933,
         "y": 4807,
         "wires": [
@@ -1306,9 +1308,11 @@
         "type": "function",
         "z": "ca2305ba.3a64f8",
         "name": "Announce Dryer Complete",
-        "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"The Dryer is complete\"\n            } \n        }\n    }",
+        "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"Your clothes are now dry\"\n            } \n        }\n    }",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 933,
         "y": 4897,
         "wires": [
@@ -2649,7 +2653,8 @@
         "name": "Turn on Living Room Lamps",
         "links": [
             "88bdb145.6b871",
-            "87cb4a1f.a43738"
+            "87cb4a1f.a43738",
+            "2ee7bd8b.f41682"
         ],
         "x": 590,
         "y": 1090,
@@ -2689,7 +2694,8 @@
         "links": [
             "a0906a0f.64a0d8",
             "71167b62.870da4",
-            "cfc456df.8e87c8"
+            "cfc456df.8e87c8",
+            "4f194b28.ee4384"
         ],
         "x": 2330,
         "y": 1280,
@@ -3237,8 +3243,8 @@
         "func": "    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n    msg.notification_txt=friendlyName + \" has been Opened\"\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1033,
-        "y": 4147,
+        "x": 1026,
+        "y": 4023,
         "wires": [
             [
                 "1fbb17d9.a174f8"
@@ -3281,8 +3287,8 @@
         "func": "    const friendlyName = msg.data.new_state.attributes.friendly_name;\n    node.status({text: friendlyName});\n    msg.notification_txt=friendlyName + \" has been Closed\"\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1033,
-        "y": 4217,
+        "x": 1026,
+        "y": 4093,
         "wires": [
             [
                 "1fbb17d9.a174f8"
@@ -10893,11 +10899,16 @@
                 "t": "cont",
                 "v": "z2m_outside_backdoor_light_scene_state_",
                 "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "z2m_upstairs_hall_lights_scene_state_",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 12,
+        "outputs": 13,
         "x": 440,
         "y": 930,
         "wires": [
@@ -10937,6 +10948,9 @@
             ],
             [
                 "ecba8ed0.cbebf"
+            ],
+            [
+                "e63966e3.85d9b8"
             ]
         ]
     },
@@ -17515,40 +17529,6 @@
         "wires": []
     },
     {
-        "id": "f2830512.f9e328",
-        "type": "debug",
-        "z": "81d1a9dc.cedc58",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1030,
-        "y": 1010,
-        "wires": []
-    },
-    {
-        "id": "55d96e58.fd01",
-        "type": "debug",
-        "z": "81d1a9dc.cedc58",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1200,
-        "y": 1020,
-        "wires": []
-    },
-    {
         "id": "65e09ad1.ca4884",
         "type": "api-call-service",
         "z": "81d1a9dc.cedc58",
@@ -20284,6 +20264,245 @@
         "wires": [
             [
                 "10a8d83b.37bf38"
+            ]
+        ]
+    },
+    {
+        "id": "e63966e3.85d9b8",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Upstairs Hallway Light",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 7,
+        "x": 800,
+        "y": 1850,
+        "wires": [
+            [],
+            [
+                "58961df0.07c9a4"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ],
+        "outputLabels": [
+            "1x Tap",
+            "2x Tap",
+            "3x Tap",
+            "4x Tap",
+            "5x Tap",
+            "Key Released",
+            "Key Held Down"
+        ]
+    },
+    {
+        "id": "58961df0.07c9a4",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "2x Tap",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "scene_state_scene_001",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "scene_state_scene_002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1050,
+        "y": 1840,
+        "wires": [
+            [
+                "2ee7bd8b.f41682"
+            ],
+            [
+                "4f194b28.ee4384"
+            ]
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "2ee7bd8b.f41682",
+        "type": "link out",
+        "z": "81d1a9dc.cedc58",
+        "name": "Turn on Living Room Lamps",
+        "links": [
+            "a85620cc.0278d"
+        ],
+        "x": 1320,
+        "y": 1840,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4f194b28.ee4384",
+        "type": "link out",
+        "z": "81d1a9dc.cedc58",
+        "name": "Turn off Living Room Lamps",
+        "links": [
+            "f024aac3.fc53a8"
+        ],
+        "x": 1320,
+        "y": 1890,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "bc429a57.effd48",
+        "type": "server-state-changed",
+        "z": "ca2305ba.3a64f8",
+        "name": "Dishwasher Announcement ",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "sensor.dishwasher_operation_state",
+        "entityidfiltertype": "exact",
+        "outputinitially": true,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "x": 180,
+        "y": 4650,
+        "wires": [
+            [
+                "53813470.91a16c",
+                "30ee193.8b62ae6"
+            ]
+        ]
+    },
+    {
+        "id": "30ee193.8b62ae6",
+        "type": "debug",
+        "z": "ca2305ba.3a64f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 4560,
+        "wires": []
+    },
+    {
+        "id": "53813470.91a16c",
+        "type": "switch",
+        "z": "ca2305ba.3a64f8",
+        "name": "DW Status",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Finished",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 4650,
+        "wires": [
+            [
+                "30ee193.8b62ae6",
+                "85a9ff4d.b51bd"
+            ]
+        ]
+    },
+    {
+        "id": "85a9ff4d.b51bd",
+        "type": "function",
+        "z": "ca2305ba.3a64f8",
+        "name": "Announce Dish Washer Complete",
+        "func": "return {\n    \"payload\": {\n    \"data\": {\n           \"message\": \"The Dishes are now clean\"\n            } \n        }\n    }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 960,
+        "y": 4650,
+        "wires": [
+            [
+                "9c9d739e.481a3",
+                "7e3035e.acfd0cc",
+                "985b8d6e.4548a"
             ]
         ]
     }
