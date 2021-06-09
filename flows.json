@@ -281,7 +281,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "binary_sensor.z2m_serverroom_door_contact",
+        "entityidfilter": "binary_sensor.z2m_serverroom_door_door_state",
         "entityidfiltertype": "exact",
         "outputinitially": true,
         "state_type": "habool",
@@ -3216,6 +3216,7 @@
         "z": "a0818eac.0a1ff",
         "name": "",
         "bot": "d1254dc8.4173e",
+        "outputs": 1,
         "x": 960,
         "y": 120,
         "wires": [
@@ -10942,10 +10943,11 @@
                 "a4c7f8a9.bf5138"
             ],
             [
-                "72c0aae2.037114"
+                "72c0aae2.037114",
+                "9d7b9808.ad0598"
             ],
             [
-                "4ad2b8bb.271578"
+                "ddfd613e.82ed5"
             ],
             [],
             [
@@ -11076,22 +11078,22 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "sensor.z2m_master_bedroom_right_ns_remote_scene_state_001_scene",
+                "v": "sensor.z2m_master_bedroom_right_ns_remote_scene_state_scene_001",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "sensor.z2m_master_bedroom_right_ns_remote_scene_state_002_scene",
+                "v": "sensor.z2m_master_bedroom_right_ns_remote_scene_state_scene_002",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "sensor.z2m_master_bedroom_right_ns_remote_scene_state_003_scene",
+                "v": "sensor.z2m_master_bedroom_right_ns_remote_scene_state_scene_003",
                 "vt": "str"
             },
             {
                 "t": "eq",
-                "v": "sensor.z2m_master_bedroom_right_ns_remote_scene_state_004_scene",
+                "v": "sensor.z2m_master_bedroom_right_ns_remote_scene_state_scene_004",
                 "vt": "str"
             }
         ],
@@ -11246,7 +11248,7 @@
         "type": "debug",
         "z": "81d1a9dc.cedc58",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -11254,8 +11256,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
-        "y": 670,
+        "x": 1040,
+        "y": 640,
         "wires": []
     },
     {
@@ -11263,7 +11265,7 @@
         "type": "debug",
         "z": "81d1a9dc.cedc58",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -11279,7 +11281,7 @@
         "type": "debug",
         "z": "81d1a9dc.cedc58",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -11894,12 +11896,12 @@
         "rules": [
             {
                 "t": "cont",
-                "v": "scene_state_001_scene",
+                "v": "scene_state_scene_001",
                 "vt": "str"
             },
             {
                 "t": "cont",
-                "v": "scene_state_002_scene",
+                "v": "scene_state_scene_002",
                 "vt": "str"
             }
         ],
@@ -12180,59 +12182,6 @@
         ]
     },
     {
-        "id": "4ad2b8bb.271578",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "Left Nightstand Remote",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "sensor.z2m_master_bedroom_left_ns_remote_scene_state_001_scene",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "sensor.z2m_master_bedroom_left_ns_remote_scene_state_002_scene",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "sensor.z2m_master_bedroom_left_ns_remote_scene_state_003_scene",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "sensor.z2m_master_bedroom_left_ns_remote_scene_state_004_scene",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 4,
-        "x": 800,
-        "y": 820,
-        "wires": [
-            [
-                "1a7e88f9.141d87"
-            ],
-            [
-                "9b0aeaff.e51b28"
-            ],
-            [],
-            [
-                "5b955682.1dbcb8"
-            ]
-        ],
-        "outputLabels": [
-            "1x Tap",
-            "2x Tap",
-            "3x Tap",
-            "4x Tap"
-        ]
-    },
-    {
         "id": "da1f46c8.a88e88",
         "type": "link out",
         "z": "81d1a9dc.cedc58",
@@ -12301,7 +12250,7 @@
         "type": "debug",
         "z": "81d1a9dc.cedc58",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -12309,8 +12258,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 1500,
+        "x": 1680,
+        "y": 1570,
         "wires": []
     },
     {
@@ -12365,7 +12314,8 @@
         "wires": [
             [],
             [
-                "ee846eb0.e0c45"
+                "ee846eb0.e0c45",
+                "41a186d8.f6efe8"
             ],
             [],
             [],
@@ -12393,12 +12343,12 @@
         "rules": [
             {
                 "t": "cont",
-                "v": "scene_state_001_scene",
+                "v": "scene_state_scene_001",
                 "vt": "str"
             },
             {
                 "t": "cont",
-                "v": "scene_state_002_scene",
+                "v": "scene_state_scene_002",
                 "vt": "str"
             }
         ],
@@ -12835,7 +12785,7 @@
         "type": "debug",
         "z": "81d1a9dc.cedc58",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -14042,7 +13992,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1060,
+        "x": 1030,
         "y": 1700,
         "wires": [
             [
@@ -14296,7 +14246,7 @@
         "type": "debug",
         "z": "ca2305ba.3a64f8",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -15745,5 +15695,59 @@
         "x": 1810,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "ddfd613e.82ed5",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Left Nightstand Remote",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "sensor.z2m_master_bedroom_left_ns_remote_scene_state_scene_001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensor.z2m_master_bedroom_left_ns_remote_scene_state_scene_002",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensor.z2m_master_bedroom_left_ns_remote_scene_state_scene_003",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sensor.z2m_master_bedroom_left_ns_remote_scene_state_scene_004",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 810,
+        "y": 910,
+        "wires": [
+            [
+                "9d7b9808.ad0598",
+                "1a7e88f9.141d87"
+            ],
+            [
+                "9b0aeaff.e51b28"
+            ],
+            [],
+            [
+                "5b955682.1dbcb8"
+            ]
+        ],
+        "outputLabels": [
+            "1x Tap",
+            "2x Tap",
+            "3x Tap",
+            "4x Tap"
+        ]
     }
 ]
