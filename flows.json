@@ -87,10 +87,13 @@
         "id": "65b61d5d.d1e1c4",
         "type": "server",
         "name": "Home Assistant",
+        "version": 1,
         "legacy": false,
+        "addon": false,
         "rejectUnauthorizedCerts": true,
         "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true
+        "connectionDelay": true,
+        "cacheJson": true
     },
     {
         "id": "d1254dc8.4173e",
@@ -269,7 +272,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Server Room Door Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -298,6 +301,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 237,
         "y": 3824,
         "wires": [
@@ -341,7 +364,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Light Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -349,9 +372,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 729,
         "y": 3835,
         "wires": [
@@ -364,7 +387,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Light On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -372,9 +395,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 730,
         "y": 3790,
         "wires": [
@@ -389,7 +412,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Office Google Home",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "tts",
         "service": "google_say",
@@ -397,9 +420,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1440,
         "y": 4670,
         "wires": [
@@ -445,7 +468,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Office Slider Door Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -474,6 +497,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 173,
         "y": 4001,
         "wires": [
@@ -519,7 +562,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Door TTS Status",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -540,6 +583,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 120,
         "y": 580,
         "wires": [
@@ -613,7 +679,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Backdoor Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -642,6 +708,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 153,
         "y": 4083,
         "wires": [
@@ -750,7 +836,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Kitchen Google Home",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "tts",
         "service": "google_say",
@@ -758,9 +844,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1440,
         "y": 4750,
         "wires": [
@@ -775,7 +861,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Kitchen Door Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -804,6 +890,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 163,
         "y": 4170,
         "wires": [
@@ -849,7 +955,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Front Door Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -878,6 +984,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 153,
         "y": 4247,
         "wires": [
@@ -923,7 +1049,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Master Bedroom Slider Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "entityidfilter": "binary_sensor.master_bedroom_slider_sensor",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -933,6 +1059,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 193,
         "y": 4327,
         "wires": [
@@ -978,7 +1127,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Garage Basement Contact",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -999,6 +1148,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 173,
         "y": 4417,
         "wires": [
@@ -1044,7 +1216,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Tesla Garage Door",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -1065,6 +1237,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 153,
         "y": 4546,
         "wires": [
@@ -1110,7 +1305,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "S2k Garage Door",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -1131,6 +1326,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 143,
         "y": 4484,
         "wires": [
@@ -1176,7 +1394,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Master Bedroom mini",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "tts",
         "service": "google_say",
@@ -1184,9 +1402,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1440,
         "y": 4840,
         "wires": [
@@ -1218,7 +1436,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Washing Machine Power",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -1239,6 +1457,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 167.99997329711914,
         "y": 4814.000221610069,
         "wires": [
@@ -1271,7 +1512,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Dryer Power",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -1292,6 +1533,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 126.99997329711914,
         "y": 4890.0002101659775,
         "wires": [
@@ -1364,7 +1628,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Google TTS Announce Level",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -1385,6 +1649,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 160,
         "y": 420,
         "wires": [
@@ -1433,7 +1720,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Set Master Bedroom mini",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "media_player",
         "service": "volume_set",
@@ -1441,9 +1728,16 @@
         "data": "{\"volume_level\":\"{{payload}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 893.0141716003418,
         "y": 481.00562286376953,
         "wires": [
@@ -1458,7 +1752,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Set Kitchen Mini",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "media_player",
         "service": "volume_set",
@@ -1466,9 +1760,16 @@
         "data": "{\"volume_level\":\"{{payload}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 870,
         "y": 370,
         "wires": [
@@ -1481,7 +1782,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Set Office Google Home",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "media_player",
         "service": "volume_set",
@@ -1489,9 +1790,16 @@
         "data": "{\"volume_level\":\"{{payload}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 893.0142135620117,
         "y": 429.00568199157715,
         "wires": [
@@ -1514,7 +1822,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Scone On",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -1522,9 +1830,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1020,
         "y": 1020,
         "wires": [
@@ -1537,7 +1845,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Stairway Lights On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -1545,9 +1853,9 @@
         "data": "{\"brightness_pct\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1240,
         "y": 1220,
         "wires": [
@@ -1560,7 +1868,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Stairway Lights Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -1568,9 +1876,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2760,
         "y": 1470,
         "wires": [
@@ -1583,7 +1891,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Scone Off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -1591,9 +1899,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2780,
         "y": 1270,
         "wires": [
@@ -1606,7 +1914,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Front Lights Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -1614,9 +1922,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2790,
         "y": 1600,
         "wires": [
@@ -1629,7 +1937,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Front House Lights On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -1637,9 +1945,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 970,
         "y": 1380,
         "wires": [
@@ -1652,7 +1960,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Outside Soffit Lights - ON",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_on",
@@ -1660,9 +1968,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 980,
         "y": 1430,
         "wires": [
@@ -1675,7 +1983,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Outside Soffit Lights - OFF",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_off",
@@ -1683,9 +1991,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2830,
         "y": 1700,
         "wires": [
@@ -1698,7 +2006,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Hot Tub string Lights - ON",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -1706,9 +2014,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 980,
         "y": 1480,
         "wires": [
@@ -1721,7 +2029,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Hot Tub string lights - OFF",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_off",
@@ -1729,9 +2037,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2830,
         "y": 1750,
         "wires": [
@@ -1744,7 +2052,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Patio Sconce Light- ON",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_on",
@@ -1752,9 +2060,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 980,
         "y": 1530,
         "wires": [
@@ -1767,7 +2075,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Patio Sconce Light- OFF",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_off",
@@ -1775,9 +2083,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2820,
         "y": 1650,
         "wires": [
@@ -1814,7 +2122,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Fridge Light - On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -1822,9 +2130,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 950,
         "y": 240,
         "wires": [
@@ -1837,7 +2145,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Deck Door Light - On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -1845,9 +2153,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 960,
         "y": 340,
         "wires": [
@@ -1860,7 +2168,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Sink Light - On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -1868,9 +2176,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 940,
         "y": 290,
         "wires": [
@@ -1883,7 +2191,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Table Light - On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -1891,9 +2199,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 950,
         "y": 390,
         "wires": [
@@ -1930,7 +2238,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Fridge Light - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -1938,9 +2246,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2630,
         "y": 270,
         "wires": [
@@ -1953,7 +2261,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Deck Door Light - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -1961,9 +2269,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2640,
         "y": 370,
         "wires": [
@@ -1976,7 +2284,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Sink Light - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -1984,9 +2292,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2620,
         "y": 320,
         "wires": [
@@ -1999,7 +2307,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Table Light - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2007,9 +2315,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2630,
         "y": 420,
         "wires": [
@@ -2022,7 +2330,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "office back lights on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2030,9 +2338,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 960,
         "y": 860,
         "wires": [
@@ -2045,7 +2353,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "office back lights off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2053,9 +2361,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2640,
         "y": 900,
         "wires": [
@@ -2068,7 +2376,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "office front light on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2076,9 +2384,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 960,
         "y": 810,
         "wires": [
@@ -2091,7 +2399,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "front office light off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2099,9 +2407,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2640,
         "y": 850,
         "wires": [
@@ -2114,7 +2422,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "home theater BL on",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2122,9 +2430,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 960,
         "y": 700,
         "wires": [
@@ -2137,7 +2445,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "home theater FL on",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2145,9 +2453,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 960,
         "y": 650,
         "wires": [
@@ -2160,7 +2468,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "home theater FR on",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2168,9 +2476,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 970,
         "y": 600,
         "wires": [
@@ -2183,7 +2491,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "home theater BR on",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2191,9 +2499,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 970,
         "y": 750,
         "wires": [
@@ -2206,7 +2514,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "home theater BR off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2214,9 +2522,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2630,
         "y": 640,
         "wires": [
@@ -2229,7 +2537,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "home theater BL off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2237,9 +2545,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2620,
         "y": 590,
         "wires": [
@@ -2252,7 +2560,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "home theater FR off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2260,9 +2568,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2630,
         "y": 740,
         "wires": [
@@ -2275,7 +2583,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "home theater FL off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2283,9 +2591,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2620,
         "y": 690,
         "wires": [
@@ -2386,7 +2694,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Tall Lamp On",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2394,9 +2702,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1030,
         "y": 1090,
         "wires": [
@@ -2409,7 +2717,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Short Lamp On",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2417,9 +2725,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1020,
         "y": 1140,
         "wires": [
@@ -2432,7 +2740,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Fan Light On",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2440,9 +2748,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1000,
         "y": 1190,
         "wires": [
@@ -2455,7 +2763,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Tall Lamp Off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2463,9 +2771,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2790,
         "y": 1320,
         "wires": [
@@ -2478,7 +2786,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Short Lamp Off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2486,9 +2794,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2790,
         "y": 1370,
         "wires": [
@@ -2501,7 +2809,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Living Room Fan Light Off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2509,9 +2817,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2780,
         "y": 1420,
         "wires": [
@@ -2625,7 +2933,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "input_boolean.hot_tub_scene on",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_on",
@@ -2633,9 +2941,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 990,
         "y": 1900,
         "wires": [
@@ -2648,7 +2956,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "input_boolean.hot_tub_scene off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_off",
@@ -2656,9 +2964,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2840,
         "y": 2040,
         "wires": [
@@ -2752,7 +3060,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Cabinet Lights On",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2760,9 +3068,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 950,
         "y": 440,
         "wires": [
@@ -2813,7 +3121,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Kitchen Cabinet Lights Off",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2821,9 +3129,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2630,
         "y": 470,
         "wires": [
@@ -2836,7 +3144,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Master Bath Light - On Dim",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -2844,9 +3152,9 @@
         "data": "{\"brightness_pct\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 960,
         "y": 2000,
         "wires": [
@@ -2859,7 +3167,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Master Bath Light - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -2867,9 +3175,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2820,
         "y": 2110,
         "wires": [
@@ -2884,7 +3192,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "MBath Night Dim Level",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -2913,6 +3221,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 140,
         "y": 710,
         "wires": [
@@ -2973,7 +3301,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "MBath Normal Dim Level",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -2994,6 +3322,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 150,
         "y": 760,
         "wires": [
@@ -3069,7 +3420,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Upstairs Bathroom Fan turns on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -3098,6 +3449,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1700,
         "y": 210,
         "wires": [
@@ -3158,7 +3529,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Upstairs Bath Fan - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -3166,9 +3537,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2830,
         "y": 1910,
         "wires": [
@@ -3321,7 +3692,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Front Door Lock Status",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -3350,6 +3721,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 170,
         "y": 3930,
         "wires": [
@@ -3389,7 +3780,7 @@
         "z": "a0818eac.0a1ff",
         "name": "clara_status",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "person.clara",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -3399,6 +3790,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 190,
         "y": 700,
         "wires": [
@@ -3413,7 +3827,7 @@
         "z": "a0818eac.0a1ff",
         "name": "curtis_status",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "person.curtis",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -3423,6 +3837,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 190,
         "y": 640,
         "wires": [
@@ -3437,7 +3874,7 @@
         "z": "a0818eac.0a1ff",
         "name": "tosha_status",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "person.tosha",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -3447,6 +3884,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 190,
         "y": 580,
         "wires": [
@@ -3571,7 +4031,7 @@
         "z": "a0818eac.0a1ff",
         "name": "matthew_status",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "person.matthew_andersen",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -3581,6 +4041,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 190,
         "y": 520,
         "wires": [
@@ -3606,7 +4089,18 @@
         "z": "ca2305ba.3a64f8",
         "name": "Get restart status",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
         "entityidfilter": "input_boolean.ha_restarted",
         "entityidfiltertype": "exact",
         "outputinitially": true,
@@ -3616,6 +4110,34 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 120,
         "y": 110,
         "wires": [
@@ -3678,7 +4200,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Christmas Lights - ON",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_on",
@@ -3686,9 +4208,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 970,
         "y": 1570,
         "wires": [
@@ -3729,7 +4251,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -3758,6 +4280,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 200,
         "y": 1280,
         "wires": [
@@ -3926,7 +4468,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "input_select",
         "service": "select_option",
@@ -3934,9 +4476,9 @@
         "data": "{\"option\":\"Morning\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1590,
         "y": 1290,
         "wires": [
@@ -3951,7 +4493,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -3980,6 +4522,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 180,
         "y": 1430,
         "wires": [
@@ -4148,7 +4710,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Set House mode = Day",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "input_select",
         "service": "select_option",
@@ -4156,9 +4718,9 @@
         "data": "{\"option\":\"Day\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1320,
         "y": 1420,
         "wires": [
@@ -4214,7 +4776,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -4243,6 +4805,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 190,
         "y": 1590,
         "wires": [
@@ -4411,7 +4993,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "input_select",
         "service": "select_option",
@@ -4419,9 +5001,9 @@
         "data": "{\"option\":\"Evening\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1350,
         "y": 1580,
         "wires": [
@@ -4477,7 +5059,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "input_datetime.start_night",
         "entityidfiltertype": "exact",
         "outputinitially": true,
@@ -4487,6 +5069,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 180,
         "y": 1740,
         "wires": [
@@ -4655,7 +5260,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "input_select",
         "service": "select_option",
@@ -4663,9 +5268,9 @@
         "data": "{\"option\":\"Night\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1350,
         "y": 1730,
         "wires": [
@@ -4936,19 +5541,34 @@
         "z": "ca2305ba.3a64f8",
         "name": "Is light on?",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": true,
         "entity_id": "light.z2m_upstairs_bathroom_light_dimmer",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1990,
         "y": 280,
         "wires": [
@@ -4967,7 +5587,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Master Bath Fan Turns on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -4996,6 +5616,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1680,
         "y": 360,
         "wires": [
@@ -5043,19 +5683,34 @@
         "z": "ca2305ba.3a64f8",
         "name": "Is light on?",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": true,
         "entity_id": "light.z2m_masterbath_light_dimmer",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1990,
         "y": 430,
         "wires": [
@@ -5092,7 +5747,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Upstairs Bath Fan - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -5100,9 +5755,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2830,
         "y": 1990,
         "wires": [
@@ -5147,7 +5802,7 @@
         "z": "d2879bb8.476c48",
         "name": "HotWaterCirc Pump On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -5155,9 +5810,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 610,
         "y": 70,
         "wires": [
@@ -5172,7 +5827,7 @@
         "z": "d2879bb8.476c48",
         "name": "HotWaterCirc Pump Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -5180,9 +5835,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 580,
         "y": 830,
         "wires": [
@@ -5212,19 +5867,28 @@
         "z": "d2879bb8.476c48",
         "name": "Is Front Door Locked",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "locked",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "lock.z2m_frontdoor_lock_lock",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 570,
         "y": 1260,
         "wires": [
@@ -5256,7 +5920,7 @@
         "z": "d2879bb8.476c48",
         "name": "Lock Front Door",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "lock",
         "service": "lock",
@@ -5264,9 +5928,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 840,
         "y": 1240,
         "wires": [
@@ -5326,19 +5990,28 @@
         "z": "d2879bb8.476c48",
         "name": "Is Tesla Garage door open",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "open",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "cover.tess_2",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 590,
         "y": 950,
         "wires": [
@@ -5355,7 +6028,7 @@
         "z": "d2879bb8.476c48",
         "name": "Close Tesla Door",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "cover",
         "service": "close_cover",
@@ -5363,9 +6036,16 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 860,
         "y": 950,
         "wires": [
@@ -5410,19 +6090,28 @@
         "z": "d2879bb8.476c48",
         "name": "Is S2kGarage door open",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "open",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "cover.s2000_2",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 580,
         "y": 1010,
         "wires": [
@@ -5439,7 +6128,7 @@
         "z": "d2879bb8.476c48",
         "name": "Close Tesla Door",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "cover",
         "service": "close_cover",
@@ -5447,9 +6136,16 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 850,
         "y": 1010,
         "wires": [
@@ -5494,7 +6190,7 @@
         "z": "d2879bb8.476c48",
         "name": "Turn off livingroom fireplace",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "climate",
         "service": "set_hvac_mode",
@@ -5502,9 +6198,9 @@
         "data": "{\"hvac_mode\":\"off\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 590,
         "y": 1110,
         "wires": [
@@ -5517,7 +6213,7 @@
         "z": "d2879bb8.476c48",
         "name": "Turn off office fireplace",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "climate",
         "service": "set_hvac_mode",
@@ -5525,9 +6221,9 @@
         "data": "{\"hvac_mode\":\"off\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 570,
         "y": 1150,
         "wires": [
@@ -5580,7 +6276,7 @@
         "z": "d2879bb8.476c48",
         "name": "Morning Routine",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "input_select.house_mode",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -5590,6 +6286,29 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 180,
         "y": 90,
         "wires": [
@@ -5607,7 +6326,7 @@
         "z": "d2879bb8.476c48",
         "name": "Night Routine",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "input_select.house_mode",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -5617,6 +6336,29 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 160,
         "y": 790,
         "wires": [
@@ -5643,7 +6385,7 @@
         "z": "d2879bb8.476c48",
         "name": "Day Routine",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "input_select.house_mode",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -5653,6 +6395,29 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 190,
         "y": 270,
         "wires": [
@@ -5671,7 +6436,7 @@
         "z": "d2879bb8.476c48",
         "name": "Evening Routine",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "input_select.house_mode",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -5681,6 +6446,29 @@
         "halt_if_compare": "is",
         "outputs": 2,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 160,
         "y": 450,
         "wires": [
@@ -5748,7 +6536,7 @@
         "z": "d2879bb8.476c48",
         "name": "Hot Tub",
         "server": "65b61d5d.d1e1c4",
-        "version": "1",
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -5769,6 +6557,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 220,
         "y": 2263,
         "wires": [
@@ -5840,7 +6651,7 @@
         "z": "d2879bb8.476c48",
         "name": "Is house occupied",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "entityidfilter": "binary_sensor.occupancy",
         "entityidfiltertype": "exact",
         "outputinitially": true,
@@ -5850,6 +6661,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 240,
         "y": 2580,
         "wires": [
@@ -6027,7 +6861,7 @@
         "z": "d2879bb8.476c48",
         "name": "HotWaterCirc Pump On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -6035,9 +6869,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 840,
         "y": 2540,
         "wires": [
@@ -6050,7 +6884,7 @@
         "z": "d2879bb8.476c48",
         "name": "HotWaterCirc Pump Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -6058,9 +6892,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 850,
         "y": 2690,
         "wires": [
@@ -6089,7 +6923,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Downstairs Bathroom Fan Turns on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6118,6 +6952,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1710,
         "y": 540,
         "wires": [
@@ -6165,19 +7019,34 @@
         "z": "ca2305ba.3a64f8",
         "name": "Is light on?",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": true,
         "entity_id": "light.z2m_downstairs_bathroom_light_dimmer",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1990,
         "y": 610,
         "wires": [
@@ -6196,7 +7065,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn Off Downstairs Bathroom Fan",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -6204,9 +7073,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2330,
         "y": 630,
         "wires": [
@@ -6219,7 +7088,7 @@
         "z": "2aba4bad.aeba64",
         "name": "Resume Ecobee program",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "ecobee",
         "service": "resume_program",
@@ -6227,9 +7096,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 680,
         "y": 350,
         "wires": [
@@ -6281,7 +7150,7 @@
         "z": "d2879bb8.476c48",
         "name": "Set MBathFloor temp",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "climate",
         "service": "set_temperature",
@@ -6289,9 +7158,9 @@
         "data": "{\"temperature\":\"{{payload}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1390,
         "y": 410,
         "wires": [
@@ -6314,7 +7183,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Master Bath Mirror Light turns on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6343,6 +7212,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1690,
         "y": 770,
         "wires": [
@@ -6390,19 +7279,34 @@
         "z": "ca2305ba.3a64f8",
         "name": "Is light on?",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": true,
         "entity_id": "light.z2m_masterbath_light_dimmer",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1980,
         "y": 840,
         "wires": [
@@ -6421,7 +7325,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn Off Vanity Light",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -6429,9 +7333,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2290,
         "y": 860,
         "wires": [
@@ -6444,7 +7348,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Master Bath Fan - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -6452,9 +7356,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2290,
         "y": 460,
         "wires": [
@@ -6516,19 +7420,28 @@
         "z": "d2879bb8.476c48",
         "name": "Get House Mode",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_select.house_mode",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 430,
         "y": 1560,
         "wires": [
@@ -6543,19 +7456,28 @@
         "z": "d2879bb8.476c48",
         "name": "Is Front Door un Locked",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "unlocked",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "lock.z2m_frontdoor_lock_lock",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 1120,
         "y": 1560,
         "wires": [
@@ -6589,7 +7511,7 @@
         "z": "d2879bb8.476c48",
         "name": "Lock Front Door",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "lock",
         "service": "lock",
@@ -6597,9 +7519,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1350,
         "y": 1570,
         "wires": [
@@ -6643,7 +7565,7 @@
         "z": "d2879bb8.476c48",
         "name": "Is front door unlocked",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -6672,6 +7594,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 140,
         "y": 1570,
         "wires": [
@@ -6710,7 +7652,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Masterbedroom Light - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -6718,9 +7660,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2830,
         "y": 2160,
         "wires": [
@@ -6844,7 +7786,7 @@
         "z": "d2879bb8.476c48",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "input_select",
         "service": "select_option",
@@ -6852,9 +7794,9 @@
         "data": "{\"option\":\"Morning\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1520,
         "y": 2290,
         "wires": [
@@ -6884,7 +7826,7 @@
         "z": "d2879bb8.476c48",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "input_select",
         "service": "select_option",
@@ -6892,9 +7834,9 @@
         "data": "{\"option\":\"None\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1160,
         "y": 2280,
         "wires": [
@@ -6994,19 +7936,28 @@
         "z": "d2879bb8.476c48",
         "name": "Get Floor Temp Setting",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_number.bath_floor_temp_evening",
         "state_type": "num",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 580,
         "y": 530,
         "wires": [
@@ -7038,7 +7989,7 @@
         "z": "d2879bb8.476c48",
         "name": "Set SetUpstairsBathFloor temp",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "climate",
         "service": "set_temperature",
@@ -7046,9 +7997,9 @@
         "data": "{\"temperature\":\"{{payload}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1420,
         "y": 470,
         "wires": [
@@ -7061,19 +8012,28 @@
         "z": "d2879bb8.476c48",
         "name": "Get Floor Temp Setting",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_number.bath_floor_temp_night",
         "state_type": "num",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 580,
         "y": 770,
         "wires": [
@@ -7090,19 +8050,28 @@
         "z": "d2879bb8.476c48",
         "name": "Get Floor Temp Setting",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_number.bath_floor_temp_day",
         "state_type": "num",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 590,
         "y": 340,
         "wires": [
@@ -7118,19 +8087,28 @@
         "z": "d2879bb8.476c48",
         "name": "Get Floor Temp Setting",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_number.bath_floor_temp_morning",
         "state_type": "num",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 600,
         "y": 130,
         "wires": [
@@ -7147,19 +8125,28 @@
         "z": "d2879bb8.476c48",
         "name": "Is Back Door Locked",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "locked",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "lock.z2m_back_door_lock_lock",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 570,
         "y": 1320,
         "wires": [
@@ -7175,7 +8162,7 @@
         "z": "d2879bb8.476c48",
         "name": "Lock Back Door",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "lock",
         "service": "lock",
@@ -7183,9 +8170,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 840,
         "y": 1300,
         "wires": [
@@ -7229,19 +8216,28 @@
         "z": "d2879bb8.476c48",
         "name": "Is Garage Door Locked",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "locked",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "lock.z2m_garage_door_lock_lock",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 580,
         "y": 1380,
         "wires": [
@@ -7257,7 +8253,7 @@
         "z": "d2879bb8.476c48",
         "name": "Lock Garage Door",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "lock",
         "service": "lock",
@@ -7265,9 +8261,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 850,
         "y": 1360,
         "wires": [
@@ -7311,7 +8307,7 @@
         "z": "d2879bb8.476c48",
         "name": "HotWaterCirc Pump On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -7319,9 +8315,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 580,
         "y": 260,
         "wires": [
@@ -7334,7 +8330,7 @@
         "z": "d2879bb8.476c48",
         "name": "HotWaterCirc Pump On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -7342,9 +8338,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 580,
         "y": 470,
         "wires": [
@@ -7357,7 +8353,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Back Flood Left On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -7365,9 +8361,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 950,
         "y": 2080,
         "wires": [
@@ -7380,7 +8376,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Back Flood Left Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -7388,9 +8384,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2810,
         "y": 2260,
         "wires": [
@@ -7443,7 +8439,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Kitchen Display",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "tts",
         "service": "google_say",
@@ -7451,9 +8447,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1420,
         "y": 4920,
         "wires": [
@@ -7466,7 +8462,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Back Flood RightOn",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -7474,9 +8470,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 950,
         "y": 2130,
         "wires": [
@@ -7489,7 +8485,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Back Flood Right Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -7497,9 +8493,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2820,
         "y": 2310,
         "wires": [
@@ -7512,7 +8508,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Backdoor light on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -7520,9 +8516,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 970,
         "y": 1340,
         "wires": [
@@ -7535,7 +8531,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Backdoor light off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -7543,9 +8539,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2775.350830078125,
         "y": 1548.232666015625,
         "wires": [
@@ -7558,7 +8554,7 @@
         "z": "768db333.b948cc",
         "name": "Attic Node 2 OTA Mode",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -7579,6 +8575,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 150,
         "y": 140,
         "wires": [
@@ -7606,7 +8625,7 @@
         "z": "768db333.b948cc",
         "name": "Attic Node 1 OTA Mode",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -7627,6 +8646,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 150,
         "y": 70,
         "wires": [
@@ -7641,7 +8683,7 @@
         "z": "768db333.b948cc",
         "name": "Outside Patio Node 1 OTA",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -7662,6 +8704,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 120,
         "y": 580,
         "wires": [
@@ -8023,7 +9088,7 @@
         "z": "768db333.b948cc",
         "name": "Attic Garage Node OTA",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8044,6 +9109,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 130,
         "y": 280,
         "wires": [
@@ -8092,7 +9180,7 @@
         "z": "768db333.b948cc",
         "name": "Backdeck Node 1 OTA",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8113,6 +9201,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 120,
         "y": 750,
         "wires": [
@@ -8161,7 +9272,7 @@
         "z": "2aba4bad.aeba64",
         "name": "Get Fan run Minutes",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8182,6 +9293,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 120,
         "y": 120,
         "wires": [
@@ -8197,7 +9331,7 @@
         "z": "2aba4bad.aeba64",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": true,
         "service_domain": "ecobee",
         "service": "set_fan_min_on_time",
@@ -8205,9 +9339,9 @@
         "data": "{\"fan_min_on_time\":{{payload}}}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 650,
         "y": 50,
         "wires": [
@@ -8555,7 +9689,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Garage Soffit Lights on - Dim",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -8563,9 +9697,9 @@
         "data": "{\"brightness_pct\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1320,
         "y": 1690,
         "wires": [
@@ -8605,7 +9739,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Evening Garage Soffit DimLevel",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8626,6 +9760,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 170,
         "y": 830,
         "wires": [
@@ -8710,7 +9867,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Evening Front Porch Soffit DimLevel",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8731,6 +9888,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 180,
         "y": 890,
         "wires": [
@@ -8772,7 +9952,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Night Garage Soffit DimLevel",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8793,6 +9973,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 160,
         "y": 930,
         "wires": [
@@ -8807,7 +10010,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Night Front Porch Soffit DimLevel",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -8828,6 +10031,29 @@
         "halt_if_compare": "is",
         "outputs": 1,
         "output_only_on_state_change": true,
+        "for": "0",
+        "forType": "num",
+        "forUnits": "minutes",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 170,
         "y": 970,
         "wires": [
@@ -8923,7 +10149,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Front Porch Soffit Lights on - Dim",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -8931,9 +10157,9 @@
         "data": "{\"brightness_pct\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1340,
         "y": 1750,
         "wires": [
@@ -8948,7 +10174,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Garage Soffit Lights on - Dim",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -8956,9 +10182,9 @@
         "data": "{\"brightness_pct\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2700,
         "y": 1060,
         "wires": [
@@ -9025,7 +10251,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Front Porch Soffit Lights on - Dim",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -9033,9 +10259,9 @@
         "data": "{\"brightness_pct\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2720,
         "y": 1120,
         "wires": [
@@ -9048,7 +10274,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Garage Soffit Lights - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -9056,9 +10282,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2770,
         "y": 1180,
         "wires": [
@@ -9071,7 +10297,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Front Porch Soffit Lights - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -9079,9 +10305,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2780,
         "y": 1220,
         "wires": [
@@ -9094,7 +10320,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "House Numbers - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_off",
@@ -9102,9 +10328,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2820,
         "y": 1850,
         "wires": [
@@ -9117,7 +10343,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "House Numbers - ON",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_on",
@@ -9125,9 +10351,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 970,
         "y": 1620,
         "wires": [
@@ -9204,7 +10430,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Back Deck Soffit Lights - On",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -9212,9 +10438,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 970,
         "y": 2220,
         "wires": [
@@ -9244,7 +10470,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Back Deck Soffit Lights - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -9252,9 +10478,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2830,
         "y": 2400,
         "wires": [
@@ -9296,7 +10522,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Matt Night Stand Light Toggle",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "toggle",
@@ -9304,9 +10530,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1610,
         "y": 760,
         "wires": [
@@ -9319,7 +10545,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Tosha Night Stand Light Toggle",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "toggle",
@@ -9327,9 +10553,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1620,
         "y": 710,
         "wires": [
@@ -9355,6 +10581,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
+        "version": 1,
         "event_type": "zwave.node_event",
         "exposeToHomeAssistant": false,
         "haConfig": [
@@ -9368,6 +10595,26 @@
             }
         ],
         "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            },
+            {
+                "property": "event_type",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
         "x": 210,
         "y": 330,
         "wires": [
@@ -9398,7 +10645,7 @@
         "z": "e55c2d73.4c8bc",
         "name": "Motion in the Garage",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -9427,6 +10674,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 160,
         "y": 130,
         "wires": [
@@ -9485,7 +10752,7 @@
         "z": "e55c2d73.4c8bc",
         "name": "Garage Lights OFF",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -9493,9 +10760,16 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 1120,
         "y": 240,
         "wires": [
@@ -9508,7 +10782,7 @@
         "z": "e55c2d73.4c8bc",
         "name": "Garage Lights ON",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -9516,9 +10790,16 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 960,
         "y": 160,
         "wires": [
@@ -9531,19 +10812,34 @@
         "z": "e55c2d73.4c8bc",
         "name": "Still Motion?",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": true,
         "entity_id": "binary_sensor.z2m_garage_sensor_motion_sensor_status",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 920,
         "y": 220,
         "wires": [
@@ -9587,7 +10883,7 @@
         "z": "e55c2d73.4c8bc",
         "name": "Motion George",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -9616,6 +10912,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 130,
         "y": 360,
         "wires": [
@@ -9677,7 +10993,7 @@
         "z": "e55c2d73.4c8bc",
         "name": "OFF",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -9685,9 +11001,16 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 920,
         "y": 450,
         "wires": [
@@ -9702,7 +11025,7 @@
         "z": "e55c2d73.4c8bc",
         "name": "ON",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -9710,9 +11033,16 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "payload",
-        "output_location_type": "msg",
         "mustacheAltTags": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "queue": "none",
         "x": 740,
         "y": 380,
         "wires": [
@@ -9727,19 +11057,34 @@
         "z": "e55c2d73.4c8bc",
         "name": "Still Motion?",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": true,
         "entity_id": "binary_sensor.george_light_sensor_sensor",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 750,
         "y": 440,
         "wires": [
@@ -10010,8 +11355,9 @@
         "id": "8b3038e3.7fad18",
         "type": "ha-get-entities",
         "z": "496c5e71.3b7e1",
-        "server": "65b61d5d.d1e1c4",
         "name": "Get list of turned on lights",
+        "server": "65b61d5d.d1e1c4",
+        "version": 0,
         "rules": [
             {
                 "property": "entity_id",
@@ -10163,8 +11509,9 @@
         "id": "62da4e36.519e8",
         "type": "ha-get-entities",
         "z": "496c5e71.3b7e1",
-        "server": "65b61d5d.d1e1c4",
         "name": "Get list of turned on lights",
+        "server": "65b61d5d.d1e1c4",
+        "version": 0,
         "rules": [
             {
                 "property": "entity_id",
@@ -10282,7 +11629,7 @@
         "z": "2aba4bad.aeba64",
         "name": "Turn on ecobee fan",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": true,
         "service_domain": "climate",
         "service": "set_fan_mode",
@@ -10290,9 +11637,9 @@
         "data": "{\"fan_mode\":\"on\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 660,
         "y": 410,
         "wires": [
@@ -10327,7 +11674,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Resume Ecobee program",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "ecobee",
         "service": "resume_program",
@@ -10335,9 +11682,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2620,
         "y": 460,
         "wires": [
@@ -10379,7 +11726,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Christmas Lights - OFF",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "homeassistant",
         "service": "turn_off",
@@ -10387,9 +11734,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2830,
         "y": 1800,
         "wires": [
@@ -10441,7 +11788,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Sync Dim Level of front office",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -10470,6 +11817,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 3340,
         "y": 220,
         "wires": [
@@ -10485,7 +11852,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Set Dim level of Back office lights",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -10493,9 +11860,9 @@
         "data": "{\"brightness\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 4270,
         "y": 200,
         "wires": [
@@ -10535,7 +11902,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Sync Dim Level Kitchen Fridge Light",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -10564,6 +11931,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 3350,
         "y": 320,
         "wires": [
@@ -10579,7 +11966,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Set Dim level of Kitchen Espresso Light",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -10587,9 +11974,9 @@
         "data": "{\"brightness\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 4310,
         "y": 280,
         "wires": [
@@ -10631,7 +12018,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Set Dim level of Kitchen Table Light",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -10639,9 +12026,9 @@
         "data": "{\"brightness\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 4290,
         "y": 330,
         "wires": [
@@ -10654,7 +12041,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Set Dim level of Kitchen Sink Light",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -10662,9 +12049,9 @@
         "data": "{\"brightness\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 4290,
         "y": 380,
         "wires": [
@@ -10677,19 +12064,28 @@
         "z": "81d1a9dc.cedc58",
         "name": "If back office lights on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "light.z2m_office_back_lights_dimmer",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 3960,
         "y": 200,
         "wires": [
@@ -10705,19 +12101,28 @@
         "z": "81d1a9dc.cedc58",
         "name": "If kitchen espresso light on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "light.z2m_kitchen_espresso_light_dimmer",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 3980,
         "y": 280,
         "wires": [
@@ -10733,19 +12138,28 @@
         "z": "81d1a9dc.cedc58",
         "name": "If kitchen table light on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "light.z2m_kitchen_table_light_dimmer",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 3960,
         "y": 330,
         "wires": [
@@ -10761,19 +12175,28 @@
         "z": "81d1a9dc.cedc58",
         "name": "If kitchen sink light on",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "light.z2m_kitchen_sink_light_dimmer",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 3960,
         "y": 380,
         "wires": [
@@ -10789,7 +12212,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Master Bath Mirror Light - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -10797,9 +12220,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 3090,
         "y": 2110,
         "wires": [
@@ -10814,7 +12237,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Pickup Scene States z2m",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -10843,6 +12266,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 190,
         "y": 930,
         "wires": [
@@ -11686,7 +13129,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Master Bath Above Mirror Light - Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -11694,9 +13137,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 3420,
         "y": 2110,
         "wires": [
@@ -11726,7 +13169,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Set Ecobee to 68",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "climate",
         "service": "set_temperature",
@@ -11734,9 +13177,9 @@
         "data": "{\"temperature\":68}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1310,
         "y": 1090,
         "wires": [
@@ -11751,7 +13194,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Turn on ecobee fan",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": true,
         "service_domain": "climate",
         "service": "set_fan_mode",
@@ -11759,9 +13202,9 @@
         "data": "{\"fan_mode\":\"on\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1570,
         "y": 1090,
         "wires": [
@@ -11776,7 +13219,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Turn on Bathroom Fan",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
@@ -11784,9 +13227,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1840,
         "y": 1090,
         "wires": [
@@ -11799,7 +13242,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Resume Ecobee program",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "ecobee",
         "service": "resume_program",
@@ -11807,9 +13250,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1340,
         "y": 1140,
         "wires": [
@@ -11942,19 +13385,34 @@
         "z": "81d1a9dc.cedc58",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": true,
         "entity_id": "light.back_deck_soffit_lights",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1340,
         "y": 1220,
         "wires": [
@@ -12002,7 +13460,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Turn on Back Deck Soffit Lights",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -12010,9 +13468,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1860,
         "y": 1260,
         "wires": [
@@ -12085,7 +13543,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Back Deck Soffit Lights on - Dim",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -12093,9 +13551,9 @@
         "data": "{\"brightness_pct\":\"{{brightness_pct}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2420,
         "y": 1290,
         "wires": [
@@ -12164,7 +13622,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Turn on Kitchen espresso light",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -12172,9 +13630,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1330,
         "y": 1410,
         "wires": [
@@ -12200,7 +13658,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Set Dim level Master Nightstands",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -12208,9 +13666,9 @@
         "data": "{\"brightness_pct\":\"{{brightness_pct}}\"}",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1690,
         "y": 1450,
         "wires": [
@@ -12223,19 +13681,34 @@
         "z": "81d1a9dc.cedc58",
         "name": "Get Master Nightstand Dim Level",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": true,
         "entity_id": "input_number.master_bedroom_nightstand_dim_level",
         "state_type": "str",
-        "state_location": "brightness_pct",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "brightness_pct",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 1340,
         "y": 1470,
         "wires": [
@@ -12430,7 +13903,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Turn on Outside Soffit Lights",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
@@ -12438,9 +13911,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1330,
         "y": 1680,
         "wires": [
@@ -12455,7 +13928,7 @@
         "z": "81d1a9dc.cedc58",
         "name": "Turn off Outside Soffit Lights",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -12463,9 +13936,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1800,
         "y": 1740,
         "wires": [
@@ -12478,19 +13951,28 @@
         "z": "81d1a9dc.cedc58",
         "name": "Check Hot Tub",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_boolean.hot_tub_scene",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 1530,
         "y": 1730,
         "wires": [
@@ -12506,7 +13988,7 @@
         "z": "b4bd0bcf.c07d88",
         "name": "Shop Light Off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -12514,9 +13996,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 2640,
         "y": 1000,
         "wires": [
@@ -12560,19 +14042,28 @@
         "z": "d2879bb8.476c48",
         "name": "Get House Mode",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_select.house_mode",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 430,
         "y": 1650,
         "wires": [
@@ -12587,19 +14078,28 @@
         "z": "d2879bb8.476c48",
         "name": "Is Back Door un Locked",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "unlocked",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "lock.z2m_back_door_lock_lock",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 1120,
         "y": 1650,
         "wires": [
@@ -12633,7 +14133,7 @@
         "z": "d2879bb8.476c48",
         "name": "Lock Back Door",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "lock",
         "service": "lock",
@@ -12641,9 +14141,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1350,
         "y": 1660,
         "wires": [
@@ -12689,7 +14189,7 @@
         "z": "d2879bb8.476c48",
         "name": "Is back door unlocked",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -12718,6 +14218,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 140,
         "y": 1660,
         "wires": [
@@ -12733,7 +14253,7 @@
         "z": "d2879bb8.476c48",
         "name": "Turn Off Laundry",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
@@ -12741,9 +14261,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 570,
         "y": 670,
         "wires": [
@@ -13517,7 +15037,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Hot Tub Light ",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -13546,6 +15066,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 180,
         "y": 2390,
         "wires": [
@@ -13605,19 +15145,28 @@
         "z": "ca2305ba.3a64f8",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "true",
         "halt_if_type": "bool",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_boolean.hot_tub_scene",
         "state_type": "habool",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 860,
         "y": 2280,
         "wires": [
@@ -13634,7 +15183,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Turn off Ring Hot Tub light",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
@@ -13642,9 +15191,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 1350,
         "y": 2360,
         "wires": [
@@ -14203,7 +15752,7 @@
         "z": "ca2305ba.3a64f8",
         "name": "Dishwasher Announcement ",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -14232,6 +15781,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 180,
         "y": 4650,
         "wires": [
@@ -14309,7 +15878,7 @@
         "z": "770eefce.2dc6a",
         "name": "My Cal",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -14338,6 +15907,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 110,
         "y": 360,
         "wires": [
@@ -14406,7 +15995,7 @@
         "z": "770eefce.2dc6a",
         "name": "Kitchen Display",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "tts",
         "service": "google_say",
@@ -14414,9 +16003,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 830,
         "y": 430,
         "wires": [
@@ -14429,19 +16018,28 @@
         "z": "770eefce.2dc6a",
         "name": "",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "calendar.matthew_andersen_sysdig_com",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 370,
         "y": 550,
         "wires": [
@@ -14668,19 +16266,28 @@
         "z": "770eefce.2dc6a",
         "name": "Get Code from HA",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "input_text.lockman_user_1_pin",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
         "x": 390,
         "y": 900,
         "wires": [
@@ -14943,8 +16550,9 @@
         "func": "\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is deployed.\n// Welcome to Lockman Setup your info below:\n\n// How many Locks are we managing?\nflow.set(\"numLocks\", 1)\n\n// Set Info about number of codes to use:\nflow.set(\"numberCodes\", 9)\n\n// Set Info about Lock 1\nflow.set(\"Lock1_mqttPrefix\", \"z2m/z2m_garage_door_lock/99/0/userCode\" )\n\n",
+        "initialize": "// Code added here will be run once\n// whenever the node is deployed.\n// Welcome to Lockman Setup your info below:\n\n// How many Locks are we managing?\nflow.set(\"numLocks\", 4)\n\n// Set Info about number of codes to use:\nflow.set(\"numberCodes\", 9)\n\n// Set Info about Locks\n\nflow.set(\"Lock_FriendlyName\", [\"z2m_garage_door_lock\", \"z2m_shop_door_lock\", \"z2m_back_door_lock\", \"z2m_frontdoor_lock\"])",
         "finalize": "",
+        "libs": [],
         "x": 120,
         "y": 70,
         "wires": [
@@ -14957,7 +16565,7 @@
         "z": "7222e2e2.d13bac",
         "name": "User X Code Changed",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -14986,6 +16594,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 130,
         "y": 250,
         "wires": [
@@ -15002,21 +16630,30 @@
         "z": "7222e2e2.d13bac",
         "name": "Check Lock enabled for user",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 2,
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "{{ entity_id }}",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 930,
-        "y": 210,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 980,
+        "y": 180,
         "wires": [
             [
                 "74ecdc3f.42a294",
@@ -15037,8 +16674,9 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 370,
-        "y": 250,
+        "libs": [],
+        "x": 380,
+        "y": 220,
         "wires": [
             [
                 "71b93a39.80c3d4",
@@ -15059,8 +16697,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 360,
-        "y": 330,
+        "x": 350,
+        "y": 280,
         "wires": []
     },
     {
@@ -15076,22 +16714,23 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 570,
-        "y": 260,
+        "x": 550,
+        "y": 280,
         "wires": []
     },
     {
         "id": "c577049e.8b6528",
         "type": "function",
         "z": "7222e2e2.d13bac",
-        "name": "Set Enity_id for lock1 status",
-        "func": "msg.entity_id = \"input_boolean.lockman_user_\" + msg.currentCode + \"_enable_lock1\"\nreturn msg;",
+        "name": "Set Enity_id for lock X status",
+        "func": "for (var i = 1; i <= flow.get(\"numLocks\"); i++){\n    msg.entity_id = \"input_boolean.lockman_user_\" + msg.currentCode + \"_enable_lock\" + i\n    msg.currentLock = i\n    node.send(msg)\n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 620,
-        "y": 210,
+        "libs": [],
+        "x": 670,
+        "y": 220,
         "wires": [
             [
                 "e7b41118.22bef",
@@ -15112,8 +16751,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
-        "y": 270,
+        "x": 860,
+        "y": 280,
         "wires": []
     },
     {
@@ -15129,8 +16768,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 180,
+        "x": 1220,
+        "y": 120,
         "wires": []
     },
     {
@@ -15146,8 +16785,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
-        "y": 220,
+        "x": 1220,
+        "y": 180,
         "wires": []
     },
     {
@@ -15156,7 +16795,7 @@
         "z": "7222e2e2.d13bac",
         "name": "User X Pin Changed",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -15185,6 +16824,26 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 120,
         "y": 720,
         "wires": [
@@ -15200,7 +16859,7 @@
         "z": "7222e2e2.d13bac",
         "name": "Set User X Code Changed to off",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "debugenabled": false,
         "service_domain": "input_boolean",
         "service": "turn_off",
@@ -15208,9 +16867,9 @@
         "data": "",
         "dataType": "json",
         "mergecontext": "",
-        "output_location": "",
-        "output_location_type": "none",
         "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
         "x": 880,
         "y": 720,
         "wires": [
@@ -15330,9 +16989,9 @@
         "id": "7797549d.c40ffc",
         "type": "server-state-changed",
         "z": "7222e2e2.d13bac",
-        "name": "User X Lock 1 Status",
+        "name": "User X Lock X Status",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 3,
         "exposeToHomeAssistant": false,
         "haConfig": [
             {
@@ -15361,8 +17020,28 @@
         "ignorePrevStateUnavailable": false,
         "ignoreCurrentStateUnknown": false,
         "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
         "x": 120,
-        "y": 500,
+        "y": 490,
         "wires": [
             [
                 "fa6cd548.91ca98",
@@ -15394,25 +17073,26 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 340,
-        "y": 550,
+        "y": 540,
         "wires": []
     },
     {
         "id": "4952fc46.eaac04",
         "type": "function",
         "z": "7222e2e2.d13bac",
-        "name": "Set currentCode",
-        "func": "var numberCodes = flow.get(\"numberCodes\")\nfor (var i = 0; i < numberCodes; i++){\n    var currentTest = \"input_boolean.lockman_user_\" + i + \"_enable_lock1\"\n    if (msg.topic == currentTest){\n        msg.currentCode = i\n        return msg;\n    }\n}",
+        "name": "Set currentCode and lock",
+        "func": "var numberCodes = flow.get(\"numberCodes\")\nvar numberLocks = flow.get(\"numLocks\")\nfor (var i = 0; i <= numberCodes; i++){\n    if (msg.topic.includes(\"user_\" + i)){\n        msg.currentCode = i\n    }\nfor (var l = 0; l <= numberLocks; l++){\n    if (msg.topic.includes(\"lock\" + l)){\n        msg.currentLock = l\n    }\n}\n    \n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 380,
-        "y": 500,
+        "libs": [],
+        "x": 400,
+        "y": 480,
         "wires": [
             [
                 "6f5aa402.14926c",
-                "85e9c02e.19ce1"
+                "db60f2de.23918"
             ]
         ]
     },
@@ -15429,55 +17109,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
-        "y": 550,
-        "wires": []
-    },
-    {
-        "id": "85e9c02e.19ce1",
-        "type": "switch",
-        "z": "7222e2e2.d13bac",
-        "name": "Get Lock",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "regex",
-                "v": "input_boolean.lockman_user_[0-9]_enable_lock1",
-                "vt": "str",
-                "case": false
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 600,
-        "y": 490,
-        "wires": [
-            [
-                "10c2a1bc.52b64e",
-                "db60f2de.23918"
-            ]
-        ],
-        "outputLabels": [
-            "Lock 1"
-        ]
-    },
-    {
-        "id": "10c2a1bc.52b64e",
-        "type": "debug",
-        "z": "7222e2e2.d13bac",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 770,
-        "y": 550,
+        "x": 560,
+        "y": 540,
         "wires": []
     },
     {
@@ -15502,8 +17135,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 800,
-        "y": 490,
+        "x": 680,
+        "y": 480,
         "wires": [
             [
                 "b7af498.9ca88b8",
@@ -15528,8 +17161,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
-        "y": 570,
+        "x": 860,
+        "y": 530,
         "wires": []
     },
     {
@@ -15545,8 +17178,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1010,
-        "y": 610,
+        "x": 860,
+        "y": 570,
         "wires": []
     },
     {
@@ -15559,8 +17192,9 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1100,
-        "y": 440,
+        "libs": [],
+        "x": 990,
+        "y": 390,
         "wires": [
             [
                 "301b8838.f539d8",
@@ -15581,8 +17215,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1340,
-        "y": 560,
+        "x": 1320,
+        "y": 550,
         "wires": []
     },
     {
@@ -15591,21 +17225,30 @@
         "z": "7222e2e2.d13bac",
         "name": "Get User X pin from HA",
         "server": "65b61d5d.d1e1c4",
-        "version": 1,
+        "version": 2,
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "override_topic": false,
         "entity_id": "{{ entity_id }}",
         "state_type": "str",
-        "state_location": "payload",
-        "override_payload": "msg",
-        "entity_location": "data",
-        "override_data": "msg",
         "blockInputOverrides": false,
-        "x": 1400,
-        "y": 440,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 1290,
+        "y": 390,
         "wires": [
             [
                 "dabcbc68.9473b",
@@ -15626,8 +17269,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1580,
-        "y": 570,
+        "x": 1600,
+        "y": 540,
         "wires": []
     },
     {
@@ -15639,8 +17282,8 @@
         "high": "999999",
         "inte": "true",
         "property": "payload",
-        "x": 1060,
-        "y": 500,
+        "x": 1020,
+        "y": 480,
         "wires": [
             [
                 "f1d33a43.9a0be8"
@@ -15651,14 +17294,15 @@
         "id": "f1d33a43.9a0be8",
         "type": "function",
         "z": "7222e2e2.d13bac",
-        "name": "",
-        "func": "msg.topic = flow.get(\"Lock1_mqttPrefix\") + \"/\" + msg.currentCode +\"/set\";\nmsg.payload = '\"' + msg.payload + '\"';\nreturn msg;",
+        "name": "Set MQTT Topic",
+        "func": "let currentLockName = flow.get(\"Lock_FriendlyName\")\nmsg.topic = \"z2m/\" + currentLockName[msg.currentLock - 1] + \"/99/0/userCode/\" + msg.currentCode +\"/set\"\nmsg.payload = \"\\\"\" + msg.payload + \"\\\"\"\n\nnode.warn (\"Ran set topic for lock\")\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1620,
-        "y": 500,
+        "libs": [],
+        "x": 1670,
+        "y": 470,
         "wires": [
             [
                 "898bbfbf.219eb",
@@ -15679,8 +17323,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1780,
-        "y": 570,
+        "x": 1810,
+        "y": 550,
         "wires": []
     },
     {
@@ -15691,9 +17335,14 @@
         "topic": "",
         "qos": "",
         "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
         "broker": "32473d23.e05bc2",
-        "x": 1810,
-        "y": 500,
+        "x": 1940,
+        "y": 480,
         "wires": []
     },
     {
@@ -15748,6 +17397,137 @@
             "2x Tap",
             "3x Tap",
             "4x Tap"
+        ]
+    },
+    {
+        "id": "60d562c4.dd406c",
+        "type": "debug",
+        "z": "7222e2e2.d13bac",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1740,
+        "y": 710,
+        "wires": []
+    },
+    {
+        "id": "c1819951.461cc8",
+        "type": "template",
+        "z": "7222e2e2.d13bac",
+        "name": "test",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\"555555\"",
+        "output": "str",
+        "x": 1760,
+        "y": 370,
+        "wires": [
+            [
+                "69bb2f79.00719"
+            ]
+        ]
+    },
+    {
+        "id": "54383192.bd1bc",
+        "type": "inject",
+        "z": "7222e2e2.d13bac",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1570,
+        "y": 310,
+        "wires": [
+            [
+                "c1819951.461cc8"
+            ]
+        ]
+    },
+    {
+        "id": "391155ba.56cd2a",
+        "type": "function",
+        "z": "7222e2e2.d13bac",
+        "name": "Set MQTT Topic",
+        "func": "msg.payload = \"\\\"\" + msg.payload + \"\\\"\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 720,
+        "wires": [
+            [
+                "60d562c4.dd406c",
+                "69bb2f79.00719"
+            ]
+        ]
+    },
+    {
+        "id": "b812f652.d01758",
+        "type": "random",
+        "z": "7222e2e2.d13bac",
+        "name": "Generate Random Code",
+        "low": "100000",
+        "high": "999999",
+        "inte": "true",
+        "property": "payload",
+        "x": 1180,
+        "y": 850,
+        "wires": [
+            [
+                "391155ba.56cd2a"
+            ]
+        ]
+    },
+    {
+        "id": "cfab6848.bfa0d8",
+        "type": "inject",
+        "z": "7222e2e2.d13bac",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 920,
+        "y": 900,
+        "wires": [
+            [
+                "b812f652.d01758"
+            ]
         ]
     }
 ]
