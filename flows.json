@@ -87,13 +87,14 @@
         "id": "65b61d5d.d1e1c4",
         "type": "server",
         "name": "Home Assistant",
-        "version": 1,
-        "legacy": false,
+        "version": 2,
         "addon": false,
         "rejectUnauthorizedCerts": true,
         "ha_boolean": "y|yes|true|on|home|open",
         "connectionDelay": true,
-        "cacheJson": true
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": 30
     },
     {
         "id": "d1254dc8.4173e",
@@ -257,6 +258,19 @@
         "willPayload": ""
     },
     {
+        "id": "c34a8f9d.e3647",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 2,
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true,
+        "heartbeat": false,
+        "heartbeatInterval": 30
+    },
+    {
         "id": "384480ed.efa9c",
         "type": "comment",
         "z": "ca2305ba.3a64f8",
@@ -368,7 +382,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
-        "entityId": "switch.z2m_serverroom_light_switch",
+        "entityId": "switch.downstairs_serverroom_light_switch",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -391,7 +405,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
-        "entityId": "switch.z2m_serverroom_light_switch",
+        "entityId": "switch.downstairs_serverroom_light_switch",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -1418,16 +1432,12 @@
         "type": "power-monitor",
         "z": "ca2305ba.3a64f8",
         "name": "Washing Machine",
-        "threshold": "5",
         "startafter": "3",
         "stopafter": "4",
         "x": 491.99997329711914,
         "y": 4816.000221610069,
         "wires": [
-            [],
-            [
-                "1497c62f.daf7ba"
-            ]
+            []
         ]
     },
     {
@@ -1493,17 +1503,12 @@
         "type": "power-monitor",
         "z": "ca2305ba.3a64f8",
         "name": "Dryer",
-        "threshold": "3",
         "startafter": "4",
         "stopafter": "3",
         "x": 452.9999771118164,
         "y": 4901.0006984472275,
         "wires": [
-            [],
-            [
-                "6243d4b0.8831ec",
-                "6d065844.6f8968"
-            ]
+            []
         ]
     },
     {
@@ -2334,7 +2339,7 @@
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
-        "entityId": "light.z2m_office_back_lights_dimmer",
+        "entityId": "light.office_back_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -2357,7 +2362,7 @@
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
-        "entityId": "light.z2m_office_back_lights_dimmer",
+        "entityId": "light.office_back_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -3614,7 +3619,11 @@
             "cbebf2ec.fe3a1",
             "d9b8c67c.f38f68",
             "e0c6d6b.da71b28",
-            "8932f926.bdc868"
+            "8932f926.bdc868",
+            "d08775d3432d36b3",
+            "b5214391e7c003ca",
+            "a44e2bab2731e427",
+            "c138f274554104f4"
         ],
         "x": 330,
         "y": 180,
@@ -4229,8 +4238,8 @@
             "3d88c035.57073",
             "5a96b76d.00d898"
         ],
-        "x": 1890,
-        "y": 1450,
+        "x": 1840,
+        "y": 1440,
         "wires": [
             [
                 "654b3663.811218",
@@ -4242,7 +4251,15 @@
                 "27d6d59a.acb05a",
                 "f0b32a3f.f909f8",
                 "372bb403.15919c",
-                "bfdbff74.1d98e"
+                "bfdbff74.1d98e",
+                "3356ae02.564752",
+                "48015f30.90e1d",
+                "df2997bd.573f78",
+                "ecbbef4a.4e525",
+                "610d916d.eef81",
+                "a99ea4ab.0cbc18",
+                "be4d704c.dd5f5",
+                "da886df5.bbcd"
             ]
         ],
         "l": true
@@ -5864,129 +5881,6 @@
         "wires": []
     },
     {
-        "id": "508583a.69a437c",
-        "type": "api-current-state",
-        "z": "d2879bb8.476c48",
-        "name": "Is Front Door Locked",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 2,
-        "halt_if": "locked",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "lock.z2m_frontdoor_lock_lock",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 570,
-        "y": 1260,
-        "wires": [
-            [],
-            [
-                "2e4e7199.d8d47e",
-                "276739f4.7fb986",
-                "acdd801e.f99ff"
-            ]
-        ]
-    },
-    {
-        "id": "2e4e7199.d8d47e",
-        "type": "debug",
-        "z": "d2879bb8.476c48",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 1270,
-        "y": 730,
-        "wires": []
-    },
-    {
-        "id": "276739f4.7fb986",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Lock Front Door",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "lock",
-        "service": "lock",
-        "entityId": "lock.z2m_frontdoor_lock_lock",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 840,
-        "y": 1240,
-        "wires": [
-            [
-                "acdd801e.f99ff",
-                "84e9d6b5.430eb8"
-            ]
-        ]
-    },
-    {
-        "id": "84e9d6b5.430eb8",
-        "type": "function",
-        "z": "d2879bb8.476c48",
-        "name": "Message Door Locked",
-        "func": "    msg.notification_txt=\"Front Door Has Been Locked\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1080,
-        "y": 1240,
-        "wires": [
-            [
-                "72ef96b6.44b8b8"
-            ]
-        ]
-    },
-    {
-        "id": "acdd801e.f99ff",
-        "type": "debug",
-        "z": "d2879bb8.476c48",
-        "name": "Lock Door",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1270,
-        "y": 770,
-        "wires": []
-    },
-    {
-        "id": "72ef96b6.44b8b8",
-        "type": "link out",
-        "z": "d2879bb8.476c48",
-        "name": "Sent Telegram",
-        "links": [
-            "a69a61fd.e1ff7"
-        ],
-        "x": 1310,
-        "y": 1180,
-        "wires": [],
-        "l": true
-    },
-    {
         "id": "f84f4a4d.021878",
         "type": "api-current-state",
         "z": "d2879bb8.476c48",
@@ -5997,7 +5891,7 @@
         "halt_if": "open",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "cover.tess_2",
+        "entity_id": "cover.tess",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -6018,7 +5912,6 @@
         "y": 950,
         "wires": [
             [
-                "2e4e7199.d8d47e",
                 "e1eaf2d6.b2eb9"
             ],
             []
@@ -6034,7 +5927,7 @@
         "debugenabled": false,
         "service_domain": "cover",
         "service": "close_cover",
-        "entityId": "cover.tess_2",
+        "entityId": "cover.tess",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -6052,7 +5945,6 @@
         "y": 950,
         "wires": [
             [
-                "acdd801e.f99ff",
                 "44982ebb.369d6"
             ]
         ]
@@ -6097,7 +5989,7 @@
         "halt_if": "open",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "cover.s2000_2",
+        "entity_id": "cover.s2000",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -6118,7 +6010,6 @@
         "y": 1010,
         "wires": [
             [
-                "2e4e7199.d8d47e",
                 "bfcde99b.2af438"
             ],
             []
@@ -6128,13 +6019,13 @@
         "id": "bfcde99b.2af438",
         "type": "api-call-service",
         "z": "d2879bb8.476c48",
-        "name": "Close Tesla Door",
+        "name": "Close S2k Door",
         "server": "65b61d5d.d1e1c4",
         "version": 3,
         "debugenabled": false,
         "service_domain": "cover",
         "service": "close_cover",
-        "entityId": "cover.s2000_2",
+        "entityId": "cover.s2000",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -6148,11 +6039,10 @@
             }
         ],
         "queue": "none",
-        "x": 850,
+        "x": 840,
         "y": 1010,
         "wires": [
             [
-                "acdd801e.f99ff",
                 "585b97dc.8fe208"
             ]
         ]
@@ -6165,6 +6055,9 @@
         "func": "    msg.notification_txt=\"S2k Garage door has been closed\"\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 1160,
         "y": 1010,
         "wires": [
@@ -6267,8 +6160,8 @@
         "links": [
             "a69a61fd.e1ff7"
         ],
-        "x": 820,
-        "y": 1080,
+        "x": 840,
+        "y": 1070,
         "wires": [],
         "l": true
     },
@@ -6361,12 +6254,11 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 160,
-        "y": 790,
+        "x": 120,
+        "y": 800,
         "wires": [
             [
                 "653eab07.6c65e4",
-                "508583a.69a437c",
                 "f84f4a4d.021878",
                 "a623a6d.36a0658",
                 "b7bc12ab.95fdf",
@@ -6375,8 +6267,10 @@
                 "eefa5d5c.57057",
                 "eb8366d7.d6ff78",
                 "f6c41f1c.4a0ec",
-                "7dc27c02.a35ed4",
-                "1829495e.56d047"
+                "afbe1fad.df4a8",
+                "e6c2f9a958fb149e",
+                "adf714ec6a8151c8",
+                "f24392b88e1fc2bf"
             ],
             []
         ]
@@ -7386,246 +7280,6 @@
         "wires": []
     },
     {
-        "id": "4a4ac510.765cec",
-        "type": "switch",
-        "z": "d2879bb8.476c48",
-        "name": "House Mode",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Night",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Morning",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 650,
-        "y": 1560,
-        "wires": [
-            [
-                "559963da.b6907c"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "b49e8334.c6d5",
-        "type": "api-current-state",
-        "z": "d2879bb8.476c48",
-        "name": "Get House Mode",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.house_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 430,
-        "y": 1560,
-        "wires": [
-            [
-                "4a4ac510.765cec"
-            ]
-        ]
-    },
-    {
-        "id": "9519b790.64b338",
-        "type": "api-current-state",
-        "z": "d2879bb8.476c48",
-        "name": "Is Front Door un Locked",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 2,
-        "halt_if": "unlocked",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "lock.z2m_frontdoor_lock_lock",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 1120,
-        "y": 1560,
-        "wires": [
-            [
-                "fbe880aa.e3538"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "559963da.b6907c",
-        "type": "stoptimer",
-        "z": "d2879bb8.476c48",
-        "duration": "2",
-        "units": "Minute",
-        "payloadtype": "num",
-        "payloadval": "0",
-        "name": "",
-        "x": 890,
-        "y": 1570,
-        "wires": [
-            [
-                "9519b790.64b338"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "fbe880aa.e3538",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Lock Front Door",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "lock",
-        "service": "lock",
-        "entityId": "lock.z2m_frontdoor_lock_lock",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1350,
-        "y": 1570,
-        "wires": [
-            [
-                "cea35e16.6e501"
-            ]
-        ]
-    },
-    {
-        "id": "cea35e16.6e501",
-        "type": "function",
-        "z": "d2879bb8.476c48",
-        "name": "Message Door Locked",
-        "func": "    msg.notification_txt=\"Front Door was found unlocked and Has Been Locked\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1570,
-        "y": 1570,
-        "wires": [
-            [
-                "4a6c82ff.04211c"
-            ]
-        ]
-    },
-    {
-        "id": "4a6c82ff.04211c",
-        "type": "link out",
-        "z": "d2879bb8.476c48",
-        "name": "Sent Telegram",
-        "links": [
-            "a69a61fd.e1ff7"
-        ],
-        "x": 1800,
-        "y": 1590,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "727af7be.3add78",
-        "type": "server-state-changed",
-        "z": "d2879bb8.476c48",
-        "name": "Is front door unlocked",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "lock.z2m_frontdoor_lock_lock",
-        "entityidfiltertype": "exact",
-        "outputinitially": true,
-        "state_type": "str",
-        "haltifstate": "unlocked",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 140,
-        "y": 1570,
-        "wires": [
-            [
-                "b49e8334.c6d5"
-            ],
-            []
-        ]
-    },
-    {
         "id": "857ae990.5fdd58",
         "type": "link in",
         "z": "b4bd0bcf.c07d88",
@@ -7884,8 +7538,8 @@
         "func": "global.set(\"HouseMode\", \"Night\")\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1310,
-        "y": 1780,
+        "x": 1320,
+        "y": 1790,
         "wires": [
             []
         ]
@@ -8120,188 +7774,6 @@
                 "8107d89e.4cded8"
             ]
         ]
-    },
-    {
-        "id": "7dc27c02.a35ed4",
-        "type": "api-current-state",
-        "z": "d2879bb8.476c48",
-        "name": "Is Back Door Locked",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 2,
-        "halt_if": "locked",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "lock.z2m_back_door_lock_lock",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 570,
-        "y": 1320,
-        "wires": [
-            [],
-            [
-                "4e96ece1.a18814"
-            ]
-        ]
-    },
-    {
-        "id": "4e96ece1.a18814",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Lock Back Door",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "lock",
-        "service": "lock",
-        "entityId": "lock.z2m_back_door_lock_lock",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 840,
-        "y": 1300,
-        "wires": [
-            [
-                "a17a9d24.baae5"
-            ]
-        ]
-    },
-    {
-        "id": "a17a9d24.baae5",
-        "type": "function",
-        "z": "d2879bb8.476c48",
-        "name": "Message Door Locked",
-        "func": "    msg.notification_txt=\"Back Door Has Been Locked\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1080,
-        "y": 1300,
-        "wires": [
-            [
-                "928388fb.4c9a38"
-            ]
-        ]
-    },
-    {
-        "id": "928388fb.4c9a38",
-        "type": "link out",
-        "z": "d2879bb8.476c48",
-        "name": "Sent Telegram",
-        "links": [
-            "a69a61fd.e1ff7"
-        ],
-        "x": 1310,
-        "y": 1240,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "1829495e.56d047",
-        "type": "api-current-state",
-        "z": "d2879bb8.476c48",
-        "name": "Is Garage Door Locked",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 2,
-        "halt_if": "locked",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "lock.z2m_garage_door_lock_lock",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 580,
-        "y": 1380,
-        "wires": [
-            [],
-            [
-                "b3a5551f.702388"
-            ]
-        ]
-    },
-    {
-        "id": "b3a5551f.702388",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Lock Garage Door",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "lock",
-        "service": "lock",
-        "entityId": "lock.z2m_garage_door_lock_lock",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 850,
-        "y": 1360,
-        "wires": [
-            [
-                "61f1d195.993ea"
-            ]
-        ]
-    },
-    {
-        "id": "61f1d195.993ea",
-        "type": "function",
-        "z": "d2879bb8.476c48",
-        "name": "Message Door Locked",
-        "func": "    msg.notification_txt=\"Garage Door Has Been Locked\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1080,
-        "y": 1360,
-        "wires": [
-            [
-                "b6e85b3.69618a8"
-            ]
-        ]
-    },
-    {
-        "id": "b6e85b3.69618a8",
-        "type": "link out",
-        "z": "d2879bb8.476c48",
-        "name": "Sent Telegram",
-        "links": [
-            "a69a61fd.e1ff7"
-        ],
-        "x": 1310,
-        "y": 1300,
-        "wires": [],
-        "l": true
     },
     {
         "id": "320fe74f.9c49b8",
@@ -9364,31 +8836,6 @@
         "x": 890,
         "y": 150,
         "wires": []
-    },
-    {
-        "id": "4dc5581b.17ebb8",
-        "type": "change",
-        "z": "2aba4bad.aeba64",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 390,
-        "y": 210,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "a92eb07d.8b53e",
@@ -10572,8 +10019,8 @@
         "links": [
             "857ae990.5fdd58"
         ],
-        "x": 1660,
-        "y": 830,
+        "x": 1650,
+        "y": 860,
         "wires": [],
         "l": true
     },
@@ -11253,7 +10700,8 @@
         "y": 200,
         "wires": [
             [
-                "88b8ea99.275968"
+                "88b8ea99.275968",
+                "e61732a04c66e91b"
             ]
         ]
     },
@@ -11858,7 +11306,7 @@
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
-        "entityId": "light.z2m_office_back_lights_dimmer",
+        "entityId": "light.office_back_lights",
         "data": "{\"brightness\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
@@ -12071,7 +11519,7 @@
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "light.z2m_office_back_lights_dimmer",
+        "entity_id": "light.office_back_lights",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -12307,7 +11755,7 @@
         "rules": [
             {
                 "t": "cont",
-                "v": "sensor.z2m_office_back_lights_scene_state_",
+                "v": "sensor.office_back_lights_scene_state_",
                 "vt": "str"
             },
             {
@@ -12377,9 +11825,7 @@
         "x": 440,
         "y": 930,
         "wires": [
-            [
-                "ec010698.7dd4d8"
-            ],
+            [],
             [
                 "1c2c2602.10acea",
                 "1c92b312.2b637d"
@@ -12426,8 +11872,8 @@
         "z": "81d1a9dc.cedc58",
         "name": "Z2M Scenes",
         "info": "",
-        "x": 170,
-        "y": 160,
+        "x": 150,
+        "y": 560,
         "wires": []
     },
     {
@@ -12555,7 +12001,9 @@
             [
                 "9b0aeaff.e51b28"
             ],
-            [],
+            [
+                "5f79a8c2cf71c494"
+            ],
             [
                 "5b955682.1dbcb8"
             ]
@@ -12652,8 +12100,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1090,
-        "y": 810,
+        "x": 1100,
+        "y": 870,
         "wires": [
             [
                 "67a52321.45b24c"
@@ -13113,7 +12561,7 @@
         "type": "debug",
         "z": "81d1a9dc.cedc58",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -14008,248 +13456,6 @@
         ]
     },
     {
-        "id": "c1f14339.19c8",
-        "type": "switch",
-        "z": "d2879bb8.476c48",
-        "name": "House Mode",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Night",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "Morning",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 650,
-        "y": 1650,
-        "wires": [
-            [
-                "f16a7012.51ef"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "6571d4da.94820c",
-        "type": "api-current-state",
-        "z": "d2879bb8.476c48",
-        "name": "Get House Mode",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_select.house_mode",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 430,
-        "y": 1650,
-        "wires": [
-            [
-                "c1f14339.19c8"
-            ]
-        ]
-    },
-    {
-        "id": "9d3a7473.d82918",
-        "type": "api-current-state",
-        "z": "d2879bb8.476c48",
-        "name": "Is Back Door un Locked",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 2,
-        "halt_if": "unlocked",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "lock.z2m_back_door_lock_lock",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 1120,
-        "y": 1650,
-        "wires": [
-            [
-                "41fe3c5c.1a1e14"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f16a7012.51ef",
-        "type": "stoptimer",
-        "z": "d2879bb8.476c48",
-        "duration": "2",
-        "units": "Minute",
-        "payloadtype": "num",
-        "payloadval": "0",
-        "name": "",
-        "x": 890,
-        "y": 1660,
-        "wires": [
-            [
-                "9d3a7473.d82918"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "41fe3c5c.1a1e14",
-        "type": "api-call-service",
-        "z": "d2879bb8.476c48",
-        "name": "Lock Back Door",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "lock",
-        "service": "lock",
-        "entityId": "lock.z2m_back_door_lock_lock",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1350,
-        "y": 1660,
-        "wires": [
-            [
-                "5befb5d7.9b53cc"
-            ]
-        ]
-    },
-    {
-        "id": "5befb5d7.9b53cc",
-        "type": "function",
-        "z": "d2879bb8.476c48",
-        "name": "Message Door Locked",
-        "func": "    msg.notification_txt=\"Back Door was found unlocked and Has Been Locked\"\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1570,
-        "y": 1660,
-        "wires": [
-            [
-                "8932f926.bdc868"
-            ]
-        ]
-    },
-    {
-        "id": "8932f926.bdc868",
-        "type": "link out",
-        "z": "d2879bb8.476c48",
-        "name": "Sent Telegram",
-        "links": [
-            "a69a61fd.e1ff7"
-        ],
-        "x": 1800,
-        "y": 1680,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "2b5149f3.ed8746",
-        "type": "server-state-changed",
-        "z": "d2879bb8.476c48",
-        "name": "Is back door unlocked",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "exposeToHomeAssistant": false,
-        "haConfig": [
-            {
-                "property": "name",
-                "value": ""
-            },
-            {
-                "property": "icon",
-                "value": ""
-            }
-        ],
-        "entityidfilter": "lock.z2m_back_door_lock_lock",
-        "entityidfiltertype": "exact",
-        "outputinitially": true,
-        "state_type": "str",
-        "haltifstate": "unlocked",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "outputs": 2,
-        "output_only_on_state_change": true,
-        "for": "",
-        "forType": "num",
-        "forUnits": "minutes",
-        "ignorePrevStateNull": false,
-        "ignorePrevStateUnknown": false,
-        "ignorePrevStateUnavailable": false,
-        "ignoreCurrentStateUnknown": false,
-        "ignoreCurrentStateUnavailable": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "eventData"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 140,
-        "y": 1660,
-        "wires": [
-            [
-                "6571d4da.94820c"
-            ],
-            []
-        ]
-    },
-    {
         "id": "afbe1fad.df4a8",
         "type": "api-call-service",
         "z": "d2879bb8.476c48",
@@ -14293,12 +13499,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 310,
-        "y": 1330,
+        "x": 120,
+        "y": 1180,
         "wires": [
             [
-                "1829495e.56d047",
-                "7dc27c02.a35ed4"
+                "e6c2f9a958fb149e"
             ]
         ]
     },
@@ -14320,140 +13525,21 @@
         "wires": []
     },
     {
-        "id": "ec010698.7dd4d8",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "Office Back Lights",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "3",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "5",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "6",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 7,
-        "x": 780,
-        "y": 250,
-        "wires": [
-            [
-                "3ecf0e75.529732"
-            ],
-            [
-                "e886b9b2.fbadb8"
-            ],
-            [
-                "6d6f6f76.dff7c"
-            ],
-            [
-                "aa2197f3.599cd8"
-            ],
-            [
-                "7dbec776.62fa28"
-            ],
-            [
-                "15866605.59392a"
-            ],
-            [
-                "6a0ff57b.b78c5c"
-            ]
-        ],
-        "outputLabels": [
-            "1x Tap",
-            "2x Tap",
-            "3x Tap",
-            "4x Tap",
-            "5x Tap",
-            "Key Released",
-            "Key Held Down"
-        ]
-    },
-    {
-        "id": "e886b9b2.fbadb8",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "2x Tap",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1080,
-        "y": 60,
-        "wires": [
-            [
-                "921221cd.4b125"
-            ],
-            [
-                "256da3c4.36891c"
-            ]
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
         "id": "3ecf0e75.529732",
         "type": "switch",
         "z": "81d1a9dc.cedc58",
         "name": "1x Tap",
-        "property": "topic",
+        "property": "payload.event.label",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "cont",
-                "v": "scene_state_scene_001",
+                "t": "eq",
+                "v": "Scene 001",
                 "vt": "str"
             },
             {
-                "t": "cont",
-                "v": "scene_state_scene_002",
+                "t": "eq",
+                "v": "Scene 002",
                 "vt": "str"
             }
         ],
@@ -14461,175 +13547,14 @@
         "repair": false,
         "outputs": 2,
         "x": 1080,
-        "y": 20,
+        "y": 30,
         "wires": [
-            [],
-            []
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
-        "id": "6d6f6f76.dff7c",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "3x Tap",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1080,
-        "y": 100,
-        "wires": [
-            [],
-            []
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
-        "id": "aa2197f3.599cd8",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "4x Tap",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1080,
-        "y": 140,
-        "wires": [
-            [],
-            []
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
-        "id": "7dbec776.62fa28",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "5x Tap",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1080,
-        "y": 180,
-        "wires": [
-            [],
-            []
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
-        "id": "6a0ff57b.b78c5c",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "Long Hold",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1090,
-        "y": 260,
-        "wires": [
-            [],
-            []
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
-        "id": "15866605.59392a",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "Key Released",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1110,
-        "y": 220,
-        "wires": [
-            [],
-            []
+            [
+                "80a676f74e00c0fb"
+            ],
+            [
+                "80a676f74e00c0fb"
+            ]
         ],
         "outputLabels": [
             "on",
@@ -17379,8 +16304,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 810,
-        "y": 910,
+        "x": 800,
+        "y": 900,
         "wires": [
             [
                 "9d7b9808.ad0598",
@@ -17389,7 +16314,9 @@
             [
                 "9b0aeaff.e51b28"
             ],
-            [],
+            [
+                "5f79a8c2cf71c494"
+            ],
             [
                 "5b955682.1dbcb8"
             ]
@@ -17764,7 +16691,7 @@
         "finalize": "",
         "libs": [],
         "x": 910,
-        "y": 970,
+        "y": 990,
         "wires": [
             [
                 "2c24aa5b.bac806",
@@ -17842,6 +16769,1869 @@
         "statusType": "auto",
         "x": 1120,
         "y": 1050,
+        "wires": []
+    },
+    {
+        "id": "a4e5c24b51e8603a",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ee0614c20d3661e5",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 670,
+        "wires": []
+    },
+    {
+        "id": "485bc5dcdfc56bb5",
+        "type": "server-state-changed",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "switch.s31_patio_heater",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "habool",
+        "haltifstate": "true",
+        "halt_if_type": "bool",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 190,
+        "y": 590,
+        "wires": [
+            [
+                "0bacf551b73543ba"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6cdee85a88c82b1f",
+        "type": "api-call-service",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.s31_patio_heater",
+        "data": "",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1120,
+        "y": 620,
+        "wires": [
+            [
+                "2f2f707cdd569bc2"
+            ]
+        ]
+    },
+    {
+        "id": "5bd4231a0eec38c7",
+        "type": "delay",
+        "z": "2aba4bad.aeba64",
+        "name": "Delay for set time",
+        "pauseType": "delayv",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 840,
+        "y": 590,
+        "wires": [
+            [
+                "6cdee85a88c82b1f",
+                "a4e5c24b51e8603a"
+            ]
+        ]
+    },
+    {
+        "id": "0bacf551b73543ba",
+        "type": "api-current-state",
+        "z": "2aba4bad.aeba64",
+        "name": "Get Delay",
+        "server": "65b61d5d.d1e1c4",
+        "version": 2,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.settings_patio_heater_runtime",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "delay",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 470,
+        "y": 590,
+        "wires": [
+            [
+                "ee0614c20d3661e5",
+                "2c28855b25767571"
+            ]
+        ]
+    },
+    {
+        "id": "2c28855b25767571",
+        "type": "calculator",
+        "z": "2aba4bad.aeba64",
+        "name": "Min to MS",
+        "inputMsgField": "delay",
+        "outputMsgField": "delay",
+        "operation": "mult",
+        "constant": "60000",
+        "round": false,
+        "decimals": 0,
+        "x": 640,
+        "y": 590,
+        "wires": [
+            [
+                "5bd4231a0eec38c7",
+                "ee0614c20d3661e5"
+            ]
+        ]
+    },
+    {
+        "id": "2f2f707cdd569bc2",
+        "type": "function",
+        "z": "2aba4bad.aeba64",
+        "name": "Heater Turn off Message",
+        "func": "msg.notification_txt= \"Patio Heater has been turned off automatically\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 620,
+        "wires": [
+            [
+                "a4e5c24b51e8603a",
+                "d08775d3432d36b3"
+            ]
+        ]
+    },
+    {
+        "id": "d08775d3432d36b3",
+        "type": "link out",
+        "z": "2aba4bad.aeba64",
+        "name": "Send Notification",
+        "links": [
+            "a69a61fd.e1ff7"
+        ],
+        "x": 1740,
+        "y": 610,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "a249e756b9187317",
+        "type": "comment",
+        "z": "2aba4bad.aeba64",
+        "name": "Patio Heater Shut Off",
+        "info": "",
+        "x": 120,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f66c26e643caca88",
+        "type": "comment",
+        "z": "2aba4bad.aeba64",
+        "name": "Shop Temperature Control",
+        "info": "",
+        "x": 140,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "4f336f0882a588e6",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 870,
+        "wires": []
+    },
+    {
+        "id": "e6c2f9a958fb149e",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Get Shop Temp Setting",
+        "server": "65b61d5d.d1e1c4",
+        "version": 2,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.setting_shop_heat_setpoint",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 580,
+        "y": 890,
+        "wires": [
+            [
+                "3bde5df5a19d6f2a",
+                "cf61a80d8d39cfd2"
+            ]
+        ]
+    },
+    {
+        "id": "3bde5df5a19d6f2a",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "Set Shop temp",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_temperature",
+        "entityId": "climate.shop_thermostat",
+        "data": "{\"temperature\":\"{{payload}}\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 890,
+        "y": 880,
+        "wires": [
+            [
+                "62b0e5f6514888f5"
+            ]
+        ]
+    },
+    {
+        "id": "62b0e5f6514888f5",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 810,
+        "wires": []
+    },
+    {
+        "id": "cf61a80d8d39cfd2",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "949b7e6d10320720",
+        "type": "server-state-changed",
+        "z": "2aba4bad.aeba64",
+        "name": "Shop Temp Default changed",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "input_number.setting_shop_heat_setpoint",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 170,
+        "y": 810,
+        "wires": [
+            [
+                "c007afddad4dbe16"
+            ]
+        ]
+    },
+    {
+        "id": "c007afddad4dbe16",
+        "type": "api-call-service",
+        "z": "2aba4bad.aeba64",
+        "name": "Set Shop temp",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_temperature",
+        "entityId": "climate.shop_thermostat",
+        "data": "{\"temperature\":\"{{payload}}\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 470,
+        "y": 810,
+        "wires": [
+            [
+                "4e9330356372cee6"
+            ]
+        ]
+    },
+    {
+        "id": "4e9330356372cee6",
+        "type": "api-call-service",
+        "z": "2aba4bad.aeba64",
+        "name": "Set Heat on",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "turn_on",
+        "entityId": "climate.shop_thermostat",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 700,
+        "y": 790,
+        "wires": [
+            [
+                "168364522cb61684"
+            ]
+        ]
+    },
+    {
+        "id": "5f79a8c2cf71c494",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Button 3",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Inactive",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1100,
+        "y": 820,
+        "wires": [
+            [
+                "0c0bd6068c9b7c40"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0c0bd6068c9b7c40",
+        "type": "api-call-service",
+        "z": "81d1a9dc.cedc58",
+        "name": "Turn on night mode",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "input_select",
+        "service": "select_option",
+        "entityId": "input_select.house_mode",
+        "data": "{\"option\":\"Night\"}",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1370,
+        "y": 810,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1f1fc5b6b4938bd",
+        "type": "inject",
+        "z": "81d1a9dc.cedc58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1160,
+        "y": 970,
+        "wires": [
+            [
+                "0c0bd6068c9b7c40"
+            ]
+        ]
+    },
+    {
+        "id": "42b77132acdb7502",
+        "type": "comment",
+        "z": "d2879bb8.476c48",
+        "name": "Check Items every x minutes",
+        "info": "",
+        "x": 150,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "adf714ec6a8151c8",
+        "type": "stoptimer",
+        "z": "d2879bb8.476c48",
+        "duration": "10",
+        "units": "Minute",
+        "payloadtype": "num",
+        "payloadval": "0",
+        "name": "",
+        "x": 330,
+        "y": 1310,
+        "wires": [
+            [
+                "59a033cf86c461ec"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a44e2bab2731e427",
+        "type": "link out",
+        "z": "d2879bb8.476c48",
+        "name": "Sent Telegram",
+        "links": [
+            "a69a61fd.e1ff7"
+        ],
+        "x": 1380,
+        "y": 1360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5ab5e47e651daab8",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "35a0972fa29ca0c5",
+        "type": "inject",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 1330,
+        "wires": [
+            [
+                "adf714ec6a8151c8"
+            ]
+        ]
+    },
+    {
+        "id": "59a033cf86c461ec",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Is still Night Mode",
+        "server": "65b61d5d.d1e1c4",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "Night",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_select.house_mode",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "x": 340,
+        "y": 1400,
+        "wires": [
+            [
+                "5ab5e47e651daab8",
+                "adf714ec6a8151c8",
+                "f24392b88e1fc2bf"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f24392b88e1fc2bf",
+        "type": "ha-get-entities",
+        "z": "d2879bb8.476c48",
+        "name": "Get Ulocked Doors",
+        "server": "65b61d5d.d1e1c4",
+        "version": 0,
+        "rules": [
+            {
+                "property": "state",
+                "logic": "is",
+                "value": "unlocked",
+                "valueType": "str"
+            }
+        ],
+        "output_type": "split",
+        "output_empty_results": false,
+        "output_location_type": "msg",
+        "output_location": "payload",
+        "output_results_count": 1,
+        "x": 620,
+        "y": 1400,
+        "wires": [
+            [
+                "990bddc27becf90a",
+                "b5c53c6a8240b393"
+            ]
+        ]
+    },
+    {
+        "id": "c5fbd3fb9f8c4a32",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1350,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "eb07ade2ce55681b",
+        "type": "function",
+        "z": "d2879bb8.476c48",
+        "name": "Set notification with door name",
+        "func": "    msg.notification_txt= msg.payload.attributes.friendly_name + \" was found unlocked and Has Been Locked\"\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1400,
+        "wires": [
+            [
+                "c5fbd3fb9f8c4a32",
+                "a44e2bab2731e427"
+            ]
+        ]
+    },
+    {
+        "id": "b5c53c6a8240b393",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "Lock Doors",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "lock",
+        "service": "lock",
+        "entityId": "{{payload.entity_id}}",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 840,
+        "y": 1400,
+        "wires": [
+            [
+                "eb07ade2ce55681b"
+            ]
+        ]
+    },
+    {
+        "id": "990bddc27becf90a",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "024fb67c114d8142",
+        "type": "schedex",
+        "z": "d2879bb8.476c48",
+        "name": "Shop Heat warm up",
+        "passthroughunhandled": false,
+        "suspended": false,
+        "lat": "",
+        "lon": "",
+        "ontime": "6:00",
+        "ontopic": "msg.payload",
+        "onpayload": "On",
+        "onoffset": 0,
+        "onrandomoffset": 0,
+        "offtime": "8:00",
+        "offtopic": "msg.payload",
+        "offpayload": "Off",
+        "offoffset": 0,
+        "offrandomoffset": 0,
+        "mon": true,
+        "tue": true,
+        "wed": true,
+        "thu": true,
+        "fri": true,
+        "sat": true,
+        "sun": true,
+        "x": 210,
+        "y": 1630,
+        "wires": [
+            [
+                "eb2ced2c34e8118a"
+            ]
+        ]
+    },
+    {
+        "id": "3398454964e0c4e6",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "eb2ced2c34e8118a",
+        "type": "switch",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "On",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1630,
+        "wires": [
+            [
+                "30547a8823ecf477"
+            ],
+            [
+                "6c75bb20aa2ac364",
+                "62783a472d378e0d"
+            ]
+        ]
+    },
+    {
+        "id": "6c75bb20aa2ac364",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 1730,
+        "wires": []
+    },
+    {
+        "id": "09e240e42aa35003",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_temperature",
+        "entityId": "climate.shop_thermostat",
+        "data": "{\"temperature\":\"{{payload}}\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 890,
+        "y": 1600,
+        "wires": [
+            [
+                "3398454964e0c4e6"
+            ]
+        ]
+    },
+    {
+        "id": "30547a8823ecf477",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Get High setpoint",
+        "server": "65b61d5d.d1e1c4",
+        "version": 2,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "num",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.setting_shop_heat_highsetpoint",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 600,
+        "y": 1600,
+        "wires": [
+            [
+                "09e240e42aa35003",
+                "549af980bcb84cfa"
+            ]
+        ]
+    },
+    {
+        "id": "549af980bcb84cfa",
+        "type": "debug",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1550,
+        "wires": []
+    },
+    {
+        "id": "881a1b6a28cc2a0c",
+        "type": "inject",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "On",
+        "payloadType": "str",
+        "x": 220,
+        "y": 1780,
+        "wires": [
+            [
+                "eb2ced2c34e8118a"
+            ]
+        ]
+    },
+    {
+        "id": "bb5a175862b678c8",
+        "type": "inject",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Off",
+        "payloadType": "str",
+        "x": 220,
+        "y": 1830,
+        "wires": [
+            [
+                "eb2ced2c34e8118a"
+            ]
+        ]
+    },
+    {
+        "id": "62783a472d378e0d",
+        "type": "api-current-state",
+        "z": "d2879bb8.476c48",
+        "name": "Get standard setpoint",
+        "server": "65b61d5d.d1e1c4",
+        "version": 2,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "num",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.setting_shop_heat_setpoint",
+        "state_type": "num",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 610,
+        "y": 1660,
+        "wires": [
+            [
+                "8d41048f9bd99a87"
+            ]
+        ]
+    },
+    {
+        "id": "8d41048f9bd99a87",
+        "type": "api-call-service",
+        "z": "d2879bb8.476c48",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "climate",
+        "service": "set_temperature",
+        "entityId": "climate.shop_thermostat",
+        "data": "{\"temperature\":\"{{payload}}\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 890,
+        "y": 1660,
+        "wires": [
+            [
+                "3398454964e0c4e6"
+            ]
+        ]
+    },
+    {
+        "id": "51906c17f08ed511",
+        "type": "comment",
+        "z": "2aba4bad.aeba64",
+        "name": "Turn on fan with shop heat",
+        "info": "",
+        "x": 130,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "53c9adb00d1a7747",
+        "type": "server-state-changed",
+        "z": "2aba4bad.aeba64",
+        "name": "Shop Heater State Change",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "entityidfilter": "switch.shop_heater_shelly_shsw_pm_8caab55f341d",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "on",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 2,
+        "output_only_on_state_change": true,
+        "for": 0,
+        "forType": "num",
+        "forUnits": "minutes",
+        "ignorePrevStateNull": false,
+        "ignorePrevStateUnknown": false,
+        "ignorePrevStateUnavailable": false,
+        "ignoreCurrentStateUnknown": false,
+        "ignoreCurrentStateUnavailable": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 140,
+        "y": 970,
+        "wires": [
+            [
+                "7090d9d13041e54c",
+                "23013983c6698439"
+            ],
+            [
+                "de0f5dff9734b8b4",
+                "4378431e63657f80"
+            ]
+        ]
+    },
+    {
+        "id": "7090d9d13041e54c",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1170,
+        "wires": []
+    },
+    {
+        "id": "de0f5dff9734b8b4",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1230,
+        "wires": []
+    },
+    {
+        "id": "23013983c6698439",
+        "type": "api-current-state",
+        "z": "2aba4bad.aeba64",
+        "name": "If HEAT Mode",
+        "server": "65b61d5d.d1e1c4",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "heat",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "climate.shop_thermostat",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 410,
+        "y": 920,
+        "wires": [
+            [
+                "9b47cb527b5e6e18",
+                "deb3dc2b1b932bd1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9b47cb527b5e6e18",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 910,
+        "wires": []
+    },
+    {
+        "id": "deb3dc2b1b932bd1",
+        "type": "api-call-service",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.shop_fan_shelly_shsw_pm_8caab55f849f",
+        "data": "",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 780,
+        "y": 950,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4378431e63657f80",
+        "type": "api-current-state",
+        "z": "2aba4bad.aeba64",
+        "name": "If HEAT Mode",
+        "server": "65b61d5d.d1e1c4",
+        "version": 2,
+        "outputs": 2,
+        "halt_if": "heat",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "climate.shop_thermostat",
+        "state_type": "str",
+        "blockInputOverrides": false,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            }
+        ],
+        "override_topic": false,
+        "state_location": "payload",
+        "override_payload": "msg",
+        "entity_location": "data",
+        "override_data": "msg",
+        "x": 420,
+        "y": 990,
+        "wires": [
+            [
+                "ff867ed7bb2784c0",
+                "3066c40c0e781d34"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ff867ed7bb2784c0",
+        "type": "api-call-service",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_off",
+        "entityId": "switch.shop_fan_shelly_shsw_pm_8caab55f849f",
+        "data": "",
+        "dataType": "jsonata",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 770,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3066c40c0e781d34",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1050,
+        "wires": []
+    },
+    {
+        "id": "168364522cb61684",
+        "type": "debug",
+        "z": "2aba4bad.aeba64",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 790,
+        "wires": []
+    },
+    {
+        "id": "17b6dad96ceeb16a",
+        "type": "inject",
+        "z": "a0818eac.0a1ff",
+        "name": "",
+        "props": [
+            {
+                "p": "notification_txt",
+                "v": "Test Message",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "2c24aa5b.bac806",
+                "e61732a04c66e91b"
+            ]
+        ]
+    },
+    {
+        "id": "e61732a04c66e91b",
+        "type": "debug",
+        "z": "a0818eac.0a1ff",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 290,
+        "wires": []
+    },
+    {
+        "id": "57f5738a7b765f73",
+        "type": "server-events",
+        "z": "81d1a9dc.cedc58",
+        "name": "",
+        "server": "65b61d5d.d1e1c4",
+        "version": 1,
+        "event_type": "zwave_js_value_notification",
+        "exposeToHomeAssistant": false,
+        "haConfig": [
+            {
+                "property": "name",
+                "value": ""
+            },
+            {
+                "property": "icon",
+                "value": ""
+            }
+        ],
+        "waitForRunning": true,
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "eventData"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "$outputData(\"eventData\").event_type",
+                "valueType": "jsonata"
+            }
+        ],
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "4f4515ef5fb0a733",
+                "6d6d46c0ced95aa0"
+            ]
+        ]
+    },
+    {
+        "id": "4f4515ef5fb0a733",
+        "type": "debug",
+        "z": "81d1a9dc.cedc58",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6d6d46c0ced95aa0",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Identify Zwave Node",
+        "property": "payload.event.device_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "570da2b8d78e229d7e7377fe4aa95c90",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "f752ecf996bc6d99",
+                "02a2c4643105b915"
+            ]
+        ]
+    },
+    {
+        "id": "f752ecf996bc6d99",
+        "type": "debug",
+        "z": "81d1a9dc.cedc58",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 110,
+        "wires": []
+    },
+    {
+        "id": "02a2c4643105b915",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Office Back Lights",
+        "property": "payload.event.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "KeyPressed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed2x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed3x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed4x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed5x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyHeldDown",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyReleased",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 790,
+        "y": 130,
+        "wires": [
+            [
+                "3ecf0e75.529732"
+            ],
+            [
+                "6875c37a7cf07754"
+            ],
+            [
+                "8fc5f8dd8b6d185c"
+            ],
+            [
+                "229d02596d110f67"
+            ],
+            [
+                "ea9bac0e9cefa664"
+            ],
+            [
+                "cdbcf8d8cfa5f127"
+            ],
+            [
+                "f04a0948500007cc"
+            ]
+        ]
+    },
+    {
+        "id": "80a676f74e00c0fb",
+        "type": "debug",
+        "z": "81d1a9dc.cedc58",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f04a0948500007cc",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Released",
+        "property": "payload.event.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Scene 001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Scene 002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1090,
+        "y": 270,
+        "wires": [
+            [],
+            []
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "cdbcf8d8cfa5f127",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Held Down",
+        "property": "payload.event.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Scene 001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Scene 002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1100,
+        "y": 230,
+        "wires": [
+            [],
+            []
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "ea9bac0e9cefa664",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "5x Tap",
+        "property": "payload.event.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Scene 001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Scene 002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1080,
+        "y": 190,
+        "wires": [
+            [],
+            []
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "229d02596d110f67",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "4x Tap",
+        "property": "payload.event.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Scene 001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Scene 002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1080,
+        "y": 150,
+        "wires": [
+            [],
+            []
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "8fc5f8dd8b6d185c",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "3x Tap",
+        "property": "payload.event.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Scene 001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Scene 002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1080,
+        "y": 110,
+        "wires": [
+            [],
+            []
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "6875c37a7cf07754",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "2x Tap",
+        "property": "payload.event.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Scene 001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Scene 002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1080,
+        "y": 70,
+        "wires": [
+            [
+                "921221cd.4b125"
+            ],
+            [
+                "256da3c4.36891c"
+            ]
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "371a1882ea74cbe4",
+        "type": "comment",
+        "z": "81d1a9dc.cedc58",
+        "name": "ZWave Scenes",
+        "info": "",
+        "x": 160,
+        "y": 140,
         "wires": []
     }
 ]
