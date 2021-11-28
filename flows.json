@@ -375,7 +375,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
-        "entityId": "switch.downstairs_serverroom_light_switch",
+        "entityId": "switch.server_room_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -398,7 +398,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_on",
-        "entityId": "switch.downstairs_serverroom_light_switch",
+        "entityId": "switch.server_room_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -2192,7 +2192,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "lock.z2m_frontdoor_lock_lock",
+        "entityidfilter": "lock.front_door_lock",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -3727,7 +3727,7 @@
                 "value": ""
             }
         ],
-        "entityidfilter": "switch.z2m_masterbath_fan_switch",
+        "entityidfilter": "switch.master_bath_fan",
         "entityidfiltertype": "exact",
         "outputinitially": false,
         "state_type": "str",
@@ -3816,7 +3816,7 @@
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "light.z2m_masterbath_light_dimmer",
+        "entity_id": "light.master_bath_lights",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -4133,7 +4133,7 @@
         "halt_if": "on",
         "halt_if_type": "str",
         "halt_if_compare": "is",
-        "entity_id": "light.z2m_masterbath_light_dimmer",
+        "entity_id": "light.master_bath_lights",
         "state_type": "str",
         "blockInputOverrides": false,
         "outputProperties": [
@@ -4201,7 +4201,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
-        "entityId": "switch.z2m_masterbath_fan_switch",
+        "entityId": "switch.master_bath_fan",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -6383,7 +6383,7 @@
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_on",
-        "entityId": "light.z2m_masterbath_light_dimmer",
+        "entityId": "light.master_bath_lights",
         "data": "{\"brightness_pct\":\"{{brightness}}\"}",
         "dataType": "json",
         "mergecontext": "",
@@ -6406,7 +6406,7 @@
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
-        "entityId": "light.z2m_masterbath_light_dimmer",
+        "entityId": "light.master_bath_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -6585,7 +6585,7 @@
         "debugenabled": false,
         "service_domain": "switch",
         "service": "turn_off",
-        "entityId": "switch.z2m_masterbath_fan_switch",
+        "entityId": "switch.master_bath_fan",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -6626,7 +6626,8 @@
             "ecd592ca.7f0e9",
             "30d5a63.3fde05a",
             "da1f46c8.a88e88",
-            "abbc04b3.061a48"
+            "abbc04b3.061a48",
+            "cad2ca2f1ce9c22c"
         ],
         "x": 2360,
         "y": 2140,
@@ -6648,7 +6649,7 @@
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
-        "entityId": "light.z2m_master_bedroom_light_dimmer",
+        "entityId": "light.master_bedroom_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -6658,7 +6659,9 @@
         "x": 2830,
         "y": 2160,
         "wires": [
-            []
+            [
+                "e71ef2f5692ff885"
+            ]
         ]
     },
     {
@@ -7367,7 +7370,7 @@
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
-        "entityId": "light.z2m_masterbath_above_mirror_light_dimmer",
+        "entityId": "light.master_bath_above_mirror",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -7390,7 +7393,7 @@
         "debugenabled": false,
         "service_domain": "light",
         "service": "turn_off",
-        "entityId": "switch.z2m_shop_light_switch",
+        "entityId": "light.shop_lights",
         "data": "",
         "dataType": "json",
         "mergecontext": "",
@@ -7457,6 +7460,29 @@
             [
                 "10a8d83b.37bf38"
             ]
+        ]
+    },
+    {
+        "id": "e71ef2f5692ff885",
+        "type": "api-call-service",
+        "z": "b4bd0bcf.c07d88",
+        "name": "Night Stands Off",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_off",
+        "entityId": "light.euri_mbr_matt_ns, light.euri_mbr_tosh_ns",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 3090,
+        "y": 2170,
+        "wires": [
+            []
         ]
     },
     {
@@ -9484,19 +9510,6 @@
         "wires": []
     },
     {
-        "id": "1e8b3c37.3fbc04",
-        "type": "mqtt out",
-        "z": "770eefce.2dc6a",
-        "name": "Set User Code",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "broker": "32473d23.e05bc2",
-        "x": 1010,
-        "y": 760,
-        "wires": []
-    },
-    {
         "id": "5db97b16.bc56e4",
         "type": "change",
         "z": "770eefce.2dc6a",
@@ -9520,91 +9533,6 @@
         "wires": [
             [
                 "cb20776b.e87978"
-            ]
-        ]
-    },
-    {
-        "id": "f8412b20.29d078",
-        "type": "inject",
-        "z": "770eefce.2dc6a",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
-        "y": 830,
-        "wires": [
-            [
-                "b815805f.26376"
-            ]
-        ]
-    },
-    {
-        "id": "b815805f.26376",
-        "type": "api-current-state",
-        "z": "770eefce.2dc6a",
-        "name": "Get Code from HA",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_text.lockman_user_1_pin",
-        "state_type": "str",
-        "blockInputOverrides": false,
-        "outputProperties": [
-            {
-                "property": "payload",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            }
-        ],
-        "x": 390,
-        "y": 900,
-        "wires": [
-            [
-                "8bcc8831.5d8f88",
-                "7efe6383.52ecac"
-            ]
-        ]
-    },
-    {
-        "id": "7efe6383.52ecac",
-        "type": "function",
-        "z": "770eefce.2dc6a",
-        "name": "",
-        "func": "return { payload: '\"' + msg.payload + '\"'}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 580,
-        "y": 820,
-        "wires": [
-            [
-                "8bcc8831.5d8f88",
-                "cb6a0eb5.57103"
             ]
         ]
     },
@@ -9649,23 +9577,6 @@
                 "5db97b16.bc56e4"
             ]
         ]
-    },
-    {
-        "id": "8bcc8831.5d8f88",
-        "type": "debug",
-        "z": "770eefce.2dc6a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 950,
-        "wires": []
     },
     {
         "id": "2e794860.8f7c28",
@@ -9803,34 +9714,6 @@
         "wires": [
             [
                 "73abc692.bb3838"
-            ]
-        ]
-    },
-    {
-        "id": "cb6a0eb5.57103",
-        "type": "change",
-        "z": "770eefce.2dc6a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "z2m/z2m_garage_door_lock/99/0/userCode/1/set",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 800,
-        "wires": [
-            [
-                "1e8b3c37.3fbc04",
-                "8bcc8831.5d8f88"
             ]
         ]
     },
@@ -10919,7 +10802,7 @@
         "name": "********* Scene Management ********",
         "info": "",
         "x": 220,
-        "y": 60,
+        "y": 110,
         "wires": []
     },
     {
@@ -10939,8 +10822,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1610,
-        "y": 760,
+        "x": 1840,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -10962,8 +10845,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1620,
-        "y": 710,
+        "x": 1850,
+        "y": 1030,
         "wires": [
             []
         ]
@@ -10976,8 +10859,8 @@
         "links": [
             "857ae990.5fdd58"
         ],
-        "x": 1650,
-        "y": 860,
+        "x": 1880,
+        "y": 1180,
         "wires": [],
         "l": true
     },
@@ -11489,11 +11372,6 @@
         "rules": [
             {
                 "t": "cont",
-                "v": "sensor.office_back_lights_scene_state_",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
                 "v": "sensor.z2m_office_front_lights_scene_state_",
                 "vt": "str"
             },
@@ -11555,11 +11433,10 @@
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 13,
+        "outputs": 12,
         "x": 440,
         "y": 930,
         "wires": [
-            [],
             [
                 "1c2c2602.10acea",
                 "1c92b312.2b637d"
@@ -11575,9 +11452,7 @@
                 "ddfd613e.82ed5"
             ],
             [],
-            [
-                "93e999c8.b154e8"
-            ],
+            [],
             [
                 "e1ecfd0b.28646"
             ],
@@ -11585,9 +11460,7 @@
                 "c8fba325.1ca51",
                 "5b0b7fce.a314b"
             ],
-            [
-                "b531fbc7.4cf218"
-            ],
+            [],
             [
                 "32bfac58.452014",
                 "e4f6b6df.7298d8"
@@ -11607,7 +11480,7 @@
         "name": "Z2M Scenes",
         "info": "",
         "x": 150,
-        "y": 560,
+        "y": 610,
         "wires": []
     },
     {
@@ -11620,7 +11493,7 @@
             "6ebd6391.4bbb3c"
         ],
         "x": 1400,
-        "y": 60,
+        "y": 110,
         "wires": [],
         "l": true
     },
@@ -11634,7 +11507,7 @@
             "7ee27850.15b358"
         ],
         "x": 1410,
-        "y": 120,
+        "y": 170,
         "wires": [],
         "l": true
     },
@@ -11647,8 +11520,8 @@
             "26849a1f.654876",
             "7ee27850.15b358"
         ],
-        "x": 1520,
-        "y": 460,
+        "x": 1750,
+        "y": 780,
         "wires": [],
         "l": true
     },
@@ -11661,8 +11534,8 @@
             "2715c85.ae11838",
             "6ebd6391.4bbb3c"
         ],
-        "x": 1520,
-        "y": 420,
+        "x": 1750,
+        "y": 740,
         "wires": [],
         "l": true
     },
@@ -11674,8 +11547,8 @@
         "links": [
             "df74d19e.78101"
         ],
-        "x": 1400,
-        "y": 340,
+        "x": 1630,
+        "y": 660,
         "wires": [],
         "l": true
     },
@@ -11688,8 +11561,8 @@
             "1ff8965b.dd41ba",
             "ccd8a0da.cfdb4"
         ],
-        "x": 1400,
-        "y": 380,
+        "x": 1630,
+        "y": 700,
         "wires": [],
         "l": true
     },
@@ -11725,8 +11598,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 800,
-        "y": 730,
+        "x": 1030,
+        "y": 1050,
         "wires": [
             [
                 "1a7e88f9.141d87",
@@ -11771,8 +11644,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1100,
-        "y": 730,
+        "x": 1330,
+        "y": 1050,
         "wires": [
             [
                 "2f90fbf2.0aea14",
@@ -11803,8 +11676,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1100,
-        "y": 770,
+        "x": 1330,
+        "y": 1090,
         "wires": [
             [
                 "40728637.6683f8"
@@ -11834,8 +11707,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1100,
-        "y": 870,
+        "x": 1330,
+        "y": 1190,
         "wires": [
             [
                 "67a52321.45b24c"
@@ -11852,8 +11725,8 @@
             "5c408a79.5a6514",
             "cc5e066f.a722d8"
         ],
-        "x": 1310,
-        "y": 550,
+        "x": 1540,
+        "y": 870,
         "wires": [],
         "l": true
     },
@@ -11865,8 +11738,8 @@
         "links": [
             "1bfbfe04.fea962"
         ],
-        "x": 1320,
-        "y": 600,
+        "x": 1550,
+        "y": 920,
         "wires": [],
         "l": true
     },
@@ -11883,8 +11756,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1040,
-        "y": 640,
+        "x": 1270,
+        "y": 960,
         "wires": []
     },
     {
@@ -11899,8 +11772,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1560,
-        "y": 660,
+        "x": 1790,
+        "y": 980,
         "wires": []
     },
     {
@@ -12248,7 +12121,7 @@
         "type": "debug",
         "z": "81d1a9dc.cedc58",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -12278,209 +12151,6 @@
         "wires": []
     },
     {
-        "id": "65e09ad1.ca4884",
-        "type": "api-call-service",
-        "z": "81d1a9dc.cedc58",
-        "name": "Set Ecobee to 68",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "climate",
-        "service": "set_temperature",
-        "entityId": "climate.upstairs",
-        "data": "{\"temperature\":68}",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1310,
-        "y": 1090,
-        "wires": [
-            [
-                "3e38d38d.476efc"
-            ]
-        ]
-    },
-    {
-        "id": "3e38d38d.476efc",
-        "type": "api-call-service",
-        "z": "81d1a9dc.cedc58",
-        "name": "Turn on ecobee fan",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": true,
-        "service_domain": "climate",
-        "service": "set_fan_mode",
-        "entityId": "climate.upstairs",
-        "data": "{\"fan_mode\":\"on\"}",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1570,
-        "y": 1090,
-        "wires": [
-            [
-                "b5ef0d95.0580b"
-            ]
-        ]
-    },
-    {
-        "id": "b5ef0d95.0580b",
-        "type": "api-call-service",
-        "z": "81d1a9dc.cedc58",
-        "name": "Turn on Bathroom Fan",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "switch",
-        "service": "turn_on",
-        "entityId": "switch.z2m_masterbath_fan_switch",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1840,
-        "y": 1090,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bbd22a9f.b24418",
-        "type": "api-call-service",
-        "z": "81d1a9dc.cedc58",
-        "name": "Resume Ecobee program",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "ecobee",
-        "service": "resume_program",
-        "entityId": "climate.upstairs",
-        "data": "",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1340,
-        "y": 1140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "93e999c8.b154e8",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "Master Bath Fan",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "3",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "5",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "6",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 7,
-        "x": 780,
-        "y": 1080,
-        "wires": [
-            [],
-            [
-                "8e5f430a.8a17a"
-            ],
-            [],
-            [],
-            [],
-            [],
-            []
-        ],
-        "outputLabels": [
-            "1x Tap",
-            "2x Tap",
-            "3x Tap",
-            "4x Tap",
-            "5x Tap",
-            "Key Released",
-            "Key Held Down"
-        ]
-    },
-    {
-        "id": "8e5f430a.8a17a",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "2x Tap",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1000,
-        "y": 1090,
-        "wires": [
-            [
-                "65e09ad1.ca4884"
-            ],
-            [
-                "bbd22a9f.b24418"
-            ]
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
         "id": "4ca07a02.a37814",
         "type": "link out",
         "z": "81d1a9dc.cedc58",
@@ -12488,8 +12158,8 @@
         "links": [
             "27c6622f.f6845e"
         ],
-        "x": 1320,
-        "y": 1270,
+        "x": 1340,
+        "y": 1490,
         "wires": [],
         "l": true
     },
@@ -12527,8 +12197,8 @@
                 "valueType": "triggerId"
             }
         ],
-        "x": 1340,
-        "y": 1220,
+        "x": 1360,
+        "y": 1440,
         "wires": [
             [
                 "ed0bfebc.6e1d"
@@ -12557,8 +12227,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1610,
-        "y": 1220,
+        "x": 1630,
+        "y": 1440,
         "wires": [
             [
                 "b1232b59.c36678"
@@ -12585,8 +12255,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1860,
-        "y": 1260,
+        "x": 1880,
+        "y": 1480,
         "wires": [
             []
         ]
@@ -12613,8 +12283,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1830,
-        "y": 1210,
+        "x": 1850,
+        "y": 1430,
         "wires": [
             [
                 "58420e34.8ef2a"
@@ -12643,8 +12313,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2090,
-        "y": 1270,
+        "x": 2110,
+        "y": 1490,
         "wires": [
             [
                 "2ce73d8b.dff142"
@@ -12668,8 +12338,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 2420,
-        "y": 1290,
+        "x": 2440,
+        "y": 1510,
         "wires": [
             []
         ]
@@ -12693,8 +12363,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2140,
-        "y": 1310,
+        "x": 2160,
+        "y": 1530,
         "wires": [
             [
                 "2ce73d8b.dff142"
@@ -12711,8 +12381,8 @@
             "77bd43a7.33d76c",
             "a5a486d6.9ffe28"
         ],
-        "x": 1310,
-        "y": 1330,
+        "x": 1330,
+        "y": 1550,
         "wires": [],
         "l": true
     },
@@ -12725,8 +12395,8 @@
             "918392a5.ec51",
             "7d845e34.f1356"
         ],
-        "x": 1310,
-        "y": 1370,
+        "x": 1330,
+        "y": 1590,
         "wires": [],
         "l": true
     },
@@ -12747,89 +12417,10 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1330,
-        "y": 1410,
+        "x": 1350,
+        "y": 1630,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "da1f46c8.a88e88",
-        "type": "link out",
-        "z": "81d1a9dc.cedc58",
-        "name": "Turn Off Master Bed/Bath lights",
-        "links": [
-            "857ae990.5fdd58"
-        ],
-        "x": 1330,
-        "y": 1520,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "4ad19d4a.bdcb64",
-        "type": "api-call-service",
-        "z": "81d1a9dc.cedc58",
-        "name": "Set Dim level Master Nightstands",
-        "server": "65b61d5d.d1e1c4",
-        "version": 3,
-        "debugenabled": false,
-        "service_domain": "light",
-        "service": "turn_on",
-        "entityId": "light.master_bed_nightstands",
-        "data": "{\"brightness_pct\":\"{{brightness_pct}}\"}",
-        "dataType": "json",
-        "mergecontext": "",
-        "mustacheAltTags": false,
-        "outputProperties": [],
-        "queue": "none",
-        "x": 1690,
-        "y": 1450,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "676c45ef.de3fec",
-        "type": "api-current-state",
-        "z": "81d1a9dc.cedc58",
-        "name": "Get Master Nightstand Dim Level",
-        "server": "65b61d5d.d1e1c4",
-        "version": 2,
-        "outputs": 1,
-        "halt_if": "",
-        "halt_if_type": "str",
-        "halt_if_compare": "is",
-        "entity_id": "input_number.master_bedroom_nightstand_dim_level",
-        "state_type": "str",
-        "blockInputOverrides": true,
-        "outputProperties": [
-            {
-                "property": "brightness_pct",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entityState"
-            },
-            {
-                "property": "data",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "entity"
-            },
-            {
-                "property": "topic",
-                "propertyType": "msg",
-                "value": "",
-                "valueType": "triggerId"
-            }
-        ],
-        "x": 1340,
-        "y": 1470,
-        "wires": [
-            [
-                "4ad19d4a.bdcb64",
-                "41a186d8.f6efe8"
-            ]
         ]
     },
     {
@@ -12837,7 +12428,7 @@
         "type": "debug",
         "z": "81d1a9dc.cedc58",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -12845,8 +12436,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1680,
-        "y": 1570,
+        "x": 1700,
+        "y": 1790,
         "wires": []
     },
     {
@@ -12896,8 +12487,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 800,
-        "y": 1600,
+        "x": 820,
+        "y": 1820,
         "wires": [
             [],
             [
@@ -12942,8 +12533,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1040,
-        "y": 1590,
+        "x": 1060,
+        "y": 1810,
         "wires": [
             [
                 "fcb0629b.5fcca"
@@ -12966,8 +12557,8 @@
             "562ff468.8e249c",
             "233ebac9.692876"
         ],
-        "x": 1270,
-        "y": 1590,
+        "x": 1290,
+        "y": 1810,
         "wires": [],
         "l": true
     },
@@ -12980,8 +12571,8 @@
             "ab97c066.6aef4",
             "637a1c24.bfa924"
         ],
-        "x": 1280,
-        "y": 1630,
+        "x": 1300,
+        "y": 1850,
         "wires": [],
         "l": true
     },
@@ -12993,8 +12584,8 @@
         "links": [
             "8a75da5c.445d88"
         ],
-        "x": 1630,
-        "y": 1680,
+        "x": 1650,
+        "y": 1900,
         "wires": [],
         "l": true
     },
@@ -13006,8 +12597,8 @@
         "links": [
             "3cca7cc6.ac7944"
         ],
-        "x": 1330,
-        "y": 1780,
+        "x": 1350,
+        "y": 2000,
         "wires": [],
         "l": true
     },
@@ -13028,8 +12619,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1330,
-        "y": 1680,
+        "x": 1350,
+        "y": 1900,
         "wires": [
             [
                 "1f74be96.bc70f1"
@@ -13053,8 +12644,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1800,
-        "y": 1740,
+        "x": 1820,
+        "y": 1960,
         "wires": [
             []
         ]
@@ -13087,8 +12678,8 @@
                 "valueType": "entity"
             }
         ],
-        "x": 1530,
-        "y": 1730,
+        "x": 1550,
+        "y": 1950,
         "wires": [
             [],
             [
@@ -13109,8 +12700,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
-        "y": 1160,
+        "x": 1120,
+        "y": 1380,
         "wires": []
     },
     {
@@ -13136,7 +12727,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1080,
-        "y": 30,
+        "y": 80,
         "wires": [
             [
                 "80a676f74e00c0fb"
@@ -13197,8 +12788,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 780,
-        "y": 450,
+        "x": 1010,
+        "y": 770,
         "wires": [
             [
                 "3bf55a77.d01906"
@@ -13244,8 +12835,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1080,
-        "y": 390,
+        "x": 1310,
+        "y": 710,
         "wires": [
             [
                 "b7a127ab.5f0738"
@@ -13281,8 +12872,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1080,
-        "y": 350,
+        "x": 1310,
+        "y": 670,
         "wires": [
             [
                 "f610beee.9336"
@@ -13343,8 +12934,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 780,
-        "y": 590,
+        "x": 1010,
+        "y": 910,
         "wires": [
             [],
             [
@@ -13388,8 +12979,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1010,
-        "y": 560,
+        "x": 1240,
+        "y": 880,
         "wires": [
             [
                 "922e0dcd.ed728"
@@ -13450,8 +13041,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 800,
-        "y": 1330,
+        "x": 820,
+        "y": 1550,
         "wires": [
             [],
             [
@@ -13497,8 +13088,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 1320,
+        "x": 1050,
+        "y": 1540,
         "wires": [
             [
                 "4c9fbc1f.14d0b4"
@@ -13534,8 +13125,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 1370,
+        "x": 1050,
+        "y": 1590,
         "wires": [
             [
                 "bf49a02f.0480b"
@@ -13594,8 +13185,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 800,
-        "y": 1210,
+        "x": 820,
+        "y": 1430,
         "wires": [
             [],
             [
@@ -13639,8 +13230,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1020,
-        "y": 1210,
+        "x": 1040,
+        "y": 1430,
         "wires": [
             [
                 "ff864997.773888"
@@ -13648,148 +13239,6 @@
             [
                 "4ca07a02.a37814"
             ]
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
-        "id": "b531fbc7.4cf218",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "Master Bedroom Light",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "3",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "4",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "5",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "6",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "2",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 7,
-        "x": 800,
-        "y": 1470,
-        "wires": [
-            [],
-            [
-                "144f2676.c1246a"
-            ],
-            [
-                "b2bbc027.d7de9"
-            ],
-            [],
-            [],
-            [],
-            []
-        ],
-        "outputLabels": [
-            "1x Tap",
-            "2x Tap",
-            "3x Tap",
-            "4x Tap",
-            "5x Tap",
-            "Key Released",
-            "Key Held Down"
-        ]
-    },
-    {
-        "id": "144f2676.c1246a",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "2x Tap",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1030,
-        "y": 1450,
-        "wires": [
-            [
-                "676c45ef.de3fec"
-            ],
-            [
-                "da1f46c8.a88e88"
-            ]
-        ],
-        "outputLabels": [
-            "on",
-            "off"
-        ]
-    },
-    {
-        "id": "b2bbc027.d7de9",
-        "type": "switch",
-        "z": "81d1a9dc.cedc58",
-        "name": "3x Tap",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "scene_state_scene_001",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "scene_state_scene_002",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1030,
-        "y": 1490,
-        "wires": [
-            [],
-            []
         ],
         "outputLabels": [
             "on",
@@ -13843,8 +13292,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 780,
-        "y": 1720,
+        "x": 800,
+        "y": 1940,
         "wires": [
             [],
             [
@@ -13888,8 +13337,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1030,
-        "y": 1700,
+        "x": 1050,
+        "y": 1920,
         "wires": [
             [
                 "2e0a6056.8cf03"
@@ -13951,8 +13400,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 7,
-        "x": 800,
-        "y": 1850,
+        "x": 820,
+        "y": 2070,
         "wires": [
             [],
             [
@@ -13996,8 +13445,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1050,
-        "y": 1840,
+        "x": 1070,
+        "y": 2060,
         "wires": [
             [
                 "2ee7bd8b.f41682"
@@ -14019,8 +13468,8 @@
         "links": [
             "a85620cc.0278d"
         ],
-        "x": 1320,
-        "y": 1840,
+        "x": 1340,
+        "y": 2060,
         "wires": [],
         "l": true
     },
@@ -14032,8 +13481,8 @@
         "links": [
             "f024aac3.fc53a8"
         ],
-        "x": 1320,
-        "y": 1890,
+        "x": 1340,
+        "y": 2110,
         "wires": [],
         "l": true
     },
@@ -14069,8 +13518,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 800,
-        "y": 900,
+        "x": 1030,
+        "y": 1220,
         "wires": [
             [
                 "9d7b9808.ad0598",
@@ -14115,8 +13564,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1100,
-        "y": 820,
+        "x": 1330,
+        "y": 1140,
         "wires": [
             [
                 "0c0bd6068c9b7c40"
@@ -14141,8 +13590,8 @@
         "mustacheAltTags": false,
         "outputProperties": [],
         "queue": "none",
-        "x": 1370,
-        "y": 810,
+        "x": 1600,
+        "y": 1130,
         "wires": [
             []
         ]
@@ -14168,8 +13617,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 1160,
-        "y": 970,
+        "x": 1250,
+        "y": 1260,
         "wires": [
             [
                 "0c0bd6068c9b7c40"
@@ -14211,7 +13660,7 @@
             }
         ],
         "x": 190,
-        "y": 300,
+        "y": 350,
         "wires": [
             [
                 "4f4515ef5fb0a733",
@@ -14232,8 +13681,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 360,
+        "x": 290,
+        "y": 440,
         "wires": []
     },
     {
@@ -14248,18 +13697,53 @@
                 "t": "eq",
                 "v": "570da2b8d78e229d7e7377fe4aa95c90",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "362d222d739c4f776bd95903725e9e71",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8459412b3408e2e9e90c6ac397fb37f3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "95d2c1781fdec8d63cc6dc645e73edc4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "d9667db6263531838a241ca8f4e6ea32",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 1,
+        "outputs": 5,
         "x": 500,
-        "y": 260,
+        "y": 430,
         "wires": [
             [
                 "f752ecf996bc6d99",
                 "02a2c4643105b915"
-            ]
+            ],
+            [
+                "4cb23522d7243f5f"
+            ],
+            [],
+            [
+                "e6d107fc39a65e0f"
+            ],
+            []
+        ],
+        "outputLabels": [
+            "Office Back Lights",
+            "Master Bedroom Lights",
+            "Master Bath Lights",
+            "Master Bath Fan",
+            "Master Bath Above Mirror"
         ]
     },
     {
@@ -14275,8 +13759,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 590,
-        "y": 110,
+        "x": 760,
+        "y": 270,
         "wires": []
     },
     {
@@ -14327,7 +13811,7 @@
         "repair": false,
         "outputs": 7,
         "x": 790,
-        "y": 130,
+        "y": 180,
         "wires": [
             [
                 "3ecf0e75.529732"
@@ -14366,7 +13850,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1440,
-        "y": 180,
+        "y": 230,
         "wires": []
     },
     {
@@ -14392,7 +13876,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1090,
-        "y": 270,
+        "y": 320,
         "wires": [
             [],
             []
@@ -14425,7 +13909,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1100,
-        "y": 230,
+        "y": 280,
         "wires": [
             [],
             []
@@ -14458,7 +13942,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1080,
-        "y": 190,
+        "y": 240,
         "wires": [
             [],
             []
@@ -14491,7 +13975,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1080,
-        "y": 150,
+        "y": 200,
         "wires": [
             [],
             []
@@ -14524,7 +14008,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1080,
-        "y": 110,
+        "y": 160,
         "wires": [
             [],
             []
@@ -14557,7 +14041,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1080,
-        "y": 70,
+        "y": 120,
         "wires": [
             [
                 "921221cd.4b125"
@@ -14578,7 +14062,388 @@
         "name": "ZWave Scenes",
         "info": "",
         "x": 160,
-        "y": 140,
+        "y": 190,
+        "wires": []
+    },
+    {
+        "id": "e6d107fc39a65e0f",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Master Bath Fan",
+        "property": "payload.event.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "KeyPressed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed2x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed3x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed4x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed5x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyHeldDown",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyReleased",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 790,
+        "y": 530,
+        "wires": [
+            [],
+            [
+                "195e814dca2388a1",
+                "89780b9b2fbfe8ef"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4cb23522d7243f5f",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "Master Bedroom Lights",
+        "property": "payload.event.value",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "KeyPressed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed2x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed3x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed4x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyPressed5x",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyHeldDown",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "KeyReleased",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 810,
+        "y": 400,
+        "wires": [
+            [],
+            [
+                "24e9c4558bc26283",
+                "3ec056b5172918d0"
+            ],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "24e9c4558bc26283",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "2x Tap",
+        "property": "payload.event.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Scene 001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Scene 002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1080,
+        "y": 370,
+        "wires": [
+            [
+                "d79eab942982e10c"
+            ],
+            [
+                "cad2ca2f1ce9c22c"
+            ]
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "d79eab942982e10c",
+        "type": "api-current-state",
+        "z": "81d1a9dc.cedc58",
+        "name": "Get Master Nightstand Dim Level",
+        "server": "65b61d5d.d1e1c4",
+        "version": 2,
+        "outputs": 1,
+        "halt_if": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "entity_id": "input_number.master_bedroom_nightstand_dim_level",
+        "state_type": "str",
+        "blockInputOverrides": true,
+        "outputProperties": [
+            {
+                "property": "brightness_pct",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            },
+            {
+                "property": "data",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entity"
+            },
+            {
+                "property": "topic",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "triggerId"
+            }
+        ],
+        "x": 1380,
+        "y": 340,
+        "wires": [
+            [
+                "fe8ff4eb8223210f"
+            ]
+        ]
+    },
+    {
+        "id": "cad2ca2f1ce9c22c",
+        "type": "link out",
+        "z": "81d1a9dc.cedc58",
+        "name": "Turn Off Master Bed/Bath lights",
+        "links": [
+            "857ae990.5fdd58"
+        ],
+        "x": 1370,
+        "y": 390,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "fe8ff4eb8223210f",
+        "type": "api-call-service",
+        "z": "81d1a9dc.cedc58",
+        "name": "Set Dim level Master Nightstands",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "light",
+        "service": "turn_on",
+        "entityId": "light.master_bed_nightstands",
+        "data": "{\"brightness_pct\":\"{{brightness_pct}}\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1730,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "195e814dca2388a1",
+        "type": "switch",
+        "z": "81d1a9dc.cedc58",
+        "name": "2x Tap",
+        "property": "payload.event.label",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Scene 001",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Scene 002",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1070,
+        "y": 490,
+        "wires": [
+            [
+                "d408f1a9d3d0487a"
+            ],
+            [
+                "afe56b4e1533f3ed"
+            ]
+        ],
+        "outputLabels": [
+            "on",
+            "off"
+        ]
+    },
+    {
+        "id": "afe56b4e1533f3ed",
+        "type": "api-call-service",
+        "z": "81d1a9dc.cedc58",
+        "name": "Resume Ecobee program",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "ecobee",
+        "service": "resume_program",
+        "entityId": "climate.upstairs",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1290,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d408f1a9d3d0487a",
+        "type": "api-call-service",
+        "z": "81d1a9dc.cedc58",
+        "name": "Turn on ecobee fan",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": true,
+        "service_domain": "climate",
+        "service": "set_fan_mode",
+        "entityId": "climate.upstairs",
+        "data": "{\"fan_mode\":\"on\"}",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1270,
+        "y": 490,
+        "wires": [
+            [
+                "7f8b80435f938c6b"
+            ]
+        ]
+    },
+    {
+        "id": "7f8b80435f938c6b",
+        "type": "api-call-service",
+        "z": "81d1a9dc.cedc58",
+        "name": "Turn on Bathroom Fan",
+        "server": "65b61d5d.d1e1c4",
+        "version": 3,
+        "debugenabled": false,
+        "service_domain": "switch",
+        "service": "turn_on",
+        "entityId": "switch.master_bath_fan",
+        "data": "",
+        "dataType": "json",
+        "mergecontext": "",
+        "mustacheAltTags": false,
+        "outputProperties": [],
+        "queue": "none",
+        "x": 1520,
+        "y": 490,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89780b9b2fbfe8ef",
+        "type": "debug",
+        "z": "81d1a9dc.cedc58",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3ec056b5172918d0",
+        "type": "debug",
+        "z": "81d1a9dc.cedc58",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 420,
         "wires": []
     },
     {
